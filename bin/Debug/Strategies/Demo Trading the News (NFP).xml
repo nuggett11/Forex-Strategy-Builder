@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<strategy>
+  <programName>Forex Strategy Builder</programName>
+  <programVersion>2.57.9.0</programVersion>
+  <strategyName>Demo Trading the News (NFP)</strategyName>
+  <instrumentSymbol>EURUSD</instrumentSymbol>
+  <instrumentPeriod>min30</instrumentPeriod>
+  <sameDirSignalAction>Nothing</sameDirSignalAction>
+  <oppDirSignalAction>Nothing</oppDirSignalAction>
+  <permanentStopLoss usePermanentSL="False" permanentSLType="Relative">1000</permanentStopLoss>
+  <permanentTakeProfit usePermanentTP="False" permanentTPType="Relative">1000</permanentTakeProfit>
+  <breakEven useBreakEven="False">1000</breakEven>
+  <maxOpenLots>20</maxOpenLots>
+  <useAcountPercentEntry>False</useAcountPercentEntry>
+  <entryLots>1</entryLots>
+  <addingLots>1</addingLots>
+  <reducingLots>1</reducingLots>
+  <description>Trading on news - U.S. non-farm payrolls (NFP).
+
+We do not actually analyze the news but catch the price movement after the news has been announced. We assume that if the news is good, the price of the USD will raise (in this example, however, we use the EURUSD pair which means that good news will lower the relative price of the EUR in USD). Therefore, we simply observe the effect of the news on the market. If the price goes up, we buy and if it goes down, we sell regardless of what the news was.
+
+The "Price Move" indicator sends pending entry orders at a price higher and lower than the current one. The key factor is to place our entry orders at the time of the news announcement. 
+
+The U.S government publishes the NFP report at 08:30 a.m. eastern time on the first Friday of every month. For that purpose, we use the following entry filters: 
+
+"Day of Week" – it specifies the Friday as an entry day. 
+
+"Entry Time" – sets the entry orders at 08:30 a.m. The execution must take place between 08:30 a.m. and 09:00 a.m. In this example, we use 13:30 and 14:00 because the FSB data is with GMT time zone. (The Entry Time indicator works best when its "from" time is equal to the bar opening time. For that reason, we use a 30 min. chart.) 
+
+The "Enter Once" filter allows one entry per month only. (On the First Friday - not every Friday.) It also cancels the second entry order after the first one has been executed. 
+
+We use a "Stop Limit" indicator to exit the market. It places Stop Loss and Take Profit orders. 
+
+You can also try a Trailing Stop exit.
+</description>
+  <openFilters>3</openFilters>
+  <closeFilters>0</closeFilters>
+  <slot slotNumber="0" slotType="Open">
+    <indicatorName>Price Move</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>0</index>
+      <value>Enter long after an upward move</value>
+    </listParam>
+    <listParam paramNumber="1">
+      <caption>Base price</caption>
+      <index>0</index>
+      <value>Open</value>
+    </listParam>
+    <numParam paramNumber="0">
+      <caption>Price move</caption>
+      <value>5</value>
+    </numParam>
+    <checkParam paramNumber="0">
+      <caption>Use previous bar value</caption>
+      <value>False</value>
+    </checkParam>
+  </slot>
+  <slot slotNumber="1" slotType="OpenFilter" logicalGroup="A">
+    <indicatorName>Day of Week</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>0</index>
+      <value>Enter the market between the specified days</value>
+    </listParam>
+    <listParam paramNumber="1">
+      <caption>From (incl.)</caption>
+      <index>5</index>
+      <value>Friday</value>
+    </listParam>
+    <listParam paramNumber="2">
+      <caption>To (excl.)</caption>
+      <index>6</index>
+      <value>Saturday</value>
+    </listParam>
+  </slot>
+  <slot slotNumber="2" slotType="OpenFilter" logicalGroup="A">
+    <indicatorName>Entry Time</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>0</index>
+      <value>Enter the market between the specified hours</value>
+    </listParam>
+    <numParam paramNumber="0">
+      <caption>From hour (incl.)</caption>
+      <value>13</value>
+    </numParam>
+    <numParam paramNumber="1">
+      <caption>From min (incl.)</caption>
+      <value>30</value>
+    </numParam>
+    <numParam paramNumber="2">
+      <caption>Until hour (excl.)</caption>
+      <value>14</value>
+    </numParam>
+    <numParam paramNumber="3">
+      <caption>Until min( excl.)</caption>
+      <value>0</value>
+    </numParam>
+  </slot>
+  <slot slotNumber="3" slotType="OpenFilter" logicalGroup="A">
+    <indicatorName>Enter Once</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>3</index>
+      <value>Enter no more than once a month</value>
+    </listParam>
+  </slot>
+  <slot slotNumber="4" slotType="Close">
+    <indicatorName>Stop Limit</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>0</index>
+      <value>Exit at the Stop Loss or the Take Profit level</value>
+    </listParam>
+    <numParam paramNumber="0">
+      <caption>Stop Loss</caption>
+      <value>1200</value>
+    </numParam>
+    <numParam paramNumber="1">
+      <caption>Take Profit</caption>
+      <value>300</value>
+    </numParam>
+  </slot>
+</strategy>

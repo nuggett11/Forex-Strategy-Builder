@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<strategy>
+  <programName>Forex Strategy Builder</programName>
+  <programVersion>2.57.11.0</programVersion>
+  <strategyName>Demo Comparator</strategyName>
+  <instrumentSymbol>EURUSD</instrumentSymbol>
+  <instrumentPeriod>day</instrumentPeriod>
+  <sameDirSignalAction>Nothing</sameDirSignalAction>
+  <oppDirSignalAction>Nothing</oppDirSignalAction>
+  <permanentStopLoss usePermanentSL="False" permanentSLType="Relative">1000</permanentStopLoss>
+  <permanentTakeProfit usePermanentTP="False" permanentTPType="Relative">1000</permanentTakeProfit>
+  <breakEven useBreakEven="False">1000</breakEven>
+  <maxOpenLots>20</maxOpenLots>
+  <useAcountPercentEntry>False</useAcountPercentEntry>
+  <entryLots>1</entryLots>
+  <addingLots>1</addingLots>
+  <reducingLots>1</reducingLots>
+  <description>Forex Strategy Builder found several hundred ambiguous bars during the backtest of this strategy. Such a situation may lead to inaccurate backtest result. To improve the reliability of the backtest you can use two tools - "Intrabar Scanner" and "Method Comparator".
+
+An “ambiguous bar” is a bar that contains more than one orders and the backtesting algorithm is not able to determine for certain what the exact sequence of order execution was within the bar. This usually happens when we have more than one active order within the bar range. In this case the program doesn’t know which order to execute first. The sequence of the order execution is of great importance for correct strategy testing. 
+
+Forex Strategy Builder can use different methods to interpolate (calculate) the price route inside an ambiguous bar. Of all the available methods, the "Optimistic" one usually shows the best result (with some exceptions) and the "Pessimistic" one – the worst result (with some exceptions too). 
+
+You can compare the different methods and see the mean balance line by using the "Method Comparator". We can confidently assume that the mean balance line is the nearest scenario to the real one. 
+
+To improve the backtest accuracy you can use the "Scanner". It loads all available intrabar data (for shorter time frames in the same market) and uses it to calculate a more realistic route of the price within each bar. 
+
+It is also possible to combine the effect of the Scanner and the Comparator by switching on the automatic scan mode (from the Testing – Automatic scan menu). You should load the intrabar data from the scanner window in order to complete the auto scanning. 
+</description>
+  <openFilters>0</openFilters>
+  <closeFilters>0</closeFilters>
+  <slot slotNumber="0" slotType="Open">
+    <indicatorName>Pivot Points</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>4</index>
+      <value>Enter long at S1 (short at R1)</value>
+    </listParam>
+    <listParam paramNumber="1">
+      <caption>Base price</caption>
+      <index>0</index>
+      <value>One day</value>
+    </listParam>
+    <numParam paramNumber="0">
+      <caption>Vertical shift</caption>
+      <value>0</value>
+    </numParam>
+    <checkParam paramNumber="0">
+      <caption>Use previous bar value</caption>
+      <value>True</value>
+    </checkParam>
+  </slot>
+  <slot slotNumber="1" slotType="Close">
+    <indicatorName>Pivot Points</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>2</index>
+      <value>Exit long at R1 (short at S1)</value>
+    </listParam>
+    <listParam paramNumber="1">
+      <caption>Base price</caption>
+      <index>0</index>
+      <value>One day</value>
+    </listParam>
+    <numParam paramNumber="0">
+      <caption>Vertical shift</caption>
+      <value>0</value>
+    </numParam>
+    <checkParam paramNumber="0">
+      <caption>Use previous bar value</caption>
+      <value>True</value>
+    </checkParam>
+  </slot>
+</strategy>

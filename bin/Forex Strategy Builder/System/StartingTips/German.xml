@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tips>
+  <!-- Language (Must be the same as in the language file.) -->
+  <language>German</language>
+  <!-- Credits -->
+  <translatedby>Erich Weber</translatedby>
+  <website>http://forexsb.com</website>
+  <corrections>info@forexsb.com</corrections>
+  <!-- Starting Tips -->
+	<tip>
+		<h1>Willkommen</h1>
+		<p>
+			Danke, dass Sie sich für Forex Strategy Builder entschieden haben.
+			Wir hoffen, dass diese Freeware nützlich für Sie sein wird.
+			Wir wünschen Ihnen viel Glück und erfolgreichen Forex Handel.
+		</p>
+		<p style="text-align: right">Forex Software team.</p>
+	</tip>
+	<tip>
+		<h1>Einführung</h1>
+		<p>
+			Forex Strategy Builder ist ein Werkzeug zum Erstellen von Handelsstrategien
+			die aus technischen Indikatoren bestehen.
+			Dieses Programm testet die Strategien indem es historische Offline-Daten eines
+			Brokers verwendet. Es zeigt nach der Berechnung einen Indikator-Chart, einen Konto-Chart und
+			Statistiken.
+		</p>
+	</tip>
+	<tip>
+		<h1>Weitere Informationen</h1>
+		<p>
+			Die erste Informationsquelle ist die Webseite des Programms <a href="http://forexsb.com/" target="_blank">http://forexsb.com</a>.
+			Ein guter Startpunkt ist die <a href="http://forexsb.com/help/" target="_blank">Online Hilfe</a>.
+			Für weitere Informationen und Fragen besuchen Sie das <a href="http://forexsb.com/forum/" target="_blank">Support Forum</a>.
+		</p>
+	</tip>
+	<tip>
+		<h1>Schnellstart</h1>
+		<p>
+			Laden Sie ein paar der mitgelieferten Demostrategien über das Menü "Datei" - "Öffnen".
+			Das Programm wird eine Strategie automatisch neu durchrechnen wenn sie geladen wurde und
+			wenn Sie Änderungen an einem Indikator, dem Markt oder Zeithorizont vornehmen.
+			Es gibt eine Kurzbeschreibung zu jeder Demostrategie. Sie können diese sehen, wenn Sie
+			auf den "Übersicht"-Button klicken. Sehen Sie sich den Indikatorchart und die Journaltabellen an!
+			</p>
+	</tip>
+	<tip>
+		<h1>Testen einer Strategie</h1>
+		<p>
+			Das Programm testet die Strategien automatisch.
+			Es führt jedesmal wenn Sie etwas ändern das Auswirkung auf das Handelsergebnis haben könnte eine Neuberechnung durch.
+			Zum Beispiel wird jede Änderung eines Indikators, einer logischen Regel, eines Parameters, der Tradegröße
+			und einige der Handelsgebühren eine Neuberechnung nach sich ziehen.
+			Sie sehen immer das endgültige, neu berechnete Backtestergebnis der aktuellen Strategie.
+		</p>
+	</tip>
+	<tip>
+		<h1>Historische Daten</h1>
+		<p>
+			Forex Strategy Builder speichert historische Datendateien lokal.
+			Die Dateien befinden sich im "Forex Strategy Builder\Data" Ordner.
+			Sie können diesen Speicherort ändern, indem Sie aus dem Menü "Markt" - "Datenverzeichnis" auswählen.
+		</p>
+	</tip>
+	<tip>
+		<h1>Datenaktualisierung</h1>
+		<p>
+			Forex Strategy Builder kann "CSV"-Dateien lesen die von MetaTrader 4 exportiert wurden.
+			Um das zu erreichen, laden Sie die gewünschten Daten in einen MetaTrader-Chart und
+			speichern sie Daten (File - Save AS) in das Datenverzeichnis von FSB. Sie können
+			weitere Informationen über das Datenformat und die Aktualisieurng auf der Webseite
+			des Programms finden.
+		</p>
+	</tip>
+   <tip>
+        <h1>Forex Handelsstrategie</h1>
+        <p>
+            Nach Ansicht der Technischen Analyse ist eine Forex Strategie eine Kombination von technischen
+            Indikatoren, die Kauf- und Verkaufsignale zu einer bestimmten Zeit und zu einem bestimmten Kurs generieren.
+        </p>
+    </tip>
+    <tip>
+        <h1>Einstiegs- und Ausstiegsstrategien</h1>
+        <p>
+            Eine Forex Handelsstrategie kann in zwei Hauptaufgaben aufgeteilt werden:<br />
+            - Einstiegsstrategie - repräsentiert die Logik zum Öffnen (zur Mittelung) einer Position.<br />
+            - Ausstiegsstrategie - repräsentiert die Logik zum Schließen einer bestehenden Position.
+        </p>
+    </tip>
+    <tip>
+        <h1>Einstiegsstrategie</h1>
+        <p>
+            Die Einstiegsstrategie wird durch den <i>"Eröffnungspunkt der Position"</i>
+            und die <i>"Eröffnungs-Logik-Bedingung"</i> Slots repräsentiert.
+        </p>
+    </tip>
+    <tip>
+        <h1>Ausstiegsstrategie</h1>
+        <p>
+            Die Ausstiegsstrategie wird durch den <i>"Schließ-Punkt der Position"</i> und
+            die <i>"Schließungs-Logik-Bedingung"</i> Slots repräsentiert.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Eröffnungspunkt der Position" Slot</h1>
+        <p>
+            Dies ist der erste Eröffnungs-Strategie Slot. Sein Indikator zeigt den Kurs der Eröffnung oder Mittelung.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Eröffnungs-Logik-Bedingung" Slot</h1>
+        <p>
+            Jeder <i>"Eröffnungs-Logik-Bedingung"</i> Slot enthält eine logische Bedingung. Er dient als
+            Einstiegsfilter. Ein Einstiegssignal kann generiert werden, wenn alle
+            <i>"Eröffnungs-Logik-Bedingungen"</i> erfüllt sind.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Schließ-Punkt der Position" Slot</h1>
+        <p>
+            Dies ist der erste Ausstiegs-Strategie Slot. Sein Indikator zeit den Preis beim Ausstieg aus einer
+            bestehenden Position an.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Schließungs-Logik-Bedingung"</h1>
+        <p>
+            Wir können eine <i>"Schließungs-Logik-Bedingung"</i> nur verwenden, wenn der
+            <i>"Schließ-Punkt der Position"</i> Slot ein <i>"Bar Closing"</i> enthält.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Schließungs-Logik-Bedingung" Slot</h1>
+        <p>
+            Jeder <i>"Schließungs-Logik-Bedingung"</i> Slot enthält eine logische Bedingung. Er dient als ein
+            Trigger für einen Ausstieg. Ein Ausstiegssignal wird ausgelöst wenn eine der
+            <i>"Schließungs-Logik-Bedingungen"</i> erfüllt ist..
+        </p>
+    </tip>
+    <tip>
+        <h1>Hinzufügen eines Strategie Slots</h1>
+        <p>
+            Man kann nur neue Slots mit logischen Bedingungen hinzufügen. Eröffnungs- und Schließungs-
+			Punkt der Positions-Slots sind permanent. Für die Eröffnung stehen maximal vier, für das
+			Schließen maximal zwei Slots zur Verfügung. Ein Schließungs-Logik-Bedingung-Slot ist nur
+			verfügbar, wenn als Schließungs-Punkt "Bar Closing" ausgewählt wurde.
+        </p>
+    </tip>
+    <tip>
+        <h1>Entfernen eines Strategie Slots</h1>
+        <p>
+            Sie können einen Strategie Slot entfernen, indem sie dessen Schließsymbol anklicken.
+			Sie können die Eröffnungs- und Schließungs-Punkt nicht entfernen. Sie sind permanent.<br />
+            Alle aktuellen <i>"Schließ-Logik-Bedingungs"</i> Slots werden entfernt wenn Sie
+            als <i>"Schließungs-Punkt der Position"</i> etwas anderes als <i>"Bar Closing"</i> einstellen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Bearbeitung eines Indikator Slots</h1>
+        <p>
+            Um den Dialog mit den Indikator-Parametern zu öffnen, klicken Sie einfach auf den Indikator-Slot.
+			Je nach Slot-Typ können Sie einen neuen entsprechenden Indikator wählen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Ändern der Darstellung der Strategie-Slots</h1>
+        <p>
+			Sie können die Darstellung aller Strategie Slots mittels der drei kleinen quadratischen
+			Buttons über den Strategie Slots verändern. Dies hat nur Auswirkung auf die Darstellung
+			und beeinflusst die Strategie in keiner Weise.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signale in die gleiche und entgegengesetzte Richtung</h1>
+        <p>
+			Signale in die gleiche und entgegengesetzte Richtung sind zusätzliche Signale, die von
+			der Einstiegsstrategie während der Haltedauer einer Position generiert werden.
+			Eine Änderung ihrer Logik ändert direkt das Strategieverhalten.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signale in die gleiche Richtung</h1>
+        <p>
+			Ein Signal in die gleiche Richtung ist ein Kaufsignal, während eine Longposition 
+			gehalten wird oder ein Verkaufssignal, während eine Shortposition gehalten wird.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signale in die gleiche Richtung - "Nichts"</h1>
+        <p>
+			Diese Logik bedeutet, dass alle zusätzlichen Signale in der gleichen Richtung wie
+			die gerade offene Position storniert werden. In diesem Fall gibt es keine Möglichkeit,
+			der initialen Position weitere Lots hinzuzufügen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signale in die gleiche Richtung - "Gewinner"</h1>
+        <p>
+            Die "Gewinner" Option bedeutet, dass das Programm zulässt, dass einer im Gewinn stehenden
+			Position Lots hinzugefügt werden. Das Hinzufügen kann abgebrochen werden, wenn die maximale
+			Anzahl an offenen Lots erreicht wurde. Bei Positionen, die im Verlust stehen, ist ein
+			Hinzufügen nicht erlaubt.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signale in die gleiche Richtung - "Hinzufügen"</h1>
+        <p>
+			Diese Logik erlaubt der Einstiegsstrategie bei zusätzlichen Signalen in die initiale
+			Positionsrichtung Lots hinzuzufügen. Der <b>Forex Strategy Trader</b> wird den Preis
+            der Position mitteln.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signal in die entgegengesetzte Richtung</h1>
+        <p>
+			Ein Signal in die entgegengesetzte Richtung ist ein Kaufsignal, während eine Shortposition
+			gehalten wird oder ein Verkaufsignal, während eine Longposition gehalten wird.
+			Es kann nur von der Einstiegsstrategie generiert werden. Ein Schließ-Signal von der
+			Ausstiegsstrategie ist kein "Signal in die entgegengesetzte Richtung".
+        </p>
+    </tip>
+    <tip>
+        <h1>Signal in die entgegengesetzte Richtung - "Nichts"</h1>
+        <p>
+			Diese Logik bedeutet, dass alle zusätzlichen Signale in die entgegengesetzte Richtung
+			zur aktuellen Position storniert werden. In diesem Fall gibt es keine Möglichkeit,
+			Lots von der initialen Position zu schließen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signal in die entgegengesetzte Richtung - "Reduzieren"</h1>
+        <p>
+			Die Einstiegslogik wird ihre offene Position um ein Lot reduzieren, wenn ein Signal
+			in die entgegengesetzte Richtung auftritt. Das bedeutet natürlich, dass Ihre Position
+			geschlossen wird, wenn nur ein Lot offen war.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signal in die entgegengesetzte Richtung - "Schließen"</h1>
+        <p>
+			Im Falle eines durch die Einstiegsstrategie generierten Signals in die entgegengesetzte 
+			Richtung wird der <b>Forex Strategy Trader</b> die aktuelle Position unabhängig von der
+			Lotgröße schließen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Signal in die entgegengesetzte Richtung - "Umkehren"</h1>
+        <p>
+            Eine Einstiegsstrategie mit <i>Signal in die entgegengesetzte Richtung</i> schließt die
+            aktuelle Position und öffnet eine neue in die entgegengesetzte Richtung. 
+			Die neue Position wird mit einem Lot eröffnet.
+        </p>
+    </tip>
+    <tip>
+        <h1>Einstiegsstrategie Signale</h1>
+        <p>
+			Die Einstiegssignale hängen von der gleichen und entgegengesetzten Signal Logik ab.
+			Im Falle der Aufstockung einer Position kann die Ausführung durch den "Lot Limiter"
+			storniert werden, falls die Anzahl der Lots das Limit erreicht.
+        </p>
+    </tip>
+    <tip>
+        <h1>Ausstiegsstrategie Signale</h1>
+        <p>
+			Die durch die Ausstiegsstrategie generierten Signale sind unabhängig von der Logik
+			der gleichen und entgegengesetzen Signalmenüs (da diese nur die Einstiegsstrategie
+			betreffen).
+			Eine Ausstiegsstrategie Signal kann storniert werden, wenn es keine offene Position 
+			gibt oder wenn die Richtung gleich wie die der offenen Position ist.
+        </p>
+    </tip>
+    <tip>
+        <h1>Unklare Kerzen</h1>
+        <p>
+            Eine Kerze für die wir nicht genug Informationen haben um sie korrekt zu interpolieren.
+			In einer unklaren Kerze können mehr als eine Order ausgeführt werden und wir sind
+			nicht sicher über die korrekte Reihenfolge.
+        </p>
+    </tip>
+    <tip>
+        <h1>Unklarheit über zwei Aufträge</h1>
+        <p>
+            Eine Backtestsituation bei der zwei erreichbare aktive Aufträge in beide Richtungen
+			zum gleichen Preis bestehen.<br />
+            Eine solche Situation tritt zum Beispiel auf, wenn es einen <i>Stop Loss</i> Auftrag
+			und einen <i>Take Profit</i> Auftrag innerhalb der Grenzen der aktuellen Kerze gibt.
+        </p>
+    </tip>
+    <tip>
+        <h1>Unklarheit beim Schließen</h1>
+        <p>
+			Eine Situation bei der sowohl die Spitze, als auch der Boden der Kerze erreicht wurden und:<br />
+            - der aktuelle Kurs höher ist als der Schlußkurs, es darunter aber eine Order gibt.<br />
+            - der aktuelle Kurs tiefer ist als der Schlußkurs, es darüber aber eine Order gibt.<br />
+			Das Dilemma ist: schließen wir die Kerze oder öffnen wir zuvor den Auftrag?
+        </p>
+    </tip>
+    <tip>
+        <h1>Interpolationsmethoden</h1>
+        <p>
+            Forex Strategy Builder bietet verschiedene Methoden der Kerzeninterpolation.
+			Sie betreffen die Reihenfolge der Auftragsausführung innerhalb von unklaren Kerzen.<br />
+			Der Typ der Interpolationsmethode spielt keine Rolle, wenn es keine unklaren Kerzen gibt.
+        </p>
+    </tip>
+    <tip>
+        <h1>Zweck der Interpolationsmethoden</h1>
+        <p>
+			Ohne in die Zukunft zu sehen entscheiden die Interpolationsmethoden was genau als
+			erstes innerhalb einer unklaren Kerze auszuführen ist - je nach gewünschtem Szenario.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Pessimistische" Methode</h1>
+        <p>
+			Diese Interpolationsmethode versucht jene Aufträge als erste auszuführen die ein
+			Verlust werden oder weniger Gewinn abwerfen. Im Falle einer Unklarheit beim Schließen,
+			wird die Ausstiegsorder ausgeführt, wenn die Position im Verlust steht anstatt sie
+			an die nächste Kerze weiter zu geben.
+        </p>
+    </tip>
+    <tip>
+        <h1>Die Idee der "Pessimistischen" Methode</h1>
+        <p>
+			Um die Regel "Sicherheit Zuerst!" zu befolgen versucht die pessimistische
+			Methode das ungünstigste mögliche Szenario zu finden. Die Idee ist, uns vor
+			Methodenfitting zu schützen.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Pessimistische" Methode - Ist das das ungünstigste was passieren kann?</h1>
+        <p>
+			Nein, ist sie nicht. Sie schaut nicht in die Zukunft um das Ergebnis der möglichen
+			Varianten zu bestimmen. Sie trifft Entscheidungen nur aufgrund der Informationen der
+			aktuellen Kerze. Daher wird sie eine im Gewinn stehende Position stehen lassen und
+			an die nächste Kerze übetragen anstatt sie innerhalb der aktuellen Kerze zu schließen.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Zu pessimistische" Methode</h1>
+        <p>
+			In manchen Fällen kann die pessimistische Methode zu pessimistisch sein.
+			Zum Beispiel wenn es einen <i>Stop Loss</i> Auftrag gibt, der weit entfernt vom Eröffnungskurs
+			der Position und sehr nahe am <i>Take Profit</i> Auftrag liegt. 
+			Der Backtester wird dann versuchen den Stop Loss Auftrag anstatt des näher liegenden
+			<i>Take Profit</i> Auftrags auszuführen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Interpolationsmethode - "Kürzeste" </h1>
+        <p>
+			Diese Methode führt den Backtester durch die kürzeste Preisroute innerhalb der Kerze.<br />
+			Die kürzeste Route innerhalb einer Kerze ist:<br />
+			- Weiße Kerze: Eröffnung - Tief - Hoch - Schluß<br />
+			- Schwarze Kerze: Eröffnung - Hoch - Tief - Schluß<br />
+			Diese Reihenfolge trifft auf 90% aller Kerzen zu.
+        </p>
+    </tip>
+    <tip>
+        <h1>Idee der "Kürzesten" Methode</h1>
+        <p>
+			Die kürzeste Preisroute ist nur bei einem perfekt effektiven und null-volatilem Markt
+			anwendbar. Trotzdem ist sie wegen der extremen Ergebnisse bei manchen Strategien 
+			eine gute Basis für den Vergleich mit anderen Methoden.
+        </p>
+    </tip>
+    <tip>
+        <h1>Nachteil der "Kürzeste" Methode</h1>
+        <p>
+            Wenn der Backtester der kürzesten Route folgt blickt er nie zurück. Er kann einen Auftrag nicht
+			berücksichtigen, der bei einem bereits passierten Preis (Stop Loss) platziert wurde.
+			Das Ergebnis dieser Methode kann manchmal besser sein als die optimistische oder schlechter
+			als die pessimistische.
+        </p>
+    </tip>
+    <tip>
+        <h1>Interpolationsmethode - "Nächste"</h1>
+        <p>
+            Bei dieser Methode bevorzugt der Backtester Aufträge die innerhalb einer unklaren Kerze näher liegen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Idee der "Nächsten" Methode</h1>
+        <p>
+			Setzen wir voraus der Markt ist zufällig und die Preise folgen der Gaussverteilung.
+			Daraus folgt, dass der nächste (naheliegendste) Preis die größte Wahrscheinlichkeit hat,
+			ausgeführt zu werden.<br />
+			Das Ergebnis dieses Backtest wird das selbe sein wie in einem perfekt zufälligen Markt.
+        </p>
+    </tip>
+    <tip>
+        <h1>Nachteil der "Nächsten" Methode</h1>
+        <p>
+			Im Falle der Schließungslogik "Stop Limit" bei der der Stoppreis näher bei der
+			Eröffnung liegt als der Limit-Preis, wird der Backtester die Position mit Verlust schließen
+			wenn es möglich ist. Im umgekehrten Fall (näherliegender Limit Auftrag) wird der Backtester
+			die Position im Gewinn schließen.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Optimistische" Methode</h1>
+        <p>
+            Die optimistische Interpolationsmethode versucht jenen Auftrag auszuführen, der den
+			größten Gewinn oder geringsten Verlust einbringt. Im Falle einer Unklarheit beim 
+			Schließen, wir sie den Schließauftrag ausführen, wenn die Position im Gewinn ist,
+			anstatt sie an die nächste Kerze weiter zu geben.
+        </p>
+    </tip>
+    <tip>
+        <h1>Idee der "Optimistischen" Methode</h1>
+        <p>
+			Die optimistische Methode dient als Alternative zur pessimistischen Methode. Sie
+			dient nur dem Vergleich mit anderen Methoden und nicht als Basis für die Evaluierung
+			einer Strategie.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Optimistische" Method - Ist sie die bestmögliche?</h1>
+        <p>
+			Nein, ist sie nicht. Sie schaut nicht in die Zukunft um das mögliche Ergebnis der
+			Varianten zu sehen. Sie trifft Entscheidungen nur aufgrund der Informationen innerhalb
+			der aktuellen Kerze. Daher wird sie eine im Verlust stehende Position offen stehen
+			lassen und an die nächste Kerze weiter reichen anstatt sie innerhalb der aktuellen
+			Kerze zu schließen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Zu "optimistische" Methode</h1>
+        <p>
+			In manchen Fällen kann die optimistische Methode zu optimistisch sein.
+			Zum Beispiel wenn es einen <i>Take Profit</i> Auftrag weit entfernt vom
+			Eröffnungskurs der Position und einen sehr nahe liegenden <i>Stop Loss</i> Auftrag
+			gibt. Der Backtester wird dann versuchen den <i>Take Profit</i> Auftrag anstatt
+            des näheren <i>Stop Loss</i> Auftrags auszuführen.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Zufällige" Methode</h1>
+        <p>
+			Die zufällige Interpolationsmethode führt die Aufträge nach einer zufälligen Route aus.
+			Das Hauptprinzip ist, dass nähere Aufträge größere Chancen haben ausgeführt zu werden
+			als weiter enfernte.
+        </p>
+    </tip>
+    <tip>
+        <h1>Idee der "Zufälligen" Methode</h1>
+        <p>
+			Wenn wir voraussetzen, dass der Markt zufällig ist und dass keine anderen Faktoren
+			den Preis beeinflussen, wird die "Zufällige" Methode das perfekte Ergebnis liefern.
+			Wenn sie mehrere male angewendet wird, gibt sie uns ein ausreichend deutliches
+			Bild der Strategieperformance.
+        </p>
+    </tip>
+    <tip>
+        <h1>Anwendung der "Zufälligen" Methode</h1>
+        <p>
+			Indem Sie auf die "F5"-Taste drücken veranlassen Sie den <b>Forex Strategy Builder</b>
+			die aktuelle Strategie neu durch zu rechnen. Jedes mal wird der Backtester
+			die zufällige Route in unklaren Kerzen anwenden und der Kontochart wird anders
+			aussehen.<br />
+			Man kann auch das "Vergleicher"-Werkzeug verwenden.
+        </p>
+    </tip>
+    <tip>
+        <h1>Vergleicher</h1>
+        <p>
+			Der Methodenvergleicher ist ein Werkzeug der die Strategie unter Berücksichtigung
+			aller Interpolationsmethoden durchrechnet und deren Ergebnisse auf einem einzigen
+			Chart darstellt. Er zeichnet auch das durchschnittliche Ergebnis auf.
+			Es ist höchstwahrscheinlich, dass die tatsächliche historische Kontoentwicklung
+			am ehesten der dargestellten Kontoentwicklung entspricht.
+        </p>
+    </tip>
+    <tip>
+        <h1>Kerzen Explorer</h1>
+        <p>
+			Der Kerzen Explorer zeigt die Preisroute innerhalb einer Kerze.<br />
+			Sie können ihn öffnen, indem sie einen Doppelklick auf eine Journalzeile
+			oder auf eine Kerze im Indikatorchart machen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Scanner</h1>
+        <p>
+			Der Scanner führt ein Intrabar Scanning mit allen verfügbaren Datenperioden durch.<br />
+			Er ist praktisch wenn es unklare Kerzen gibt.
+        </p>
+    </tip>
+    <tip>
+        <h1>Scanner - Benützung</h1>
+        <p>
+			Bei der ersten Benützung des Scanners oder nach einer Änderung in der
+			Datenperiode müssen Sie die verfügbare kürzere Datenperiode laden.
+			Es dauert ungefähr 10 Sekunden.<br />
+			Drücken Sie auf den "Scann" Button um ein sofortiges Scannen auszulösen.
+        </p>
+    </tip>
+    <tip>
+        <h1>Schneller Scan</h1>
+        <p>
+			Sie können einen "Schnellen Scan" ausführen, indem Sie die Taste "F6" im Hauptfenster drücken.
+            Im Falle dass Intrabardaten bisher noch nicht geladen wurden wird das Scannerfenster geöffnet.
+        </p>
+    </tip>
+</tips>

@@ -1,0 +1,3268 @@
+<?xml version="1.0"?>
+<lang>
+  <!-- Language (This will appear in the menu.) -->
+  <language>Hungarian</language>
+  <!-- Credits -->
+  <translatedby>csocsesz</translatedby>
+  <website>
+  </website>
+  <corrections>dbagi@freemail.hu</corrections>
+  <!-- Common -->
+  <str>
+    <main>Yes</main>
+    <alt>Igen</alt>
+  </str>
+  <str>
+    <main>No</main>
+    <alt>Nem</alt>
+  </str>
+  <str>
+    <main>Ok</main>
+    <alt>Ok</alt>
+  </str>
+  <str>
+    <main>Go</main>
+    <alt>Menj</alt>
+  </str>
+  <str>
+    <main>Start</main>
+    <alt>Start</alt>
+  </str>
+  <str>
+    <main>More</main>
+    <alt>Több</alt>
+  </str>
+  <str>
+    <main>Default</main>
+    <alt>Alap</alt>
+  </str>
+  <str>
+    <main>Cancel</main>
+    <alt>Bezár</alt>
+  </str>
+  <str>
+    <main>Accept</main>
+    <alt>Ment</alt>
+  </str>
+  <str>
+    <main>Browse</main>
+    <alt>Tallóz</alt>
+  </str>
+  <str>
+    <main>Delete</main>
+    <alt>Töröl</alt>
+  </str>
+  <str>
+    <main>Error</main>
+    <alt>Hiba</alt>
+  </str>
+  <str>
+    <main>Beta</main>
+    <alt>Beta</alt>
+  </str>
+  <str>
+    <main>Up</main>
+    <alt>Fel</alt>
+  </str>
+  <str>
+    <main>Move Up</main>
+    <alt>Mozgat fel</alt>
+  </str>
+  <str>
+    <main>Down</main>
+    <alt>Le</alt>
+  </str>
+  <str>
+    <main>Move Down</main>
+    <alt>Mozgat le</alt>
+  </str>
+  <str>
+    <main>Duplicate</main>
+    <alt>Dupla</alt>
+  </str>
+  <str>
+    <main>lot</main>
+    <alt>egység</alt>
+  </str>
+  <str>
+    <main>lots</main>
+    <alt>egység</alt>
+  </str>
+  <str>
+    <main>money</main>
+    <alt>pénz</alt>
+  </str>
+  <str>
+    <main>none</main>
+    <alt>Nincs</alt>
+  </str>
+  <str>
+    <main>and</main>
+    <alt>and</alt>
+  </str>
+  <str>
+    <main>or</main>
+    <alt>or</alt>
+  </str>
+  <str>
+    <main>Dot</main>
+    <alt>Dot</alt>
+  </str>
+  <str>
+    <main>Comma</main>
+    <alt>Comma</alt>
+  </str>
+  <str>
+    <main>Semicolon</main>
+    <alt>Semicolon</alt>
+  </str>
+  <str>
+    <main>Tab</main>
+    <alt>Tab</alt>
+  </str>
+  <!-- Data Periods -->
+  <str>
+    <main>Data time frame.</main>
+    <alt>Időformátum.</alt>
+  </str>
+  <str>
+    <main>Minute</main>
+    <alt>perces</alt>
+  </str>
+  <str>
+    <main>Minutes</main>
+    <alt>perces</alt>
+  </str>
+  <str>
+    <main>Hour</main>
+    <alt>órás</alt>
+  </str>
+  <str>
+    <main>Hours</main>
+    <alt>órás</alt>
+  </str>
+  <str>
+    <main>Day</main>
+    <alt>napos</alt>
+  </str>
+  <str>
+    <main>Week</main>
+    <alt>heti</alt>
+  </str>
+  <str>
+    <main>Tick</main>
+    <alt>Tick</alt>
+  </str>
+  <str>
+    <main>Ticks</main>
+    <alt>Ticks</alt>
+  </str>
+  <!-- Main Menu -->
+  <str>
+    <main>File</main>
+    <alt>File</alt>
+  </str>
+  <str>
+    <main>New</main>
+    <alt>Új</alt>
+  </str>
+  <str>
+    <main>Open the default strategy "New.xml".</main>
+    <alt>Alapértelmezett stratégia megnyitása "New.xml".</alt>
+  </str>
+  <str>
+    <main>Open...</main>
+    <alt>Megnyit...</alt>
+  </str>
+  <str>
+    <main>Open a strategy.</main>
+    <alt>Stratégia megnyitása.</alt>
+  </str>
+  <str>
+    <main>Save</main>
+    <alt>Ment</alt>
+  </str>
+  <str>
+    <main>Save the strategy.</main>
+    <alt>Stratégia mentése.</alt>
+  </str>
+  <str>
+    <main>Save As</main>
+    <alt>Mentés mint</alt>
+  </str>
+  <str>
+    <main>Save a copy of the strategy.</main>
+    <alt>Stratégia mentése másolatként.</alt>
+  </str>
+  <str>
+    <main>Exit</main>
+    <alt>Bezár</alt>
+  </str>
+  <str>
+    <main>Close the program.</main>
+    <alt>Program bezárása.</alt>
+  </str>
+  <str>
+    <main>Edit</main>
+    <alt>Szerkeszt</alt>
+  </str>
+  <str>
+    <main>Undo</main>
+    <alt>Visszavon</alt>
+  </str>
+  <str>
+    <main>Undo the last change in the strategy.</main>
+    <alt>Stratégia utolsó változtatásának visszavonása.</alt>
+  </str>
+  <str>
+    <main>Previous Generated Strategy</main>
+    <alt>Previous Generated Strategy</alt>
+  </str>
+  <str>
+    <main>Next Generated Strategy</main>
+    <alt>Next Generated Strategy</alt>
+  </str>
+  <str>
+    <main>View</main>
+    <alt>Nézet</alt>
+  </str>
+  <str>
+    <main>Language</main>
+    <alt>Nyelv</alt>
+  </str>
+  <str>
+    <main>Language Tools</main>
+    <alt>Nyelvi beállítások</alt>
+  </str>
+  <str>
+    <main>Make New Translation</main>
+    <alt>Új fordítás</alt>
+  </str>
+  <str>
+    <main>Edit Current Translation</main>
+    <alt>Aktuális fordítás szerkesztése</alt>
+  </str>
+  <str>
+    <main>Show English Phrases</main>
+    <alt>Mutasd az angol kifejezéseket</alt>
+  </str>
+  <str>
+    <main>Show Translated Phrases</main>
+    <alt>Mutasd a lefordított kifejezéseket</alt>
+  </str>
+  <str>
+    <main>Show All Phrases</main>
+    <alt>Mutasd az összes kifejezést</alt>
+  </str>
+  <str>
+    <main>Indicator Chart</main>
+    <alt>Indikátor Chart</alt>
+  </str>
+  <str>
+    <main>Show the full Indicator Chart.</main>
+    <alt>Mutasd a teljes Indikátor Chartot.</alt>
+  </str>
+  <str>
+    <main>Account Chart</main>
+    <alt>Számla Chart</alt>
+  </str>
+  <str>
+    <main>Show the full Account Chart.</main>
+    <alt>Mutasd a teljes Számla Chartot.</alt>
+  </str>
+  <str>
+    <main>Journal by Positions</main>
+    <alt>Naplózás pozíció alapján</alt>
+  </str>
+  <str>
+    <main>Journal by Bars</main>
+    <alt>Naplózás gyertyák alapján</alt>
+  </str>
+  <str>
+    <main>Full Screen</main>
+    <alt>Teljes képernyő</alt>
+  </str>
+  <str>
+    <main>Gradient View</main>
+    <alt>Szürkeárnyalatos nézet</alt>
+  </str>
+  <str>
+    <main>Color Scheme</main>
+    <alt>Program nézet</alt>
+  </str>
+  <str>
+    <main>Account</main>
+    <alt>Számla</alt>
+  </str>
+  <str>
+    <main>Information in Currency</main>
+    <alt>Információ devizában</alt>
+  </str>
+  <str>
+    <main>Display the account and the statistics in currency.</main>
+    <alt>Számlaegyenleg és statisztika devizában.</alt>
+  </str>
+  <str>
+    <main>Information in Pips</main>
+    <alt>Információ pontokban</alt>
+  </str>
+  <str>
+    <main>Display the account and the statistics in pips.</main>
+    <alt>Számlaegyenleg és statisztika pontokban.</alt>
+  </str>
+  <str>
+    <main>Account Settings</main>
+    <alt>Számla beállítások</alt>
+  </str>
+  <str>
+    <main>Set the account parameters.</main>
+    <alt>Számlabeállítások.</alt>
+  </str>
+  <str>
+    <main>Market</main>
+    <alt>Piac</alt>
+  </str>
+  <str>
+    <main>Reload</main>
+    <alt>Újratölt</alt>
+  </str>
+  <str>
+    <main>Reload the market data.</main>
+    <alt>Piacadat újratöltése.</alt>
+  </str>
+  <str>
+    <main>Charges</main>
+    <alt>Költségek</alt>
+  </str>
+  <str>
+    <main>Spread, Swap numbers, Slippage.</main>
+    <alt>Spread, Swap számok, Slippage.</alt>
+  </str>
+  <str>
+    <main>Data Horizon</main>
+    <alt>Adathorizont</alt>
+  </str>
+  <str>
+    <main>Limit the number of data bars and the starting date.</main>
+    <alt>Kezdő dátum és a gyertyák számának megadása.</alt>
+  </str>
+  <str>
+    <main>Edit Instruments</main>
+    <alt>Devizapár szerkesztése</alt>
+  </str>
+  <str>
+    <main>Add, edit, or delete instruments.</main>
+    <alt>Hozzáadás, szerkesztés, vagy a devizapár törlése.</alt>
+  </str>
+  <str>
+    <main>Data Directory</main>
+    <alt>Adatkönyvtár</alt>
+  </str>
+  <str>
+    <main>Change the current offline data directory.</main>
+    <alt>Adatkönyvtár módosítása.</alt>
+  </str>
+  <str>
+    <main>Check the Data</main>
+    <alt>Adat ellenőrzése</alt>
+  </str>
+  <str>
+    <main>Check the data during loading.</main>
+    <alt>Adat ellenőrzés betöltéskor.</alt>
+  </str>
+  <str>
+    <main>Cut Off Bad Data</main>
+    <alt>Hibás adat kivágása</alt>
+  </str>
+  <str>
+    <main>Fill In Data Gaps</main>
+    <alt>Adatrések kitöltése</alt>
+  </str>
+  <str>
+    <main>Download Forex Rates</main>
+    <alt>Forex Árfolyam letöltés</alt>
+  </str>
+  <str>
+    <main>Download historical data from the program's website.</main>
+    <alt>Múltbéli adatok letöltése a program weboldaláról.</alt>
+  </str>
+  <str>
+    <main>Strategy</main>
+    <alt>Stratégia</alt>
+  </str>
+  <str>
+    <main>Overview</main>
+    <alt>Áttekintés</alt>
+  </str>
+  <str>
+    <main>See the strategy overview.</main>
+    <alt>Stratégia áttekintése.</alt>
+  </str>
+  <str>
+    <main>Recalculate</main>
+    <alt>Újraszámol</alt>
+  </str>
+  <str>
+    <main>Recalculate the strategy.</main>
+    <alt>Stratégia újraszámolása.</alt>
+  </str>
+  <str>
+    <main>Quick Scan</main>
+    <alt>Gyors keresés</alt>
+  </str>
+  <str>
+    <main>Perform quick intrabar scanning.</main>
+    <alt>Gyors gyertyán belüli keresés.</alt>
+  </str>
+  <str>
+    <main>Publish</main>
+    <alt>Megoszt</alt>
+  </str>
+  <str>
+    <main>Publish the strategy in the program's forum.</main>
+    <alt>Stratégia megosztása a program fórumán.</alt>
+  </str>
+  <str>
+    <main>Use Logical Groups</main>
+    <alt>Use Logical Groups</alt>
+  </str>
+  <str>
+    <main>Groups add AND and OR logic interaction of the indicators.</main>
+    <alt>Groups add AND and OR logic interaction of the indicators.</alt>
+  </str>
+  <str>
+    <main>Max number of Opening Logic Conditions</main>
+    <alt>Max number of Opening Logic Conditions</alt>
+  </str>
+  <str>
+    <main>Max number of Closing Logic Conditions</main>
+    <alt>Max number of Closing Logic Conditions</alt>
+  </str>
+  <str>
+    <main>Remember the Last Strategy</main>
+    <alt>Az utolsó stratégia megjegyzése</alt>
+  </str>
+  <str>
+    <main>Load the last used strategy at startup.</main>
+    <alt>Legutóbb használt stratégia betöltése induláskor.</alt>
+  </str>
+  <str>
+    <main>Auto Control of "Use previous bar value"</main>
+    <alt>Automata ellenőrzés "Használd az előző gyertya adatát"</alt>
+  </str>
+  <str>
+    <main>Provides automatic setting of the indicators' check box "Use previous bar value".</main>
+    <alt>Indikátor automata beállítása "Használd az előző gyertya adatát".</alt>
+  </str>
+  <str>
+    <main>Export</main>
+    <alt>Export</alt>
+  </str>
+  <str>
+    <main>Market Data</main>
+    <alt>Piac adat</alt>
+  </str>
+  <str>
+    <main>Export market data as a spreadsheet.</main>
+    <alt>Exportál piaci adatot munkalapként.</alt>
+  </str>
+  <str>
+    <main>Data File</main>
+    <alt>Data File</alt>
+  </str>
+  <str>
+    <main>Export market data as a CSV file.</main>
+    <alt>Export market data as a CSV file.</alt>
+  </str>
+  <str>
+    <main>Indicators</main>
+    <alt>Indikátorok</alt>
+  </str>
+  <str>
+    <main>Export market data and indicators as a spreadsheet.</main>
+    <alt>Exportál piaci adatot és indikátorokat munkalapként.</alt>
+  </str>
+  <str>
+    <main>Bar Summary</main>
+    <alt>Gyertya összegzés</alt>
+  </str>
+  <str>
+    <main>Export the transactions summary by bars as a spreadsheet.</main>
+    <alt>Exportál tranzakció összegzést munkalapként.</alt>
+  </str>
+  <str>
+    <main>Positions</main>
+    <alt>Pozíciók</alt>
+  </str>
+  <str>
+    <main>Export positions in pips as a spreadsheet.</main>
+    <alt>Exportál pozíciót pip-ben munkalapként.</alt>
+  </str>
+  <str>
+    <main>Positions in Currency</main>
+    <alt>Pozíciók devizanemben</alt>
+  </str>
+  <str>
+    <main>Export positions in currency as a spreadsheet.</main>
+    <alt>Exportál pozíciót devizában munkalapként.</alt>
+  </str>
+  <str>
+    <main>Testing</main>
+    <alt>Ellenőrzés</alt>
+  </str>
+  <str>
+    <main>Automatic Scan</main>
+    <alt>Automata keresés</alt>
+  </str>
+  <str>
+    <main>Scan the strategy using all available intrabar data.</main>
+    <alt>Stratégia keresés az összes gyertyán belüli adat segítségével.</alt>
+  </str>
+  <str>
+    <main>Use the scanner to load the data.</main>
+    <alt>Scanner használata az adatbetöltéshez.</alt>
+  </str>
+  <str>
+    <main>Trade until a Margin Call</main>
+    <alt>Nyit pozíciót amíg nincs feltöltési felszólítás</alt>
+  </str>
+  <str>
+    <main>Close an open position after a Margin Call.</main>
+    <alt>Zár egy nyitott pozíciót feltöltési felszólítás után.</alt>
+  </str>
+  <str>
+    <main>Do not open a new position when the Free Margin is insufficient.</main>
+    <alt>Nem nyit új pozíciót ha a Free Egyenleg kevés.</alt>
+  </str>
+  <str>
+    <main>Show Price Line on Account Chart</main>
+    <alt>Show Price Line on Account Chart</alt>
+  </str>
+  <str>
+    <main>Tools</main>
+    <alt>Eszközök</alt>
+  </str>
+  <str>
+    <main>Comparator</main>
+    <alt>Összehasonlít</alt>
+  </str>
+  <str>
+    <main>Compare the interpolating methods.</main>
+    <alt>Összehasonlítja az interpoláló módokat.</alt>
+  </str>
+  <str>
+    <main>Scanner</main>
+    <alt>Kereső</alt>
+  </str>
+  <str>
+    <main>Perform a deep intrabar scanning.</main>
+    <alt>Gyertyán belüli keresés.</alt>
+  </str>
+  <str>
+    <main>Optimizer</main>
+    <alt>Optimalizáció</alt>
+  </str>
+  <str>
+    <main>Optimize the strategy parameters.</main>
+    <alt>Stratégia beállításának optimalizálása.</alt>
+  </str>
+  <str>
+    <main>Generator</main>
+    <alt>Generátor</alt>
+  </str>
+  <str>
+    <main>Generate or improve a strategy.</main>
+    <alt>Generál vagy tökéletesít egy stratégiát.</alt>
+  </str>
+  <str>
+    <main>Bar Explorer</main>
+    <alt>Gyertya Explorer</alt>
+  </str>
+  <str>
+    <main>Show the price route inside a bar.</main>
+    <alt>Mutasd az árváltozást a gyertyán belül.</alt>
+  </str>
+  <str>
+    <main>Additional</main>
+    <alt>Kiegészítő</alt>
+  </str>
+  <str>
+    <main>Play Sounds</main>
+    <alt>Play Sounds</alt>
+  </str>
+  <str>
+    <main>Calculator</main>
+    <alt>Számológép</alt>
+  </str>
+  <str>
+    <main>A simple calculator.</main>
+    <alt>Egyszerű számológép.</alt>
+  </str>
+  <str>
+    <main>Reset Settings</main>
+    <alt>Alapbeállítás</alt>
+  </str>
+  <str>
+    <main>Reset the program settings to their default values. You need to restart!</main>
+    <alt>Programbeállításokat alapértékre. Újra kell indítani!</alt>
+  </str>
+  <str>
+    <main>Help</main>
+    <alt>Súgó</alt>
+  </str>
+  <str>
+    <main>Contribute</main>
+    <alt>Közreműködik</alt>
+  </str>
+  <str>
+    <main>Donate, Support, Advertise!</main>
+    <alt>Adomány, Támogatás, Reklám!</alt>
+  </str>
+  <str>
+    <main>Tip of the Day</main>
+    <alt>A nap ötlete</alt>
+  </str>
+  <str>
+    <main>Show a tip.</main>
+    <alt>Mutasd az ötletet.</alt>
+  </str>
+  <str>
+    <main>Safety First</main>
+    <alt>Első a biztonság</alt>
+  </str>
+  <str>
+    <main>Show the "Safety First" web page.</main>
+    <alt>Ugrás az "Első a biztonság" weboldalra.</alt>
+  </str>
+  <str>
+    <main>Quick Start Guide</main>
+    <alt>Gyors Program bemutatás</alt>
+  </str>
+  <str>
+    <main>Show the quick start guide.</main>
+    <alt>Ugrás a gyors Program bemutatásra.</alt>
+  </str>
+  <str>
+    <main>Online Help</main>
+    <alt>Online súgó</alt>
+  </str>
+  <str>
+    <main>Show the online help.</main>
+    <alt>Ugrás az online súgóra.</alt>
+  </str>
+  <str>
+    <main>Support Forum</main>
+    <alt>Support Fórum</alt>
+  </str>
+  <str>
+    <main>Show the program's forum.</main>
+    <alt>Ugrás a program fórumra.</alt>
+  </str>
+  <str>
+    <main>Check for Updates at Startup</main>
+    <alt>Check for Updates at Startup</alt>
+  </str>
+  <str>
+    <main>Check for New Beta Versions</main>
+    <alt>Check for New Beta Versions</alt>
+  </str>
+  <str>
+    <main>About</main>
+    <alt>Programinfó</alt>
+  </str>
+  <str>
+    <main>Show the program information.</main>
+    <alt>Mutasd a programinfót.</alt>
+  </str>
+  <str>
+    <main>Forex</main>
+    <alt>Forex</alt>
+  </str>
+  <str>
+    <main>Economic Calendar</main>
+    <alt>Gazdasági Naptár</alt>
+  </str>
+  <str>
+    <main>Market Commentary</main>
+    <alt>Piaci Kommentár</alt>
+  </str>
+  <str>
+    <main>Daily Forex Outlook</main>
+    <alt>Napi Forex áttekintés</alt>
+  </str>
+  <str>
+    <main>Weekly Forex Outlook</main>
+    <alt>Heti Forex áttekintés</alt>
+  </str>
+  <str>
+    <main>Forex Brokers</main>
+    <alt>Forex Brokers</alt>
+  </str>
+  <str>
+    <main>New Version</main>
+    <alt>Új verzió</alt>
+  </str>
+  <str>
+    <main>New Beta</main>
+    <alt>New Beta</alt>
+  </str>
+  <str>
+    <main>Forum</main>
+    <alt>Fórum</alt>
+  </str>
+  <str>
+    <main>Print</main>
+    <alt>Nyomtat</alt>
+  </str>
+  <str>
+    <main>Print Preview</main>
+    <alt>Nyomtatási kép</alt>
+  </str>
+  <str>
+    <main>Page Setup</main>
+    <alt>Oldal beállítás</alt>
+  </str>
+  <str>
+    <main>Properties</main>
+    <alt>Beállítás</alt>
+  </str>
+  <!--Status Bar -->
+  <str>
+    <main>Symbol Period (Spread, Swap numbers, Slippage)</main>
+    <alt>Devizapár időtartam (Spread, Swap numbers, Slippage)</alt>
+  </str>
+  <str>
+    <main>Price close</main>
+    <alt>Záró ár</alt>
+  </str>
+  <str>
+    <main>The current date</main>
+    <alt>Aktuális dátum</alt>
+  </str>
+  <str>
+    <main>The current time</main>
+    <alt>Aktuális idő</alt>
+  </str>
+  <str>
+    <main>Long balance</main>
+    <alt>Long balance</alt>
+  </str>
+  <str>
+    <main>Short balance</main>
+    <alt>Short balance</alt>
+  </str>
+  <!-- About Screen -->
+  <str>
+    <main>Version</main>
+    <alt>Verzió</alt>
+  </str>
+  <str>
+    <main>Distributor</main>
+    <alt>Terjesztő</alt>
+  </str>
+  <str>
+    <main>This is a freeware program!</main>
+    <alt>Ez egy ingyenes program!</alt>
+  </str>
+  <str>
+    <main>Website</main>
+    <alt>Web oldal</alt>
+  </str>
+  <str>
+    <main>Support forum</main>
+    <alt>Támogatás fórum</alt>
+  </str>
+  <str>
+    <main>Contacts</main>
+    <alt>Kapcsolat</alt>
+  </str>
+  <!-- Account Settings -->
+  <str>
+    <main>Account currency</main>
+    <alt>Számla devizanem</alt>
+  </str>
+  <str>
+    <main>Initial account</main>
+    <alt>Kezdő tőke</alt>
+  </str>
+  <str>
+    <main>Lot size</main>
+    <alt>Mennyiség</alt>
+  </str>
+  <str>
+    <main>Leverage</main>
+    <alt>Tőkeáttét</alt>
+  </str>
+  <str>
+    <main>Account exchange rate</main>
+    <alt>Számla váltási árfolyam</alt>
+  </str>
+  <str>
+    <main>Forex Strategy Builder uses the account exchange rate to calculate the trading statistics in your account currency.</main>
+    <alt>Forex Strategy Builder a számla váltási árfolyamot használja a kereskedési statisztika kiszámolásához a számla devizanemében.</alt>
+  </str>
+  <str>
+    <main>When your account currency does not take part in the trading couple the account exchange rate is a fixed figure.</main>
+    <alt>Ha a számla devizaneme nem része a kereskedett párnak, akkor a számla váltási árfolyam egy fix számjegy.</alt>
+  </str>
+  <str>
+    <main>Bar closing price</main>
+    <alt>Gyertya záró ár</alt>
+  </str>
+  <!-- Account Statistics -->
+  <str>
+    <main>Account Statistics</main>
+    <alt>Számla statisztika</alt>
+  </str>
+  <str>
+    <main>Intrabar scanning</main>
+    <alt>Gyertyán belüli keresés</alt>
+  </str>
+  <str>
+    <main>Interpolation method</main>
+    <alt>Interpolációs módszer</alt>
+  </str>
+  <str>
+    <main>Ambiguous bars</main>
+    <alt>Kétértelmű gyertyák</alt>
+  </str>
+  <str>
+    <main>Profit per day</main>
+    <alt>Profit per day</alt>
+  </str>
+  <str>
+    <main>Tested bars</main>
+    <alt>Tesztelt gyertyák</alt>
+  </str>
+  <str>
+    <main>Account balance</main>
+    <alt>Számla egyenleg</alt>
+  </str>
+  <str>
+    <main>Minimum account</main>
+    <alt>Minimum egyenleg</alt>
+  </str>
+  <str>
+    <main>Maximum account</main>
+    <alt>Maximum egyenleg</alt>
+  </str>
+  <str>
+    <main>Maximum drawdown</main>
+    <alt>Maximális visszaesés</alt>
+  </str>
+  <str>
+    <main>Max equity drawdown</main>
+    <alt>Max equity drawdown</alt>
+  </str>
+  <str>
+    <main>Gross profit</main>
+    <alt>Bruttó nyereség</alt>
+  </str>
+  <str>
+    <main>Gross loss</main>
+    <alt>Bruttó veszteség</alt>
+  </str>
+  <str>
+    <main>Sent orders</main>
+    <alt>Elküldött megbízások</alt>
+  </str>
+  <str>
+    <main>Executed orders</main>
+    <alt>Végrehajtott megbízások</alt>
+  </str>
+  <str>
+    <main>Traded lots</main>
+    <alt>Kereskedett egységek</alt>
+  </str>
+  <str>
+    <main>Winning trades</main>
+    <alt>Nyereséges kötések</alt>
+  </str>
+  <str>
+    <main>Losing trades</main>
+    <alt>Veszteséges kötések</alt>
+  </str>
+  <str>
+    <main>Win/loss ratio</main>
+    <alt>Nyereség/Veszteség arány</alt>
+  </str>
+  <str>
+    <main>Time in position</main>
+    <alt>Pozícióban töltött idő</alt>
+  </str>
+  <str>
+    <main>Charged spread</main>
+    <alt>Elszámolt spread</alt>
+  </str>
+  <str>
+    <main>Charged rollover</main>
+    <alt>Elszámolt rollover</alt>
+  </str>
+  <str>
+    <main>Charged commission</main>
+    <alt>Elszámolt jutalék</alt>
+  </str>
+  <str>
+    <main>Charged slippage</main>
+    <alt>Elszámolt slippage</alt>
+  </str>
+  <str>
+    <main>Total charges</main>
+    <alt>Teljes költségek</alt>
+  </str>
+  <str>
+    <main>Balance without charges</main>
+    <alt>Egyenleg költségek nélkül</alt>
+  </str>
+  <str>
+    <main>Closing price</main>
+    <alt>Záró ár</alt>
+  </str>
+  <!-- Market Statistics -->
+  <str>
+    <main>Market Statistics</main>
+    <alt>Piaci statisztika</alt>
+  </str>
+  <str>
+    <main>Symbol</main>
+    <alt>Devizapár</alt>
+  </str>
+  <str>
+    <main>Period</main>
+    <alt>Időtartam</alt>
+  </str>
+  <str>
+    <main>Number of bars</main>
+    <alt>Gyertyák száma</alt>
+  </str>
+  <str>
+    <main>Date of updating</main>
+    <alt>Frissítés dátuma</alt>
+  </str>
+  <str>
+    <main>Time of updating</main>
+    <alt>Frissítés ideje</alt>
+  </str>
+  <str>
+    <main>Date of beginning</main>
+    <alt>Kezdés dátuma</alt>
+  </str>
+  <str>
+    <main>Time of beginning</main>
+    <alt>Kezdés ideje</alt>
+  </str>
+  <str>
+    <main>Minimum price</main>
+    <alt>Minimum ár</alt>
+  </str>
+  <str>
+    <main>Maximum price</main>
+    <alt>Maximum ár</alt>
+  </str>
+  <str>
+    <main>Average Gap</main>
+    <alt>Átlagos rés</alt>
+  </str>
+  <str>
+    <main>Maximum Gap</main>
+    <alt>Maximum rés</alt>
+  </str>
+  <str>
+    <main>Average High-Low</main>
+    <alt>Átlagos High-Low</alt>
+  </str>
+  <str>
+    <main>Maximum High-Low</main>
+    <alt>Maximum High-Low</alt>
+  </str>
+  <str>
+    <main>Average Close-Open</main>
+    <alt>Átlagos Close-Open</alt>
+  </str>
+  <str>
+    <main>Maximum Close-Open</main>
+    <alt>Maximum Close-Open</alt>
+  </str>
+  <str>
+    <main>Maximum days off</main>
+    <alt>Maximum szabadnapok</alt>
+  </str>
+  <str>
+    <main>Maximum data bars</main>
+    <alt>Maximum adatgyertyák</alt>
+  </str>
+  <str>
+    <main>No data older than</main>
+    <alt>Nincs régebbi adat mint</alt>
+  </str>
+  <str>
+    <main>No data newer than</main>
+    <alt>Nincs újabba adat mint</alt>
+  </str>
+  <str>
+    <main>Accomplished</main>
+    <alt>Megvalósított</alt>
+  </str>
+  <str>
+    <main>Not accomplished</main>
+    <alt>Nem megvalósított</alt>
+  </str>
+  <str>
+    <main>Switched off</main>
+    <alt>Kikapcsolva</alt>
+  </str>
+  <str>
+    <main>pips</main>
+    <alt>pip</alt>
+  </str>
+  <str>
+    <main>pip</main>
+    <alt>pip</alt>
+  </str>
+  <str>
+    <main>No limits</main>
+    <alt>Nincs határ</alt>
+  </str>
+  <!-- Additional statsitics -->
+  <str>
+    <main>Additional Statistics</main>
+    <alt>Kiegészítő statisztikák</alt>
+  </str>
+  <str>
+    <main>Show long/short balance lines in the chart and more statistics in the overview.</main>
+    <alt>Show long/short balance lines in the chart and more statistics in the overview.</alt>
+  </str>
+  <str>
+    <main>Profit factor</main>
+    <alt>Nyereség tényező</alt>
+  </str>
+  <str>
+    <main>Annualized profit</main>
+    <alt>Évesített nyereség</alt>
+  </str>
+  <str>
+    <main>Minimum account date</main>
+    <alt>Minimális egyenleg dátuma</alt>
+  </str>
+  <str>
+    <main>Maximum account date</main>
+    <alt>Maximális egyenleg dátuma</alt>
+  </str>
+  <str>
+    <main>Absolute drawdown</main>
+    <alt>Teljes visszaesés</alt>
+  </str>
+  <str>
+    <main>Maximum drawdown date</main>
+    <alt>Maximális visszaesés dátuma</alt>
+  </str>
+  <str>
+    <main>Historical bars</main>
+    <alt>Gyertyák száma</alt>
+  </str>
+  <str>
+    <main>Bars with trades</main>
+    <alt>Kereskedésben résztvett gyertyák száma</alt>
+  </str>
+  <str>
+    <main>Number of trades</main>
+    <alt>Kereskedések száma</alt>
+  </str>
+  <str>
+    <main>Maximum profit</main>
+    <alt>Maximális nyereség</alt>
+  </str>
+  <str>
+    <main>Average profit</main>
+    <alt>Átlagos nyereség</alt>
+  </str>
+  <str>
+    <main>Maximum loss</main>
+    <alt>Maximális veszteség</alt>
+  </str>
+  <str>
+    <main>Average loss</main>
+    <alt>Átlagos veszteség</alt>
+  </str>
+  <str>
+    <main>Expected payoff</main>
+    <alt>Expected payoff</alt>
+  </str>
+  <str>
+    <main>Average holding period returns</main>
+    <alt>Average holding period returns</alt>
+  </str>
+  <str>
+    <main>Geometric holding period returns</main>
+    <alt>Geometric holding period returns</alt>
+  </str>
+  <str>
+    <main>Sharpe ratio</main>
+    <alt>Sharpe ratio</alt>
+  </str>
+  <!-- Indicator Parameters -->
+  <str>
+    <main>Logic and Parameters of the Indicators</main>
+    <alt>Indikátorok logikája és változói</alt>
+  </str>
+  <str>
+    <main>All</main>
+    <alt>Összes</alt>
+  </str>
+  <str>
+    <main>Oscillator of Indicators</main>
+    <alt>Oszcillációs indikátorok</alt>
+  </str>
+  <str>
+    <main>Indicator's MA Oscillator</main>
+    <alt>Indikátorok MA Oszcillátora</alt>
+  </str>
+  <str>
+    <main>Date/Time Functions</main>
+    <alt>Dátum/Idő  Funkciók</alt>
+  </str>
+  <str>
+    <main>Group</main>
+    <alt>Group</alt>
+  </str>
+  <str>
+    <main>The logical group of the slot.</main>
+    <alt>The logical group of the slot.</alt>
+  </str>
+  <!-- Strategy Overview -->
+  <str>
+    <main>Strategy Overview</main>
+    <alt>Stratégia áttekintés</alt>
+  </str>
+  <str>
+    <main>Strategy name</main>
+    <alt>Stratégia neve</alt>
+  </str>
+  <str>
+    <main>Table of Contents</main>
+    <alt>Tartalomjegyzék</alt>
+  </str>
+  <str>
+    <main>Logic</main>
+    <alt>Logika</alt>
+  </str>
+  <str>
+    <main>Indicator Slots</main>
+    <alt>Indikátor Slots</alt>
+  </str>
+  <str>
+    <main>Statistic Information</main>
+    <alt>Statisztikai információ</alt>
+  </str>
+  <str>
+    <main>Top</main>
+    <alt>Tetejére</alt>
+  </str>
+  <str>
+    <main>Go to the beginning.</main>
+    <alt>Menj az elejére.</alt>
+  </str>
+  <str>
+    <main>Open a new long position</main>
+    <alt>Open a new long position</alt>
+  </str>
+  <str>
+    <main>Open a new long position or add to an existing position</main>
+    <alt>Open a new long position or add to an existing position</alt>
+  </str>
+  <str>
+    <main>Open a new long position or add to a winning position</main>
+    <alt>Open a new long position or add to a winning position</alt>
+  </str>
+  <str>
+    <main>or close a short position</main>
+    <alt>or close a short position</alt>
+  </str>
+  <str>
+    <main>or reduce a short position</main>
+    <alt>or reduce a short position</alt>
+  </str>
+  <str>
+    <main>or reverse a short position</main>
+    <alt>or reverse a short position</alt>
+  </str>
+  <str>
+    <main>Open a new short position</main>
+    <alt>Open a new short position</alt>
+  </str>
+  <str>
+    <main>Open a new short position or add to an existing position</main>
+    <alt>Open a new short position or add to an existing position</alt>
+  </str>
+  <str>
+    <main>Open a new short position or add to a winning position</main>
+    <alt>Open a new short position or add to a winning position</alt>
+  </str>
+  <str>
+    <main>or close a long position</main>
+    <alt>or close a long position</alt>
+  </str>
+  <str>
+    <main>or reduce a long position</main>
+    <alt>or reduce a long position</alt>
+  </str>
+  <str>
+    <main>or reverse a long position</main>
+    <alt>or reverse a long position</alt>
+  </str>
+  <str>
+    <main>when</main>
+    <alt>when</alt>
+  </str>
+  <str>
+    <main>when the following logic condition is satisfied</main>
+    <alt>when the following logic condition is satisfied</alt>
+  </str>
+  <str>
+    <main>when at least one of the following logic conditions is satisfied</main>
+    <alt>when at least one of the following logic conditions is satisfied</alt>
+  </str>
+  <str>
+    <main>when all the following logic conditions are satisfied</main>
+    <alt>when all the following logic conditions are satisfied</alt>
+  </str>
+  <str>
+    <main>logical group [#] is satisfied</main>
+    <alt>logical group [#] is satisfied</alt>
+  </str>
+  <str>
+    <main>Close an existing long position</main>
+    <alt>Close an existing long position</alt>
+  </str>
+  <str>
+    <main>Close an existing short position</main>
+    <alt>Close an existing short position</alt>
+  </str>
+  <str>
+    <main>The slots show the logic for the long positions only.</main>
+    <alt>Csak a long poziciók logikáját mutatja.</alt>
+  </str>
+  <str>
+    <main>Forex Strategy Builder automatically computes the proper logic for the short positions.</main>
+    <alt>Forex Strategy Builder automatikusan kiszámolja a short pozíciók helyes logikáját.</alt>
+  </str>
+  <str>
+    <main>Always trade a constant number of lots.</main>
+    <alt>Mindig változatlan számú egységeket nyit.</alt>
+  </str>
+  <str>
+    <main>Opening of a new position</main>
+    <alt>Új pozíció nyitása</alt>
+  </str>
+  <str>
+    <main>Adding to a winning position</main>
+    <alt>Hozzáadás egy nyerő pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Adding to a position</main>
+    <alt>Hozzáadás egy pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Reversing a position</main>
+    <alt>Visszatér egy pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Reducing a position</main>
+    <alt>Pozició csökkentés</alt>
+  </str>
+  <str>
+    <main>Do not open more than</main>
+    <alt>Ne nyiss többet mint</alt>
+  </str>
+  <str>
+    <main>from the current position.</main>
+    <alt>aktuális pozíciótól.</alt>
+  </str>
+  <str>
+    <main>in the opposite direction.</main>
+    <alt>ellenkező irányban.</alt>
+  </str>
+  <str>
+    <main>Trade percent of your account.</main>
+    <alt>Kereskedés limitálása egész számú egységekben.</alt>
+  </str>
+  <str>
+    <main>% of the account equity</main>
+    <alt>%-a a számlaegyenlegnek</alt>
+  </str>
+  <str>
+    <main>for each open lot</main>
+    <alt>minden nyitott egységnek</alt>
+  </str>
+  <str>
+    <main>Entry signal in the direction of the present position:</main>
+    <alt>Belépési jelzés a jelenlegi irányban:</alt>
+  </str>
+  <str>
+    <main>No averaging is allowed. Cancel any additional orders which are in the same direction.</main>
+    <alt>Átlagolás nem engedélyezett. Minden hozzáadott megbízás törlése ugyanabban az irányban.</alt>
+  </str>
+  <str>
+    <main>Add to a wining position but not to a losing one. If the position is at a loss, cancel the additional entry order. Do not exceed the maximum allowed number of lots to open.</main>
+    <alt>Hozzáadás a nyerő pozícióhoz, de a veszteshez nem. Ha a pozíció veszteséges, a hozzáadott megbízás törlődik. Nem lépi túl a maximálisan engedélyezett egységeket.</alt>
+  </str>
+  <str>
+    <main>Add to the position no matter if it is at a profit or loss. Do not exceed the maximum allowed number of lots to open.</main>
+    <alt>Hozzáad a pozícióhoz, nem számít, hogy nyereséges vagy veszteséges. Nem lépi túl a maximálisan engedélyezett megnyitott egységek számát.</alt>
+  </str>
+  <str>
+    <main>Entry signal in the opposite direction:</main>
+    <alt>Belépési jelzés az ellenkező irányban:</alt>
+  </str>
+  <str>
+    <main>No modification of the present position is allowed. Cancel any additional orders which are in the opposite direction.</main>
+    <alt>Jelenlegi pozíció módosítása nem engedélyezett. Minden ellenkező irányú megbízás törlése.</alt>
+  </str>
+  <str>
+    <main>Reduce the present position. If its amount is lower than or equal to the specified reducing lots, close it.</main>
+    <alt>Csökkenti a jelenlegi pozíciót. Ha ennek a száma kisebb vagy egyenlő  a meghatározott csökkentési egységekkel, zárja ezt.</alt>
+  </str>
+  <str>
+    <main>Close the present position regardless of its amount or result. Do not open a new position until the next entry signal has been raised.</main>
+    <alt>Zárja a jelenlegi pozíciót tekintet nélkül az összegére és eredményére. Nem nyit új pozíció amíg a következő belépési jelzés emelkedik.</alt>
+  </str>
+  <str>
+    <main>Close the existing position and open a new one in the opposite direction using the entry rules.</main>
+    <alt>Zárja a jelenlegi pozíciót és új ellenkező irányút nyit a nyitási szabályok figyelembevételével.</alt>
+  </str>
+  <str>
+    <main>Opening (Entry Signal)</main>
+    <alt>Nyitás (Nyitó jelzés)</alt>
+  </str>
+  <str>
+    <main>Closing (Exit Signal)</main>
+    <alt>Zárás (Záró jelzés)</alt>
+  </str>
+  <str>
+    <main>The strategy does not provide a permanent loss limitation.</main>
+    <alt>A stratégia nem szolgáltat állandó veszteség korlátozás.</alt>
+  </str>
+  <str>
+    <main>The Permanent Stop Loss limits the loss of a position to</main>
+    <alt>Állandó Stop Loss korlátozza a pozíció veszteségét</alt>
+  </str>
+  <str>
+    <main>pips per open lot (plus the charged spread and rollover).</main>
+    <alt>pips/nyitott egységek (+ az elszámolt spread és rollover).</alt>
+  </str>
+  <str>
+    <main>The strategy does not use a Permanent Take Profit.</main>
+    <alt>The strategy does not use a Permanent Take Profit.</alt>
+  </str>
+  <str>
+    <main>The Permanent Take Profit closes a position at</main>
+    <alt>The Permanent Take Profit closes a position at</alt>
+  </str>
+  <str>
+    <main>pips profit.</main>
+    <alt>pips profit.</alt>
+  </str>
+  <str>
+    <main>Use the indicator value from the previous bar for all asterisk-marked indicators!</main>
+    <alt>Használd az indikátor értékét az előző gyertyától az összes asterisk-jelölt indikátorhoz!</alt>
+  </str>
+  <str>
+    <main>The averaging rules apply to the entry signals only. Exit signals close a position. They cannot open, add or reduce one.</main>
+    <alt>Általános szabályok csak a nyitó jelzésekhez. Záró jelzés zárja a pozíciót. Nem nyit, nem ad hozzá vagy nem csökkenti.</alt>
+  </str>
+  <str>
+    <main>Required margin</main>
+    <alt>Kért fedezet</alt>
+  </str>
+  <str>
+    <main>Adds to the position</main>
+    <alt>Hozzáadás egy pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Adds to a winning position</main>
+    <alt>Hozzáadás egy nyereséges pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Does nothing</main>
+    <alt>Nem csinál semmit</alt>
+  </str>
+  <str>
+    <main>Closes the position</main>
+    <alt>Pozíció zárás</alt>
+  </str>
+  <str>
+    <main>Reduces the position</main>
+    <alt>Csökkent a pozíció</alt>
+  </str>
+  <str>
+    <main>Reverses the position</main>
+    <alt>Megfordult a pozíció</alt>
+  </str>
+  <str>
+    <main>Environment</main>
+    <alt>Környezet</alt>
+  </str>
+  <str>
+    <main>This value may vary!</main>
+    <alt>Az érték változhat!</alt>
+  </str>
+  <str>
+    <main>Time frame</main>
+    <alt>Időkeret</alt>
+  </str>
+  <str>
+    <main>Swap Long</main>
+    <alt>Swap long</alt>
+  </str>
+  <str>
+    <main>Swap Short</main>
+    <alt>Swap short</alt>
+  </str>
+  <!-- Strategy Panel -->
+  <str>
+    <main>Show the strategy description.</main>
+    <alt>Mutasd a stratégia jellemzését.</alt>
+  </str>
+  <str>
+    <main>Show detailed info in the slots.</main>
+    <alt>Mutasd a kiterjesztett infót az ablakban.</alt>
+  </str>
+  <str>
+    <main>Show regular info in the slots.</main>
+    <alt>Mutasd a szokásos infót az ablakban.</alt>
+  </str>
+  <str>
+    <main>Show minimum info in the slots.</main>
+    <alt>Mutasd a minimum infót az ablakban.</alt>
+  </str>
+  <str>
+    <main>Strategy Properties</main>
+    <alt>Stratégia beállítások</alt>
+  </str>
+  <str>
+    <main>Opening Point of the Position</main>
+    <alt>Pozíció nyitópontja</alt>
+  </str>
+  <str>
+    <main>Opening Logic Condition</main>
+    <alt>Nyitó logikai feltétel</alt>
+  </str>
+  <str>
+    <main>Closing Point of the Position</main>
+    <alt>Pozíció záró pontja</alt>
+  </str>
+  <str>
+    <main>Closing Logic Condition</main>
+    <alt>Záró logikai feltétel</alt>
+  </str>
+  <str>
+    <main>Add an Opening Logic Condition</main>
+    <alt>Nyitó logikai feltétel hozzáadása</alt>
+  </str>
+  <str>
+    <main>Add a new entry logic slot to the strategy.</main>
+    <alt>Új nyitó logikai feltétel hozzáadása.</alt>
+  </str>
+  <str>
+    <main>Add a Closing Logic Condition</main>
+    <alt>Záró logikai feltétel hozzáadása</alt>
+  </str>
+  <str>
+    <main>Add a new exit logic slot to the strategy.</main>
+    <alt>Új záró logikai feltétel hozzáadása.</alt>
+  </str>
+  <str>
+    <main>You can use Closing Logic Conditions only if the Closing Point of the Position slot contains one of the following indicators:</main>
+    <alt>Akkor tudsz használni több záró logikai feltételt, ha a Pozíció záró pontja ablak tartalmazza:</alt>
+  </str>
+  <str>
+    <main>Discard the logic condition.</main>
+    <alt>Logika törlése.</alt>
+  </str>
+  <str>
+    <main>Long position logic.</main>
+    <alt>Long pozíció logika.</alt>
+  </str>
+  <str>
+    <main>Averaging, Trading size, Protection.</main>
+    <alt>Átlag, Kereskedési méret, Védelem.</alt>
+  </str>
+  <str>
+    <main>Same direction signal</main>
+    <alt>Ugyanaz az irány jelzésre</alt>
+  </str>
+  <str>
+    <main>Add</main>
+    <alt>Hozzáad</alt>
+  </str>
+  <str>
+    <main>Winner</main>
+    <alt>Nyeretes</alt>
+  </str>
+  <str>
+    <main>Nothing</main>
+    <alt>Nincs művelet</alt>
+  </str>
+  <str>
+    <main>Opposite direction signal</main>
+    <alt>Ellenkező irány jelzésre</alt>
+  </str>
+  <str>
+    <main>Reduce</main>
+    <alt>Csökkent</alt>
+  </str>
+  <str>
+    <main>Permanent Stop Loss</main>
+    <alt>Állandó Stop Loss</alt>
+  </str>
+  <str>
+    <main>Permanent Take Profit</main>
+    <alt>Állandó Take Profit</alt>
+  </str>
+  <str>
+    <main>Break Even</main>
+    <alt>Break Even</alt>
+  </str>
+  <!-- Account Panel -->
+  <str>
+    <main>Bar interpolation method.</main>
+    <alt>Gyertya interpolációs módszer.</alt>
+  </str>
+  <str>
+    <main>Pessimistic</main>
+    <alt>Pesszimista</alt>
+  </str>
+  <str>
+    <main>Shortest</main>
+    <alt>Legrövidebb</alt>
+  </str>
+  <str>
+    <main>Nearest</main>
+    <alt>Legközelebbi</alt>
+  </str>
+  <str>
+    <main>Optimistic</main>
+    <alt>Optimista</alt>
+  </str>
+  <str>
+    <main>Random</main>
+    <alt>Véletlen</alt>
+  </str>
+  <str>
+    <main>Pessimistic scenario</main>
+    <alt>Pesszimista forgatókönyv</alt>
+  </str>
+  <str>
+    <main>Shortest bar route</main>
+    <alt>Legrövidebb gyertya út</alt>
+  </str>
+  <str>
+    <main>Nearest order first</main>
+    <alt>Legközelebbi megbízást először</alt>
+  </str>
+  <str>
+    <main>Optimistic scenario</main>
+    <alt>Optimista forgatókönyv</alt>
+  </str>
+  <str>
+    <main>Random execution</main>
+    <alt>Véletlenszerű végrehalytás</alt>
+  </str>
+  <str>
+    <main>Quick scan</main>
+    <alt>Gyors keresés</alt>
+  </str>
+  <str>
+    <main>Click to view the full chart.</main>
+    <alt>Click a teljes chart nézethez.</alt>
+  </str>
+  <str>
+    <main>Right click to detach chart.</main>
+    <alt>Right click to detach chart.</alt>
+  </str>
+  <!-- Journals -->
+  <str>
+    <main>Click to select a bar.</main>
+    <alt>Click a választott gyertyára.</alt>
+  </str>
+  <str>
+    <main>Click to view Bar Explorer.</main>
+    <alt>Click megnézni a  gyertya Explorer-t.</alt>
+  </str>
+  <str>
+    <main>Double click to view Bar Explorer.</main>
+    <alt>Dupla click megnézni gyertya Explorer-t.</alt>
+  </str>
+  <str>
+    <main>Hide the journal tables.</main>
+    <alt>Naplózott ablak elrejtése.</alt>
+  </str>
+  <str>
+    <main>Toggle the journal type.</main>
+    <alt>Mutasd a naplózott ablakot.</alt>
+  </str>
+  <str>
+    <main>Position</main>
+    <alt>Pozíció</alt>
+  </str>
+  <str>
+    <main>Summary</main>
+    <alt>Összegzés</alt>
+  </str>
+  <str>
+    <main>Bar</main>
+    <alt>Gyertya</alt>
+  </str>
+  <str>
+    <main>bars</main>
+    <alt>bars</alt>
+  </str>
+  <str>
+    <main>Bar Opening Time</main>
+    <alt>Gyertya nyitó ideje</alt>
+  </str>
+  <str>
+    <main>Date</main>
+    <alt>Dátum</alt>
+  </str>
+  <str>
+    <main>Volume</main>
+    <alt>Mennyiség</alt>
+  </str>
+  <str>
+    <main>Direction</main>
+    <alt>Irány</alt>
+  </str>
+  <str>
+    <main>Lots</main>
+    <alt>Egység</alt>
+  </str>
+  <str>
+    <main>Amount</main>
+    <alt>Mennyiség</alt>
+  </str>
+  <str>
+    <main>Transaction</main>
+    <alt>Tranzakció</alt>
+  </str>
+  <str>
+    <main>Ord Price</main>
+    <alt>Megbízási ár</alt>
+  </str>
+  <str>
+    <main>Avrg Price</main>
+    <alt>Átlag ár</alt>
+  </str>
+  <str>
+    <main>Spread</main>
+    <alt>Spread</alt>
+  </str>
+  <str>
+    <main>Rollover</main>
+    <alt>Kamat</alt>
+  </str>
+  <str>
+    <main>Slippage</main>
+    <alt>Slippage</alt>
+  </str>
+  <str>
+    <main>Profit Loss</main>
+    <alt>Profit / Veszteség</alt>
+  </str>
+  <str>
+    <main>Floating P/L</main>
+    <alt>Lebegő P/L</alt>
+  </str>
+  <str>
+    <main>Balance</main>
+    <alt>Egyenleg</alt>
+  </str>
+  <str>
+    <main>Equity</main>
+    <alt>Tőke</alt>
+  </str>
+  <str>
+    <main>Margin</main>
+    <alt>Letét</alt>
+  </str>
+  <str>
+    <main>Required</main>
+    <alt>Igényelt</alt>
+  </str>
+  <str>
+    <main>Free</main>
+    <alt>Free</alt>
+  </str>
+  <str>
+    <main>Backtest</main>
+    <alt>Teszt</alt>
+  </str>
+  <str>
+    <main>Interpolation</main>
+    <alt>Interpoláció</alt>
+  </str>
+  <str>
+    <main>Ambiguous</main>
+    <alt>Félreérthető</alt>
+  </str>
+  <str>
+    <main>Correct</main>
+    <alt>Rendben</alt>
+  </str>
+  <str>
+    <main>Unknown</main>
+    <alt>Ismeretlen</alt>
+  </str>
+  <str>
+    <main>Long</main>
+    <alt>Long</alt>
+  </str>
+  <str>
+    <main>Short</main>
+    <alt>Short</alt>
+  </str>
+  <str>
+    <main>Neutral</main>
+    <alt>Semleges</alt>
+  </str>
+  <str>
+    <main>Transfer</main>
+    <alt>Átvitel</alt>
+  </str>
+  <str>
+    <main>Reverse</main>
+    <alt>Ellentétes</alt>
+  </str>
+  <str>
+    <main>Open</main>
+    <alt>Megnyit</alt>
+  </str>
+  <str>
+    <main>High</main>
+    <alt>Legmagasabb</alt>
+  </str>
+  <str>
+    <main>Low</main>
+    <alt>Legalacsonyabb</alt>
+  </str>
+  <str>
+    <main>Close</main>
+    <alt>Bezár</alt>
+  </str>
+  <str>
+    <main>Closed</main>
+    <alt>Zárva</alt>
+  </str>
+  <str>
+    <main>Cancelled</main>
+    <alt>Törölt</alt>
+  </str>
+  <str>
+    <main>Orders During the Bar</main>
+    <alt>Megbízás a gyertya alatt</alt>
+  </str>
+  <str>
+    <main>Positions During the Bar</main>
+    <alt>Pozíció a gyertya alatt</alt>
+  </str>
+  <str>
+    <main>Type</main>
+    <alt>Típus</alt>
+  </str>
+  <str>
+    <main>Price 1</main>
+    <alt>Ár 1</alt>
+  </str>
+  <str>
+    <main>Price 2</main>
+    <alt>Ár 2</alt>
+  </str>
+  <str>
+    <main>Status</main>
+    <alt>Állapot</alt>
+  </str>
+  <str>
+    <main>Comment</main>
+    <alt>Megjegyzés</alt>
+  </str>
+  <str>
+    <main>Buy</main>
+    <alt>Vétel</alt>
+  </str>
+  <str>
+    <main>Sell</main>
+    <alt>Eladás</alt>
+  </str>
+  <str>
+    <main>Stop</main>
+    <alt>Stop</alt>
+  </str>
+  <str>
+    <main>Limit</main>
+    <alt>Limit</alt>
+  </str>
+  <str>
+    <main>StopLimit</main>
+    <alt>StopLimit</alt>
+  </str>
+  <str>
+    <main>Sent</main>
+    <alt>Elküldve</alt>
+  </str>
+  <str>
+    <main>Confirmed</main>
+    <alt>Megerősítve</alt>
+  </str>
+  <str>
+    <main>Executed</main>
+    <alt>Végrehajtott</alt>
+  </str>
+  <!-- Tip of the Day -->
+  <str>
+    <main>Loading...</main>
+    <alt>Töltés...</alt>
+  </str>
+  <str>
+    <main>Show a tip</main>
+    <alt>Mutasd az ötletet</alt>
+  </str>
+  <str>
+    <main>Previous Tip</main>
+    <alt>Previous Tip</alt>
+  </str>
+  <str>
+    <main>Next Tip</main>
+    <alt>Next Tip</alt>
+  </str>
+  <!-- Balance Chart -->
+  <str>
+    <main>Balance / Equity Chart</main>
+    <alt>Egyenleg / Tőke Chart</alt>
+  </str>
+  <str>
+    <main>Margin Call</main>
+    <alt>Feltöltési felszólítás</alt>
+  </str>
+  <str>
+    <main>Load intrabar data</main>
+    <alt>Gyertyán belüli adat betöltése</alt>
+  </str>
+  <str>
+    <main>Scanned</main>
+    <alt>Keresett</alt>
+  </str>
+  <!-- Chart -->
+  <str>
+    <main>Chart</main>
+    <alt>Chart</alt>
+  </str>
+  <str>
+    <main>Grid</main>
+    <alt>Háló</alt>
+  </str>
+  <str>
+    <main>Cross</main>
+    <alt>Kereszt</alt>
+  </str>
+  <str>
+    <main>Position lots</main>
+    <alt>Pozíció egységekben</alt>
+  </str>
+  <str>
+    <main>Entry / Exit points</main>
+    <alt>Belépő / Kilépő pontok</alt>
+  </str>
+  <str>
+    <main>Dynamic info</main>
+    <alt>Dinamikus infó</alt>
+  </str>
+  <str>
+    <main>Corrected position price</main>
+    <alt>Korrigált pozíció ár</alt>
+  </str>
+  <str>
+    <main>Balance / Equity chart</main>
+    <alt>Egyenleg / Tőke chart</alt>
+  </str>
+  <str>
+    <main>Floating P/L chart</main>
+    <alt>Lebegő P/L chart</alt>
+  </str>
+  <str>
+    <main>Indicators chart</main>
+    <alt>Indikátor chart</alt>
+  </str>
+  <str>
+    <main>True indicator charts</main>
+    <alt>True indicator charts</alt>
+  </str>
+  <str>
+    <main>Ambiguous bars mark</main>
+    <alt>Kétértelmű gyertya megjelölés</alt>
+  </str>
+  <str>
+    <main>Zoom in</main>
+    <alt>Nagyít</alt>
+  </str>
+  <str>
+    <main>Zoom out</main>
+    <alt>Kicsinyít</alt>
+  </str>
+  <str>
+    <main>Bar Explorer - double click</main>
+    <alt>Gyertya Explorer - dupla click</alt>
+  </str>
+  <str>
+    <main>Scroll info upwards</main>
+    <alt>Lapozó infó felfelé</alt>
+  </str>
+  <str>
+    <main>Scroll info downwards</main>
+    <alt>Lapozó infó lefelé</alt>
+  </str>
+  <str>
+    <main>Show / hide the info panel</main>
+    <alt>Mutat / rejt infó ablak</alt>
+  </str>
+  <str>
+    <main>Bar number</main>
+    <alt>Gyertya száma</alt>
+  </str>
+  <str>
+    <main>Opening time</main>
+    <alt>Nyitás ideje</alt>
+  </str>
+  <str>
+    <main>Opening price</main>
+    <alt>Nyitó ár</alt>
+  </str>
+  <str>
+    <main>Highest price</main>
+    <alt>Legmagasabb ár</alt>
+  </str>
+  <str>
+    <main>Lowest price</main>
+    <alt>Legalacsonyabb ár</alt>
+  </str>
+  <str>
+    <main>Position direction</main>
+    <alt>Pozíció irány</alt>
+  </str>
+  <str>
+    <main>Number of open lots</main>
+    <alt>Nyitott egységek száma</alt>
+  </str>
+  <str>
+    <main>Type of the transaction</main>
+    <alt>Tranzakciók típusa</alt>
+  </str>
+  <str>
+    <main>Forming order number</main>
+    <alt>Megbízási szám képzés</alt>
+  </str>
+  <str>
+    <main>Forming order price</main>
+    <alt>Megbízási ár képzés</alt>
+  </str>
+  <!-- Order's Comments -->
+  <str>
+    <main>Close due to a Margin Call</main>
+    <alt>Zárás feltöltési felszólítás miatt </alt>
+  </str>
+  <str>
+    <main>Entry Order</main>
+    <alt>Entry megbízás</alt>
+  </str>
+  <str>
+    <main>Exit Order to position</main>
+    <alt>Exit Order a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Exit Order to order</main>
+    <alt>Exit Order a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>Stop order to position</main>
+    <alt>Stop order a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Stop Order to order</main>
+    <alt>Stop Order a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>Stop Limit to position</main>
+    <alt>Stop Limit a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Stop Limit to order</main>
+    <alt>Stop Limit a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>Stop Loss to position</main>
+    <alt>Stop Loss a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Stop Loss to order</main>
+    <alt>Stop Loss a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>Take Profit to position</main>
+    <alt>Take Profit a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Take Profit to order</main>
+    <alt>Take Profit a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>ATR Stop to position</main>
+    <alt>ATR Stop a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>ATR Stop to order</main>
+    <alt>ATR Stop a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>Trailing Stop to position</main>
+    <alt>Trailing Stop a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Trailing Stop to order</main>
+    <alt>Trailing Stop a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>Trailing Stop Limit to position</main>
+    <alt>Trailing Stop Limit a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Trailing Stop Limit to order</main>
+    <alt>Trailing Stop Limit a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>Permanent S/L to position</main>
+    <alt>Állandó S/L a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Permanent S/L to order</main>
+    <alt>Állandó S/L a megbízáshoz</alt>
+  </str>
+  <str>
+    <main>Permanent T/P to position</main>
+    <alt>Állandó T/P a pozícióhoz</alt>
+  </str>
+  <str>
+    <main>Permanent T/P to order</main>
+    <alt>Állandó T/P a megbízáshoz</alt>
+  </str>
+  <!-- Bar Explorer -->
+  <str>
+    <main>Go to the chosen bar.</main>
+    <alt>Ugrás a választott gyertyára.</alt>
+  </str>
+  <str>
+    <main>Previous ambiguous bar.</main>
+    <alt>Előző pontatlan gyertya.</alt>
+  </str>
+  <str>
+    <main>Previous bar.</main>
+    <alt>Előző gyertya.</alt>
+  </str>
+  <str>
+    <main>Next bar.</main>
+    <alt>Következő gyertya.</alt>
+  </str>
+  <str>
+    <main>Next ambiguous bar.</main>
+    <alt>Következő félreérthető gyertya.</alt>
+  </str>
+  <str>
+    <main>Price Route Inside the Bar</main>
+    <alt>Árfolyamváltozás a gyertyán belül</alt>
+  </str>
+  <str>
+    <main>Way Points Description</main>
+    <alt>Pontok változásának jellemzése</alt>
+  </str>
+  <str>
+    <main>Number</main>
+    <alt>Szám</alt>
+  </str>
+  <str>
+    <main>Description</main>
+    <alt>Jellemzés</alt>
+  </str>
+  <str>
+    <main>Price</main>
+    <alt>Ár</alt>
+  </str>
+  <str>
+    <main>Order</main>
+    <alt>Megbízás</alt>
+  </str>
+  <str>
+    <main>None</main>
+    <alt>Nincs</alt>
+  </str>
+  <str>
+    <main>Bar open</main>
+    <alt>Gyertya nyitó</alt>
+  </str>
+  <str>
+    <main>Bar high</main>
+    <alt>Gyertya high</alt>
+  </str>
+  <str>
+    <main>Bar low</main>
+    <alt>Gyertya low</alt>
+  </str>
+  <str>
+    <main>Bar close</main>
+    <alt>Gyertya záró</alt>
+  </str>
+  <str>
+    <main>Entry point</main>
+    <alt>Belépési pont</alt>
+  </str>
+  <str>
+    <main>Exit point</main>
+    <alt>Kilépési pont</alt>
+  </str>
+  <str>
+    <main>Adding point</main>
+    <alt>Pont hozzáadás</alt>
+  </str>
+  <str>
+    <main>Reducing point</main>
+    <alt>Pont elvétel</alt>
+  </str>
+  <str>
+    <main>Reversing point</main>
+    <alt>Visszatérő pont</alt>
+  </str>
+  <str>
+    <main>Cancelled order</main>
+    <alt>Törölt megbízás</alt>
+  </str>
+  <!-- Trading Charges -->
+  <str>
+    <main>Trading Charges</main>
+    <alt>Kereskedési költségek</alt>
+  </str>
+  <str>
+    <main>A position changes its average price with the selected number during a rollover.</main>
+    <alt>A kiválasztott számmal megváltoztatja az átlagos árat a rollover alatt.</alt>
+  </str>
+  <str>
+    <main>Swap number for a long position rollover</main>
+    <alt>Long pozíció rollover swap száma</alt>
+  </str>
+  <str>
+    <main>A positive value decreases your profit.</main>
+    <alt>A pozitív érték csökkenti a nyereséged.</alt>
+  </str>
+  <str>
+    <main>Swap number for a short position rollover</main>
+    <alt>Short pozíció rollover swap száma</alt>
+  </str>
+  <str>
+    <main>A negative value decreases your profit.</main>
+    <alt>A negatív érték csökkenti a nyereséged.</alt>
+  </str>
+  <str>
+    <main>Difference between Bid and Ask prices.</main>
+    <alt>Különbség a  Bid és Ask között.</alt>
+  </str>
+  <str>
+    <main>Number of pips you lose due to an inaccurate order execution.</main>
+    <alt>Elvesztett pip-ek a pontatlan megbízásvégrehalytás miatt.</alt>
+  </str>
+  <!-- Data Horizon -->
+  <str>
+    <main>Maximum number of bars:</main>
+    <alt>Gyertyák maximális száma:</alt>
+  </str>
+  <str>
+    <main>Remove data newer than:</main>
+    <alt>Adat eltávolítása ha újabb mint:</alt>
+  </str>
+  <str>
+    <main>All data newer than the specified date will be cut out.</main>
+    <alt>Összes adat eltávolítása ha az adat újabb, mint a megadott dátum.</alt>
+  </str>
+  <str>
+    <main>Remove data older than:</main>
+    <alt>Adat eltávolítása ha régebbi mint:</alt>
+  </str>
+  <str>
+    <main>All data older than the specified date will be cut out.</main>
+    <alt>Összes adat eltávolítása ha az adat régebbi, mint a megadott dátum.</alt>
+  </str>
+  <str>
+    <main>Minimum number of bars:</main>
+    <alt>Gyertyák minimális száma:</alt>
+  </str>
+  <!-- Data Directory -->
+  <str>
+    <main>Offline data directory:</main>
+    <alt>Adatkönyvtár:</alt>
+  </str>
+  <!-- Instrument Editor -->
+  <str>
+    <main>Instrument Editor</main>
+    <alt>Devizaszerkesztő</alt>
+  </str>
+  <str>
+    <main>Instruments</main>
+    <alt>Devizapárok</alt>
+  </str>
+  <str>
+    <main>Instrument Properties</main>
+    <alt>Devizapár beállításai</alt>
+  </str>
+  <str>
+    <main>Add an Instrument</main>
+    <alt>Devizapár hozzáadása</alt>
+  </str>
+  <str>
+    <main>Digits</main>
+    <alt>Tizedesek</alt>
+  </str>
+  <str>
+    <main>Point value</main>
+    <alt>Pont érték</alt>
+  </str>
+  <str>
+    <main>Spread in</main>
+    <alt>Spread</alt>
+  </str>
+  <str>
+    <main>Swap in</main>
+    <alt>Swap</alt>
+  </str>
+  <str>
+    <main>Commission</main>
+    <alt>Jutalék</alt>
+  </str>
+  <str>
+    <main>Commission in</main>
+    <alt>Jutalék</alt>
+  </str>
+  <str>
+    <main>Slippage in</main>
+    <alt>Slippage</alt>
+  </str>
+  <str>
+    <main>percents</main>
+    <alt>százalék</alt>
+  </str>
+  <str>
+    <main>per lot</main>
+    <alt>egység</alt>
+  </str>
+  <str>
+    <main>per deal</main>
+    <alt>osztásként</alt>
+  </str>
+  <str>
+    <main>at opening</main>
+    <alt>nyitáskor</alt>
+  </str>
+  <str>
+    <main>at open/close</main>
+    <alt>nyitáskor/záráskor</alt>
+  </str>
+  <str>
+    <main>at opening and closing</main>
+    <alt>nyitáskor/záráskor</alt>
+  </str>
+  <str>
+    <main>Price in</main>
+    <alt>Ár</alt>
+  </str>
+  <str>
+    <main>Account in</main>
+    <alt>Számla</alt>
+  </str>
+  <str>
+    <main>Deal price</main>
+    <alt>Alku ár</alt>
+  </str>
+  <str>
+    <main>Base name of the data files</main>
+    <alt>Adatfile név</alt>
+  </str>
+  <str>
+    <main>Wrong Symbol!</main>
+    <alt>Rossz devizapár!</alt>
+  </str>
+  <str>
+    <main>Wrong Price!</main>
+    <alt>Rossz ár!</alt>
+  </str>
+  <str>
+    <main>Wrong commission settings!</main>
+    <alt>Rossz jutalék beállítás!</alt>
+  </str>
+  <str>
+    <main>Wrong Base name of the data files!</main>
+    <alt>Rossz adatfile név!</alt>
+  </str>
+  <str>
+    <main>Do you want to delete the selected instrument?</main>
+    <alt>Valóban törölni akarod a kiválasztott devizapárt?</alt>
+  </str>
+  <str>
+    <main>You cannot delete this instrument!</main>
+    <alt>Nem törölheted ezt a devizapárt!</alt>
+  </str>
+  <str>
+    <main>Close Price</main>
+    <alt>Záró ár</alt>
+  </str>
+  <str>
+    <main>Not used</main>
+    <alt>Nem használt</alt>
+  </str>
+  <!-- Publish a Strategy -->
+  <str>
+    <main>Publish a Strategy</main>
+    <alt>Stratégia nyilvánosságra hozása</alt>
+  </str>
+  <str>
+    <main>Publishing a strategy in the program's forum:</main>
+    <alt>Stratégia nyilvánosságra hozása a fórumon:</alt>
+  </str>
+  <str>
+    <main>Open a new topic in the forum</main>
+    <alt>Nyiss egy új topic-ot a fórumban</alt>
+  </str>
+  <str>
+    <main>Copy / Paste the following code;</main>
+    <alt>Másol / Beilleszt a következő kódot;</alt>
+  </str>
+  <str>
+    <main>Describe the strategy.</main>
+    <alt>Stratégia leírása.</alt>
+  </str>
+  <str>
+    <main>Connect to</main>
+    <alt>Csatlakozás</alt>
+  </str>
+  <!-- Comparator -->
+  <str>
+    <main>The Comparator is useful when the backtest shows ambiguous bars!</main>
+    <alt>Az összehasonlítás hasznos mikor a teszt félreérthető gyertyát mutat!</alt>
+  </str>
+  <str>
+    <main>Calculate</main>
+    <alt>Számol</alt>
+  </str>
+  <str>
+    <main>Average balance</main>
+    <alt>Átlagos egyenleg</alt>
+  </str>
+  <str>
+    <main>Random iterations</main>
+    <alt>Véletlen ismétlés</alt>
+  </str>
+  <str>
+    <main>Interpolation Methods</main>
+    <alt>Interpolációs módszer</alt>
+  </str>
+  <str>
+    <main>Balance Chart</main>
+    <alt>Egyneleg Chart</alt>
+  </str>
+  <!-- Intrabar Scanner -->
+  <str>
+    <main>Intrabar Scanner</main>
+    <alt>Gyertyán belüli keresés</alt>
+  </str>
+  <str>
+    <main>Intrabar Data</main>
+    <alt>Gyertyán belüli adat</alt>
+  </str>
+  <str>
+    <main>Bars</main>
+    <alt>Gyertya</alt>
+  </str>
+  <str>
+    <main>From</main>
+    <alt>tól</alt>
+  </str>
+  <str>
+    <main>Until</main>
+    <alt>ig</alt>
+  </str>
+  <str>
+    <main>Coverage</main>
+    <alt>Lefedett</alt>
+  </str>
+  <str>
+    <main>Label</main>
+    <alt>Címke</alt>
+  </str>
+  <str>
+    <main>Probably the data is incomplete and the scanning may not be reliable!</main>
+    <alt>Valószínűleg az adat nem teljes így a keresés nem megbízható!</alt>
+  </str>
+  <str>
+    <main>Data for:</main>
+    <alt>Adat:</alt>
+  </str>
+  <str>
+    <main>Maximum days off:</main>
+    <alt>Maximális hiányzó napok:</alt>
+  </str>
+  <str>
+    <main>Updated on:</main>
+    <alt>Frissítés:</alt>
+  </str>
+  <str>
+    <main>There is no intrabar data from bar No:</main>
+    <alt>Nincs gyertyán belüli adat ettől a számú gyertyától:</alt>
+  </str>
+  <str>
+    <main>Use Ticks</main>
+    <alt>Use Ticks</alt>
+  </str>
+  <str>
+    <main>Loading:</main>
+    <alt>Loading:</alt>
+  </str>
+  <!-- Optimizer -->
+  <str>
+    <main>Optimize</main>
+    <alt>Optimalizáció</alt>
+  </str>
+  <str>
+    <main>Value</main>
+    <alt>Érték</alt>
+  </str>
+  <str>
+    <main>Parameter</main>
+    <alt>Paraméter</alt>
+  </str>
+  <str>
+    <main>Parameters</main>
+    <alt>Parameters</alt>
+  </str>
+  <str>
+    <main>Minimum</main>
+    <alt>Minimum</alt>
+  </str>
+  <str>
+    <main>Minimum value.</main>
+    <alt>Minimum érték.</alt>
+  </str>
+  <str>
+    <main>Maximum</main>
+    <alt>Maximum</alt>
+  </str>
+  <str>
+    <main>Maximum value.</main>
+    <alt>Maximum érték.</alt>
+  </str>
+  <str>
+    <main>Step</main>
+    <alt>Lépés</alt>
+  </str>
+  <str>
+    <main>Step of change.</main>
+    <alt>Változás lépése.</alt>
+  </str>
+  <str>
+    <main>Select all parameters.</main>
+    <alt>Select all parameters.</alt>
+  </str>
+  <str>
+    <main>Select none of the parameters.</main>
+    <alt>Select none of the parameters.</alt>
+  </str>
+  <str>
+    <main>Select a random number of parameters.</main>
+    <alt>Select a random number of parameters.</alt>
+  </str>
+  <str>
+    <main>Set Min / Max ± 5 steps.</main>
+    <alt>Set Min / Max ± 5 steps.</alt>
+  </str>
+  <str>
+    <main>Set Min / Max ± 10 steps.</main>
+    <alt>Set Min / Max ± 10 steps.</alt>
+  </str>
+  <str>
+    <main>Set Min / Max ± 15 steps.</main>
+    <alt>Set Min / Max ± 15 steps.</alt>
+  </str>
+  <str>
+    <main>Show indicator parameters.</main>
+    <alt>Show indicator parameters.</alt>
+  </str>
+  <str>
+    <main>Show strategy limitations.</main>
+    <alt>Show strategy limitations.</alt>
+  </str>
+  <str>
+    <main>Settings</main>
+    <alt>Settings</alt>
+  </str>
+  <str>
+    <main>Show optimizer settings.</main>
+    <alt>Show optimizer settings.</alt>
+  </str>
+  <str>
+    <main>Hide FSB when Optimizer starts</main>
+    <alt>Hide FSB when Optimizer starts</alt>
+  </str>
+  <str>
+    <main>Optimizer writes a report for each optimized strategy</main>
+    <alt>Optimizer writes a report for each optimized strategy</alt>
+  </str>
+  <str>
+    <main>There are no parameters suitable for optimization.</main>
+    <alt>There are no parameters suitable for optimization.</alt>
+  </str>
+  <!-- Strategy Description -->
+  <str>
+    <main>Strategy Description</main>
+    <alt>Stratégia leírása</alt>
+  </str>
+  <str>
+    <main>This description might be outdated!</main>
+    <alt>A jellemzés lehet, hogy régi!</alt>
+  </str>
+  <str>
+    <main>You can write a description to the strategy!</main>
+    <alt>Írd le a stratégiát!</alt>
+  </str>
+  <!-- Strategy Generator -->
+  <str>
+    <main>Strategy Generator</main>
+    <alt>Stratégia generátor</alt>
+  </str>
+  <str>
+    <main>Generate</main>
+    <alt>Generál</alt>
+  </str>
+  <str>
+    <main>Lock or unlock the slot.</main>
+    <alt>Lock or unlock the slot.</alt>
+  </str>
+  <str>
+    <main>Lock, link, or unlock the slot.</main>
+    <alt>Lock, link, or unlock the slot.</alt>
+  </str>
+  <str>
+    <main>Lock all slots.</main>
+    <alt>Lock all slots.</alt>
+  </str>
+  <str>
+    <main>Unlock all slots.</main>
+    <alt>Unlock all slots.</alt>
+  </str>
+  <str>
+    <main>Link all slots.</main>
+    <alt>Link all slots.</alt>
+  </str>
+  <str>
+    <main>Generate a new strategy at every start</main>
+    <alt>Generate a new strategy at every start</alt>
+  </str>
+  <str>
+    <main>Do not change the Permanent Stop Loss</main>
+    <alt>Ne változtasd a Permanent Stop Loss</alt>
+  </str>
+  <str>
+    <main>Do not change the Permanent Take Profit</main>
+    <alt>Ne változtasd a Permanent Take Profit</alt>
+  </str>
+  <str>
+    <main>Perform an initial optimization</main>
+    <alt>Optimalizálás indítás</alt>
+  </str>
+  <str>
+    <main>Working time</main>
+    <alt>Munkaidő</alt>
+  </str>
+  <str>
+    <main>Set the number of minutes for the Generator to work.</main>
+    <alt>A Generátor munkaperceinek beállítása.</alt>
+  </str>
+  <str>
+    <main>Calculations</main>
+    <alt>Számítások</alt>
+  </str>
+  <str>
+    <main>Maximum number of ambiguous bars</main>
+    <alt>Félreérthető gyertyák maximális száma</alt>
+  </str>
+  <str>
+    <main>Maximum equity drawdown</main>
+    <alt>Maximális tőke visszaesés</alt>
+  </str>
+  <str>
+    <main>Minimum number of trades</main>
+    <alt>Minimum kötések száma</alt>
+  </str>
+  <str>
+    <main>Maximum number of trades</main>
+    <alt>Maximum number of trades</alt>
+  </str>
+  <str>
+    <main>Maximum number of opening logic slots</main>
+    <alt>Maximális nyitó logikai ablakok száma</alt>
+  </str>
+  <str>
+    <main>Maximum number of closing logic slots</main>
+    <alt>Maximális záró logikai ablakok száma</alt>
+  </str>
+  <str>
+    <main>Minimum win / loss trades ratio</main>
+    <alt>Minimum win / loss trades ratio</alt>
+  </str>
+  <str>
+    <main>Out of sample testing, percent of OOS bars</main>
+    <alt>Mintából kieső rész  [gyertyák %-a]</alt>
+  </str>
+  <str>
+    <main>Filter bad OOS performance</main>
+    <alt>Filter bad OOS performance</alt>
+  </str>
+  <str>
+    <main>Deviation percent.</main>
+    <alt>Deviation percent.</alt>
+  </str>
+  <str>
+    <main>Filter non-linear balance pattern</main>
+    <alt>Filter non-linear balance pattern</alt>
+  </str>
+  <str>
+    <main>Check points count.</main>
+    <alt>Check points count.</alt>
+  </str>
+  <str>
+    <main>Do you want to accept the generated strategy?</main>
+    <alt>Elfogadod a generált stratégiát?</alt>
+  </str>
+  <str>
+    <main>Common</main>
+    <alt>Common</alt>
+  </str>
+  <str>
+    <main>Limitations</main>
+    <alt>Korlátozás</alt>
+  </str>
+  <str>
+    <main>Top 10</main>
+    <alt>Top 10</alt>
+  </str>
+  <str>
+    <main>Activate the strategy.</main>
+    <alt>Activate the strategy.</alt>
+  </str>
+  <str>
+    <main>Automatically generated on</main>
+    <alt>Automatikusan generálva</alt>
+  </str>
+  <str>
+    <main>Modified by the strategy generator on</main>
+    <alt>Változtatás a stratégia generátor által</alt>
+  </str>
+  <str>
+    <main>Show account statistics.</main>
+    <alt>Show account statistics.</alt>
+  </str>
+  <str>
+    <main>Show account chart.</main>
+    <alt>Show account chart.</alt>
+  </str>
+  <str>
+    <main>Only use default numeric indicator values</main>
+    <alt>Only use default numeric indicator values</alt>
+  </str>
+  <str>
+    <main>Hide FSB when Generator starts</main>
+    <alt>Hide FSB when Generator starts</alt>
+  </str>
+  <str>
+    <main>Reset all parameters and settings</main>
+    <alt>Reset all parameters and settings</alt>
+  </str>
+  <str>
+    <main>Allow all indicators.</main>
+    <alt>Allow all indicators.</alt>
+  </str>
+  <str>
+    <main>Bann all indicators.</main>
+    <alt>Bann all indicators.</alt>
+  </str>
+  <str>
+    <main>Banned Indicators</main>
+    <alt>Banned Indicators</alt>
+  </str>
+  <str>
+    <main>banned</main>
+    <alt>banned</alt>
+  </str>
+  <!-- Strategy Analyzer -->
+  <str>
+    <main>Strategy Analyzer</main>
+    <alt>Strategy Analyzer</alt>
+  </str>
+  <str>
+    <main>Analyzer</main>
+    <alt>Analyzer</alt>
+  </str>
+  <str>
+    <main>Options</main>
+    <alt>Options</alt>
+  </str>
+  <str>
+    <main>Analysis</main>
+    <alt>Analysis</alt>
+  </str>
+  <str>
+    <main>Over-optimization Report</main>
+    <alt>Over-optimization Report</alt>
+  </str>
+  <str>
+    <main>Cumulative Strategy</main>
+    <alt>Cumulative Strategy</alt>
+  </str>
+  <str>
+    <main>Parameters deviation % [recommended 20]</main>
+    <alt>Parameters deviation % [recommended 20]</alt>
+  </str>
+  <str>
+    <main>Parameters number [recommended 20]</main>
+    <alt>Parameters number [recommended 20]</alt>
+  </str>
+  <str>
+    <main>Report - decimal separator</main>
+    <alt>Report - decimal separator</alt>
+  </str>
+  <str>
+    <main>Report - column separator</main>
+    <alt>Report - column separator</alt>
+  </str>
+  <str>
+    <main>Hide FSB when Analyzer starts</main>
+    <alt>Hide FSB when Analyzer starts</alt>
+  </str>
+  <str>
+    <main>The over-optimization report shows how the stats results of back test are changing with changing of the numerical parameters of the strategy by given percent.</main>
+    <alt>The over-optimization report shows how the stats results of back test are changing with changing of the numerical parameters of the strategy by given percent.</alt>
+  </str>
+  <str>
+    <main>View Charts</main>
+    <alt>View Charts</alt>
+  </str>
+  <str>
+    <main>Open Folder</main>
+    <alt>Open Folder</alt>
+  </str>
+  <str>
+    <main>Open Report</main>
+    <alt>Open Report</alt>
+  </str>
+  <str>
+    <main>Deviation</main>
+    <alt>Deviation</alt>
+  </str>
+  <str>
+    <main>Next Chart</main>
+    <alt>Next Chart</alt>
+  </str>
+  <!-- Strategy Properties -->
+  <str>
+    <main>Handling of Additional Entry Signals</main>
+    <alt>Újabb nyitási jelzések kezelése</alt>
+  </str>
+  <str>
+    <main>Next same direction signal behavior</main>
+    <alt>Következő azonos irányú jelzésre</alt>
+  </str>
+  <str>
+    <main>Nothing - cancels the additional orders.</main>
+    <alt>Nincs művelet - törli a további megbízásokat.</alt>
+  </str>
+  <str>
+    <main>Winner - adds to a winning position.</main>
+    <alt>Nyertes - hozzáad a nyerő pozícióhoz.</alt>
+  </str>
+  <str>
+    <main>Add - adds to all positions.</main>
+    <alt>Hozzáad - hozzáad az összes pozícióhoz.</alt>
+  </str>
+  <str>
+    <main>Next opposite direction signal behavior</main>
+    <alt>Következő ellenkező irányú jelzésre</alt>
+  </str>
+  <str>
+    <main>Reduce - reduces or closes a position.</main>
+    <alt>Csökkent - Csökkenti vagy zárja a pozíciót.</alt>
+  </str>
+  <str>
+    <main>Close - closes the position.</main>
+    <alt>Bezár - zárja a pozíciót.</alt>
+  </str>
+  <str>
+    <main>Reverse - reverses the position.</main>
+    <alt>Megfordít - megfordítja a pozíciót.</alt>
+  </str>
+  <str>
+    <main>Trading Size</main>
+    <alt>Kereskedési méret</alt>
+  </str>
+  <str>
+    <main>Trade a constant number of lots</main>
+    <alt>Kereskedés állandó számú egységekkel</alt>
+  </str>
+  <str>
+    <main>Trade percent of your account. The percentage values show the part of the account equity used to cover the required margin.</main>
+    <alt>Kereskedés változó számú egységekkel, tekintettel a számlaegyenlegre. A százalékos érték mutatja a számlaegyenleg azon részét amely kifejezi a kért fedezetet.</alt>
+  </str>
+  <str>
+    <main>Maximum number of open lots</main>
+    <alt>Egységek maximális száma</alt>
+  </str>
+  <str>
+    <main>Number of entry lots for a new position</main>
+    <alt>Kezdeti egységek száma az új pozícióban</alt>
+  </str>
+  <str>
+    <main>In case of addition - number of lots to add</main>
+    <alt>Növekedés esetén - egységek számának növelése</alt>
+  </str>
+  <str>
+    <main>In case of reduction - number of lots to close</main>
+    <alt>Csökkenés esetén - egységek számának csökkentése</alt>
+  </str>
+  <str>
+    <main>Permanent Protection</main>
+    <alt>Állandó védelem</alt>
+  </str>
+  <str>
+    <main>Absolute</main>
+    <alt>Absolute</alt>
+  </str>
+  <str>
+    <main>Relative</main>
+    <alt>Relative</alt>
+  </str>
+  <!-- JForex Import -->
+  <str>
+    <main>Imported Files</main>
+    <alt>Imported Files</alt>
+  </str>
+  <str>
+    <main>Import JForex Data Files</main>
+    <alt>Import JForex Data Files</alt>
+  </str>
+  <str>
+    <main>JForex Import</main>
+    <alt>JForex Import</alt>
+  </str>
+  <str>
+    <main>Directory containing JForex data files:</main>
+    <alt>Directory containing JForex data files:</alt>
+  </str>
+  <str>
+    <main>Market closing hour on Friday:</main>
+    <alt>Market closing hour on Friday:</alt>
+  </str>
+  <str>
+    <main>Market opening hour on Sunday:</main>
+    <alt>Market opening hour on Sunday:</alt>
+  </str>
+  <str>
+    <main>Import</main>
+    <alt>Import</alt>
+  </str>
+  <!-- Error and Warning Messages -->
+  <str>
+    <main>Forex Strategy Builder cannot load a historical data file and is going to use integrated data!</main>
+    <alt>Forex Strategy Builder nem tudja betölteni az adatokat ezért az integrált adatokat fogja használni!</alt>
+  </str>
+  <str>
+    <main>Are you sure you want to control "Use previous bar value" manually?</main>
+    <alt>Ellenőrizni akarod "Használd az előző gyertyát" ?</alt>
+  </str>
+  <str>
+    <main>Do you want to save the current strategy?</main>
+    <alt>Akarod menteni az aktuális stratégiát?</alt>
+  </str>
+  <str>
+    <main>Do you want to accept changes to the strategy?</main>
+    <alt>Elfogadod a stratégia változtatását?</alt>
+  </str>
+  <str>
+    <main>Do you want to accept the changes?</main>
+    <alt>Elfogadod a változtatást?</alt>
+  </str>
+  <str>
+    <main>Data File Loading</main>
+    <alt>Adat file betöltés</alt>
+  </str>
+  <str>
+    <main>Error in the data file!</main>
+    <alt>Hiba az adat file-ban!</alt>
+  </str>
+  <str>
+    <main>Could not recognize the data file format!</main>
+    <alt>Adat file formátum nem felismerhető!</alt>
+  </str>
+  <str>
+    <main>Could not determine the number decimal separator!</main>
+    <alt>A szám elválasztó nem felismerhető!</alt>
+  </str>
+  <str>
+    <main>Could not determine the time format!</main>
+    <alt>Az időformátum nem felismerhető!</alt>
+  </str>
+  <str>
+    <main>Could not determine the date separator!</main>
+    <alt>A dátumelválasztó nem felismerhető!</alt>
+  </str>
+  <str>
+    <main>Could not determine the date format!</main>
+    <alt>Dátumformátum nem felismerhető!</alt>
+  </str>
+  <str>
+    <main>Could not determine the price columns order!</main>
+    <alt>A megbízási ár oszlopa nem felismerhető!</alt>
+  </str>
+  <str>
+    <main>Could not count the data bars!</main>
+    <alt>Gyertya adatok nem számolhatók!</alt>
+  </str>
+  <str>
+    <main>Defective till bar number:</main>
+    <alt>Hibás gyertya száma:</alt>
+  </str>
+  <str>
+    <main>Contains less than 300 bars!</main>
+    <alt>Kevesebb mint 300 gyertyát tartalmaz!</alt>
+  </str>
+  <str>
+    <main>The data is probably incomplete!</main>
+    <alt>Az adat valószínűleg nem teljes!</alt>
+  </str>
+  <str>
+    <main>There is no data for</main>
+    <alt>Nincs adat a</alt>
+  </str>
+  <str>
+    <main>in folder</main>
+    <alt>könyvtárban</alt>
+  </str>
+  <str>
+    <main>Check the offline data directory path (Menu Market -&gt; Data Directory).</main>
+    <alt>Ellenőrizd az offline adat elérési útvonalát (Menü Piac -&gt; Adatkönyvtár).</alt>
+  </str>
+  <str>
+    <main>You can try to cut it using "Data Horizon".</main>
+    <alt>Megpróbálhatod kivágni a  "Adathorizont" használatával.</alt>
+  </str>
+  <str>
+    <main>Check your data file or the limits in "Data Horizon".</main>
+    <alt>Ellenőrizd az adat file-t vagy a határolás a "Adathorizont"-ban.</alt>
+  </str>
+  <str>
+    <main>You can try also "Cut Off Bad Data".</main>
+    <alt>Megpróbálhatod a "Rossz adat kivágása".</alt>
+  </str>
+  <str>
+    <main>Cut</main>
+    <alt>Kivág</alt>
+  </str>
+  <str>
+    <main>No Gaps</main>
+    <alt>Nincs rés</alt>
+  </str>
+  <str>
+    <main>Unchecked</main>
+    <alt>Nem ellenőrzött</alt>
+  </str>
+  <str>
+    <main>Language Change</main>
+    <alt>Nyelv választás</alt>
+  </str>
+  <str>
+    <main>Do you want to reset all settings?</main>
+    <alt>Minden beállítást resetel-ni akarsz?</alt>
+  </str>
+  <str>
+    <main>Restart the program to activate the changes!</main>
+    <alt>Indítsd újra a programot a változások életbe léptetéséhez!</alt>
+  </str>
+  <str>
+    <main>Color schemes</main>
+    <alt>Színbeállítások</alt>
+  </str>
+  <str>
+    <main>The loaded strategy has been designed for a different market!</main>
+    <alt>A betöltött stratégia egy másik piacra lett kifejlesztve!</alt>
+  </str>
+  <str>
+    <main>Do you want to load this market data?</main>
+    <alt>Be akarod tölteni ezt a piaci adatot?</alt>
+  </str>
+  <str>
+    <main>Translation</main>
+    <alt>Fordítás</alt>
+  </str>
+  <str>
+    <main>Save the Strategy As</main>
+    <alt>Stratégia mentése mint</alt>
+  </str>
+  <str>
+    <main>Strategy file</main>
+    <alt>Stratégia file</alt>
+  </str>
+  <str>
+    <main>Strategy Loading</main>
+    <alt>Stratégia betöltés</alt>
+  </str>
+  <str>
+    <main>Open Strategy</main>
+    <alt>Stratégia megnyitás</alt>
+  </str>
+  <str>
+    <main>The strategy could not be loaded correctly!</main>
+    <alt>A stratégia nem töltődött be rendesen!</alt>
+  </str>
+  <str>
+    <main>A new strategy has been generated!</main>
+    <alt>Új stratégia generálva!</alt>
+  </str>
+  <str>
+    <main>There is no information for this market!</main>
+    <alt>Nincs információ erről!</alt>
+  </str>
+  <str>
+    <main>Logical Groups</main>
+    <alt>Logical Groups</alt>
+  </str>
+  <str>
+    <main>The strategy requires logical groups.</main>
+    <alt>The strategy requires logical groups.</alt>
+  </str>
+  <str>
+    <main>"Use Logical Groups" option was temporarily switched on.</main>
+    <alt>"Use Logical Groups" option was temporarily switched on.</alt>
+  </str>
+  <str>
+    <main>"Use Logical Groups" option cannot be switched off.</main>
+    <alt>"Use Logical Groups" option cannot be switched off.</alt>
+  </str>
+  <!-- Math Calculator Help -->
+  <str>
+    <main>Calculator Help</main>
+    <alt>Számológép súgó</alt>
+  </str>
+  <str>
+    <main>Write the mathematical expression in the box.</main>
+    <alt>Írd a matematikai kifejezést az ablakba.</alt>
+  </str>
+  <str>
+    <main>Enter the first number, the operator and the second number.</main>
+    <alt>Add meg az első számot, a műveletet és a második számot.</alt>
+  </str>
+  <str>
+    <main>To see the result press a key or continue with the next operation.</main>
+    <alt>Az eredmény megtekintéséhez nyomj egy gombot vagy folytasd a következő művelet.</alt>
+  </str>
+  <str>
+    <main>Operations</main>
+    <alt>Műveletek</alt>
+  </str>
+  <str>
+    <main>Addition</main>
+    <alt>Összeadás</alt>
+  </str>
+  <str>
+    <main>Power</main>
+    <alt>Négyzet</alt>
+  </str>
+  <str>
+    <main>Percent</main>
+    <alt>Százalék</alt>
+  </str>
+  <str>
+    <main>Hot keys</main>
+    <alt>Gyors gombok</alt>
+  </str>
+  <str>
+    <main>Clear</main>
+    <alt>Töröl</alt>
+  </str>
+  <str>
+    <main>Opacity</main>
+    <alt>Átlátszóság</alt>
+  </str>
+  <!-- Profit Calculator -->
+  <str>
+    <main>Profit Calculator</main>
+    <alt>Nyereség kalkulátor</alt>
+  </str>
+  <str>
+    <main>Input Values</main>
+    <alt>bemeneti érték</alt>
+  </str>
+  <str>
+    <main>Number of lots</main>
+    <alt>Egységek száma</alt>
+  </str>
+  <str>
+    <main>Entry price</main>
+    <alt>Nyitó ár</alt>
+  </str>
+  <str>
+    <main>Exit price</main>
+    <alt>Záró ár</alt>
+  </str>
+  <str>
+    <main>Days rollover</main>
+    <alt>Napi kamat</alt>
+  </str>
+  <str>
+    <main>Output Values</main>
+    <alt>Kimeneti érték</alt>
+  </str>
+  <str>
+    <main>Entry commission</main>
+    <alt>Belépési jutalék</alt>
+  </str>
+  <str>
+    <main>Exit commission</main>
+    <alt>Kilépési jutalék</alt>
+  </str>
+  <str>
+    <main>Net profit</main>
+    <alt>Nettó nyereség</alt>
+  </str>
+  <!-- Pivot Points Calculator -->
+  <str>
+    <main>Pivot Point</main>
+    <alt>Pivot pont</alt>
+  </str>
+  <str>
+    <main>Pivot Points</main>
+    <alt>Pivot pont</alt>
+  </str>
+  <str>
+    <main>Support</main>
+    <alt>Támasz</alt>
+  </str>
+  <str>
+    <main>Resistance</main>
+    <alt>Ellenállás</alt>
+  </str>
+  <!-- Fibonacci Levels Calculator -->
+  <str>
+    <main>Fibonacci Levels</main>
+    <alt>Fibonacci szintek</alt>
+  </str>
+  <str>
+    <main>First price</main>
+    <alt>Első ár</alt>
+  </str>
+  <str>
+    <main>Second price</main>
+    <alt>Második ár</alt>
+  </str>
+  <!-- Language Phrases -->
+  <str>
+    <main>Language Phrases</main>
+    <alt>Nyelvi kifejezések</alt>
+  </str>
+  <str>
+    <main>Useful for Automatic Translation</main>
+    <alt>Hasznos automatikus fordítás</alt>
+  </str>
+  <str>
+    <main>Useful for Spell Check</main>
+    <alt>Hasznos a betűzés ellenőrzéshez</alt>
+  </str>
+  <str>
+    <main>Useful for Translation Check</main>
+    <alt>Hasznos a fordítás ellenőrzéshez</alt>
+  </str>
+  <str>
+    <main>Translated by</main>
+    <alt>Fordította</alt>
+  </str>
+  <!-- Custom Indicators -->
+  <str>
+    <main>Custom Indicators</main>
+    <alt>Custom Indicators</alt>
+  </str>
+  <str>
+    <main>Reload the Custom Indicators</main>
+    <alt>Reload the Custom Indicators</alt>
+  </str>
+  <str>
+    <main>Open the Source Files Folder</main>
+    <alt>Open the Source Files Folder</alt>
+  </str>
+  <str>
+    <main>Custom Indicators Forum</main>
+    <alt>Custom Indicators Forum</alt>
+  </str>
+  <str>
+    <main>Check the Custom Indicators</main>
+    <alt>Check the Custom Indicators</alt>
+  </str>
+  <str>
+    <main>Export the Strategy as a Custom Indicator</main>
+    <alt>Export the Strategy as a Custom Indicator</alt>
+  </str>
+  <str>
+    <main>Load the Custom Indicators at Startup</main>
+    <alt>Load the Custom Indicators at Startup</alt>
+  </str>
+  <str>
+    <main>Show the Loaded Custom Indicators</main>
+    <alt>Show the Loaded Custom Indicators</alt>
+  </str>
+  <!-- New Translation -->
+  <str>
+    <main>New Translation</main>
+    <alt>Új fordítás</alt>
+  </str>
+  <str>
+    <main>Common Parameters</main>
+    <alt>Általános beállítások</alt>
+  </str>
+  <str>
+    <main>File name</main>
+    <alt>Fájl név</alt>
+  </str>
+  <str>
+    <main>Author</main>
+    <alt>Szerző</alt>
+  </str>
+  <!-- Edit Translation -->
+  <str>
+    <main>Edit Translation</main>
+    <alt>Fordítás szerkesztés</alt>
+  </str>
+  <str>
+    <main>English Phrase - Translated Phrase</main>
+    <alt>Angol kifejezések - Lefordított kifejezések</alt>
+  </str>
+  <str>
+    <main>Search</main>
+    <alt>Keres</alt>
+  </str>
+  <str>
+    <main>Not Translated</main>
+    <alt>Nem lefordított</alt>
+  </str>
+  <!-- Command Console -->
+  <str>
+    <main>Command Console</main>
+    <alt>Parancssor</alt>
+  </str>
+</lang>

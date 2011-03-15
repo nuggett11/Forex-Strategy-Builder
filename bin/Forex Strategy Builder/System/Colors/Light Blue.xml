@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<color>
+	<!--	General -->
+	<FormBack r="153" g="204" b="204" />
+	<ControlBack r="245" g="255" b="255" />
+	<ControlText r="0" g="50" b="50" />
+	<CaptionBack r="102" g="153" b="204" />
+	<CaptionText r="255" g="255" b="255" />
+	<EvenRowBack r="255" g="255" b="255" />
+	<WarningRowBack r="255" g="230" b="230" />
+	<WarningRowText r="0" g="50" b="50" />
+	<SelectedRowBack r="215" g="225" b="235" />
+	<SelectedRowText r="0" g="0" b="0" />
+	<JournalLines r="215" g="215" b="225" />
+	<SignalRed r="250" g="0" b="0" />
+
+	<!--	Indicator Slots -->
+	<SlotCaptionBackProperties r="150" g="100" b="100" />
+	<SlotCaptionBackOpen r="102" g="153" b="51" />
+	<SlotCaptionBackOpenFilter r="102" g="153" b="153" />
+	<SlotCaptionBackClose r="204" g="102" b="51" />
+	<SlotCaptionBackCloseFilter r="210" g="140" b="140" />
+	<SlotCaptionText r="255" g="255" b="255" />
+	<SlotBack r="245" g="255" b="255" />
+	<SlotIndicatorText r="80" g="130" b="180" />
+	<SlotLogicText r="0" g="51" b="51" />
+	<SlotParamText r="51" g="153" b="153" />
+	<SlotValueText r="51" g="153" b="153" />
+	<SlotDash r="204" g="204" b="153" />
+
+	<!--	Charts -->
+	<ChartBack r="245" g="255" b="255" />
+	<ChartFore r="0" g="50" b="50" />
+	<BarWhite r="225" g="225" b="225" />
+	<BarBlack r="30" g="30" b="30" />
+	<BarBorder r="0" g="0" b="0" />
+	<TradeLong r="30" g="160" b="30" />
+	<TradeShort r="225" g="30" b="30" />
+	<TradeClose r="225" g="160" b="30" />
+	<Volume r="150" g="0" b="210" />
+	<LabelBack r="255" g="255" b="255" />
+	<LabelText r="0" g="50" b="50" />
+	<ChartGrid r="204" g="204" b="204" />
+	<ChartCross r="153" g="163" b="204" />
+	<ChartBalanceLine r="102" g="102" b="153" />
+	<ChartEquityLine r="255" g="204" b="51" />
+
+	<!--	Comparator -->
+	<ComparatorChartBalanceLine r="102" g="102" b="153" />
+	<ComparatorChartOptimisticLine r="255" g="153" b="153" />
+	<ComparatorChartPessimisticLine r="0" g="0" b="0" />
+	<ComparatorChartShortestLine r="102" g="102" b="0" />
+	<ComparatorChartNearestLine r="153" g="102" b="153" />
+	<ComparatorChartRandomLine r="51" g="102" b="0" />
+	<ComparatorChartRandomArea r="153" g="255" b="153" />
+	<ComparatorChartRandomBands r="204" g="204" b="153" />
+</color>

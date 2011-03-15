@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<update>
+  <versions>
+    <release>2560400</release>
+    <beta>2571100</beta>
+  </versions>
+  <brokers>
+    <broker>
+      <title>FastBrokers (Meta Trader)</title>
+      <link>http://www.fastbrokers.com/index.php?bfd1bd24</link>
+    </broker>
+    <broker>
+      <title>Easy-Forex (Online Platform)</title>
+      <link>http://ads.easy-forex.com/Gateway.aspx?gid=58353</link>
+    </broker>
+  </brokers>
+</update>

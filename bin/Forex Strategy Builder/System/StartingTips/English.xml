@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tips>
+  <!-- Language (Must be the same as in the language file.) -->
+  <language>English</language>
+  <!-- Credits -->
+  <translatedby>Forex Software Ltd.</translatedby>
+  <website>http://forexsb.com</website>
+  <corrections>info@forexsb.com</corrections>
+  <!-- Starting Tips -->
+	<tip>
+		<h1>Welcome</h1>
+		<p>
+			Thank you for choosing Forex Strategy Builder. 
+			We hope you will find this freeware program useful. 
+			Wish you good health, luck and profitable trade.
+		</p>
+		<p style="text-align: right">Forex Software team.</p>
+	</tip>
+	<tip>
+		<h1>Introduction</h1>
+		<p>
+			Forex Strategy Builder is a tool for creating of trading strategies
+			consisting of technical indicators.
+			The program tests the strategies by using offline historical data from a broker.
+			It shows an indicator chart, an account balance chart and statistics after the calculation.
+		</p>
+	</tip>
+	<tip>
+		<h1>More Information</h1>
+		<p>
+			The main source of information is the website of the program <a href="http://forexsb.com/" target="_blanc">http://forexsb.com</a>.
+			It is good to start with the <a href="http://forexsb.com/wiki/fsb/manual/start" target="_blanc">online help</a>.
+			For questions and discussion, you can use the <a href="http://forexsb.com/forum/" target="_blanc">support forum</a>.
+		</p>
+	</tip>
+	<tip>
+		<h1>Quick Start</h1>
+		<p>
+			Load some of the provided demo strategies from "File" - "Open" menu.
+			The program will recalculate automatically the strategy when it is loaded and if you change 
+			some indicator, the market symbol or the period.
+			There is a short description to each of the demo strategies. You can see it by clicking on "Overview" button. Take a look at the indicator chart and the journal tables. 
+		</p>
+	</tip>
+	<tip>
+		<h1>Testing a Strategy</h1>
+		<p>
+			The program tests the strategies automatically.
+			It performs calculations every time when you change something that could reflect on the trade result.
+			For example, every change of an indicator, a logic rule,
+			a parameter, trade size and some of the trading charges will cause recalculation.
+			You always see a final, recalculated backtest result of the current strategy.
+		</p>
+	</tip>
+	<tip>
+		<h1>Historical Data</h1>
+		<p>
+			Forex Strategy Builder locally stored historical data files.
+			The files are located in the "Forex Strategy Builder\Data" folder.
+			You can change the data location by using "Market" - "Data Directory" menu command.
+		</p>
+	</tip>
+	<tip>
+		<h1>Data Update</h1>
+		<p>
+			Forex Strategy Builder can read "CSV" data files exported from MetaTrader 4.
+			To do so, load the necessary data in a MetaTrader chart and save it (File - Save As)
+			in the Data folder of FSB. You can find more information about the data file format
+			and updating tutorials in the website of the program.
+		</p>
+	</tip>
+    <tip>
+        <h1>Forex trading strategy</h1>
+        <p>
+            In the spirit of technical analysis - the forex strategy is a combination of technical
+            indicators that raise buy and sell signals at certain time and at certain price.
+        </p>
+    </tip>
+    <tip>
+        <h1>Entry and Exit strategies</h1>
+        <p>
+            A forex trading strategy can be divided on two main parts:<br />
+            - Entry strategy - represents the logic of opening (averaging) a position.<br />
+            - Exit strategy - represents the logic of closing the existing position.
+        </p>
+    </tip>
+    <tip>
+        <h1>Entry strategy</h1>
+        <p>
+            The entry strategy is represented by the <i>"Opening point of the position"</i>
+            and <i>"Opening logic condition"</i> slots.
+        </p>
+    </tip>
+    <tip>
+        <h1>Exit strategy</h1>
+        <p>
+            The exit strategy is represented by the <i>"Closing point of the position"</i> and
+            <i>"Closing logic condition"</i> slots.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Opening point of the position" slot</h1>
+        <p>
+            This is the first strategy slot. Its indicator shows the entry price of opening or averaging
+            a position.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Opening logic condition" slot</h1>
+        <p>
+            Every <i>"Opening logic condition"</i> slot contains a logic condition. It serves
+            as an entry filter. An entry signal can be raised when all the
+            <i>"Opening logic conditions"</i> are fulfilled.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Closing point of the position" slot</h1>
+        <p>
+            This is the first exit strategy slot. Its indicator shows the exit
+            price of closing the existing position.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Closing logic condition"</h1>
+        <p>
+            We can use a <i>"Closing logic condition"</i> when the
+            <i>"Closing point of the position"</i> slot contains <i>"Bar Closing"</i> only.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Closing logic condition" slot</h1>
+        <p>
+            Every <i>"Closing logic condition"</i> slot contains a logic condition. It serves
+            as an exit trigger. An exit signal will be raised when one of the
+            <i>"Closing logic conditions"</i> is fulfilled.
+        </p>
+    </tip>
+    <tip>
+        <h1>Adding a strategy slot</h1>
+        <p>
+            You can add new logic condition slots only. Opening and Closing point of the position
+            slots are permanent. Maximum number of logic slots is four Opening and two Closing
+            slots. A Closing logic condition slot is available when closing point is "Bar Closing"
+            only.
+        </p>
+    </tip>
+    <tip>
+        <h1>Removing a strategy slot</h1>
+        <p>
+            Remove a logic slot by pressing its closing button. You cannot remove the Opening
+            and Closing point of the position slots. They are permanent.<br />
+            All present <i>"Closing logic condition"</i> slots will be removed if you
+            make <i>"Closing point of the position"</i> different from <i>"Bar Closing"</i>.
+        </p>
+    </tip>
+    <tip>
+        <h1>Edit the slot indicator</h1>
+        <p>
+            To open the indicator parameters dialogue simply click on the indicator slot. You
+            will be able to choose a new indicator according to the type of the slot.
+        </p>
+    </tip>
+    <tip>
+        <h1>Changing the strategy slots representation</h1>
+        <p>
+            You can change the layout of all strategy slots by means of the three small
+            square buttons above the strategy slots. They change the view only and do not affect
+            your strategy in any way.
+        </p>
+    </tip>
+    <tip>
+        <h1>Same and Opposite direction signals</h1>
+        <p>
+            Same and Opposite direction signals are additional signals raised from the Entry strategy
+            during a position. A change of their logic directly changes the strategy behaviour.
+        </p>
+    </tip>
+    <tip>
+        <h1>Same direction signal</h1>
+        <p>
+            Same direction signal is another buy signal during a long position or another sell
+            signal during a short position.
+        </p>
+    </tip>
+    <tip>
+        <h1>Same direction signal - "Nothing"</h1>
+        <p>
+            This logic means that all additional signals in the direction of your position will
+            be cancelled. There is no way to add more lots to the initial position in this case.
+        </p>
+    </tip>
+    <tip>
+        <h1>Same direction signal - "Add"</h1>
+        <p>
+            This logic allows the Entry strategy to raise additional signals toward the initial
+            position direction and to increase its amount in lots. <b>Forex Strategy Builder</b>
+            will average the price of the market position.
+        </p>
+    </tip>
+    <tip>
+        <h1>Opposite direction signal</h1>
+        <p>
+            Opposite direction signal is a buy signal during a short position or a
+            sell signal during a long position. It has to be raised from the Entry strategy only.
+            A closing signal from the Exit strategy is not an opposite direction signal.
+        </p>
+    </tip>
+    <tip>
+        <h1>Opposite direction signal - "Nothing"</h1>
+        <p>
+            This logic means that all additional signals in the opposite direction of your position
+            will be cancelled. There is no way to close lots from the initial position in this case.
+        </p>
+    </tip>
+    <tip>
+        <h1>Opposite direction signal - "Reduce"</h1>
+        <p>
+            The Entry logic will reduce your market position with one lot in case of an opposite
+            signal. Of course, this means that if your position amount is one lot only, it will
+            be closed.
+        </p>
+    </tip>
+    <tip>
+        <h1>Opposite direction signal - "Close"</h1>
+        <p>
+            In case of an opposite signal raised by the Entry strategy <b>Forex Strategy Builder</b>
+            will close your present position no matter of its amount.
+        </p>
+    </tip>
+    <tip>
+        <h1>Opposite direction signal - "Reverse"</h1>
+        <p>
+            An Entry strategy <i>opposite direction signal</i> closes the current position
+            and opens a new opposite one. The amount of the opposite position will be one lot.
+        </p>
+    </tip>
+    <tip>
+        <h1>Entry strategy signals</h1>
+        <p>
+            The entry signals depend on the same and opposite signals logic. In case of adding
+            to a position, the execution can be cancelled by the "Lot Limiter" if the number
+            of position lots reaches the limit.
+        </p>
+    </tip>
+    <tip>
+        <h1>Exit strategy signals</h1>
+        <p>
+            The signals raised by the Exit strategy are independent from the logic of the same
+            and opposite signal menus (as they concern the entry strategy only).
+			An exit strategy signal can be cancelled when there is
+            no position or when its direction is the same as the current position direction.
+        </p>
+    </tip>
+    <tip>
+        <h1>Ambiguous bar</h1>
+        <p>
+            A bar for that we do not have enough
+            information to interpolate correctly. In an ambiguous bar, more than one order
+            can be executed and we are not sure for the right sequence.
+        </p>
+    </tip>
+    <tip>
+        <h1>Two orders ambiguity</h1>
+        <p>
+            A back testing situation when there are two
+            reachable active orders in both sides of the current price.<br />
+            For example, such a situation exists when there is a <i>Stop Loss</i> order 
+			and a <i>Take Profit</i>
+			order within the limits of the present bar.
+        </p>
+    </tip>
+    <tip>
+        <h1>Closing ambiguity</h1>
+        <p>
+            Closing ambiguity is a backtesting situation when the top as
+            well as the bottom of the bar have been reached and:<br />
+            - the current price is higher than the bar closing but there is an order below it.<br />
+            - the current price is lower than the bar closing but there is an order above it.<br />
+            The dilemma is whether to close the bar or to execute the order first.
+        </p>
+    </tip>
+    <tip>
+        <h1>Methods of bar interpolation</h1>
+        <p>
+            Forex Strategy Builder provides several methods of bar interpolation.
+            They concern the sequence of order execution within the ambiguous bars.<br />
+            The type of the interpolation method is not important when there are no
+            ambiguous bars.
+        </p>
+    </tip>
+    <tip>
+        <h1>Purpose of the interpolation methods</h1>
+        <p>
+            Without seeing into the future, the
+            interpolation methods make decision what exact order to execute first within an
+            ambiguous bar, according to the desired scenario. 
+        </p>
+    </tip>
+    <tip>
+        <h1>"Pessimistic" method</h1>
+        <p>
+            This interpolation method tends to execute
+            the order that will be at a loss or less profit. In case of a closing ambiguity,
+            it will execute the exit order if the position is at a loss instead of transferring
+            it to the next bar.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Pessimistic" method idea</h1>
+        <p>
+            To observe the rule "Safety First!" the
+            pessimistic method tries to find as bad scenario as possible. The idea is to
+            prevent us from a method fitting.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Pessimistic" method - Is it the worst possible?</h1>
+        <p>
+            No, it is not. It does not look into the
+            future to see the result of the possible variants. It makes decision using the
+            information from the current bar only. Therefore, it will leave open a
+            profitable position and will transfer it to the next bar instead of closing it
+            within the current bar.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Too pessimistic" method</h1>
+        <p>
+            The pessimistic method of interpolation can
+            be too pessimistic in some cases. For example, when there is a <i>Stop Loss</i>
+            order far away from the opening price of the position and a very near
+            <i>Take Profit</i> order. The back-tester will try to execute the Stop Loss order
+            instead of the nearer <i>Take Profit</i> order.
+        </p>
+    </tip>
+    <tip>
+        <h1>Interpolation method - "Shortest" </h1>
+        <p>
+            This method leads the back-tester through
+            the shortest price route inside the bar.<br />
+            The shortest price route is:<br />
+            - White bar: Open – Low - High - Close<br />
+            - Black bar: Open – High – Low - Close<br />
+            This sequence is applies to 90% of the bars.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Shortest" method idea</h1>
+        <p>
+            The shortest
+            price-route applicable to a perfectly effective and zero volatile market
+            only. In spite of that, it is good basis for comparison with the other methods because
+            of its extreme result with some strategies.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Shortest" method drawback</h1>
+        <p>
+            When back-tester follows the shortest bar route, it never looks beck. It cannot 
+			take into account
+            an order placed at already passed price (Stop Loss). The back-testing result of
+            this method can be sometimes better than the optimistic or worse than the
+            pessimistic method.
+        </p>
+    </tip>
+    <tip>
+        <h1>Interpolation method - "Nearest"</h1>
+        <p>
+            Using the "Nearest" method of bar
+            interpolation the back-tester prefers to execute the nearest order first in an
+            ambiguous bar.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Nearest" method idea</h1>
+        <p>
+            Let suppose that
+            the market is random and the price follows the Gauss distribution. Therefore,
+            the nearest order has biggest probability to be executed.<br />
+            The result of this back test will be the same as the result on a perfectly random market.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Nearest" method drawback</h1>
+        <p>
+            In case of closing logic "Stop Limit" with the stop price nearer to the entry order
+            than the limit price, the back tester closes the position at a loss when it is
+            possible. In the opposite case (nearer limit order), the back tester closes the
+            position on profit.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Optimistic" method</h1>
+        <p>
+            The optimistic interpolation method tends
+            to execute the order that will bring bigger profit or less loss. In case of a
+            closing ambiguity, it will execute the exit order if the position is on profit
+            instead of transferring it to the next bar.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Optimistic" method idea</h1>
+        <p>
+            The Optimistic method is presented as an
+            alternative of the pessimistic method. It has to be used only for comparison to
+            other methods and not as a base for strategy evaluation. 
+        </p>
+    </tip>
+    <tip>
+        <h1>"Optimistic" method - Is it the best possible?</h1>
+        <p>
+            No, it is not. It does not look into the
+            future to see the result of the possible variants. It makes decision using the
+            information from the current bar only. Therefore, it will leave open a losing position
+            and will transfer it to the next bar instead of closing it within the current bar.
+        </p>
+    </tip>
+    <tip>
+        <h1>Too "optimistic" method</h1>
+        <p>
+            The optimistic method of interpolation can
+            be too optimistic in some cases. For example, when there is a <i>Take Profit</i>
+            order far away from the opening price of the position and a very near <i>Stop Loss</i>
+            order. The back-tester will try to execute the <i>Take Profit</i> order instead of
+            the nearer <i>Stop Loss</i> order.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Random" method</h1>
+        <p>
+            The random interpolation method executes
+            the existing orders using a random route. The main principle is that the nearer
+            order has bigger chance to be executed than the farther one.
+        </p>
+    </tip>
+    <tip>
+        <h1>"Random" method idea</h1>
+        <p>
+            If we suppose the market is random and
+            there are no other factors influencing on the price, the "random" method will
+            be the perfect one. Applied a number of times it gives us a
+            clear enough picture of the strategy performance.
+        </p>
+    </tip>
+    <tip>
+        <h1>Usage of the "Random" method</h1>
+        <p>
+            You can make <b>Forex Strategy Builder</b>
+            recalculate the current strategy by pressing the "F5" key. Every time the
+            back tester will calculate the strategy using random price-route within the
+            ambiguous bars and the balance chart will be different.<br />
+            The other option is to use the "Comparator" tool.
+        </p>
+    </tip>
+    <tip>
+        <h1>Comparator</h1>
+        <p>
+            The method comparator is a tool that
+            calculates the strategy using all the interpolating methods and shows their
+            results on a single chart. It also plots the average result. It is highly
+            possible that the resulting line to be nearest balance line to the real historical
+            balance of the present strategy.
+        </p>
+    </tip>
+    <tip>
+        <h1>Bar explorer</h1>
+        <p>
+            Bar explorer represents the price-route inside a bar.<br />
+            You can open it by double clicking on a journal row or on a bar from the
+            indicator chart.
+        </p>
+    </tip>
+    <tip>
+        <h1>Scanner</h1>
+        <p>
+            Scanner performs intrabar scanning using all available data periods.<br />
+            It is useful when there are ambiguous bars.
+        </p>
+    </tip>
+    <tip>
+        <h1>Scanner - usage</h1>
+        <p>
+            The first time you use it or after a change in the data period, you have
+            to load the available shorter period data. It takes about 10 seconds.<br />
+            Press the "Scan" button to perform instantaneous scanning.
+        </p>
+    </tip>
+    <tip>
+        <h1>Quick scan</h1>
+        <p>
+            You can perform "Quick scan" by pressing "F6" from the program main screen.
+            In case of the intrabar data has not been loaded earlier, the scanner
+            window will be shown.
+        </p>
+    </tip>
+</tips>

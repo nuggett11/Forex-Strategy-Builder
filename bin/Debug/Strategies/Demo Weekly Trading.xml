@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<strategy>
+  <programName>Forex Strategy Builder</programName>
+  <programVersion>2.57.9.0</programVersion>
+  <strategyName>Demo Weekly Trading</strategyName>
+  <instrumentSymbol>EURUSD</instrumentSymbol>
+  <instrumentPeriod>day</instrumentPeriod>
+  <sameDirSignalAction>Nothing</sameDirSignalAction>
+  <oppDirSignalAction>Nothing</oppDirSignalAction>
+  <permanentStopLoss usePermanentSL="False" permanentSLType="Relative">1000</permanentStopLoss>
+  <permanentTakeProfit usePermanentTP="True" permanentTPType="Relative">1000</permanentTakeProfit>
+  <breakEven useBreakEven="False">1000</breakEven>
+  <maxOpenLots>20</maxOpenLots>
+  <useAcountPercentEntry>False</useAcountPercentEntry>
+  <entryLots>1</entryLots>
+  <addingLots>1</addingLots>
+  <reducingLots>1</reducingLots>
+  <description>This strategy demonstrates the possibility of trading only during certain periods of the week. In this particular case, we enter the market at the top or bottom price of the previous week but we do so only on Tuesday, Wednesday or Thursday. We close position at the end of the week, at the last bar closing price for the week. Or if the market reaches the permanent Take Profit.
+
+Since we have the previous week's top and bottom prices, we can place our entry orders on Tuesday morning and they will be active until Thursday midnight. We use OCO (One Cancels the Other) entry orders. This is so because we use the Enter Once condition for the week, and therefore, we will not open a second position if at some point during the week we have reached the other price.
+
+If you want to further improve the strategy you can use the Generator to add more filters. To do so open the Generator and lock the existing slots by clicking on them. Then click the "Generate" button and wait for FSB to add filters.</description>
+  <openFilters>2</openFilters>
+  <closeFilters>0</closeFilters>
+  <slot slotNumber="0" slotType="Open">
+    <indicatorName>Top Bottom Price</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>0</index>
+      <value>Enter long at the top price</value>
+    </listParam>
+    <listParam paramNumber="1">
+      <caption>Base price</caption>
+      <index>0</index>
+      <value>High &amp; Low</value>
+    </listParam>
+    <listParam paramNumber="2">
+      <caption>Base period</caption>
+      <index>2</index>
+      <value>Previous week</value>
+    </listParam>
+    <numParam paramNumber="0">
+      <caption>Price shift</caption>
+      <value>0</value>
+    </numParam>
+  </slot>
+  <slot slotNumber="1" slotType="OpenFilter" logicalGroup="A">
+    <indicatorName>Enter Once</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>2</index>
+      <value>Enter no more than once a week</value>
+    </listParam>
+  </slot>
+  <slot slotNumber="2" slotType="OpenFilter" logicalGroup="A">
+    <indicatorName>Day of Week</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>0</index>
+      <value>Enter the market between the specified days</value>
+    </listParam>
+    <listParam paramNumber="1">
+      <caption>From (incl.)</caption>
+      <index>2</index>
+      <value>Tuesday</value>
+    </listParam>
+    <listParam paramNumber="2">
+      <caption>To (excl.)</caption>
+      <index>5</index>
+      <value>Friday</value>
+    </listParam>
+  </slot>
+  <slot slotNumber="3" slotType="Close">
+    <indicatorName>Week Closing</indicatorName>
+    <listParam paramNumber="0">
+      <caption>Logic</caption>
+      <index>0</index>
+      <value>Exit the market at the end of the week</value>
+    </listParam>
+    <listParam paramNumber="1">
+      <caption>Base price</caption>
+      <index>0</index>
+      <value>Close</value>
+    </listParam>
+  </slot>
+</strategy>

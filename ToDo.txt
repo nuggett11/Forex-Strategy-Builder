@@ -1,0 +1,86 @@
+BUGS
+- Small Balance Chart - bug when restore from minimized and startegy was changed. The problem is that InitChart() uses Data.*. InitChart() have to be separated from SetResize().
+- Generator: CheckAvailableIndicators() - max number of slots
+
+CURRENT TASK
+
+Analyzer:
+
+Cumulative strategy report:
+- Make Cumulative strategy analysis.
+
+DEBUG
+- Generator: banned indicators, linked slots, locked slots, top 10.
+
+
+TODO
+
+Legend: 
+v Done
+- To Do
+~ Maybe
+? Probably not now
+
+General:
+v Fix zeroes in journal field Amount
+? Repair back test of Trailing Stop - tick mode instead of bar mode;
+? Add Break Even stop;
+~ Import MT5 data files;
+? Multi-core processors to be supported. 
+- Show Floating P/L in journal during transfer when there are more transactions in the bar.
+v Show Required Margin in Journal by Positions.
+- Explorer - show position lots between the points.
+~ Money Management - add / subtract after a certain number of pips profit or loss;
+~ More MA smoothing methods.
+v Fix calculation of Required Margin and Account Percent Entry.
+- Fix loading data without a decimal separator in the data file.
+- User format of data file that can overwrite the default one.
+- Check reported issues with data files.
+
+Permanent Protection Type:
+v Absolute and Relative Permanent SL / TP
+v Add protection type description in BBcode, Overview, Strategy Properties slot...
+v Add protection type in Backtester
+- Add protection type to Generator
+
+Scanner:
+v Add Cancel button to compact mode
+v Disable Symbol and Period combo boxes during data loading at startup.
+v Remove Tick info when there aren't tick data files;
+v Add "Loading:" label when loading data files;
+
+Generator:
+~ Add buttons: Overview, Save As; Dismiss Strategy;
+~ Add views: Market statistics, Account Statistics;
+x At starting generation reset the strategy layout and balance chart to default. Consider the locked slots;
+v Save and show Top 10 strategies. Update the list regularly. Show: Micro Balance chart, Balance, Drawdown, Win/loss.
+- Scroll bar for the settings panels;
+v Linked slots - keep the indicator but change its parameters.
+v Repair strategy description option;
+v Repair strategy Overview option;
+v Fix Unlock all icon.
+x Option in Settings - automatically save top 10 strategy (Top_01_EURUSD_1Day.xml)
+v Option in Settings - Reset settings.
+v Option - Only use default indicator values.
+v Banning of indicators (through a setting file or menu).
+v Make a list of indicators allowed for generating. The generator to search on this list when generating ind. name. Proper error message when the choice is not available. 
+v Disable indicator check boxes when generating.
+v Deal with Permanent SL / TP type when adding or reducing is on. Keep protection type when changing TP or SL is forbidden. 
+v Make it possible to show / hide FSB when the generator is working.
+
+Optimizer:
+v Add buttons: Select, Unselect, Set steps...
+? optimization of Permanent TP / SL.
+x re-sizable form;
+v Option in Settings - Reset settings.
+
+jForex Import:
+- Import correct files even when there are wrong ones.
+
+Indicators:
+~ Trailing Stop, Stop Loss, Take Profit... to start from previous top/bottom, ATR...
+
+Languages:
+v Fix Russian translation
+
+

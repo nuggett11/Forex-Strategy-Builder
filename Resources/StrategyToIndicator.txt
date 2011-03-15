@@ -1,0 +1,204 @@
+// Strategy to Indicator: #INDICATORNAME#
+// Last changed on #MODIFIED#
+// Part of Forex Strategy Builder
+// Website http://forexsb.com/
+// Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
+// This code or any part of it cannot be used in other applications without a permission.
+
+using System;
+using System.Collections.Generic;
+
+namespace Forex_Strategy_Builder
+{
+    /// <summary>
+    /// Startegy to Indicator
+    /// </summary>
+    public class Strategy_To_Indicator : Indicator
+    {
+        /// <summary>
+        /// Sets the default indicator parameters for the designated slot type
+        /// </summary>
+        public Strategy_To_Indicator(SlotTypes slotType)
+        {
+            // General properties
+            IndicatorName   = "#INDICATORNAME#";
+            PossibleSlots   = SlotTypes.OpenFilter;
+			CustomIndicator = true;
+
+            // Setting up the indicator parameters
+            IndParam = new IndicatorParam();
+            IndParam.IndicatorName = IndicatorName;
+            IndParam.SlotType      = slotType;
+            IndParam.IndicatorType = TypeOfIndicator.Additional;
+
+            // The ComboBox parameters
+            IndParam.ListParam[0].Caption  = "Logic";
+            IndParam.ListParam[0].ItemList = new string[] { "This is a static filter from a strategy" };
+            IndParam.ListParam[0].Index    = 0;
+            IndParam.ListParam[0].Text     = IndParam.ListParam[0].ItemList[IndParam.ListParam[0].Index];
+            IndParam.ListParam[0].Enabled  = true;
+            IndParam.ListParam[0].ToolTip  = "Logic of application of the indicator.";
+			
+            IndParam.ListParam[1].Caption  = "Base instrument";
+            IndParam.ListParam[1].ItemList = new string[] { "#INSTRUMENT#" };
+            IndParam.ListParam[1].Index    = 0;
+            IndParam.ListParam[1].Text     = IndParam.ListParam[1].ItemList[IndParam.ListParam[1].Index];
+            IndParam.ListParam[1].Enabled  = true;
+            IndParam.ListParam[1].ToolTip  = "The indicator has been created from this instrument.";
+			
+            IndParam.ListParam[2].Caption  = "Base period";
+            IndParam.ListParam[2].ItemList = new string[] { "#BASEPERIOD#" };
+            IndParam.ListParam[2].Index    = 0;
+            IndParam.ListParam[2].Text     = IndParam.ListParam[2].ItemList[IndParam.ListParam[2].Index];
+            IndParam.ListParam[2].Enabled  = true;
+            IndParam.ListParam[2].ToolTip  = "The indicator has been created from this time frame.";
+			
+            IndParam.ListParam[3].Caption  = "Start date";
+            IndParam.ListParam[3].ItemList = new string[] { "#STARTDATE#" };
+            IndParam.ListParam[3].Index    = 0;
+            IndParam.ListParam[3].Text     = IndParam.ListParam[3].ItemList[IndParam.ListParam[3].Index];
+            IndParam.ListParam[3].Enabled  = true;
+            IndParam.ListParam[3].ToolTip  = "The indicator works from this date.";
+			
+            IndParam.ListParam[4].Caption  = "End date";
+            IndParam.ListParam[4].ItemList = new string[] { "#ENDDATE#" };
+            IndParam.ListParam[4].Index    = 0;
+            IndParam.ListParam[4].Text     = IndParam.ListParam[4].ItemList[IndParam.ListParam[4].Index];
+            IndParam.ListParam[4].Enabled  = true;
+            IndParam.ListParam[4].ToolTip  = "The indicator works till this date.";
+
+            // The CheckBox parameters
+            IndParam.CheckParam[0].Caption = "Reversed signals";
+            IndParam.CheckParam[0].Checked = false;
+            IndParam.CheckParam[0].Enabled = true;
+            IndParam.CheckParam[0].ToolTip = "The indicator raises signals which are opposit to the signlas of the base startegy.";
+
+            return;
+        }
+
+        /// <summary>
+        /// Calculates the indicator's components
+        /// </summary>
+        public override void Calculate(SlotTypes slotType)
+        {
+            // Reading the parameters
+            bool bReversed = IndParam.CheckParam[0].Checked;
+
+		    // Saved data
+		    TimeSpan tsBasePeriodLenght = TimeSpan.FromMinutes(#PERIODMINUTES#);
+            TimeSpan tsPeriodLenght     = TimeSpan.FromMinutes((int)Period);
+		    
+		    string[] asLongPeriods = new string[]
+		    {
+#LISTLONG#            };
+
+		    string[] asShortPeriods = new string[]
+		    {
+#LISTSHORT#            };
+			
+            // Calculation
+            List<DateTime> dtLongPerods  = new List<DateTime>();
+            List<DateTime> dtShortPerods = new List<DateTime>();
+
+            try
+            {
+                foreach (string sPeriod in asLongPeriods)
+                {   
+                    DateTime dtPeriod = DateTime.Parse(sPeriod);
+                    if(dtPeriod + tsBasePeriodLenght > Date[0])
+						dtLongPerods.Add(dtPeriod);
+                }
+            }
+            catch { }
+
+            try
+            {
+                foreach (string sPeriod in asShortPeriods)
+                {   
+                    DateTime dtPeriod = DateTime.Parse(sPeriod);
+                    if(dtPeriod + tsBasePeriodLenght > Date[0])
+						dtShortPerods.Add(dtPeriod);
+                }
+            }
+            catch { }
+
+            int iFirstBar = 1;
+            double[] adLong  = new double[Bars];
+            double[] adShort = new double[Bars];
+			
+            // Calculation of the logic
+            int iReachedBar = 0;
+            foreach (DateTime dtBasePeriod in dtLongPerods)
+            {
+                bool bEntered = false;
+                for (int iBar = iReachedBar; iBar < Bars; iBar++)
+                {
+					iReachedBar = iBar;
+                    if (Date[iBar] >= dtBasePeriod && Date[iBar] + tsPeriodLenght <= dtBasePeriod + tsBasePeriodLenght)
+                    {
+                        adLong[iBar] = 1;
+                        bEntered = true;
+                    }
+                    else if(bEntered)
+						break;
+                }
+            }
+
+            iReachedBar = 0;
+            foreach (DateTime dtBasePeriod in dtShortPerods)
+            {
+                bool bEntered = false;
+                for (int iBar = iReachedBar; iBar < Bars; iBar++)
+                {
+					iReachedBar = iBar;
+                    if (Date[iBar] >= dtBasePeriod && Date[iBar] + tsPeriodLenght <= dtBasePeriod + tsBasePeriodLenght)
+                    {
+                        adShort[iBar] = 1;
+                        bEntered = true;
+                    }
+                    else if(bEntered)
+						break;
+                }
+            }
+
+            // Saving the components
+            Component = new IndicatorComp[2];
+
+            Component[0] = new IndicatorComp();
+            Component[0].CompName  = "Is long entry allowed";
+            Component[0].DataType  = IndComponentType.AllowOpenLong;
+            Component[0].ChartType = IndChartType.NoChart;
+            Component[0].FirstBar  = iFirstBar;
+            Component[0].Value     = bReversed ? adShort : adLong;
+
+            Component[1] = new IndicatorComp();
+            Component[1].CompName  = "Is short entry allowed";
+            Component[1].DataType  = IndComponentType.AllowOpenShort;
+            Component[1].ChartType = IndChartType.NoChart;
+            Component[1].FirstBar  = iFirstBar;
+            Component[1].Value     = bReversed ? adLong : adShort;
+            return;
+        }
+
+        /// <summary>
+        /// Sets the indicator logic description
+        /// </summary>
+        public override void SetDescription(SlotTypes slotType)
+        {
+            EntryFilterLongDescription  = IndicatorName + " allows";
+            EntryFilterShortDescription = IndicatorName + " allows";
+
+            return;
+        }
+
+        /// <summary>
+        /// Indicator to string
+        /// </summary>
+        public override string ToString()
+        {
+            string sString = IndicatorName;
+
+            return sString;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<Project Name="New Obfuscator Project" UseRelativePaths="True" PropogateObfuscationSettings="False" PropogateWatermarkSettings="True" PropogateOutputSettings="True" PropogateAuthenticodeSettings="True" CheckVersionsWhileResolvingAssemblies="True" ID="{f5ed5a62-42dd-40b5-8144-e7b2af0008fa}">
+  <SearchDirectories />
+  <OutputSettings OutputPath=".\CryptoObfuscator_Output" EncryptDependancies="False" CompressDependancies="False" MainAssemblyPath="" RunAssemblyPath="Forex Strategy Builder" SNPath="" SignToolPath="" LicensingDLLPath="" LicensingMergeAssemblyName="">
+    <AdditionalAssemblies />
+  </OutputSettings>
+  <ObfuscationSettings RenamingScheme="2" UseOverloadedFieldNames="True" UseOverloadedMethodNames="True" HonorObfuscationAttributes="False" ExcludeSerializedTypes="True" ProcessInlineStrings="True" ForceXAMLProcessingModeExclude="False" />
+  <ObfuscationRules />
+  <Assembly Load="true" Path=".\Forex Strategy Builder.exe" XapEntryName="" KeyFilePath="" CertFilePath="" TimeStampURL="" Embed="True" PfxPassword="" PfxPasswordCert="">
+    <ObfuscationSettings EncryptStrings="False" SuppressReflector="True" ReduceMetaData="True" ObfuscationDisposition="1" FlowObfuscation="1" SuppressILDASM="True" SuppressReflection="True" CombineResources="False" EncryptResources="False" CompressResources="False" MarkAsSealed="True" EnableTamperDetection="False" EnableAntiDebugging="True" SymbolRenaming="True" HideExternalCalls="False" HideInternalCalls="False" GeneratePdbFile="True" ObfuscatePdbFileNames="True">
+      <Watermarks Watermark0="" Watermark1="" Watermark2="" Watermark3="" Watermark4="" Watermark5="" Watermark6="" Watermark7="" Watermark8="" Watermark9="" />
+    </ObfuscationSettings>
+  </Assembly>
+  <WarningSuppressions />
+</Project>
