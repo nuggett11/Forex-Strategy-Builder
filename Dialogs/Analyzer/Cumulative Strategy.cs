@@ -34,7 +34,7 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
             // Button Reset Report
             btnResetReport.Parent     = this;
             btnResetReport.Name       = "btnResetReport";
-            btnResetReport.ImageAlign = ContentAlignment.MiddleCenter; 
+            btnResetReport.ImageAlign = ContentAlignment.MiddleCenter;
             btnResetReport.Image      = Properties.Resources.close_button;
             btnResetReport.Click     += new EventHandler(ViewCharts_Click);
             btnResetReport.UseVisualStyleBackColor = true;

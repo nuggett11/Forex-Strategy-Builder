@@ -507,7 +507,7 @@ namespace Forex_Strategy_Builder
             sharpeRatio      = 0;
             sharpeRatioLong  = 0;
             sharpeRatioShort = 0;
-            
+
             double sumPow      = 0;
             double sumPowLong  = 0;
             double sumPowShort = 0;
@@ -591,21 +591,21 @@ namespace Forex_Strategy_Builder
                 barsWithPos.ToString(),
                 (100f * barsWithPos /(Data.Bars - Data.FirstBar)).ToString("F2") + "%",
                 totalTrades.ToString(),
-                totalWinTrades.ToString(), 
-                totalLossTrades.ToString(), 
-                (1f * totalWinTrades/(totalWinTrades + totalLossTrades)).ToString("F2"), 
+                totalWinTrades.ToString(),
+                totalLossTrades.ToString(),
+                (1f * totalWinTrades/(totalWinTrades + totalLossTrades)).ToString("F2"),
                 Math.Round(Math.Max(maxLongWin, maxShortWin)).ToString()   + unit,
                 Math.Round(grossProfit / totalWinTrades).ToString()        + unit,
                 Math.Round(Math.Min(maxLongLoss, maxShortLoss)).ToString() + unit,
                 Math.Round(grossLoss / totalLossTrades).ToString()         + unit,
                 (1f * NetBalance / totalTrades).ToString("F2")             + unit
             };
-            
+
             additionalStatsValueLong = new string[]
             {
                 "0" + unit,
-                NetLongBalance.ToString() + unit, 
-                NetLongBalance.ToString() + unit, 
+                NetLongBalance.ToString() + unit,
+                NetLongBalance.ToString() + unit,
                 Math.Round(grossLongProfit).ToString() + unit,
                 Math.Round(grossLongLoss).ToString()   + unit,
                 (grossLongLoss == 0 ? "N/A" : Math.Abs(grossLongProfit/grossLongLoss).ToString("F2")),
@@ -622,21 +622,21 @@ namespace Forex_Strategy_Builder
                 barsWithLongPos.ToString(),
                 (100f * barsWithLongPos /(Data.Bars - Data.FirstBar)).ToString("F2") + "%",
                 totalLongTrades.ToString(),
-                winningLongTrades.ToString(), 
-                losingLongTrades.ToString(), 
-                (1f * winningLongTrades /(winningLongTrades + losingLongTrades)).ToString("F2"), 
+                winningLongTrades.ToString(),
+                losingLongTrades.ToString(),
+                (1f * winningLongTrades /(winningLongTrades + losingLongTrades)).ToString("F2"),
                 Math.Round(maxLongWin).ToString() + unit,
                 Math.Round(grossLongProfit / winningLongTrades).ToString() + unit,
                 Math.Round(maxLongLoss).ToString() + unit,
                 Math.Round(grossLongLoss / losingLongTrades).ToString() + unit,
                 (1f * NetLongBalance / (winningLongTrades + losingLongTrades)).ToString("F2") + unit
             };
-            
+
             additionalStatsValueShort = new string[]
             {
                 "0" + unit,
-                NetShortBalance.ToString() + unit, 
-                NetShortBalance.ToString() + unit, 
+                NetShortBalance.ToString() + unit,
+                NetShortBalance.ToString() + unit,
                 Math.Round(grossShortProfit).ToString() + unit,
                 Math.Round(grossShortLoss).ToString()   + unit,
                 (grossShortLoss == 0 ? "N/A" : Math.Abs(grossShortProfit/grossShortLoss).ToString("F2")),
@@ -653,9 +653,9 @@ namespace Forex_Strategy_Builder
                 barsWithShortPos.ToString(),
                 (100f * barsWithShortPos /(Data.Bars - Data.FirstBar)).ToString("F2") + "%",
                 totalShortTrades.ToString(),
-                winningShortTrades.ToString(), 
-                losingShortTrades.ToString(), 
-                (1f * winningShortTrades / (winningShortTrades + losingShortTrades)).ToString("F2"), 
+                winningShortTrades.ToString(),
+                losingShortTrades.ToString(),
+                (1f * winningShortTrades / (winningShortTrades + losingShortTrades)).ToString("F2"),
                 Math.Round(maxShortWin).ToString() + unit,
                 Math.Round(grossShortProfit / winningShortTrades).ToString() + unit,
                 Math.Round(maxShortLoss).ToString() + unit,
@@ -735,10 +735,10 @@ namespace Forex_Strategy_Builder
                 (Data.Bars - Data.FirstBar).ToString(),
                 barsWithPos.ToString(),
                 (100f * barsWithPos /(Data.Bars - Data.FirstBar)).ToString("F2") + "%",
-                totalTrades.ToString(), 
-                totalWinTrades.ToString(), 
-                totalLossTrades.ToString(), 
-                (1f * totalWinTrades / (totalWinTrades + totalLossTrades)).ToString("F2"), 
+                totalTrades.ToString(),
+                totalWinTrades.ToString(),
+                totalLossTrades.ToString(),
+                (1f * totalWinTrades / (totalWinTrades + totalLossTrades)).ToString("F2"),
                 Math.Max(maxLongMoneyWin, maxShortMoneyWin).ToString("F2") + unit,
                 (grossMoneyProfit / totalWinTrades).ToString("F2") + unit,
                 Math.Min(maxLongMoneyLoss, maxShortMoneyLoss).ToString("F2") + unit,
@@ -772,10 +772,10 @@ namespace Forex_Strategy_Builder
                 (Data.Bars - Data.FirstBar).ToString(),
                 barsWithLongPos.ToString(),
                 (100f * barsWithLongPos /(Data.Bars - Data.FirstBar)).ToString("F2") + "%",
-                totalLongTrades.ToString(), 
-                winningLongTrades.ToString(), 
-                losingLongTrades.ToString(), 
-                (1f * winningLongTrades / (winningLongTrades + losingLongTrades)).ToString("F2"), 
+                totalLongTrades.ToString(),
+                winningLongTrades.ToString(),
+                losingLongTrades.ToString(),
+                (1f * winningLongTrades / (winningLongTrades + losingLongTrades)).ToString("F2"),
                 maxLongMoneyWin.ToString("F2") + unit,
                 (grossLongMoneyProfit / winningLongTrades).ToString("F2") + unit,
                 maxLongMoneyLoss.ToString("F2") + unit,
@@ -785,7 +785,7 @@ namespace Forex_Strategy_Builder
                 GHPRLong.ToString("F2") + "%",
                 sharpeRatioLong.ToString("F2")
             };
-            
+
             additionalStatsValueShort = new string[]
             {
                 Configs.InitialAccount.ToString("F2") + unit,
@@ -809,10 +809,10 @@ namespace Forex_Strategy_Builder
                 (Data.Bars - Data.FirstBar).ToString(),
                 barsWithShortPos.ToString(),
                 (100f * barsWithShortPos /(Data.Bars - Data.FirstBar)).ToString("F2") + "%",
-                totalShortTrades.ToString(), 
-                winningShortTrades.ToString(), 
-                losingShortTrades.ToString(), 
-                (1f * winningShortTrades / (winningShortTrades + losingShortTrades)).ToString("F2"), 
+                totalShortTrades.ToString(),
+                winningShortTrades.ToString(),
+                losingShortTrades.ToString(),
+                (1f * winningShortTrades / (winningShortTrades + losingShortTrades)).ToString("F2"),
                 maxShortMoneyWin.ToString("F2") + unit,
                 (grossShortMoneyProfit / winningShortTrades).ToString("F2") + unit,
                 maxShortMoneyLoss.ToString("F2") + unit,

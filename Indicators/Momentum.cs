@@ -69,7 +69,7 @@ namespace Forex_Strategy_Builder
             IndParam.NumParam[0].Max     = 200;
             IndParam.NumParam[0].Enabled = true;
             IndParam.NumParam[0].ToolTip = "The period of Momentum.";
- 
+
             IndParam.NumParam[1].Caption = "Additional smoothing";
             IndParam.NumParam[1].Value   = 0;
             IndParam.NumParam[1].Min     = 0;
@@ -93,7 +93,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-	
+
         /// <summary>
         /// Calculates the indicator's components
         /// </summary>
@@ -109,10 +109,10 @@ namespace Forex_Strategy_Builder
 
             int      iFirstBar   = iPrvs + iPeriod + iSmooth + 2;
             double[] adMomentum  = new double[Bars];
-			double[] adBasePrice = Price(basePrice);
+            double[] adBasePrice = Price(basePrice);
 
             for (int iBar = iPeriod; iBar < Bars; iBar++)
-				adMomentum[iBar] = adBasePrice[iBar] - adBasePrice[iBar-iPeriod];
+            	adMomentum[iBar] = adBasePrice[iBar] - adBasePrice[iBar-iPeriod];
 
             if (iSmooth > 0)
                 adMomentum = MovingAverage(iSmooth, 0, maMethod, adMomentum);

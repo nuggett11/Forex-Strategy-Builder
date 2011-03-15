@@ -30,7 +30,7 @@ namespace Forex_Strategy_Builder
             lblInformation = new Label();
             btnClose       = new Button();
             btnConnect     = new Button();
-            
+
             // BBCode_viewer
             AcceptButton = btnClose;
             BackColor    = LayoutColors.ColorFormBack;
@@ -119,7 +119,7 @@ namespace Forex_Strategy_Builder
             pnlInfoBase.Size     = new Size(ClientSize.Width - 2 * border, 65);
             pnlInfoBase.Location = new Point(border, border);
 
-            // pnlBBCodeBase 
+            // pnlBBCodeBase
             pnlBBCodeBase.Size     = new Size(ClientSize.Width - 2 * border, btnClose.Top - pnlInfoBase.Bottom - btnVertSpace - border);
             pnlBBCodeBase.Location = new Point(border, pnlInfoBase.Bottom + border);
 

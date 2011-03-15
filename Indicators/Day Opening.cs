@@ -11,12 +11,12 @@ namespace Forex_Strategy_Builder
     /// Day Opening Indicator
     /// </summary>
     public class Day_Opening : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
         public Day_Opening(SlotTypes slotType)
-		{
+        {
             // General properties
             IndicatorName  = "Day Opening";
             PossibleSlots  = SlotTypes.Open;

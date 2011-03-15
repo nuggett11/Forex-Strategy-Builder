@@ -142,12 +142,12 @@ namespace Forex_Strategy_Builder
             int       iATRPeriod     = (int)IndParam.NumParam[1].Value;
             int       iATRMultiplier = (int)IndParam.NumParam[3].Value;
             int       iPrvs          = IndParam.CheckParam[0].Checked ? 1 : 0;
-	
+
             // Calculation
             double[] adMA      = MovingAverage(nMA, 0, maMethod, Price(price));
-			double[] adATR     = new double[Bars];
-			double[] adUpBand  = new double[Bars];
-			double[] adDnBand  = new double[Bars];
+            double[] adATR     = new double[Bars];
+            double[] adUpBand  = new double[Bars];
+            double[] adDnBand  = new double[Bars];
 
             int iFirstBar = (int)Math.Max(nMA, iATRPeriod) + iPrvs + 2;
 
@@ -158,7 +158,7 @@ namespace Forex_Strategy_Builder
             }
 
             adATR = MovingAverage(iATRPeriod, 0, maMethod, adATR);
-	
+
             for (int iBar = nMA; iBar < Bars; iBar++)
             {
                 adUpBand[iBar] = adMA[iBar] + adATR[iBar] * iATRMultiplier;

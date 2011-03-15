@@ -19,7 +19,7 @@ using System.IO;
 namespace Forex_Strategy_Builder
 {
     /// <summary>
-    /// Provide links to the Parameter's fields 
+    /// Provide links to the Parameter's fields
     /// </summary>
     public class Parameter
     {
@@ -317,7 +317,7 @@ namespace Forex_Strategy_Builder
             nudOutOfSample.Increment = 1;
             nudOutOfSample.Value     = 30;
             nudOutOfSample.EndInit();
-            nudOutOfSample.ValueChanged += new EventHandler(NudOutOfSample_ValueChanged); 
+            nudOutOfSample.ValueChanged += new EventHandler(NudOutOfSample_ValueChanged);
 
             // BackGroundWorker
             bgWorker = new BackgroundWorker();
@@ -652,7 +652,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         void SaveOptions()
         {
-            string options = 
+            string options =
             chbOutOfSample.Checked.ToString()                + ";" +
             nudOutOfSample.Value.ToString()                  + ";" +
             chbAmbiguousBars.Checked.ToString()              + ";" +
@@ -674,7 +674,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Paints pnlCaptions 
+        /// Paints pnlCaptions
         /// </summary>
         void PnlCaptions_Paint(object sender, PaintEventArgs e)
         {
@@ -696,7 +696,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Paints PnlParamsBase 
+        /// Paints PnlParamsBase
         /// </summary>
         void PnlParamsBase_Paint(object sender, PaintEventArgs e)
         {
@@ -1391,7 +1391,7 @@ namespace Forex_Strategy_Builder
             Data.Strategy.Slot[slot].MaxValue       = indicator.SeparatedChartMaxValue;
             Data.Strategy.Slot[slot].IsDefined      = true;
 
-            // Search the indicators' components to determine the Data.FirstBar 
+            // Search the indicators' components to determine the Data.FirstBar
             Data.FirstBar = 0;
             foreach (IndicatorSlot indSlot in Data.Strategy.Slot)
                 foreach (IndicatorComp indComp in indSlot.Component)
@@ -1466,7 +1466,7 @@ namespace Forex_Strategy_Builder
                 for (int numParam = 0; numParam < 6; numParam++)
                     if (Data.Strategy.Slot[slot].IndParam.NumParam[numParam].Enabled)
                         sbReport.Append(Data.Strategy.Slot[slot].IndParam.NumParam[numParam].Caption + ",");
-            
+
             sbReport.AppendLine();
         }
 
@@ -1543,7 +1543,7 @@ namespace Forex_Strategy_Builder
 
                 alblParameterValue[param].Text = newtext;
                 alblParameterValue[param].Font = fontParamValueBold;
-                
+
                 Timer timer = new Timer();
                 timer.Interval = 1500;
                 timer.Tag      = param;

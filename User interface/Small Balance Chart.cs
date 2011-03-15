@@ -157,7 +157,7 @@ namespace Forex_Strategy_Builder
             g.Dispose();
 
             labelWidth = Math.Max(labelWidth, 30);
-            XLeft  = border + space; 
+            XLeft  = border + space;
             XRight = ClientSize.Width - border - space - labelWidth;
             XScale = (XRight - 2 * space - border) / (float)chartBars;
 
@@ -238,7 +238,7 @@ namespace Forex_Strategy_Builder
             {
                 XOOSBar = XLeft + (barOOS - firstBar) * XScale;
                 balance = (float)(Configs.AccountInMoney ? Backtester.MoneyBalance(barOOS) : Backtester.Balance(barOOS));
-                
+
             }
             else
             {
@@ -348,7 +348,7 @@ namespace Forex_Strategy_Builder
                 g.DrawString(Language.T("Scanned") + modellingQuolity, fontNote, Brushes.LimeGreen, XLeft, captionHeight - 2);
 
             // Scanned bars
-            if (isScanPerformed && !isHideScanningLine && 
+            if (isScanPerformed && !isHideScanningLine &&
                 (Data.IntraBars != null && Data.IsIntrabarData ||
                  Data.Period == DataPeriods.min1 && Data.IsTickData && Configs.UseTickData))
             {

@@ -582,7 +582,7 @@ namespace Forex_Strategy_Builder
                     break;
             }
         }
- 
+
         /// <summary>
         /// Tools button
         /// </summary>
@@ -826,7 +826,7 @@ namespace Forex_Strategy_Builder
 
                 mi.Checked = true;
             }
-            
+
             return;
         }
 
@@ -887,10 +887,10 @@ namespace Forex_Strategy_Builder
 
                 MainMenuStrip.Items.Clear();
                 InitializeMenu();
-                
+
                 statusStrip.Items.Clear();
                 InitializeStatusBar();
-                
+
                 Calculate(false);
                 RebuildStrategyLayout();
                 infpnlMarketStatistics.Update(Data.MarketStatsParam, Data.MarketStatsValue, Data.MarketStatsFlag, Language.T("Market Statistics"));

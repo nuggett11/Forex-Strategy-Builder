@@ -14,7 +14,7 @@ namespace Forex_Strategy_Builder
     /// Round Numbers Indicator
     /// </summary>
     public class Round_Number : Indicator
-	{
+    {
         /// <summary>
         /// Constructor
         /// </summary>
@@ -83,11 +83,11 @@ namespace Forex_Strategy_Builder
             int    iDigids = (int)IndParam.NumParam[1].Value;
 
             // Calculation
-			double[] adUpperRN = new double[Bars];
-			double[] adLowerRN = new double[Bars];
+            double[] adUpperRN = new double[Bars];
+            double[] adLowerRN = new double[Bars];
 
             int iFirstBar = 1;
-	
+
             for (int iBar = 1; iBar < Bars; iBar++)
             {
                 double dNearestRound;
@@ -178,7 +178,7 @@ namespace Forex_Strategy_Builder
             }
 
             return;
-		}
+        }
 
         /// <summary>
         /// Sets the indicator logic description

@@ -13,12 +13,12 @@ namespace Forex_Strategy_Builder
     /// Day Closing Indicator
     /// </summary>
     public class Day_Closing : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
         public Day_Closing(SlotTypes slotType)
-		{
+        {
             // General properties
             IndicatorName = "Day Closing";
             PossibleSlots = SlotTypes.Close;
@@ -60,8 +60,8 @@ namespace Forex_Strategy_Builder
             for (int iBar = 1; iBar < Bars; iBar++)
                 if (Time[iBar - 1].Day != Time[iBar].Day)
                     adClosePrice[iBar - 1] = Close[iBar - 1];
-					
-			// Check the last bar
+
+            // Check the last bar
             TimeSpan tsBarClosing = Time[Bars - 1].TimeOfDay.Add(new TimeSpan(0, (int)Period, 0));
             TimeSpan tsDayClosing = new TimeSpan(24, 0, 0);
             if (tsBarClosing == tsDayClosing)

@@ -91,7 +91,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Adds all indicators to the store.  
+        /// Adds all indicators to the store.
         /// </summary>
         static void AddOriginalIndicators()
         {

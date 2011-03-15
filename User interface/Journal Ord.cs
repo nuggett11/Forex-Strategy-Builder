@@ -61,7 +61,7 @@ namespace Forex_Strategy_Builder
         /// Gets the Button Toglle Journal
         /// </summary>
         public Button BtnToggleJournal { get { return btnToggleJournal; } }
-        
+
         /// <summary>
         /// Constructor
         /// </summary>

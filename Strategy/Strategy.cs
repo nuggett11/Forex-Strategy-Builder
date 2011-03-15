@@ -363,7 +363,7 @@ namespace Forex_Strategy_Builder
             // Sets the slot numbers.
             for (int slot = 0; slot < Slots; slot++)
                 indicatorSlot[slot].SlotNumber = slot;
-            
+
             return newSlotNumb;
         }
 
@@ -526,7 +526,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public int SetFirstBar()
         {
-            // Searches the indicators' components to determine the first bar. 
+            // Searches the indicators' components to determine the first bar.
             firstBar = 0;
             foreach (IndicatorSlot slot in indicatorSlot)
                 foreach (IndicatorComp comp in slot.Component)
@@ -693,7 +693,7 @@ namespace Forex_Strategy_Builder
         public static bool Load(string filename)
         {
             XmlDocument xmlDocStrategy = new XmlDocument();
-            
+
             try
             {
                 xmlDocStrategy.Load(filename);

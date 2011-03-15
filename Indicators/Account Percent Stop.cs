@@ -60,22 +60,22 @@ namespace Forex_Strategy_Builder
 
             // Calculation
             int iFirstBar = 1;
-           
+
             // Saving the components
             Component = new IndicatorComp[1];
 
             Component[0] = new IndicatorComp();
             Component[0].CompName      = "Stop to a transferred position";
-			Component[0].DataType	   = IndComponentType.Other;
+            Component[0].DataType      = IndComponentType.Other;
             Component[0].ShowInDynInfo = false;
-			Component[0].FirstBar	   = iFirstBar;
-			Component[0].Value	       = new double[Bars];
+            Component[0].FirstBar      = iFirstBar;
+            Component[0].Value         = new double[Bars];
 
             // The program calculates the Account Percent Stop during the backtest.
             // It depends on the account value at the moment of the transaction.
             //
             // double dDeltaMoney = iPercent * MoneyBalance(iBar) / (100 * iLots);
-            // double dDeltaStop  = Math.Max(MoneyToPips(dDeltaMoney, iBar), 5) * Point; 
+            // double dDeltaStop  = Math.Max(MoneyToPips(dDeltaMoney, iBar), 5) * Point;
             // double dStop = FormOrdPrice + dDeltaStop;
 
             return;

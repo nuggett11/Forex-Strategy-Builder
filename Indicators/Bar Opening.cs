@@ -84,5 +84,5 @@ namespace Forex_Strategy_Builder
 
             return sString;
         }
-	}
+    }
 }

@@ -390,7 +390,7 @@ namespace Forex_Strategy_Builder
                 {
                     line = streamReader.ReadLine();
                     if (line.StartsWith("Time"))
-                        continue; // Skips annotation line. 
+                        continue; // Skips annotation line.
 
                     string[] data = line.Split(new char[] { fieldSplitter });
 
@@ -453,7 +453,7 @@ namespace Forex_Strategy_Builder
                 {
                     line = streamReader.ReadLine();
                     if (line.StartsWith("Time"))
-                        continue; // Skips annotation line. 
+                        continue; // Skips annotation line.
                     string[] data = line.Split(new char[] { fieldSplitter });
                     DateTime t = DateTime.ParseExact(data[0], dateFormat, formatProvider);
                     tickTime = new DateTime(t.Year, t.Month, t.Day, t.Hour, t.Minute, 0);

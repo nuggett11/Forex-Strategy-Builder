@@ -14,7 +14,7 @@ namespace Forex_Strategy_Builder
     /// Bulls Bears Power Indicator
     /// </summary>
     public class Bulls_Bears_Power : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
@@ -79,7 +79,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-        	
+
         /// <summary>
         /// Calculates the indicator's components
         /// </summary>
@@ -94,9 +94,9 @@ namespace Forex_Strategy_Builder
             // Calculation
             int      iFirstBar = iPeriod + 2;
             double[] adMA      = MovingAverage(iPeriod, 0, maMethod, Price(BasePrice.Close));
-			double[] adBulls   = new double[Bars];
-			double[] adBears   = new double[Bars];
-			double[] adBBP     = new double[Bars];
+            double[] adBulls   = new double[Bars];
+            double[] adBears   = new double[Bars];
+            double[] adBBP     = new double[Bars];
 
             for (int iBar = iPeriod; iBar < Bars; iBar++)
             {
@@ -279,7 +279,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public override string ToString()
         {
-            string sString = IndicatorName + 
+            string sString = IndicatorName +
                 (IndParam.CheckParam[0].Checked ? "* (" : " (") +
                 IndParam.ListParam[1].Text         + ", " + // Method
                 IndParam.NumParam[0].ValueToString + ")";   // Period

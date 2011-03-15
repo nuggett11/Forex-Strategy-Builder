@@ -134,11 +134,11 @@ namespace Forex_Strategy_Builder
 
             // Calculation
             double[] adMA      = MovingAverage(nMA, 0, maMethod, Price(price));
-			double[] adUpBand  = new double[Bars];
-			double[] adDnBand  = new double[Bars];
+            double[] adUpBand  = new double[Bars];
+            double[] adDnBand  = new double[Bars];
 
             int iFirstBar = nMA + iPrvs + 2;
-	
+
             for (int iBar = nMA; iBar < Bars; iBar++)
             {
                 adUpBand[iBar] = adMA[iBar] + dMargin;

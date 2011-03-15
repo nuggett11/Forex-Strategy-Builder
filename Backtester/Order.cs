@@ -183,7 +183,7 @@ namespace Forex_Strategy_Builder
             ordOrigin = OrderOrigin.None;
             ordNote   = "Not Defined";
         }
-        
+
         /// <summary>
         /// Makes a deep copy.
         /// </summary>

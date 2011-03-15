@@ -624,7 +624,7 @@ namespace Forex_Strategy_Builder
                                 break;
                             }
 
-                            // The order is reachable downlards 
+                            // The order is reachable downlards
                             goUpward = false;
                             isScanningResult = true;
                         }
@@ -1304,7 +1304,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Optimistic / Pessimistic Method 
+        /// Optimistic / Pessimistic Method
         /// </summary>
         static void OptimisticPessimisticMethod(int bar, BacktestEval eval, ref double current,
             bool isTopReachable, bool isBottomReachable,

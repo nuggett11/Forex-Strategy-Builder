@@ -136,15 +136,15 @@ namespace Forex_Strategy_Builder
             int   iFirstBar = 1;
 
             // Calculation
-			double[] adTopPrice    = new double[Bars];
-			double[] adBottomPrice = new double[Bars];
+            double[] adTopPrice    = new double[Bars];
+            double[] adBottomPrice = new double[Bars];
 
             adTopPrice[0]    = 0;
             adBottomPrice[0] = 0;
-            
+
             double dTop    = double.MinValue;
             double dBottom = double.MaxValue;
-            
+
             for (int iBar = 1; iBar < Bars; iBar++)
             {
                 if (High[iBar - 1] > dTop)
@@ -333,7 +333,7 @@ namespace Forex_Strategy_Builder
 
             string sUpperTrade;
             string sLowerTrade;
-            
+
             if (iShift > 0)
             {
                 sUpperTrade = iShift + " pips above the ";

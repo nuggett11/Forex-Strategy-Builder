@@ -289,7 +289,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public override string ToString()
         {
-            string sString = IndicatorName + 
+            string sString = IndicatorName +
                 (IndParam.CheckParam[0].Checked ? "* (" : " (") +
                 IndParam.ListParam[1].Text         + ", " + // Smoothing method
                 IndParam.ListParam[2].Text         + ", " + // Base price
@@ -299,4 +299,3 @@ namespace Forex_Strategy_Builder
         }
     }
 }
- 

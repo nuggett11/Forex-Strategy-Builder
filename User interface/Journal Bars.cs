@@ -195,22 +195,22 @@ namespace Forex_Strategy_Builder
             {
                Language.T("Bar"),
                Language.T("Date"),
-               Language.T("Hour"), 
-               Language.T("Open"), 
-               Language.T("High"), 
-               Language.T("Low"), 
+               Language.T("Hour"),
+               Language.T("Open"),
+               Language.T("High"),
+               Language.T("Low"),
                Language.T("Close"),
                Language.T("Volume"),
                Language.T("Transaction"),
                Language.T("Direction"),
                Language.T("Lots"),
                Language.T("Price"),
-               Language.T("Profit Loss"), 
+               Language.T("Profit Loss"),
                Language.T("Floating P/L"),
                Language.T("Balance"),
                Language.T("Equity"),
                Language.T("Required"),
-               Language.T("Free"), 
+               Language.T("Free"),
                Language.T("Interpolation")
             };
 
@@ -218,22 +218,22 @@ namespace Forex_Strategy_Builder
             {
                Language.T("Bar"),
                Language.T("Date"),
-               Language.T("Hour"), 
-               Language.T("Open"), 
-               Language.T("High"), 
-               Language.T("Low"), 
+               Language.T("Hour"),
+               Language.T("Open"),
+               Language.T("High"),
+               Language.T("Low"),
                Language.T("Close"),
                Language.T("Volume"),
                Language.T("Transaction"),
                Language.T("Direction"),
                Language.T("Amount"),
                Language.T("Price"),
-               Language.T("Profit Loss"), 
+               Language.T("Profit Loss"),
                Language.T("Floating P/L"),
                Language.T("Balance"),
                Language.T("Equity"),
                Language.T("Required"),
-               Language.T("Free"), 
+               Language.T("Free"),
                Language.T("Interpolation")
             };
 
@@ -242,18 +242,18 @@ namespace Forex_Strategy_Builder
                 "99999",
                 "99/99/99",
                 "99:99",
-                "99.99999", 
+                "99.99999",
                 "99.99999",
                 "99.99999",
                 "99.99999",
                 "999999",
-                longestTransaction, 
+                longestTransaction,
                 longestDirection,
                 "-9999999",
                 "99.99999",
                 "-9999999.99",
-                "-9999999.99", 
-                "-9999999.99", 
+                "-9999999.99",
+                "-9999999.99",
                 "-9999999.99",
                 "-9999999.99",
                 "-9999999.99",
@@ -554,7 +554,7 @@ namespace Forex_Strategy_Builder
                 selectedRow = 0;
             else if(selectedRow > shownBars - 1)
                 selectedRow = shownBars - 1;
-            
+
             Rectangle rect = new Rectangle(0, 2 * rowHeight, ClientSize.Width, ClientSize.Height - 2 * rowHeight);
             Invalidate(rect);
             vScrollBar.Select();

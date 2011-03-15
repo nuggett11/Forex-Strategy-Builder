@@ -115,10 +115,10 @@ namespace Forex_Strategy_Builder
             int iPeriod = (int)IndParam.NumParam[0].Value;
             int iShift  = (int)IndParam.NumParam[1].Value;
             int iPrvs   = IndParam.CheckParam[0].Checked ? 1 : 0;
-	
+
             // Calculation
-			double[] adUpBand  = new double[Bars];
-			double[] adDnBand  = new double[Bars];
+            double[] adUpBand  = new double[Bars];
+            double[] adDnBand  = new double[Bars];
 
             int iFirstBar = iPeriod + iShift + iPrvs + 2;
 
@@ -357,7 +357,7 @@ namespace Forex_Strategy_Builder
             }
 
             return;
-		}
+        }
 
         /// <summary>
         /// Sets the indicator logic description

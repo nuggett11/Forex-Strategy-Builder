@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <strategy>
   <programName>Forex Strategy Builder</programName>
-  <programVersion>2.57.11.0</programVersion>
+  <programVersion>2.57.9.0</programVersion>
   <strategyName>Demo Ichimoku Kinko Hyo</strategyName>
   <instrumentSymbol>EURUSD</instrumentSymbol>
   <instrumentPeriod>day</instrumentPeriod>
@@ -15,17 +15,17 @@
   <entryLots>1</entryLots>
   <addingLots>1</addingLots>
   <reducingLots>1</reducingLots>
-  <description>Ichimoku Kinko Hyo is a trend following charting system that has been developed by a Japanese newspaper man named Goichi Hosoda. It has been used extensively in Asian trading rooms since Hosoda published his book and has been used successfully to trade currencies, commodities, futures, and stocks. 
+  <description>Ichimoku Kinko Hyo is a trend following charting system that has been developed by a Japanese newspaper man named Goichi Hosoda. It has been used extensively in Asian trading rooms since Hosoda published his book and has been used successfully to trade currencies, commodities, futures, and stocks.
 
-The Ichimoku chart is composed of five separate indicator lines. These lines work together to form the complete "Ichimoku picture". A summary of how each line is calculated is outlined below: 
+The Ichimoku chart is composed of five separate indicator lines. These lines work together to form the complete "Ichimoku picture". A summary of how each line is calculated is outlined below:
 
-TENKAN SEN ("turning line")     
+TENKAN SEN ("turning line")
 (Highest High + Lowest Low)/2  for the past 9 periods
 
-KIJUN SEN ("standard line")                               
+KIJUN SEN ("standard line")
 (Highest High + Lowest Low)/2  for the past 26 periods
 
-CHIKOU SPAN ("lagging line")                 
+CHIKOU SPAN ("lagging line")
 Current Closing Price time-shifted backwards (into the past) 26 periods
 
 SENKOU SPAN A ("1st leading line")

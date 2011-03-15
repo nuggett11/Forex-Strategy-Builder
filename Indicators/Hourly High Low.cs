@@ -127,10 +127,10 @@ namespace Forex_Strategy_Builder
             int iUntilMin  = (int)IndParam.NumParam[3].Value;
 
             TimeSpan tsFromTime  = new TimeSpan(iFromHour,  iFromMin,  0);
-            TimeSpan tsUntilTime = new TimeSpan(iUntilHour, iUntilMin, 0);  
-  
+            TimeSpan tsUntilTime = new TimeSpan(iUntilHour, iUntilMin, 0);
+
             double dShift = IndParam.NumParam[4].Value * Point;
-            
+
             int iFirstBar = 2;
 
             // Calculation
@@ -341,7 +341,7 @@ namespace Forex_Strategy_Builder
 
             string sUpperTrade;
             string sLowerTrade;
-            
+
             if (iShift > 0)
             {
                 sUpperTrade = iShift + " pips above the ";

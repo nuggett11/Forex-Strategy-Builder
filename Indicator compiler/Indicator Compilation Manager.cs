@@ -103,7 +103,7 @@ namespace Forex_Strategy_Builder
             // Check for a repeated indicator name among the custom indicators
             foreach(Indicator indicator in listCustomIndicators)
                 if (indicator.IndicatorName == newIndicator.IndicatorName)
-                {   
+                {
                     errorMessages = "The name '" + newIndicator.IndicatorName + "' found out in [" + Path.GetFileName(filePath) + "] is already in use.";
                     return;
                 }
@@ -200,12 +200,12 @@ namespace Forex_Strategy_Builder
                     }
 
                     errorMessage = "ERROR: Cannot find an appropriate constructor for " + indicatorFileName + ".";
-                    return null; 
+                    return null;
                 }
             }
 
             errorMessage = "ERROR: Cannot create an instance of an indicator from " + assembly.ToString() + ".";
-            return null; 
+            return null;
         }
     }
 }

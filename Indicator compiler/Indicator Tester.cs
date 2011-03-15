@@ -32,9 +32,9 @@ namespace Forex_Strategy_Builder
             }
 
             // Tests the PossibleSlots property.
-            if (!indicator.TestPossibleSlot(SlotTypes.Open)       && 
-                !indicator.TestPossibleSlot(SlotTypes.OpenFilter) && 
-                !indicator.TestPossibleSlot(SlotTypes.Close)      && 
+            if (!indicator.TestPossibleSlot(SlotTypes.Open)       &&
+                !indicator.TestPossibleSlot(SlotTypes.OpenFilter) &&
+                !indicator.TestPossibleSlot(SlotTypes.Close)      &&
                 !indicator.TestPossibleSlot(SlotTypes.CloseFilter))
             {
                 sb.AppendLine("\tThe property 'PossibleSlots' is not set.");
@@ -112,7 +112,7 @@ namespace Forex_Strategy_Builder
                 if (listParam.ItemList[listParam.Index] != listParam.Text)
                 {
                     sb.AppendLine("\tThe property IndParam.ListParam[" + iParam + "].Text is wrong." +
-                        " Set " + "IndParam.ListParam[" + iParam + "].Text = IndParam.ListParam[" + iParam + 
+                        " Set " + "IndParam.ListParam[" + iParam + "].Text = IndParam.ListParam[" + iParam +
                         "].ItemList[IndParam.ListParam[" + iParam + "].Index];");
                     bIsOk = false;
                 }

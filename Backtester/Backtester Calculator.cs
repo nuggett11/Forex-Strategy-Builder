@@ -16,7 +16,7 @@ namespace Forex_Strategy_Builder
     {
         // Private fields
         static int totalOrders;
-        static int totalPositions; 
+        static int totalPositions;
         static Session[] session;
         static OrderCoordinates[] ordCoord;
         static PositionCoordinates[] posCoord;
@@ -44,7 +44,7 @@ namespace Forex_Strategy_Builder
 
         /// <summary>
         /// Gets the maximum number of orders.
-        /// Entry - 2, Exit - 3, Exit Perm. S/L - 3, Exit Perm. T/P - 3, Exit Margin Call - 1 
+        /// Entry - 2, Exit - 3, Exit Perm. S/L - 3, Exit Perm. T/P - 3, Exit Margin Call - 1
         /// </summary>
         static int MaxOrders
         {
@@ -693,14 +693,14 @@ namespace Forex_Strategy_Builder
             WayPointType   wayPointType = WayPointType.None;
 
             // Orders modification on a fly
-            // Checks whether we are on the market 
+            // Checks whether we are on the market
             if (posDir == PosDirection.Long || posDir == PosDirection.Short)
             {   // We are on the market
                 if (order.OrdSender == OrderSender.Open)
                 {   // Entry orders
                     if (ordDir == OrderDirection.Buy  && posDir == PosDirection.Long ||
                         ordDir == OrderDirection.Sell && posDir == PosDirection.Short)
-                    {   // In case of a Same Dir Signal 
+                    {   // In case of a Same Dir Signal
                         switch (Strategy.SameSignalAction)
                         {
                             case SameDirSignalAction.Add:
@@ -743,7 +743,7 @@ namespace Forex_Strategy_Builder
                     }
                     else if (ordDir == OrderDirection.Buy  && posDir == PosDirection.Short ||
                              ordDir == OrderDirection.Sell && posDir == PosDirection.Long)
-                    {   // In case of an Opposite Dir Signal 
+                    {   // In case of an Opposite Dir Signal
                         switch (Strategy.OppSignalAction)
                         {
                             case OppositeDirSignalAction.Reduce:
@@ -884,7 +884,7 @@ namespace Forex_Strategy_Builder
                         break;
                 }
 
-                // If entry order closes or reverses the position the exit orthers of the 
+                // If entry order closes or reverses the position the exit orthers of the
                 // initial position have to be cancelled
                 if (order.OrdSender == OrderSender.Open &&
                     (session[bar].Summary.Transaction == Transaction.Close ||
@@ -985,7 +985,7 @@ namespace Forex_Strategy_Builder
                 int sessionPosition = session[bar].Positions;
                 Position position = session[bar].Position[sessionPosition] = session[bar - 1].Summary.Copy();
 
-                // How many days we transfer the positions with 
+                // How many days we transfer the positions with
                 int days = Time[bar].DayOfYear - Time[bar - 1].DayOfYear;
                 if (days < 0) days += 365;
 
@@ -1122,7 +1122,7 @@ namespace Forex_Strategy_Builder
         static void SetEntryOrders(int bar, double price, PosDirection posDir, double lots)
         {
             if (lots < 0.005)
-                return; // This is a manner of cancellation an order. 
+                return; // This is a manner of cancellation an order.
 
             int ifOrder = 0;
             int toPos   = 0;
@@ -1237,8 +1237,8 @@ namespace Forex_Strategy_Builder
                 else if (compType == IndComponentType.OpenPrice || compType == IndComponentType.OpenClosePrice)
                     openLongPrice = openShortPrice = Strategy.Slot[Strategy.OpenSlot].Component[comp].Value[bar];
             }
- 
-            // Decide whether to open 
+
+            // Decide whether to open
             bool canOpenLong  = openLongPrice  > InstrProperties.Point;
             bool canOpenShort = openShortPrice > InstrProperties.Point;
 
@@ -1637,7 +1637,7 @@ namespace Forex_Strategy_Builder
                     double lots  = session[bar].Summary.PosLots;
                     double stop  = session[bar].Summary.FormOrdPrice - deltaStop;
                     string note  = Language.T("Stop Loss to position") + " " + (toPos + 1);
-                    
+
                     if (Close[bar - 1] > stop && stop > Open[bar])
                         OrdSellMarket(bar, ifOrder, toPos, lots, Open[bar], OrderSender.Close, OrderOrigin.Strategy, note);
                     else
@@ -1767,7 +1767,7 @@ namespace Forex_Strategy_Builder
                     double lots    = session[bar].Summary.PosLots;
                     double stop    = Strategy.Slot[Strategy.CloseSlot].Component[0].Value[bar - 1];
 
-                    // When the position is modified after the previous bar high 
+                    // When the position is modified after the previous bar high
                     // we do not modify the Trailing Stop
                     int wayPointOrder = 0;
                     int wayPointHigh  = 0;
@@ -1797,7 +1797,7 @@ namespace Forex_Strategy_Builder
                     double lots    = session[bar].Summary.PosLots;
                     double stop    = Strategy.Slot[Strategy.CloseSlot].Component[0].Value[bar - 1];
 
-                    // When the position is modified after the previous bar low 
+                    // When the position is modified after the previous bar low
                     // we do not modify the Trailing Stop
                     int wayPointOrder = 0;
                     int wayPointLow   = 0;
@@ -1887,7 +1887,7 @@ namespace Forex_Strategy_Builder
                     double stop    = Strategy.Slot[Strategy.CloseSlot].Component[0].Value[bar - 1];
                     double dLimit  = session[bar].Summary.FormOrdPrice + dDeltaLimit;
 
-                    // When the position is modified after the previous bar high 
+                    // When the position is modified after the previous bar high
                     // we do not modify the Trailing Stop
                     int wayPointOrder = 0;
                     int iWayPointHigh  = 0;
@@ -1920,7 +1920,7 @@ namespace Forex_Strategy_Builder
                     double stop    = Strategy.Slot[Strategy.CloseSlot].Component[0].Value[bar - 1];
                     double dLimit  = session[bar].Summary.FormOrdPrice - dDeltaLimit;
 
-                    // When the position is modified after the previous bar low 
+                    // When the position is modified after the previous bar low
                     // we do not modify the Trailing Stop
                     int wayPointOrder = 0;
                     int wayPointLow   = 0;
@@ -2465,7 +2465,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Calculate statistics 
+        /// Calculate statistics
         /// </summary>
         static bool FastCalculating(int startBar)
         {

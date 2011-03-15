@@ -127,18 +127,18 @@ namespace Forex_Strategy_Builder
             int       nMA      = (int)IndParam.NumParam[0].Value;
             double    dMpl     = IndParam.NumParam[1].Value;
             int       iPrvs    = IndParam.CheckParam[0].Checked ? 1 : 0;
-	
+
             // Calculation
-			double[] adPrice   = Price(price);
-			double[] adMA      = MovingAverage(nMA, 0, maMethod, adPrice);
-			double[] adUpBand  = new double[Bars];
-			double[] adDnBand  = new double[Bars];
+            double[] adPrice   = Price(price);
+            double[] adMA      = MovingAverage(nMA, 0, maMethod, adPrice);
+            double[] adUpBand  = new double[Bars];
+            double[] adDnBand  = new double[Bars];
 
             int iFirstBar = nMA + iPrvs + 2;
-	
-			double dSum;
-			double dStdDev;
-			double dDelta;
+
+            double dSum;
+            double dStdDev;
+            double dDelta;
             for (int iBar = nMA; iBar < Bars; iBar++)
             {
                 dSum = 0;
@@ -423,12 +423,12 @@ namespace Forex_Strategy_Builder
 
                 case "The bar opens below the Lower Band":
                     EntryFilterLongDescription  = "the bar opens below the Lower Band of " + ToString();
-                    EntryFilterShortDescription = "the bar opens above the Upper Band of " + ToString(); 
+                    EntryFilterShortDescription = "the bar opens above the Upper Band of " + ToString();
                     break;
 
                 case "The bar opens above the Lower Band":
-                    EntryFilterLongDescription  = "the bar opens above the Lower Band of " + ToString(); 
-                    EntryFilterShortDescription = "the bar opens below the Upper Band of " + ToString(); 
+                    EntryFilterLongDescription  = "the bar opens above the Lower Band of " + ToString();
+                    EntryFilterShortDescription = "the bar opens below the Upper Band of " + ToString();
                     break;
 
                 case "The bar opens below the Upper Band after opening above it":

@@ -13,7 +13,7 @@ namespace Forex_Strategy_Builder
 {
     /// <summary>
     /// CSharp_Compiler manages the compilation of source code to an assembly.
-    /// This class is thread safe, so multiple threads are capable 
+    /// This class is thread safe, so multiple threads are capable
     /// to utilize it simultaniously.
     /// </summary>
     public class CSharp_Compiler

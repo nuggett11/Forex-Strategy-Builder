@@ -32,14 +32,14 @@ namespace Forex_Strategy_Builder
             // The ComboBox parameters
             IndParam.ListParam[0].Caption = "Logic";
             if (slotType == SlotTypes.OpenFilter)
-                IndParam.ListParam[0].ItemList = new string[] 
-                { 
+                IndParam.ListParam[0].ItemList = new string[]
+                {
                     "Gives a random entry signal"
                 };
             else if (slotType == SlotTypes.CloseFilter)
                 IndParam.ListParam[0].ItemList = new string[]
                 {
-                    "Gives a random exit signal" 
+                    "Gives a random exit signal"
                 };
             else
                 IndParam.ListParam[0].ItemList = new string[]

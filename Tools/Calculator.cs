@@ -89,13 +89,13 @@ namespace Forex_Strategy_Builder
                     Language.T("Enter the first number, the operator and the second number.") + Environment.NewLine +
                     Language.T("To see the result press a key or continue with the next operation.") + Environment.NewLine + Environment.NewLine +
                     Language.T("Addition")   + ": 12.34 + 8.8 =" + Environment.NewLine +
-                    Language.T("Power")      + ": -5.3 ^ 2 ="    + Environment.NewLine + 
+                    Language.T("Power")      + ": -5.3 ^ 2 ="    + Environment.NewLine +
                     Language.T("Percent")    + ": 2.2 * 125 %"   + Environment.NewLine + Environment.NewLine +
                     Language.T("Operations") + ": + - * / ^ %"   + Environment.NewLine + Environment.NewLine +
-                    Language.T("Hot keys")   + ":" + Environment.NewLine + "   F1 - " + 
-                    Language.T("Help")       + Environment.NewLine + "   Esc - " + 
-                    Language.T("Clear")      + Environment.NewLine + "   F11 / F12 - " + 
-                    Language.T("Opacity")    + Environment.NewLine + "   (Alt + F4) - " + 
+                    Language.T("Hot keys")   + ":" + Environment.NewLine + "   F1 - " +
+                    Language.T("Help")       + Environment.NewLine + "   Esc - " +
+                    Language.T("Clear")      + Environment.NewLine + "   F11 / F12 - " +
+                    Language.T("Opacity")    + Environment.NewLine + "   (Alt + F4) - " +
                     Language.T("Exit"),
                     Language.T("Calculator Help"),
                     MessageBoxButtons.OK,
@@ -161,7 +161,7 @@ namespace Forex_Strategy_Builder
                     last = " " + last + " ";
                 else
                     last = " ";
-                
+
                 tbxInput.Clear();
                 tbxInput.AppendText(result.ToString() + last);
             }

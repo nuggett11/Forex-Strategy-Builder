@@ -187,7 +187,7 @@ namespace Forex_Strategy_Builder
                 progressBar.Size     = new Size(ClientSize.Width - 2 * space, (int)(Data.VerticalDLU * 9));
                 progressBar.Location = new Point(space, btnVertSpace);
 
-                // Label Progress 
+                // Label Progress
                 lblProgress.Location = new Point(space, btnClose.Top + 5);
             }
             else
@@ -458,7 +458,7 @@ namespace Forex_Strategy_Builder
                     Data.GradientPaint(g, rectf, Data.PeriodColor[period], 60);
                 }
             }
-            
+
             Pen penLine = new Pen(LayoutColors.ColorJournalLines);
             g.DrawLine(penLine, xp1, 2 * infoRowHeight, xp1, pnl.ClientSize.Height);
             g.DrawLine(penLine, xp2, 2 * infoRowHeight, xp2, pnl.ClientSize.Height);
@@ -532,7 +532,7 @@ namespace Forex_Strategy_Builder
         void BgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
 
-            if (Data.IsIntrabarData || 
+            if (Data.IsIntrabarData ||
                 Configs.UseTickData && Data.IsTickData ||
                 Data.Period == DataPeriods.min1)
                 Backtester.Scan();
@@ -738,8 +738,8 @@ namespace Forex_Strategy_Builder
                 if (inraBarDataStarts > 0 && Data.IntraBarsPeriods[bar] == Data.Period)
                 {
                     inraBarDataStarts = 0;
-                    warningMessage += Environment.NewLine + 
-                        Language.T("There is no intrabar data from bar No:") + " " + 
+                    warningMessage += Environment.NewLine +
+                        Language.T("There is no intrabar data from bar No:") + " " +
                         (bar + 1) + " - " + Data.Time[bar].ToString();
                 }
             }
@@ -786,7 +786,7 @@ namespace Forex_Strategy_Builder
                     {   // Adjust the Low price
                         Data.IntraBarData[bar][b].Low = price;
                     }
- 
+
                     int iMinIntrabar = -1; // Contains the min price
                     int iMaxIntrabar = -1; // Contains the max price
                     double dMinPrice = double.MaxValue;
@@ -870,7 +870,7 @@ namespace Forex_Strategy_Builder
                 }
 
                 if (time == Data.Time[bar])
-                { 
+                {
                     Data.TickData[bar] = bid;
                 }
                 else if ((bar < Data.Bars - 1 && time > Data.Time[bar] && time < Data.Time[bar + 1]) || bar == Data.Bars - 1)

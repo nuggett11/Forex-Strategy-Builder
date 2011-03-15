@@ -17,7 +17,7 @@
   <reducingLots>1</reducingLots>
   <description>This is a classical Bollinger Bands trend following strategy. We enter the market in the direction of the current trend when the bar opens outside the corresponding Bollinger Band. We enter the market at the bar opening price. However, we’ll only enter the first time the bar opens outside the Bollinger Band. The previous bar opening price must be inside the bands. We use the ADX indicator to confirm the trend. The ADX value must be increasing before we are allowed to open a position (all the entry conditions must be fulfilled when we open a position).
 
-The exit point is the central Moving Average line of the Bollinger Bands. We use a Permanent Stop Loss as an additional exit point and a loss limit. 
+The exit point is the central Moving Average line of the Bollinger Bands. We use a Permanent Stop Loss as an additional exit point and a loss limit.
 
 Long entry rules:
 We enter the market long at bar opening price when the current bar opens above the Upper Bollinger Band and the previous bar has opened below it. The ADX value increases.

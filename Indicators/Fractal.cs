@@ -13,7 +13,7 @@ namespace Forex_Strategy_Builder
     /// Fractal Indicator
     /// </summary>
     public class Fractal : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
@@ -88,7 +88,7 @@ namespace Forex_Strategy_Builder
             int    iFirstBar  = 8;
 
             double[] adFrUp = new double[Bars];
-			double[] adFrDn = new double[Bars];
+            double[] adFrDn = new double[Bars];
 
             for (int iBar = 8; iBar < Bars - 1; iBar++)
             {
@@ -185,7 +185,7 @@ namespace Forex_Strategy_Builder
                 }
             }
 
-			// Is visible
+            // Is visible
             if (bIsVisible)
                 for (int iBar = iFirstBar; iBar < Bars; iBar++)
                 {
@@ -207,21 +207,21 @@ namespace Forex_Strategy_Builder
             // Saving the components
             Component = new IndicatorComp[4];
 
-			Component[0] = new IndicatorComp();
+            Component[0] = new IndicatorComp();
             Component[0].CompName   = "Up Fractal";
             Component[0].DataType   = IndComponentType.IndicatorValue;
-			Component[0].ChartType	= IndChartType.Level;
-			Component[0].ChartColor	= Color.SpringGreen;
-			Component[0].FirstBar	= iFirstBar;
-			Component[0].Value	    = adFrUp;
+            Component[0].ChartType	= IndChartType.Level;
+            Component[0].ChartColor	= Color.SpringGreen;
+            Component[0].FirstBar	= iFirstBar;
+            Component[0].Value	    = adFrUp;
 
-			Component[1] = new IndicatorComp();
+            Component[1] = new IndicatorComp();
 		    Component[1].CompName   = "Down Fractal";
             Component[1].DataType   = IndComponentType.IndicatorValue;
-			Component[1].ChartType	= IndChartType.Level;
+            Component[1].ChartType	= IndChartType.Level;
             Component[1].ChartColor = Color.DarkRed;
-			Component[1].FirstBar	= iFirstBar;
-			Component[1].Value	    = adFrDn;
+            Component[1].FirstBar	= iFirstBar;
+            Component[1].Value	    = adFrDn;
 
             Component[2] = new IndicatorComp();
             Component[2].ChartType = IndChartType.NoChart;
@@ -286,7 +286,7 @@ namespace Forex_Strategy_Builder
 
             string sUpperTrade;
             string sLowerTrade;
-            
+
             if (iShift > 0)
             {
                 sUpperTrade = iShift + " pips above ";

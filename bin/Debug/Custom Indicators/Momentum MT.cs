@@ -70,7 +70,7 @@ namespace Forex_Strategy_Builder
             IndParam.NumParam[0].Max     = 200;
             IndParam.NumParam[0].Enabled = true;
             IndParam.NumParam[0].ToolTip = "The period of Momentum.";
- 
+
             IndParam.NumParam[1].Caption = "Additional smoothing";
             IndParam.NumParam[1].Value   = 0;
             IndParam.NumParam[1].Min     = 0;

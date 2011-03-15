@@ -22,7 +22,7 @@ namespace Forex_Strategy_Builder
         Label lblSwapShort;
         Label lblCommission;
         Label lblSlippage;
-        
+
         NumericUpDown nudSpread;
         NumericUpDown nudSwapLong;
         NumericUpDown nudSwapShort;
@@ -32,7 +32,7 @@ namespace Forex_Strategy_Builder
         Button btnEditInstrument;
         Button btnAccept;
         Button btnCancel;
-        
+
         ToolTip toolTip = new ToolTip();
 
         Font  font;
@@ -86,7 +86,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Whether to edit the instrument 
+        /// Whether to edit the instrument
         /// </summary>
         public bool EditInstrument
         {
@@ -142,7 +142,7 @@ namespace Forex_Strategy_Builder
             lblSwapLong.ForeColor = colorText;
             lblSwapLong.BackColor = Color.Transparent;
             lblSwapLong.AutoSize  = true;
-            lblSwapLong.Text      = Language.T("Swap number for a long position rollover") + " [" + 
+            lblSwapLong.Text      = Language.T("Swap number for a long position rollover") + " [" +
                 (Data.InstrProperties.SwapType == Commission_Type.money ?
                 Data.InstrProperties.PriceIn :
                 Language.T(Data.InstrProperties.SwapType.ToString())) + "]" + Environment.NewLine +
@@ -153,7 +153,7 @@ namespace Forex_Strategy_Builder
             lblSwapShort.ForeColor = colorText;
             lblSwapShort.BackColor = Color.Transparent;
             lblSwapShort.AutoSize  = true;
-            lblSwapShort.Text      = Language.T("Swap number for a short position rollover") + " [" + 
+            lblSwapShort.Text      = Language.T("Swap number for a short position rollover") + " [" +
                 (Data.InstrProperties.SwapType == Commission_Type.money ?
                 Data.InstrProperties.PriceIn :
                 Language.T(Data.InstrProperties.SwapType.ToString())) + "]" + Environment.NewLine +
@@ -246,7 +246,7 @@ namespace Forex_Strategy_Builder
             btnEditInstrument.Text   = Language.T("More");
             btnEditInstrument.Click += new EventHandler(BtnEditInstrument_Click);
             btnEditInstrument.UseVisualStyleBackColor = true;
-                
+
             //Button Cancel
             btnCancel.Parent       = this;
             btnCancel.Text         = Language.T("Cancel");

@@ -1,4 +1,4 @@
-// Data class 
+// Data class
 // Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
@@ -113,7 +113,7 @@ namespace Forex_Strategy_Builder
         static int genHistoryIndex;
 
 #region Intrabar Scanner
-        static Bar[][] intraBarData;   // Keeps the data of all periods 
+        static Bar[][] intraBarData;   // Keeps the data of all periods
         static int[]   aIntraBarBars;  // Number of intrabars of each data bar
         static int[]   aIntraBars;     // Number of bars of each data period
         static int     iLoadedIntraBarPeriods; // Number of intrabar periods that have been loaded
@@ -139,7 +139,7 @@ namespace Forex_Strategy_Builder
         public static bool IsTickData { get { return isTickData; } set { isTickData = value; } }
         static long ticks;
         public static long Ticks { get { return ticks; } set { ticks = value; } }
- 
+
 
         /// <summary>
         /// Calculates the Modelling Quality
@@ -264,7 +264,7 @@ namespace Forex_Strategy_Builder
                 marketStatsValue[14] = Data.MaxCloseOpen.ToString()     + " " + Language.T("pips");
                 marketStatsValue[15] = Data.DaysOff.ToString();
                 marketStatsValue[16] = Configs.MaxBars.ToString();
-                marketStatsValue[17] = Configs.UseStartDate ? 
+                marketStatsValue[17] = Configs.UseStartDate ?
                     (new DateTime(Configs.StartYear, Configs.StartMonth, Configs.StartDay)).ToShortDateString() :
                     Language.T("No limits");
                 marketStatsValue[18] = Configs.UseEndDate ?
@@ -301,7 +301,7 @@ namespace Forex_Strategy_Builder
         /// Programs icon.
         /// </summary>
         public static Icon Icon { get { return icon; } }
-       
+
         /// <summary>
         /// Gets the program version.
         /// </summary>
@@ -316,7 +316,7 @@ namespace Forex_Strategy_Builder
         /// Gets the program Release Candidate.
         /// </summary>
         public static bool IsProgramRC { get { return isReleaseCandidate; } }
-        
+
         /// <summary>
         /// Gets the program ID
         /// </summary>
@@ -371,9 +371,9 @@ namespace Forex_Strategy_Builder
         /// Gets or sets the strategy name with extension.
         /// </summary>
         public static string StrategyName { get { return strategyName; } set { strategyName = value; } }
- 
+
         /// <summary>
-        /// Gets the current strategy full path. 
+        /// Gets the current strategy full path.
         /// </summary>
         public static string StrategyPath { get { return Path.Combine(strategyDir, strategyName); } }
 
@@ -487,8 +487,8 @@ namespace Forex_Strategy_Builder
             // Program's Major, Minor, Version and Build numbers must be <= 99.
             programVersion = Application.ProductVersion;
             string[] version = programVersion.Split('.');
-            programID = 1000000 * int.Parse(version[0]) + 
-                          10000 * int.Parse(version[1]) + 
+            programID = 1000000 * int.Parse(version[0]) +
+                          10000 * int.Parse(version[1]) +
                             100 * int.Parse(version[2]) +
                               1 * int.Parse(version[3]);
 

@@ -12,7 +12,7 @@ namespace Forex_Strategy_Builder
     /// <summary>
     /// The positions' direction
     /// </summary>
-    public enum PosDirection 
+    public enum PosDirection
     {
         Error, None, Long, Short, Closed
     }
@@ -22,7 +22,7 @@ namespace Forex_Strategy_Builder
     /// </summary>
     public enum Transaction
     {
-        Error, None, Open, Close, Add, Reduce, Reverse, Transfer 
+        Error, None, Open, Close, Add, Reduce, Reverse, Transfer
     }
 
     /// <summary>
@@ -59,7 +59,7 @@ namespace Forex_Strategy_Builder
         double posPrice;           // Calculated middle price including the rollover fee
         double absoluteSL;         // Absolute mode Permanent SL
         double absoluteTP;         // Absolute mode Permanent TP
-        double breakEven;          // Break Even 
+        double breakEven;          // Break Even
         double requiredMargin;     // The required marging
         double profitLoss;         // Position Profit Loss
         double floatingPL;         // Position Floating Profit Loss

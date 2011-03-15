@@ -14,7 +14,7 @@ namespace Forex_Strategy_Builder
     /// </summary>
     public partial class Controls : Menu_and_StatusBar
     {
-        protected Panel pnlJournalRight; // Parent panel for Order and Position panels 
+        protected Panel pnlJournalRight; // Parent panel for Order and Position panels
         protected Journal_Positions pnlJournalByPositions;
         protected Journal_Bars pnlJournalByBars;
         protected Journal_Ord  pnlJournalOrder;

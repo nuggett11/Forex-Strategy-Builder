@@ -12,8 +12,8 @@ namespace Forex_Strategy_Builder
     /// <summary>
     /// Accelerator Oscillator Indicator
     /// </summary>
-	public class Accelerator_Oscillator : Indicator
-	{
+    public class Accelerator_Oscillator : Indicator
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type.
         /// </summary>
@@ -69,7 +69,7 @@ namespace Forex_Strategy_Builder
             IndParam.NumParam[0].Point   = 0;
             IndParam.NumParam[0].Enabled = true;
             IndParam.NumParam[0].ToolTip = "The period of slow Moving Average.";
- 
+
             IndParam.NumParam[1].Caption = "Fast MA period";
             IndParam.NumParam[1].Value   = 5;
             IndParam.NumParam[1].Min     = 1;
@@ -102,7 +102,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-	
+
         /// <summary>
         /// Calculates the indicator's components
         /// </summary>
@@ -119,10 +119,10 @@ namespace Forex_Strategy_Builder
 
             // Calculation
             int      iFirstBar = iSlow + iAccel + 2;
-			double[] adMASlow  = MovingAverage(iSlow, 0, maMethod, Price(basePrice));
-			double[] adMAFast  = MovingAverage(iFast, 0, maMethod, Price(basePrice));
-			double[] adAO      = new double[Bars];
-			double[] adAC      = new double[Bars];
+            double[] adMASlow  = MovingAverage(iSlow, 0, maMethod, Price(basePrice));
+            double[] adMAFast  = MovingAverage(iFast, 0, maMethod, Price(basePrice));
+            double[] adAO      = new double[Bars];
+            double[] adAC      = new double[Bars];
 
             for (int iBar = iSlow - 1; iBar < Bars; iBar++)
             {
@@ -309,7 +309,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public override string ToString()
         {
-            string sString =  IndicatorName + 
+            string sString =  IndicatorName +
                 (IndParam.CheckParam[0].Checked ? "* (" : " (") +
                 IndParam.ListParam[1].Text         + ", " + // Smoothing method
                 IndParam.ListParam[2].Text         + ", " + // Base price
@@ -319,5 +319,5 @@ namespace Forex_Strategy_Builder
 
             return sString;
         }
-	}
+    }
 }

@@ -111,7 +111,7 @@ namespace Forex_Strategy_Builder
 
             double[] adPrice = Price(price);
             double[] adMA    = MovingAverage(iPeriod1, 0, maMethod1, adPrice);
-			double[] adMAPr  = new double[Bars];
+            double[] adMAPr  = new double[Bars];
 
             for (int iBar = 0; iBar < Bars; iBar++)
             {

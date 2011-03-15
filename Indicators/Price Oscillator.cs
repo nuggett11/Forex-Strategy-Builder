@@ -79,7 +79,7 @@ namespace Forex_Strategy_Builder
 
             IndParam.NumParam[2].Caption = "Level";
             IndParam.NumParam[2].Value   = 0;
-            IndParam.NumParam[2].Min     = -100; 
+            IndParam.NumParam[2].Min     = -100;
             IndParam.NumParam[2].Max     = 100;
             IndParam.NumParam[2].Point   = 4;
             IndParam.NumParam[2].Enabled = true;

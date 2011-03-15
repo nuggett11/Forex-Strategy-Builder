@@ -50,7 +50,7 @@ namespace Forex_Strategy_Builder
             strBBCode += "Swap Long in " +
                 (Data.InstrProperties.SwapType == Commission_Type.money ? Data.InstrProperties.PriceIn : Data.InstrProperties.SwapType.ToString()) + ": " +
                 Data.InstrProperties.SwapLong.ToString()  + nl;
-            strBBCode += "Swap Short in " + 
+            strBBCode += "Swap Short in " +
                 (Data.InstrProperties.SwapType == Commission_Type.money ? Data.InstrProperties.PriceIn : Data.InstrProperties.SwapType.ToString()) + ": " +
                 Data.InstrProperties.SwapShort.ToString() + nl;
             strBBCode += "Commission per " +
@@ -285,7 +285,7 @@ namespace Forex_Strategy_Builder
                 sb.AppendLine("<p>" + Language.T("The position's Stop Loss will be set to Break Even price when the profit reaches") + " " + Data.Strategy.BreakEven);
                 sb.AppendLine(Language.T("pips") + "." + "</p>");
             }
-            
+
             sb.AppendLine("<p>--------------<br />");
             sb.AppendLine("* " + Language.T("Use the indicator value from the previous bar for all asterisk-marked indicators!") + "<br />");
             sb.AppendLine("** " + Language.T("The averaging rules apply to the entry signals only. Exit signals close a position. They cannot open, add or reduce one."));
@@ -922,7 +922,7 @@ namespace Forex_Strategy_Builder
                 // Add the logic
                 foreach (ListParam listParam in indSlot.IndParam.ListParam)
                     if (listParam.Enabled && listParam.Caption == "Logic")
-                        sb.AppendLine("\t<div class=\"fsb_str_logic\">" + 
+                        sb.AppendLine("\t<div class=\"fsb_str_logic\">" +
                             (Configs.UseLogicalGroups && (indSlot.SlotType == SlotTypes.OpenFilter || indSlot.SlotType == SlotTypes.CloseFilter) ?
                             "<span style=\"float: left; margin-left: 5px; margin-right: -25px\">" + "[" + indSlot.LogicalGroup + "]" + "</span>" : "") +
                             listParam.Text + "</div>");

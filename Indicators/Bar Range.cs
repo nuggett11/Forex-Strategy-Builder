@@ -81,8 +81,8 @@ namespace Forex_Strategy_Builder
 
             // Calculation
             int iFirstBar = nBars + 1;
-	
-			double[] adRange = new double[Bars];
+
+            double[] adRange = new double[Bars];
 
             for (int iBar = iFirstBar; iBar < Bars; iBar++)
             {
@@ -97,7 +97,7 @@ namespace Forex_Strategy_Builder
                 }
                 adRange[iBar] = maxHigh - minLow;
             }
-            
+
             // Saving the components
             Component = new IndicatorComp[3];
 
@@ -235,7 +235,7 @@ namespace Forex_Strategy_Builder
         public override string ToString()
         {
             string sString = IndicatorName +
-                (IndParam.CheckParam[0].Checked ? "* (" : " (") + 
+                (IndParam.CheckParam[0].Checked ? "* (" : " (") +
                 IndParam.NumParam[0].ValueToString + ", " + // Number of bars
                 IndParam.NumParam[1].ValueToString + ")";   // Level
 

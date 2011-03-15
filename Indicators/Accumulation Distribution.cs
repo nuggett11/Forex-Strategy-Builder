@@ -5,7 +5,7 @@
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
 // This code or any part of it cannot be used in other applications without a permission.
 
-// Indicator corrected by Denis 
+// Indicator corrected by Denis
 
 using System.Drawing;
 
@@ -15,12 +15,12 @@ namespace Forex_Strategy_Builder
     /// Accumulation Distribution Indicator
     /// </summary>
     public class Accumulation_Distribution : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
         public Accumulation_Distribution(SlotTypes slotType)
-		{
+        {
             // General properties
             IndicatorName  = "Accumulation Distribution";
             PossibleSlots  = SlotTypes.OpenFilter | SlotTypes.CloseFilter;
@@ -65,7 +65,7 @@ namespace Forex_Strategy_Builder
             // Calculation
             int iFirstBar = 3;
 
-			double[] adAD = new double[Bars];
+            double[] adAD = new double[Bars];
 
             adAD[0] = (Close[0] - Low[0]) - (High[0] - Close[0]);
             if ((High[0] - Low[0]) > 0)

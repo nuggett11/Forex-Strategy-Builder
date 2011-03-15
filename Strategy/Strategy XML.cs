@@ -25,7 +25,7 @@ namespace Forex_Strategy_Builder
             XmlDocument xmlDocStrategy = new XmlDocument();
             xmlDocStrategy.LoadXml("<strategy></strategy>");
 
-            //Create the XML declaration. 
+            //Create the XML declaration.
             XmlDeclaration xmldecl;
             xmldecl = xmlDocStrategy.CreateXmlDeclaration("1.0", null, null);
 
@@ -322,7 +322,7 @@ namespace Forex_Strategy_Builder
                     }
                     else
                         tempStrategy.Slot[slot].LogicalGroup = defGroup;
-                } 
+                }
 
                 // Indicator name.
                 string    indicatorName = xmlSlotTagList[0].InnerText;

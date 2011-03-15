@@ -114,7 +114,7 @@ namespace Forex_Strategy_Builder
             rowHeight = fontData.Height + 4;
 
             Padding = new Padding(border, (int)captionHeight, border, border);
-            
+
             hScrollBar = new HScrollBar();
             hScrollBar.Parent      = this;
             hScrollBar.Dock        = DockStyle.Bottom;

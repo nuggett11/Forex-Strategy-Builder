@@ -1,4 +1,4 @@
-// Ichimoku Kinko Hyo indicator 
+// Ichimoku Kinko Hyo indicator
 // Last changed on 2009-05-05
 // Part of Forex Strategy Builder & Forex Strategy Trader
 // Website http://forexsb.com/
@@ -11,7 +11,7 @@ using System.Drawing;
 namespace Forex_Strategy_Builder
 {
     /// <summary>
-    /// Ichimoku Kinko Hyo indicator 
+    /// Ichimoku Kinko Hyo indicator
     /// </summary>
     public class Ichimoku_Kinko_Hyo : Indicator
     {

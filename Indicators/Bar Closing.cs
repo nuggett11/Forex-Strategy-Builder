@@ -11,12 +11,12 @@ namespace Forex_Strategy_Builder
     /// Bar Closing Indicator
     /// </summary>
     public class Bar_Closing : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
         public Bar_Closing(SlotTypes slotType)
-		{
+        {
             // General properties
             IndicatorName = "Bar Closing";
             PossibleSlots = SlotTypes.Open | SlotTypes.Close;

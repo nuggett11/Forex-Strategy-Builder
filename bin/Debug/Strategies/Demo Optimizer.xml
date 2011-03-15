@@ -15,7 +15,7 @@
   <entryLots>1</entryLots>
   <addingLots>1</addingLots>
   <reducingLots>1</reducingLots>
-  <description>This strategy serves to demonstrate how the Optimizer works. 
+  <description>This strategy serves to demonstrate how the Optimizer works.
 
 To test it, simply open the Optimizer, check all parameters' check boxes and press the "Optimize" button.
 

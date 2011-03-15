@@ -132,7 +132,7 @@ namespace Forex_Strategy_Builder
                 dStdDev = Math.Sqrt(dSum / iPeriod);
                 double adUpBand = adMA[iBar] + dMpl * dStdDev;
                 double adDnBand = adMA[iBar] - dMpl * dStdDev;
-                adPrcBB[iBar] = (adPrice[iBar] - adDnBand) / (adUpBand - adDnBand) * 100; 
+                adPrcBB[iBar] = (adPrice[iBar] - adDnBand) / (adUpBand - adDnBand) * 100;
             }
 
             // Saving the components

@@ -74,7 +74,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Load config file 
+        /// Load config file
         /// </summary>
         void LoadUpdateFile()
         {
@@ -186,7 +186,7 @@ namespace Forex_Strategy_Builder
             {
                 MessageBox.Show(e.Message, "Check for Updates");
             }
-            
+
             return;
         }
 

@@ -14,12 +14,12 @@ namespace Forex_Strategy_Builder
     /// Force Index Indicator
     /// </summary>
     public class Force_Index : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
         public Force_Index(SlotTypes slotType)
-		{
+        {
             // General properties
             IndicatorName  = "Force Index";
             PossibleSlots  = SlotTypes.OpenFilter | SlotTypes.CloseFilter;
@@ -93,7 +93,7 @@ namespace Forex_Strategy_Builder
             // Calculation
             int iFirstBar = iPeriod + 2;
 
-			double[] adFI = new double[Bars];
+            double[] adFI = new double[Bars];
             double[] adMA = MovingAverage(iPeriod, 0, maMethod, Price(price));
 
             for (int iBar = iFirstBar; iBar < Bars; iBar++)
@@ -272,5 +272,5 @@ namespace Forex_Strategy_Builder
 
             return sString;
         }
-	}
+    }
 }

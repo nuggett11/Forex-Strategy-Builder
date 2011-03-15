@@ -18,7 +18,7 @@ namespace Forex_Strategy_Builder
     public partial class Actions : Controls
     {
         bool isDiscardSelectedIndexChange = false;
- 
+
         /// <summary>
         /// The starting point of the application
         /// </summary>
@@ -62,7 +62,7 @@ namespace Forex_Strategy_Builder
             {
                 LoadInstrument(true);
                 string messageText = Language.T("Forex Strategy Builder cannot load a historical data file and is going to use integrated data!");
-                MessageBox.Show(messageText, Language.T("Data File Loading"), MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
+                MessageBox.Show(messageText, Language.T("Data File Loading"), MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             // Prepare custom indicators
@@ -144,7 +144,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// The lockfile name will be passed automatically by Splash.exe as a  
+        /// The lockfile name will be passed automatically by Splash.exe as a
         /// command line arg -lockfile="c:\temp\C1679A85-A4FA-48a2-BF77-E74F73E08768.lock"
         /// </summary>
         /// <returns>Lock file path</returns>
@@ -213,7 +213,7 @@ namespace Forex_Strategy_Builder
                                                Backtester.AccountStatsFlags, Language.T("Account Statistics"));
             }
             else
-            {   
+            {
                 UndoStrategy();
             }
 
@@ -362,7 +362,7 @@ namespace Forex_Strategy_Builder
             if (Data.StackStrategy.Count > 0)
             {
                 Data.Strategy = Data.StackStrategy.Pop();
-                
+
                 RebuildStrategyLayout();
                 Calculate(true);
             }
@@ -500,7 +500,7 @@ namespace Forex_Strategy_Builder
                 Data.IsResult         = false;
 
                 // Configs.SetAccountExchangeRate();
-                
+
                 CheckLoadedData();
                 Data.GenerateMarketStats();
                 infpnlMarketStatistics.Update(Data.MarketStatsParam, Data.MarketStatsValue,
@@ -571,7 +571,7 @@ namespace Forex_Strategy_Builder
 
             if (maxConsecutiveBars > 10)
             {
-                errorMessage += Language.T("Defective till bar number:") + " " + (maxConsecutiveBar + 1) + " - " + 
+                errorMessage += Language.T("Defective till bar number:") + " " + (maxConsecutiveBar + 1) + " - " +
                                  Data.Time[maxConsecutiveBar].ToString() + Environment.NewLine +
                                  Language.T("You can try to cut it using \"Data Horizon\".") + Environment.NewLine +
                                  Language.T("You can try also \"Cut Off Bad Data\".");
@@ -662,7 +662,7 @@ namespace Forex_Strategy_Builder
         ///Reloads the Custom Indicators.
         /// </summary>
         void ReloadCustomIndicators()
-        { 
+        {
             // Check if the strategy contains custom indicators
             bool strategyHasCustomIndicator = false;
             foreach (IndicatorSlot slot in Data.Strategy.Slot)
@@ -841,7 +841,7 @@ namespace Forex_Strategy_Builder
                     indSlot.IsDefined      = true;
                 }
 
-            // Searches the indicators' components to determine the Data.FirstBar 
+            // Searches the indicators' components to determine the Data.FirstBar
             Data.FirstBar = Data.Strategy.SetFirstBar();
 
             // Logging
@@ -961,7 +961,7 @@ namespace Forex_Strategy_Builder
                     DialogResult result;
 
                     result = MessageBox.Show(
-                        Language.T("The loaded strategy has been designed for a different market!") + 
+                        Language.T("The loaded strategy has been designed for a different market!") +
                         Environment.NewLine + Environment.NewLine +
                         Data.Strategy.Symbol + " " + Data.DataPeriodToString(Data.Strategy.DataPeriod) +
                         Environment.NewLine + Environment.NewLine +
@@ -1337,10 +1337,10 @@ namespace Forex_Strategy_Builder
             else if (Data.InstrProperties.CommissionType == Commission_Type.percents)
                 commUnit = "%";
 
-            ToolStripStatusLabelInstrument = 
-                Data.Symbol    + " "  + 
+            ToolStripStatusLabelInstrument =
+                Data.Symbol    + " "  +
                 Data.PeriodString + " (" +
-                Data.InstrProperties.Spread     + ", " + 
+                Data.InstrProperties.Spread     + ", " +
                 Data.InstrProperties.SwapLong.ToString("F2")   + swapUnit + ", " +
                 Data.InstrProperties.SwapShort.ToString("F2")  + swapUnit + ", " +
                 Data.InstrProperties.Commission.ToString("F2") + commUnit + ", " +

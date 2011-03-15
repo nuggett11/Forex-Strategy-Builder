@@ -42,7 +42,7 @@ namespace Forex_Strategy_Builder
         public string IndicatorName { get { return indicatorName; } set { indicatorName = value; } }
 
         /// <summary>
-        /// Gets or sets the possible slots 
+        /// Gets or sets the possible slots
         /// </summary>
         protected SlotTypes PossibleSlots { set { possibleSlots = value; } }
 
@@ -56,7 +56,7 @@ namespace Forex_Strategy_Builder
             if ((slotType & possibleSlots) == SlotTypes.Open)
                 return true;
 
-            if ((slotType & possibleSlots) == SlotTypes.OpenFilter) 
+            if ((slotType & possibleSlots) == SlotTypes.OpenFilter)
                 return true;
 
             if ((slotType & possibleSlots) == SlotTypes.Close)
@@ -333,7 +333,7 @@ namespace Forex_Strategy_Builder
 
             // Simple Moving Average
             if (maMethod == MAMethod.Simple)
-            {   
+            {
                 for (iBar = iPeriod; iBar < Math.Min(Bars, Bars - iShift); iBar++)
                 {
                     adTarget[iBar + iShift] = adTarget[iBar + iShift - 1] + adSource[iBar] / iPeriod - adSource[iBar - iPeriod] / iPeriod;
@@ -342,7 +342,7 @@ namespace Forex_Strategy_Builder
 
             // Exponential Moving Average
             else if (maMethod == MAMethod.Exponential)
-            {   
+            {
                 double pr = 2d / (iPeriod + 1);
 
                 for (iBar = iPeriod; iBar < Math.Min(Bars, Bars - iShift); iBar++)
@@ -605,7 +605,7 @@ namespace Forex_Strategy_Builder
                             bNoChange = (bIsHigher == (adIndValue[iBaseBar + 1] > adIndValue[iBaseBar]));
                             iBaseBar--;
                         }
-                        
+
                         indComp.Value[iBar] = adIndValue[iBaseBar] < adIndValue[iCurrBar] - dSigma ? 1 : 0;
                     }
                     break;
@@ -1091,6 +1091,6 @@ namespace Forex_Strategy_Builder
             }
 
             return;
-        } 
+        }
     }
 }

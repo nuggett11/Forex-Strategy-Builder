@@ -127,12 +127,12 @@ namespace Forex_Strategy_Builder
             int       nMA      = (int)IndParam.NumParam[0].Value;
             double    dMpl     = IndParam.NumParam[1].Value;
             int       iPrvs    = IndParam.CheckParam[0].Checked ? 1 : 0;
-	
+
             // Calculation
-			double[] adPrice   = Price(price);
-			double[] adMA      = MovingAverage(nMA, 0, maMethod, adPrice);
-			double[] adUpBand  = new double[Bars];
-			double[] adDnBand  = new double[Bars];
+            double[] adPrice   = Price(price);
+            double[] adMA      = MovingAverage(nMA, 0, maMethod, adPrice);
+            double[] adUpBand  = new double[Bars];
+            double[] adDnBand  = new double[Bars];
 
             int iFirstBar = nMA + iPrvs + 2;
 

@@ -89,10 +89,10 @@ namespace Forex_Strategy_Builder
             fontInfo       = new Font(Font.FontFamily, 9);
             infoRowHeight = (int)Math.Max(fontInfo.Height, 18);
 
-            barInfo = Language.T("Bar") + ": " + (bar + 1).ToString() + " " + 
-                Data.Time[bar].ToString(Data.DF) + " "  + 
-                Data.Time[bar].ToString("HH:mm") + "; " + 
-                Language.T("Interpolation method") + ": " + 
+            barInfo = Language.T("Bar") + ": " + (bar + 1).ToString() + " " +
+                Data.Time[bar].ToString(Data.DF) + " "  +
+                Data.Time[bar].ToString("HH:mm") + "; " +
+                Language.T("Interpolation method") + ": " +
                 Backtester.InterpolationMethodToString();
 
             pnlChart.Parent = this;
@@ -443,7 +443,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-        
+
         /// <summary>
         /// Paints panel pnlChart
         /// </summary>
@@ -754,7 +754,7 @@ namespace Forex_Strategy_Builder
                     }
                 }
 
-                if(point == 1) 
+                if(point == 1)
                 {
                     ctrlX1 = ptKnot1.X;
                     ctrlY1 = ptKnot1.Y;
@@ -768,7 +768,7 @@ namespace Forex_Strategy_Builder
                 Point ptControl1 = new Point(ctrlX1, ctrlY1);
                 Point ptControl2 = new Point(ctrlX2, ctrlY2);
 
-                g.DrawBezier(penCross, ptKnot1, ptControl1, ptControl2, ptKnot2); 
+                g.DrawBezier(penCross, ptKnot1, ptControl1, ptControl2, ptKnot2);
             }
 
             // Draw the WayPoints

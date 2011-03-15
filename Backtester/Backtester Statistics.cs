@@ -53,7 +53,7 @@ namespace Forex_Strategy_Builder
         static int    losingTrades;
         static int    totalTrades;
         static int    testedDays;
-        
+
         static bool   isScanned;
 
         static string[] accountStatsParam = new string[0];
@@ -472,7 +472,7 @@ namespace Forex_Strategy_Builder
                 if (!Configs.TradeUntilMarginCall && marginCallBar == 0 && session[bar].Summary.FreeMargin < 0)
                     marginCallBar = bar;
             }
-         
+
             for (int pos = 0; pos < PositionsTotal; pos++)
             {   // Charged fees
                 Position position = Backtester.PosFromNumb(pos);
@@ -793,7 +793,7 @@ namespace Forex_Strategy_Builder
             else if (InstrProperties.CommissionType == Commission_Type.percents)
             {
                 commission = (price / InstrProperties.Point) * (InstrProperties.Commission / 100);
-                return commission; 
+                return commission;
             }
 
             else if (InstrProperties.CommissionType == Commission_Type.money)
@@ -802,7 +802,7 @@ namespace Forex_Strategy_Builder
             if (InstrProperties.CommissionScope == Commission_Scope.lot)
                 commission *= lots; // Commission per lot
 
-            return commission; 
+            return commission;
         }
 
         /// <summary>
@@ -824,7 +824,7 @@ namespace Forex_Strategy_Builder
             else if (InstrProperties.CommissionType == Commission_Type.percents)
             {
                 commission = lots * InstrProperties.LotSize * price * (InstrProperties.Commission / 100) / AccountExchangeRate(price);
-                return commission; 
+                return commission;
             }
 
             else if (InstrProperties.CommissionType == Commission_Type.money)
@@ -833,7 +833,7 @@ namespace Forex_Strategy_Builder
             if (InstrProperties.CommissionScope == Commission_Scope.lot)
                 commission *= lots; // Commission per lot
 
-            return commission; 
+            return commission;
         }
 
         /// <summary>
@@ -863,7 +863,7 @@ namespace Forex_Strategy_Builder
 
             double rollover = lots * lotSize * (posDir == PosDirection.Long ? swapLongPips : -swapShortPips) * point * daysRollover / Backtester.AccountExchangeRate(price);
 
-            return rollover; 
+            return rollover;
         }
 
         /// <summary>

@@ -60,7 +60,7 @@ namespace Forex_Strategy_Builder
 
             xmlTips = new XmlDocument();
             rnd     = new Random();
-            
+
             Text            = Language.T("Tip of the Day");
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon            = Data.Icon;
@@ -159,10 +159,10 @@ namespace Forex_Strategy_Builder
             // Resize if necessary
             if (btnPrevTip.Left - chboxShow.Right < btnVertSpace)
                 Width += btnVertSpace - btnPrevTip.Left + chboxShow.Right;
-            
+
             return;
         }
- 
+
         /// <summary>
         /// Form On Paint
         /// </summary>

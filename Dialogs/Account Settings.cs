@@ -22,17 +22,17 @@ namespace Forex_Strategy_Builder
         Label lblLeverage;
         Label lblExchangeRate;
         Label lblExchangeRateInfo;
-        
+
         ComboBox      cbxAccountCurrency;
         NumericUpDown nudInitialAccount;
         ComboBox      cbxLeverage;
         NumericUpDown nudExchangeRate;
         TextBox       tbxExchangeRate;
-        
+
         Button  btnDefault;
         Button  btnAccept;
         Button  btnCancel;
-        
+
         ToolTip toolTip = new ToolTip();
 
         Font   font;
@@ -386,7 +386,7 @@ namespace Forex_Strategy_Builder
                 SetAcountExchangeRate();
             }
 
-            // NumericUpDown Initial Account   
+            // NumericUpDown Initial Account
             if (name == "nudInitialAccount")
             {
                 initialAccount = (int)nudInitialAccount.Value;
@@ -400,7 +400,7 @@ namespace Forex_Strategy_Builder
 
             // NumericUpDown Exhchange Rate
             if (name == "nudExchangeRate")
-            { 
+            {
                 if (cbxAccountCurrency.Text == "USD")
                     rateToUSD = (double)nudExchangeRate.Value;
                 else if (cbxAccountCurrency.Text == "EUR")
@@ -409,7 +409,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-        
+
         /// <summary>
         /// Button Default Click
         /// </summary>

@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace Forex_Strategy_Builder
 {
-    public enum StrategyPriceType 
+    public enum StrategyPriceType
     {
         Open, Close, Indicator, CloseAndReverce, Unknown
     }
@@ -47,22 +47,22 @@ namespace Forex_Strategy_Builder
             switch (interpolationMethod)
             {
                 case InterpolationMethod.Pessimistic:
-                    method = Language.T("Pessimistic scenario"); 
+                    method = Language.T("Pessimistic scenario");
                     break;
                 case InterpolationMethod.Shortest:
-                    method = Language.T("Shortest bar route"); 
+                    method = Language.T("Shortest bar route");
                     break;
                 case InterpolationMethod.Nearest:
-                    method = Language.T("Nearest order first"); 
+                    method = Language.T("Nearest order first");
                     break;
                 case InterpolationMethod.Optimistic:
-                    method = Language.T("Optimistic scenario"); 
+                    method = Language.T("Optimistic scenario");
                     break;
                 case InterpolationMethod.Random:
-                    method = Language.T("Random execution"); 
+                    method = Language.T("Random execution");
                     break;
                 default:
-                    method = Language.T("Error"); 
+                    method = Language.T("Error");
                     break;
             }
 
@@ -78,22 +78,22 @@ namespace Forex_Strategy_Builder
             switch (interpolationMethod)
             {
                 case InterpolationMethod.Pessimistic:
-                    method = Language.T("Pessimistic"); 
+                    method = Language.T("Pessimistic");
                     break;
                 case InterpolationMethod.Shortest:
-                    method = Language.T("Shortest"); 
+                    method = Language.T("Shortest");
                     break;
                 case InterpolationMethod.Nearest:
-                    method = Language.T("Nearest"); 
+                    method = Language.T("Nearest");
                     break;
                 case InterpolationMethod.Optimistic:
-                    method = Language.T("Optimistic"); 
+                    method = Language.T("Optimistic");
                     break;
                 case InterpolationMethod.Random:
-                    method = Language.T("Random"); 
+                    method = Language.T("Random");
                     break;
                 default:
-                    method = Language.T("Error"); 
+                    method = Language.T("Error");
                     break;
             }
 
@@ -523,7 +523,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public static int OrdNumb(int bar, int ord)
         {
-            return session[bar].Order[ord].OrdNumb; 
+            return session[bar].Order[ord].OrdNumb;
         }
 
         /// <summary>

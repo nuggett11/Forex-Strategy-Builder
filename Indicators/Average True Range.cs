@@ -100,14 +100,14 @@ namespace Forex_Strategy_Builder
 
             // Calculation
             int firstBar = period + 2;
-	
-			double[] ATR = new double[Bars];
+
+            double[] ATR = new double[Bars];
 
             for (int bar = 1; bar < Bars; bar++)
                 ATR[bar] = Math.Max(High[bar], Close[bar - 1]) - Math.Min(Low[bar], Close[bar - 1]);
 
             ATR = MovingAverage(period, 0, maMethod, ATR);
-            
+
             // Saving the components
             Component = new IndicatorComp[3];
 

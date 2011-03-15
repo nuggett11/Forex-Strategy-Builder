@@ -268,7 +268,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-   
+
         /// <summary>
         /// Calculate
         /// </summary>
@@ -618,7 +618,7 @@ namespace Forex_Strategy_Builder
 
             int space  = 5;
             int border = 2;
-       
+
             // Chart Title
             string unit = " [" + (Configs.AccountInMoney ? Configs.AccountCurrency : Language.T("pips")) + "]";
             string str  = Language.T("Balance Chart") + unit;

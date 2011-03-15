@@ -49,7 +49,7 @@ namespace Forex_Strategy_Builder
         /// Sets the selected bar
         /// </summary>
         public int SelectedBar { set { selectedBar = value; } }
-        
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -168,9 +168,9 @@ namespace Forex_Strategy_Builder
             {
                 "99999",
                 longestTransaction,
-                longestDirection, 
+                longestDirection,
                 "-9999999",
-                "99999", 
+                "99999",
                 "99.99999",
                 "99.99999",
                 "-99999.99",

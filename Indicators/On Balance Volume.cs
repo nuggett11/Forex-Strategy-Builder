@@ -208,4 +208,3 @@ namespace Forex_Strategy_Builder
         }
     }
 }
- 

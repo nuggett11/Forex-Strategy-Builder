@@ -1,4 +1,4 @@
-﻿// Enumerations 
+﻿// Enumerations
 // Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
@@ -158,7 +158,7 @@ namespace Forex_Strategy_Builder
         Line,      // Line for the main or a separated chart: Alligator, MA, RSI, Momentum
         Dot,       // For the main chart: Parabolic SAR
         Histogram, // Histogram on a separated chart: MACD Histogram, Aroon
-        Level,     // Fibonacci, Donchian Channel 
+        Level,     // Fibonacci, Donchian Channel
         CloudUp,   // Ichimoku Kinko Hyo
         CloudDown  // Ichimoku Kinko Hyo
     }

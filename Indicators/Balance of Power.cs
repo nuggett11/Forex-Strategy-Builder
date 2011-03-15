@@ -14,12 +14,12 @@ namespace Forex_Strategy_Builder
     /// Balance of Power Indicator
     /// </summary>
     public class Balance_of_Power : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
         public Balance_of_Power(SlotTypes slotType)
-		{
+       {
             // General properties
             IndicatorName  = "Balance of Power";
             PossibleSlots  = SlotTypes.OpenFilter | SlotTypes.CloseFilter;
@@ -85,7 +85,7 @@ namespace Forex_Strategy_Builder
             // Calculation
             int iFirstBar = iPeriod + 2;
 
-			double[] adBOP = new double[Bars];
+            double[] adBOP = new double[Bars];
 
             for (int iBar = 1; iBar < Bars; iBar++)
             {
@@ -94,7 +94,7 @@ namespace Forex_Strategy_Builder
                 else
                     adBOP[iBar] = 0;
             }
-            
+
             adBOP = MovingAverage(iPeriod, 0, maMethod, adBOP);
 
             // Saving the components
@@ -266,5 +266,5 @@ namespace Forex_Strategy_Builder
 
             return sString;
         }
-	}
+    }
 }

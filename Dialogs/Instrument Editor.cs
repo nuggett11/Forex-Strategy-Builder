@@ -79,7 +79,7 @@ namespace Forex_Strategy_Builder
         Button   btnAddInstrAdd;
 
         Button  btnClose;
-        
+
         ToolTip toolTip = new ToolTip();
 
         Font  font;
@@ -884,7 +884,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-        
+
         /// <summary>
         /// Calculates the account exchange rate.
         /// </summary>
@@ -1145,7 +1145,7 @@ namespace Forex_Strategy_Builder
             if (bNeedReset)
             {
                 Dictionary<String, Instrument_Properties> temp = new Dictionary<string, Instrument_Properties>(Instruments.InstrumentList.Count);
-                
+
                 foreach (KeyValuePair<String, Instrument_Properties> kvp in Instruments.InstrumentList)
                     temp.Add(kvp.Key, kvp.Value.Clone());
 

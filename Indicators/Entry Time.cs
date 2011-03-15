@@ -1,8 +1,9 @@
 // Entry Time indicator
+// Last changed on 2009-04-15
 // Part of Forex Strategy Builder & Forex Strategy Trader
-// Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved!
-// Last changed on: 2009-04-15
-// http://forexsb.com
+// Website http://forexsb.com/
+// Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
+// This code or any part of it cannot be used in other applications without a permission.
 
 using System;
 

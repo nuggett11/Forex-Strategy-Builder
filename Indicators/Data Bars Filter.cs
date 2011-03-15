@@ -110,7 +110,7 @@ namespace Forex_Strategy_Builder
                 case "Use the newest bars only":
                     iFirstBar = Math.Max(0, Bars - iNewest);
                     iFirstBar = Math.Min(iFirstBar, Bars - Configs.MIN_BARS);
-                    
+
                     for (int iBar = iFirstBar; iBar < Bars; iBar++)
                     {
                         adBars[iBar] = 1;

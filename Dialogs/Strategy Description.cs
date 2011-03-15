@@ -36,7 +36,7 @@ namespace Forex_Strategy_Builder
             btnClose    = new Button();
             btnAccept   = new Button();
             btnClear    = new Button();
-            
+
             // BBCode_viewer
             AcceptButton = btnClose;
             BackColor    = LayoutColors.ColorFormBack;
@@ -119,7 +119,7 @@ namespace Forex_Strategy_Builder
             base.OnLoad(e);
 
             Size = new Size(300, 380);
-            
+
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Forex_Strategy_Builder
             btnClear.Size     = new Size(buttonWidth, buttonHeight);
             btnClear.Location = new Point(btnHrzSpace, ClientSize.Height - buttonHeight - btnVertSpace);
 
-            // pnlBase 
+            // pnlBase
             pnlBase.Size = new Size(ClientSize.Width - 2 * border, btnClose.Top - btnVertSpace - border - pnlWarnBase.Bottom - border);
             pnlBase.Location = new Point(border, pnlWarnBase.Bottom + border);
 

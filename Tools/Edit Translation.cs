@@ -497,7 +497,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
- 
+
         /// <summary>
         /// Form On Paint
         /// </summary>

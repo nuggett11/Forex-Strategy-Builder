@@ -97,12 +97,12 @@ namespace Forex_Strategy_Builder
         /// Gets or sets the caption of a NumericUpDown control.
         /// </summary>
         Label[] NumLabel { get { return aLblNumeric; } set { aLblNumeric = value; } }
- 
+
         /// <summary>
         /// Gets or sets the parameters of a NumericUpDown control.
         /// </summary>
         NUD[] NumParam { get { return aNudNumeric; } set { aNudNumeric = value; } }
- 
+
         /// <summary>
         /// Gets or sets the parameters of a CheckBox control.
         /// </summary>
@@ -355,7 +355,7 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-                
+
         /// <summary>
         /// Paints the base panel
         /// </summary>
@@ -392,7 +392,7 @@ namespace Forex_Strategy_Builder
 
             int rightColumnWight = 4 * buttonWidth + 3 * btnHrzSpace;
             int pnlTreeViewWidth = ClientSize.Width - rightColumnWight - 3 * space;
-            
+
             // Panel pnlTreeViewBase
             pnlTreeViewBase.Size     = new Size(pnlTreeViewWidth, ClientSize.Height - 2 * space);
             pnlTreeViewBase.Location = new Point(space, space);
@@ -642,7 +642,7 @@ namespace Forex_Strategy_Builder
             trnCustomIndicators.Tag  = false;
 
             trvIndicators.Nodes.AddRange(new TreeNode[]
-            { 
+            {
                 trnAll, trnIndicators, trnAdditional, trnOscillatorOfIndicators,
                 trnIndicatorsMAOscillator, trnDateTime, trnCustomIndicators
             });
@@ -665,17 +665,17 @@ namespace Forex_Strategy_Builder
                     trnCustom.Name = sIndicatorName;
                     trnCustom.Text = sIndicatorName;
                     trnCustomIndicators.Nodes.Add(trnCustom);
-                } 
+                }
 
                 TreeNode trnGroups = new TreeNode();
                 trnGroups.Tag  = true;
                 trnGroups.Name = sIndicatorName;
                 trnGroups.Text = sIndicatorName;
-                
+
                 if (type == TypeOfIndicator.Indicator)
                 {
                     trnIndicators.Nodes.Add(trnGroups);
-                } 
+                }
                 else if (type == TypeOfIndicator.Additional)
                 {
                     trnAdditional.Nodes.Add(trnGroups);
@@ -766,7 +766,7 @@ namespace Forex_Strategy_Builder
                 System.Diagnostics.Process.Start("http://forexsb.com/wiki/indicators/start");
             }
             catch { }
-       
+
             return;
 		}
 
@@ -852,7 +852,7 @@ namespace Forex_Strategy_Builder
                 Data.Strategy.Slot[slot].MaxValue       = indicator.SeparatedChartMaxValue;
                 Data.Strategy.Slot[slot].IsDefined      = true;
 
-                // Search the indicators' components to determine Data.FirstBar 
+                // Search the indicators' components to determine Data.FirstBar
                 Data.FirstBar = Data.Strategy.SetFirstBar();
 
                 // Check "Use previous bar value"
@@ -1025,7 +1025,7 @@ namespace Forex_Strategy_Builder
             Label lbl = (Label)sender;
             lbl.BackColor = Color.Transparent;
         }
- 
+
         /// <summary>
         /// Chnages the background color of a label when the mause enters.
         /// </summary>

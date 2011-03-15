@@ -37,7 +37,7 @@ namespace Forex_Strategy_Builder
         public static Dictionary<String, Instrument_Properties> InstrumentList
         {
             get { return dictInstrument; }
-            set { dictInstrument = value; } 
+            set { dictInstrument = value; }
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Forex_Strategy_Builder
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.LoadXml("<fsb></fsb>");
 
-            //Create the XML declaration. 
+            //Create the XML declaration.
             XmlDeclaration xmldecl;
             xmldecl = xmlDoc.CreateXmlDeclaration("1.0", null, null);
 

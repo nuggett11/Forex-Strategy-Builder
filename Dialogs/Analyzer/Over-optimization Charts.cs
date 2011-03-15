@@ -16,7 +16,7 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
         Over_optimization_Data_Table table;
 
         string chartTitle;
-        
+
         int space  = 5;
         int border = 2;
 

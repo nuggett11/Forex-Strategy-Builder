@@ -199,7 +199,7 @@ namespace Forex_Strategy_Builder
 
             NoDirectionOscillatorLogic(iFirstBar, iPrvs, adOscllator, 0, ref Component[1], indLogic);
             Component[2].Value = Component[1].Value;
-			
+
             return;
         }
 

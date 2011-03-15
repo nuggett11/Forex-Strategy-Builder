@@ -47,7 +47,7 @@ namespace Forex_Strategy_Builder
             tsbtOverview.Click    += new EventHandler(BtnTools_OnClick);
             tsbtOverview.ToolTipText = Language.T("See the strategy overview.");
             tsStrategy.Items.Add(tsbtOverview);
-           
+
             // Button Generator
             tsbtGenerator = new ToolStripButton();
             tsbtGenerator.Name        = "Generator";
@@ -263,7 +263,7 @@ namespace Forex_Strategy_Builder
         protected virtual void SlotContextMenu_Click(object sender, EventArgs e)
         {
         }
-        
+
         /// <summary>
         /// Performs actions after the button add open filter was clicked.
         /// </summary>

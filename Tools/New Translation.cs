@@ -228,7 +228,7 @@ namespace Forex_Strategy_Builder
 
             this.Close();
         }
- 
+
         /// <summary>
         /// Form On Paint
         /// </summary>

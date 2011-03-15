@@ -1,4 +1,4 @@
-﻿// Fisher Transform Indicator 
+﻿// Fisher Transform Indicator
 // Last changed on 2009-05-05
 // Part of Forex Strategy Builder & Forex Strategy Trader
 // Website http://forexsb.com/
@@ -11,15 +11,15 @@ using System.Drawing;
 namespace Forex_Strategy_Builder
 {
     /// <summary>
-    /// Fisher Transform Indicator 
+    /// Fisher Transform Indicator
     /// </summary>
     public class Fisher_Transform : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
         public Fisher_Transform(SlotTypes slotType)
-		{
+        {
             // General properties
             IndicatorName  = "Fisher Transform";
             PossibleSlots  = SlotTypes.OpenFilter | SlotTypes.CloseFilter;
@@ -111,7 +111,7 @@ namespace Forex_Strategy_Builder
                 adValue[iBar] = 0.33 * 2 * ((adPrice[iBar] - dLowestLow) / (dHighestHigh - dLowestLow) - 0.5) + 0.67 * adValue[iBar - 1];
             }
 
-			double[] adFT = new double[Bars];
+            double[] adFT = new double[Bars];
             adFT[0] = 0;
             for (int iBar = 1; iBar < Bars; iBar++)
             {
@@ -287,5 +287,5 @@ namespace Forex_Strategy_Builder
 
             return sString;
         }
-	}
+    }
 }

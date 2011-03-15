@@ -115,7 +115,7 @@ namespace Forex_Strategy_Builder
             atbxInputValues[0].Text = fibo.Component[5].Value[Data.Bars -1].ToString();
             atbxInputValues[1].Text = fibo.Component[1].Value[Data.Bars -1].ToString();
         }
-  
+
         /// <summary>
         /// Perform initialising
         /// </summary>

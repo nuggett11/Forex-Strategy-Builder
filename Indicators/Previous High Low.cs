@@ -274,7 +274,7 @@ namespace Forex_Strategy_Builder
 
             string sUpperTrade;
             string sLowerTrade;
-            
+
             if (iShift > 0)
             {
                 sUpperTrade = iShift + " pips above the ";

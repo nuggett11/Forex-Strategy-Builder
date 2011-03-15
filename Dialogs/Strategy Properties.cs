@@ -31,7 +31,7 @@ namespace Forex_Strategy_Builder
         NUD nudMaxOpenLots, nudEntryLots, nudAddingLots, nudReducingLots;
 
         Button btnDefault, btnAccept, btnCancel;
-        
+
         ToolTip toolTip = new ToolTip();
 
         Font font;
@@ -115,10 +115,10 @@ namespace Forex_Strategy_Builder
             cbxSameDirAction.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxSameDirAction.Items.AddRange(new string[] { Language.T("Nothing"), Language.T("Winner"), Language.T("Add") });
             cbxSameDirAction.SelectedIndex = 0;
-            toolTip.SetToolTip(cbxSameDirAction, 
+            toolTip.SetToolTip(cbxSameDirAction,
                 Language.T("Nothing - cancels the additional orders.") + Environment.NewLine +
                 Language.T("Winner - adds to a winning position.")     + Environment.NewLine +
-                Language.T("Add - adds to all positions.")); 
+                Language.T("Add - adds to all positions."));
 
             // ComboBox OppDirAction
             cbxOppDirAction.Parent        = pnlAveraging;
@@ -130,7 +130,7 @@ namespace Forex_Strategy_Builder
                 Language.T("Nothing - cancels the additional orders.") + Environment.NewLine +
                 Language.T("Reduce - reduces or closes a position.")   + Environment.NewLine +
                 Language.T("Close - closes the position.")             + Environment.NewLine +
-                Language.T("Reverse - reverses the position.")); 
+                Language.T("Reverse - reverses the position."));
 
             // Label MaxOpen Lots
             lblMaxOpenLots.Parent    = pnlAmounts;
@@ -208,7 +208,7 @@ namespace Forex_Strategy_Builder
             nudAddingLots.Maximum   = 100;
             nudAddingLots.Increment = 0.01M;
             nudAddingLots.Value     = 1;
-            nudAddingLots.DecimalPlaces = 2; 
+            nudAddingLots.DecimalPlaces = 2;
             nudAddingLots.TextAlign = HorizontalAlignment.Center;
             nudAddingLots.EndInit();
 
@@ -324,7 +324,7 @@ namespace Forex_Strategy_Builder
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            
+
             SetFormSize();
             SetParams();
             btnAccept.Focus();

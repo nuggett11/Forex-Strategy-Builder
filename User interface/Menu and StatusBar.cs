@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Forex_Strategy_Builder
 {
     /// <summary>
-    /// Provides the StatusBar and MainMenu 
+    /// Provides the StatusBar and MainMenu
     /// </summary>
     public class Menu_and_StatusBar : Workspace
     {
@@ -531,7 +531,7 @@ namespace Forex_Strategy_Builder
             miStrategyAutoscan.CheckOnClick = true;
             miStrategyAutoscan.Click       += new EventHandler(MenuStrategyAutoscan_OnClick);
             miTesting.DropDownItems.Add(miStrategyAutoscan);
-            
+
             ToolStripMenuItem miTradeUntilMC = new ToolStripMenuItem();
             miTradeUntilMC.Name         = "miTradeUntilMC";
             miTradeUntilMC.Text         = Language.T("Trade until a Margin Call");
@@ -540,7 +540,7 @@ namespace Forex_Strategy_Builder
             miTradeUntilMC.ToolTipText  = Language.T("Close an open position after a Margin Call.") + Environment.NewLine + Language.T("Do not open a new position when the Free Margin is insufficient.");
             miTradeUntilMC.Click       += new EventHandler(TradeUntilMC_OnClick);
             miTesting.DropDownItems.Add(miTradeUntilMC);
-            
+
             ToolStripMenuItem miAdditionalStats = new ToolStripMenuItem();
             miAdditionalStats.Name         = "miAdditionalStats";
             miAdditionalStats.Text         = Language.T("Additional Statistics");
@@ -549,7 +549,7 @@ namespace Forex_Strategy_Builder
             miAdditionalStats.ToolTipText  = Language.T("Show long/short balance lines in the chart and more statistics in the overview.");
             miAdditionalStats.Click       += new EventHandler(AdditionalStats_OnClick);
             miTesting.DropDownItems.Add(miAdditionalStats);
-            
+
             ToolStripMenuItem miShowClosePrice = new ToolStripMenuItem();
             miShowClosePrice.Name         = "miShowClosePrice";
             miShowClosePrice.Text         = Language.T("Show Price Line on Account Chart");

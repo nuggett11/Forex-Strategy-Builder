@@ -117,7 +117,7 @@ namespace Forex_Strategy_Builder
                 else
                     adMFI[iBar] = 100.0 - (100.0 / (1.0 + (dPMF / dNMF)));
             }
-            
+
             // Saving the components
             Component = new IndicatorComp[3];
 

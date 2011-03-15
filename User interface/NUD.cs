@@ -58,7 +58,7 @@ namespace Forex_Strategy_Builder
                 }
             }
         }
-        
+
         protected override void OnMouseWheel(MouseEventArgs e)
         {
             if (e.Delta > 0)
@@ -91,7 +91,7 @@ namespace Forex_Strategy_Builder
                 timer.Tag = Maximum;
             if (newValue < Minimum)
                 timer.Tag = Minimum;
-            
+
             timer.Interval = 50;
             timer.Start();
         }
@@ -106,7 +106,7 @@ namespace Forex_Strategy_Builder
                 value = Maximum;
             if (value < Minimum)
                 value = Minimum;
-            
+
             Value = value;
         }
     }

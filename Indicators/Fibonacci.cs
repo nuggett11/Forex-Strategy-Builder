@@ -14,7 +14,7 @@ namespace Forex_Strategy_Builder
     /// Fibonacci Indicator
     /// </summary>
     public class Fibonacci : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
@@ -24,7 +24,7 @@ namespace Forex_Strategy_Builder
             IndicatorName  = "Fibonacci";
             PossibleSlots  = SlotTypes.Open;
             WarningMessage = "Fibonacci indicator is included in the program for demonstration only." +
-                " This indicator tends to change past signals. That behaviour leads to unreliable back test results." + 
+                " This indicator tends to change past signals. That behaviour leads to unreliable back test results." +
                 " It’s not recommended Fibonacci to be used in real trading strategies.";
 
             // Setting up the indicator parameters
@@ -291,17 +291,17 @@ namespace Forex_Strategy_Builder
             Component[6].FirstBar  = iFirstBar;
             Component[6].Value     = new double[Bars];
 
-			Component[7]           = new IndicatorComp();
-			Component[7].CompName  = "Is short entry allowed";
-			Component[7].DataType  = IndComponentType.AllowOpenShort;
-			Component[7].ChartType = IndChartType.NoChart;
+            Component[7]           = new IndicatorComp();
+            Component[7].CompName  = "Is short entry allowed";
+            Component[7].DataType  = IndComponentType.AllowOpenShort;
+            Component[7].ChartType = IndChartType.NoChart;
             Component[7].FirstBar  = iFirstBar;
-			Component[7].Value	   = new double[Bars];
+            Component[7].Value	   = new double[Bars];
 
-			int iBarFibo382Reached = 0;
-			int iBarFibo500Reached = 0;
-			int iBarFibo618Reached = 0;
-			int iBarFibo100Reached = 0;
+            int iBarFibo382Reached = 0;
+            int iBarFibo500Reached = 0;
+            int iBarFibo618Reached = 0;
+            int iBarFibo100Reached = 0;
 
             for (int iBar = Math.Max(iFirstLowBar, iFirstHighBar); iBar < Bars; iBar++)
             {
@@ -387,7 +387,7 @@ namespace Forex_Strategy_Builder
                         iBarFibo100Reached = iBar;
                     }
                 }
-			}
+            }
 
             return;
 		}

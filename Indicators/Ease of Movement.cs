@@ -14,12 +14,12 @@ namespace Forex_Strategy_Builder
     /// Arms Ease of Movement Indicator
     /// </summary>
     public class Ease_of_Movement : Indicator
-	{
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
         public Ease_of_Movement(SlotTypes slotType)
-		{
+        {
             // General properties
             IndicatorName  = "Ease of Movement";
             PossibleSlots  = SlotTypes.OpenFilter | SlotTypes.CloseFilter;
@@ -89,13 +89,13 @@ namespace Forex_Strategy_Builder
             // Calculation
             int iFirstBar = iPeriod + 2;
 
-			double[] adAEOM = new double[Bars];
+            double[] adAEOM = new double[Bars];
 
             for (int iBar = 1; iBar < Bars; iBar++)
             {
                 adAEOM[iBar] = iDivisor * (High[iBar] - Low[iBar]) * ((High[iBar] + Low[iBar]) / 2 - (High[iBar - 1] - Low[iBar - 1]) / 2) / Math.Max(Volume[iBar], 1);
             }
-            
+
             adAEOM = MovingAverage(iPeriod, 0, maMethod, adAEOM);
 
             // Saving the components
@@ -225,5 +225,5 @@ namespace Forex_Strategy_Builder
 
             return sString;
         }
-	}
+    }
 }

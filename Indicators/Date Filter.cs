@@ -80,7 +80,7 @@ namespace Forex_Strategy_Builder
                     for (int iBar = iFirstBar; iBar < Bars; iBar++)
                         if (Time[iBar] < dtKeyDate)
                             adBars[iBar] = 1;
-                    
+
                     break;
 
                 case "Do not open positions before":
@@ -94,7 +94,7 @@ namespace Forex_Strategy_Builder
                     }
 
                     iFirstBar = (int)Math.Min(iFirstBar, Bars - Configs.MIN_BARS);
-                    
+
                     for (int iBar = iFirstBar; iBar < Bars; iBar++)
                     {
                         adBars[iBar] = 1;

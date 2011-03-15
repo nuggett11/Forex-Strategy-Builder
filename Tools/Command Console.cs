@@ -98,7 +98,7 @@ namespace Forex_Strategy_Builder
                 "bar #          - Shows the prices of bar #.",
                 "ind #          - Shows the indicators for bar #.",
                 "str            - shows the strategy.",
-                "debug          - Turns on debug mode.", 
+                "debug          - Turns on debug mode.",
                 "undebug        - Turns off debug mode.",
                 "loadlang       - Reloads the language file.",
                 "missingphrases - Shows all phrases, which are used in the program but are not included in the language file.",
@@ -283,10 +283,10 @@ namespace Forex_Strategy_Builder
 
                 string sBarInfo = String.Format("Bar No " + (bar + 1).ToString() + Environment.NewLine +
                     "{0:D2}.{1:D2}.{2:D4} {3:D2}:{4:D2}" + Environment.NewLine +
-                    "Open   {5:F4}" + Environment.NewLine + 
-                    "High   {6:F4}" + Environment.NewLine + 
+                    "Open   {5:F4}" + Environment.NewLine +
+                    "High   {6:F4}" + Environment.NewLine +
                     "Low    {7:F4}" + Environment.NewLine +
-                    "Close  {8:F4}" + Environment.NewLine + 
+                    "Close  {8:F4}" + Environment.NewLine +
                     "Volume {9:D6}",
                     Data.Time[bar].Day, Data.Time[bar].Month, Data.Time[bar].Year, Data.Time[bar].Hour, Data.Time[bar].Minute,
                     Data.Open[bar], Data.High[bar], Data.Low[bar], Data.Close[bar], Data.Volume[bar]);

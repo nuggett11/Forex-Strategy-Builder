@@ -59,7 +59,7 @@ namespace Forex_Strategy_Builder
         public int      Bars   { get { return bars; } }
         public double   Point  { get { return instrProperties.Point; } }
         public DateTime Update { get { return timeUpdate; } }
-        
+
         // -------------------------------------------------------------
         int  maxBars    = 20000;
         int  startYear  = 1990;
@@ -70,7 +70,7 @@ namespace Forex_Strategy_Builder
         int  endDay     = 1;
         bool useStartDate = false;
         bool useEndDate   = false;
-        
+
         /// <summary>
         /// Maximum data bars
         /// </summary>
@@ -121,7 +121,7 @@ namespace Forex_Strategy_Builder
         public string DataDir { get { return pathDataDir; } set { pathDataDir = value; } }
 
 		/// <summary>
-		/// Default constructor 
+		/// Default constructor
 		/// </summary>
 		Instrument()
 		{
@@ -284,7 +284,7 @@ namespace Forex_Strategy_Builder
 
 	        // Set the starting date
             if (useStartDate && aBar[0].Time < startDate)
-	        { 
+	        {
                 for (int bar = 0; bar < bars; bar++)
 		        {
                     if (aBar[bar].Time >= startDate)
@@ -351,7 +351,7 @@ namespace Forex_Strategy_Builder
             for (int bar = 0; bar < Bars; bar++)
             {
                 if (High(bar) < Open(bar)  ||
-                    High(bar) < Low(bar)   || 
+                    High(bar) < Low(bar)   ||
                     High(bar) < Close(bar) ||
                     Low(bar)  > Open(bar)  ||
                     Low(bar)  > Close(bar))
@@ -383,7 +383,7 @@ namespace Forex_Strategy_Builder
             {
                 if (High(bar) > instrMaxPrice)
                     instrMaxPrice = High(bar);
-                
+
                 if (Low(bar) < instrMinPrice)
                     instrMinPrice = Low(bar);
 

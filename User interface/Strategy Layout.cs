@@ -145,7 +145,7 @@ namespace Forex_Strategy_Builder
             pnlProperties.Paint  += new PaintEventHandler(PnlProperties_Paint);
             pnlProperties.Resize += new EventHandler(PnlSlot_Resize);
             toolTip.SetToolTip(pnlProperties, slotPropertiesTipText);
-   
+
             // Slot panels settings
             for (int iSlot = 0; iSlot < slots; iSlot++)
             {
@@ -641,12 +641,12 @@ namespace Forex_Strategy_Builder
                     maxValueWidth = sizeValue.Width;
             }
 
-            // Padding Param Padding Dash Padding Value Padding 
+            // Padding Param Padding Dash Padding Value Padding
             float dashWidth = 5;
             float necessaryWidth = 4 * padding + maxParamWidth + maxValueWidth + dashWidth;
 
             if (width > necessaryWidth)
-            {   // 2*Padding Param Padding Dash Padding Value 2*Padding 
+            {   // 2*Padding Param Padding Dash Padding Value 2*Padding
                 padding = (float)Math.Max((pnl.ClientSize.Width - maxParamWidth - maxValueWidth - dashWidth) / 6, padding);
             }
             else
@@ -762,7 +762,7 @@ namespace Forex_Strategy_Builder
             // Paint the panel's backgraund
             RectangleF rectfPanel = new RectangleF(border, captionHeight, pnl.Width - 2 * border, pnl.Height - captionHeight - border);
             Data.GradientPaint(g, rectfPanel, colorBackground, LayoutColors.DepthControl);
-            
+
             int vPosition = (int)captionHeight + 2;
 
             // Padlock image
@@ -800,7 +800,7 @@ namespace Forex_Strategy_Builder
                 SizeF sizeParam      = g.MeasureString(param, fontParam);
                 float maxParamWidth = sizeParam.Width;
 
-                // Padding Param Padding Dash Padding Value Padding 
+                // Padding Param Padding Dash Padding Value Padding
                 float padding        = space;
                 float necessaryWidth = 2 * padding + maxParamWidth;
 
@@ -853,13 +853,13 @@ namespace Forex_Strategy_Builder
                         maxValueWidth = g.MeasureString(value, fontParam).Width;
                 }
 
-                // Padding Param Padding Dash Padding Value Padding 
+                // Padding Param Padding Dash Padding Value Padding
                 float padding   = space;
                 float dashWidth = 5;
                 float necessaryWidth = 4 * padding + maxParamWidth + maxValueWidth + dashWidth;
 
                 if (width > necessaryWidth)
-                {   // 2*Padding Param Padding Dash Padding Value 2*Padding 
+                {   // 2*Padding Param Padding Dash Padding Value 2*Padding
                     padding = (float)Math.Max((pnl.ClientSize.Width - maxParamWidth - maxValueWidth - dashWidth) / 6, padding);
                 }
                 else
@@ -965,6 +965,6 @@ namespace Forex_Strategy_Builder
             flowLayoutStrategy.SuspendLayout();
             ArrangeStrategyControls();
             flowLayoutStrategy.ResumeLayout();
-        } 
+        }
     }
 }

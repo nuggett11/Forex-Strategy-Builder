@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <strategy>
   <programName>Forex Strategy Builder</programName>
-  <programVersion>2.57.11.0</programVersion>
+  <programVersion>2.57.9.0</programVersion>
   <strategyName>Demo MACD Reversal</strategyName>
   <instrumentSymbol>EURUSD</instrumentSymbol>
   <instrumentPeriod>day</instrumentPeriod>
@@ -17,17 +17,17 @@
   <reducingLots>1</reducingLots>
   <description>"MACD Reversal" strategy demonstrates the "Close and Reverse" technique of forex trading.
 
-This is a classic reversal strategy with additional stop-loss. It keeps our position opened almost 100% of the time. 
+This is a classic reversal strategy with additional stop-loss. It keeps our position opened almost 100% of the time.
 
-We get a signal when the MACD line crosses the zero line, and that signal reverses our position when the next bar opens. 
+We get a signal when the MACD line crosses the zero line, and that signal reverses our position when the next bar opens.
 
-The "Close and Reverse" logic, which is set in the "Closing Point of the Position" slot, is the condition that determines the reversal every time we get a signal. Whenever Forex Strategy Builder gets such signal it closes the current position and immediately opens a new one in the opposite direction. 
+The "Close and Reverse" logic, which is set in the "Closing Point of the Position" slot, is the condition that determines the reversal every time we get a signal. Whenever Forex Strategy Builder gets such signal it closes the current position and immediately opens a new one in the opposite direction.
 
-Notice that the “Opposite direction signal” dropdown menu in the strategy properties dialog is locked to "Reverse" mode. The "Close and Reverse" exit logic makes this the only possible option. 
+Notice that the “Opposite direction signal” dropdown menu in the strategy properties dialog is locked to "Reverse" mode. The "Close and Reverse" exit logic makes this the only possible option.
 
-The "Permanent Stop Loss" limits our loss to 2000 pips (you have to set 200 for 4 digits quotation). When the market reaches the stop loss level, the strategy closes the position without reversing it. That is the only time when we are out of the market. 
+The "Permanent Stop Loss" limits our loss to 2000 pips (you have to set 200 for 4 digits quotation). When the market reaches the stop loss level, the strategy closes the position without reversing it. That is the only time when we are out of the market.
 
-The value of the "Same direction signal behavior" is not important here because it is impossible to have another signal in the same direction. MACD cannot cross the zero line twice in the same direction which means that the next signal we get will always be in the opposite direction to our current position. 
+The value of the "Same direction signal behavior" is not important here because it is impossible to have another signal in the same direction. MACD cannot cross the zero line twice in the same direction which means that the next signal we get will always be in the opposite direction to our current position.
 </description>
   <openFilters>1</openFilters>
   <closeFilters>0</closeFilters>

@@ -13,7 +13,7 @@ namespace Forex_Strategy_Builder
     /// Ross Hook Indicator
     /// </summary>
     public class Ross_Hook : Indicator
-	{
+    {
         /// <summary>
         /// Constructor
         /// </summary>
@@ -61,7 +61,7 @@ namespace Forex_Strategy_Builder
         public override void Calculate(SlotTypes slotType)
         {
             double[] adRhUp = new double[Bars];
-			double[] adRhDn = new double[Bars];
+            double[] adRhDn = new double[Bars];
 
             for (int iBar = 5; iBar < Bars - 1; iBar++)
             {
@@ -90,17 +90,17 @@ namespace Forex_Strategy_Builder
             // Saving the components
             Component = new IndicatorComp[2];
 
-			Component[0]			= new IndicatorComp();
+            Component[0]            = new IndicatorComp();
             Component[0].ChartType  = IndChartType.Level;
-			Component[0].ChartColor	= Color.SpringGreen;
-			Component[0].FirstBar	= 5;
-			Component[0].Value	    = adRhUp;
+            Component[0].ChartColor	= Color.SpringGreen;
+            Component[0].FirstBar	= 5;
+            Component[0].Value	    = adRhUp;
 
-			Component[1]			= new IndicatorComp();
+            Component[1]            = new IndicatorComp();
             Component[1].ChartType  = IndChartType.Level;
             Component[1].ChartColor = Color.DarkRed;
-			Component[1].FirstBar	= 5;
-			Component[1].Value	    = adRhDn;
+            Component[1].FirstBar	= 5;
+            Component[1].Value	    = adRhDn;
 
             // Sets the Component's type
             if (slotType == SlotTypes.Open)
@@ -135,7 +135,7 @@ namespace Forex_Strategy_Builder
             }
 
             return;
-		}
+        }
 
         /// <summary>
         /// Sets the indicator logic description

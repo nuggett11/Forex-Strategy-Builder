@@ -110,7 +110,7 @@ namespace Forex_Strategy_Builder
                             }
                             else if (languageFiles.ContainsKey(node.InnerText))
                             {   // This language has been already loaded
-                                string sMessageText = "Language file: " + sLangFile + Environment.NewLine + Environment.NewLine + 
+                                string sMessageText = "Language file: " + sLangFile + Environment.NewLine + Environment.NewLine +
                                     "Duplicated language!";
                                 MessageBox.Show(sMessageText, "Language Files Loading", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }

@@ -229,7 +229,7 @@ namespace Forex_Strategy_Builder
                 Language.T("Spread"),
                 Language.T("Rollover"),
                 Language.T("Commission"),
-                Language.T("Slippage"), 
+                Language.T("Slippage"),
                 Language.T("Profit Loss"),
                 Language.T("Floating P/L"),
                 Language.T("Balance"),
@@ -251,7 +251,7 @@ namespace Forex_Strategy_Builder
                 Language.T("Spread"),
                 Language.T("Rollover"),
                 Language.T("Commission"),
-                Language.T("Slippage"), 
+                Language.T("Slippage"),
                 Language.T("Profit Loss"),
                 Language.T("Floating P/L"),
                 Language.T("Balance"),
@@ -268,12 +268,12 @@ namespace Forex_Strategy_Builder
                 longestDirection,
                 "-99999999",
                 "99.99999",
-                "99.99999", 
-                "999999.99", 
-                "-999.99", 
+                "99.99999",
+                "999999.99",
                 "-999.99",
                 "-999.99",
-                "-999.99", 
+                "-999.99",
+                "-999.99",
                 "-999999.99",
                 "-999999.99",
                 "-99999999.99",
@@ -346,7 +346,7 @@ namespace Forex_Strategy_Builder
 
                 // Charges
                 if (Configs.AccountInMoney)
-                {   // in currency 
+                {   // in currency
                     if (position.Transaction == Transaction.Open ||
                         position.Transaction == Transaction.Add  ||
                         position.Transaction == Transaction.Reverse)
@@ -598,7 +598,7 @@ namespace Forex_Strategy_Builder
                 selectedRow = 0;
             else if(selectedRow > shownPos - 1)
                 selectedRow = shownPos - 1;
-            
+
             Rectangle rect = new Rectangle(0, 2 * rowHeight, ClientSize.Width, ClientSize.Height - 2 * rowHeight);
             Invalidate(rect);
             vScrollBar.Select();

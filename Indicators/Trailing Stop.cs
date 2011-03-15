@@ -11,8 +11,8 @@ namespace Forex_Strategy_Builder
     /// Traling Stop Indicator
     /// The implimentation of logic is in Market.AnalyseClose(int iBar)
     /// </summary>
-	public class Trailing_Stop : Indicator
-	{
+    public class Trailing_Stop : Indicator
+    {
         /// <summary>
         /// Sets the default indicator parameters for the designated slot type
         /// </summary>
@@ -71,12 +71,12 @@ namespace Forex_Strategy_Builder
             // Saving the components
             Component = new IndicatorComp[1];
 
-			Component[0] = new IndicatorComp();
+            Component[0] = new IndicatorComp();
             Component[0].CompName      = "Trailing Stop for the transferred position";
-			Component[0].DataType	   = IndComponentType.Other;
+            Component[0].DataType	   = IndComponentType.Other;
             Component[0].ShowInDynInfo = false;
-			Component[0].FirstBar	   = 1;
-			Component[0].Value	       = new double[Bars];
+            Component[0].FirstBar	   = 1;
+            Component[0].Value	       = new double[Bars];
 
             return;
 		}

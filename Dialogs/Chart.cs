@@ -1,4 +1,4 @@
-// Chart class 
+// Chart class
 // Part of Forex Strategy Builde
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Forex_Strategy_Builder
 {
-    // Chart ToolStrip Buttons 
+    // Chart ToolStrip Buttons
     public enum ChartButtons
     {
         Grid, Cross,
@@ -54,7 +54,7 @@ namespace Forex_Strategy_Builder
         double   YScale;
         string[] asInfoTitle;
         string[] asInfoValue;
-        int[]    aiInfoType; // 0 - text; 1 - Idicator; 
+        int[]    aiInfoType; // 0 - text; 1 - Idicator;
         bool[]   repeatedIndicator;
         int      mouseX;
         int      mouseY;
@@ -83,66 +83,66 @@ namespace Forex_Strategy_Builder
         bool isTrueChartsShown;
         bool isCandleChart = true;
 
-        public int BarPixels 
-        { 
+        public int BarPixels
+        {
             get { return barPixels; }
             set { barPixels = value;}
         }
-        public bool ShowInfoPanel 
+        public bool ShowInfoPanel
         {
             get { return isInfoPanelShown; }
             set { isInfoPanelShown = value; }
         }
-        public bool ShowGrid 
-        { 
+        public bool ShowGrid
+        {
             get { return isGridShown; }
             set { isGridShown = value; }
         }
         public bool ShowCross
-        { 
-            get { return isCrossShown; } 
+        {
+            get { return isCrossShown; }
             set { isCrossShown = value; }
         }
-        public bool ShowVolume 
-        { 
+        public bool ShowVolume
+        {
             get { return isVolumeShown; }
             set { isVolumeShown = value; }
         }
         public bool ShowPositionLots
-        { 
+        {
             get { return isPositionLotsShown; }
             set { isPositionLotsShown = value; }
         }
         public bool ShowOrders
-        { 
+        {
             get { return isOrdersShown; }
             set { isOrdersShown = value; }
         }
-        public bool ShowDynInfo 
-        { 
+        public bool ShowDynInfo
+        {
             get { return isDynInfoShown; }
-            set { isDynInfoShown = value; } 
+            set { isDynInfoShown = value; }
         }
         public bool ShowPositionPrice
-        { 
+        {
             get { return isPositionPriceShown; }
-            set { isPositionPriceShown = value; } 
+            set { isPositionPriceShown = value; }
         }
-        public bool ShowBalanceEquity 
+        public bool ShowBalanceEquity
         {
             get { return isBalanceEquityShown; }
-            set { isBalanceEquityShown = value; } 
+            set { isBalanceEquityShown = value; }
         }
-        public bool ShowFloatingPL 
+        public bool ShowFloatingPL
         {
             get { return isFloatingPLShown; }
             set { isFloatingPLShown = value; }
         }
 
-        public bool ShowIndicators 
+        public bool ShowIndicators
         {
             get { return isIndicatorsShown; }
-            set { isIndicatorsShown = value; } 
+            set { isIndicatorsShown = value; }
         }
 
         public bool ShowAmbiguousBars
@@ -488,7 +488,7 @@ namespace Forex_Strategy_Builder
                 for (int i = 0; i < iSlot; i++)
                     repeatedIndicator[iSlot] = asIndicatorTexts[iSlot] == asIndicatorTexts[i];
             }
-            
+
             pnlInd      = new Panel[indPanels];
             splitterInd = new Splitter [indPanels];
             for (int i = 0; i < indPanels; i++)
@@ -740,7 +740,7 @@ namespace Forex_Strategy_Builder
             g.Clear(LayoutColors.ColorChartBack);
 
             if (chartBars == 0) return;
-            
+
             // Searching the min and the max price and volume
             maxPrice  = double.MinValue;
             minPrice  = double.MaxValue;
@@ -770,7 +770,7 @@ namespace Forex_Strategy_Builder
             maxPrice  = minPrice + countLabels * deltaLabel;
             YScale    = (YBottom - YTop) / (countLabels * deltaLabel);
             YVolScale = maxVolume > 0 ? 40.0f / maxVolume : 0f; // 40 - the highest volume line
-          
+
             // Price labels
             for (double label = minPrice; label <= maxPrice + Data.InstrProperties.Point; label += deltaLabel)
             {
@@ -1007,7 +1007,7 @@ namespace Forex_Strategy_Builder
                                 // The indicator value point
                                 g.DrawLine(pen, point[i].X - 1, point[i].Y, point[i].X + 1, point[i].Y);
                                 g.DrawLine(pen, point[i].X, point[i].Y - 1, point[i].X, point[i].Y + 1);
-                                
+
                                 if (bar == firstBar && isIndicatorValueAtClose)
                                 {   // First bar
                                     double value = Data.Strategy.Slot[slot].Component[comp].Value[bar - 1];
@@ -1023,7 +1023,7 @@ namespace Forex_Strategy_Builder
                                             g.DrawLine(pen, x + 1, y, x + barPixels - 4, y);
                                         else
                                             g.DrawLine(pen, x + 1, y, x + barPixels - 2, y);
-                                    } 
+                                    }
                                     if (deltaY > 4)
                                     {   // Vertical part
                                         if (point[i].Y > y)
@@ -1032,11 +1032,11 @@ namespace Forex_Strategy_Builder
                                             g.DrawLine(penTC, x + barPixels - 2, y - 2, x + barPixels - 2, point[i].Y + 2);
                                     }
                                 }
-                                
+
                                 if (bar < lastBar)
                                 {
                                     int deltaY = Math.Abs(point[i + 1].Y - point[i].Y);
-                                 
+
                                     if (barPixels > 3)
                                     {   // Horizontal part
                                         if (deltaY == 0)
@@ -1045,7 +1045,7 @@ namespace Forex_Strategy_Builder
                                             g.DrawLine(pen, point[i].X + 3, point[i].Y, point[i + 1].X - 2, point[i].Y);
                                         else
                                             g.DrawLine(pen, point[i].X + 3, point[i].Y, point[i + 1].X, point[i].Y);
-                                    } 
+                                    }
                                     if (deltaY > 4)
                                     {   // Vertical part
                                         if (point[i + 1].Y > point[i].Y)
@@ -1054,13 +1054,13 @@ namespace Forex_Strategy_Builder
                                             g.DrawLine(penTC, point[i + 1].X, point[i].Y - 2, point[i + 1].X, point[i + 1].Y + 2);
                                     }
                                 }
-                                
+
                                 if (bar == lastBar && !isIndicatorValueAtClose && barPixels > 3)
                                 {   // Last bar
                                     g.DrawLine(pen, point[i].X + 3, point[i].Y, point[i].X + barPixels - 2, point[i].Y);
                                 }
                             }
-                        } 
+                        }
                         else
                         {   // Regular Charts
                             Point[] aPoint = new Point[lastBar - firstBar + 1];
@@ -1134,7 +1134,7 @@ namespace Forex_Strategy_Builder
                     pathUp.AddLines(apntUp);
                     pathUp.AddLine(apntUp[lastBar - firstBar], new PointF(apntUp[lastBar - firstBar].X, 0));
                     pathUp.AddLine(new PointF(apntUp[lastBar - firstBar].X, 0), new PointF(apntUp[0].X, 0));
-                    
+
                     GraphicsPath pathDown = new GraphicsPath();
                     pathDown.AddLine(new PointF(apntDown[0].X, 0), apntDown[0]);
                     pathDown.AddLines(apntDown);
@@ -1201,7 +1201,7 @@ namespace Forex_Strategy_Builder
                 //    int yAbsSL = (int)Math.Round(YBottom - (Backtester.SummaryAbsoluteSL(bar) - minPrice) * YScale);
                 //    int yAbsTP = (int)Math.Round(YBottom - (Backtester.SummaryAbsoluteTP(bar) - minPrice) * YScale);
 
-                //    if (yAbsTP < YBottom && yAbsTP > YTop) 
+                //    if (yAbsTP < YBottom && yAbsTP > YTop)
                 //        g.DrawLine(penTradeLong, x, yAbsTP, x + barPixels - 2, yAbsTP);
                 //    if (yAbsSL < YBottom && yAbsSL > YTop)
                 //        g.DrawLine(penTradeShort, x, yAbsSL, x + barPixels - 2, yAbsSL);
@@ -1310,15 +1310,15 @@ namespace Forex_Strategy_Builder
 
             Panel pnl = (Panel)sender;
             Graphics g = e.Graphics;
-            
+
             int slot = (int)pnl.Tag;
-            
+
             int topSpace    = font.Height / 2 + 2;
             int bottomSpace = font.Height / 2;
 
             double minValue = double.MaxValue;
             double maxValue = double.MinValue;
-            
+
             g.Clear(LayoutColors.ColorChartBack);
 
             if (chartBars == 0) return;
@@ -1350,7 +1350,7 @@ namespace Forex_Strategy_Builder
             String strFormat;
             double labelAbs;
             int    XGridRight = pnl.ClientSize.Width - spcRight + 2;
-           
+
             label = 0; // Zero line
             int labelYZero = (int)Math.Round(pnl.ClientSize.Height - bottomSpace - (label - minValue) * scale);
             if (label >= minValue && label <= maxValue)
@@ -1437,12 +1437,12 @@ namespace Forex_Strategy_Builder
                     if (zero < minValue) zero = minValue;
                     if (zero > maxValue) zero = maxValue;
                     int y0 = (int)Math.Round(pnl.ClientSize.Height - 5 - (zero - minValue) * scale);
-                    
+
                     Rectangle rect;
                     LinearGradientBrush lgBrush;
                     Pen penGreen = new Pen(LayoutColors.ColorTradeLong);
                     Pen penRed   = new Pen(LayoutColors.ColorTradeShort);
-                    
+
                     bool isPrevBarGreen = false;
 
                     if (isTrueChartsShown)
@@ -2295,7 +2295,7 @@ namespace Forex_Strategy_Builder
                 if (pos == Backtester.Positions(bar) - 1 && Backtester.PosTransaction(bar, pos) != Transaction.Close)
                     asInfoValue[row++] = Configs.AccountInMoney ?
                         Backtester.PosMoneyFloatingPL(bar, pos).ToString("F2"):
-                        Math.Round(Backtester.PosFloatingPL(bar, pos)).ToString(); 
+                        Math.Round(Backtester.PosFloatingPL(bar, pos)).ToString();
                 else
                     asInfoValue[row++] = "   -";
             }
@@ -2326,7 +2326,7 @@ namespace Forex_Strategy_Builder
             int iBar;
             iBar  = firstBar + barNumb;
             iBar  = Math.Min(Data.Bars - 1, iBar);
-            
+
             string sTip = "";
             string sTipBarInfo = "";
             double dMousePrice = (YBottom - mouseY) / YScale + minPrice;
@@ -2478,7 +2478,7 @@ namespace Forex_Strategy_Builder
                         newScrollValue = scroll.Maximum + 1 - scroll.LargeChange;
 
                     scroll.Value = newScrollValue;
-                    
+
                 }
             }
 
@@ -2567,7 +2567,7 @@ namespace Forex_Strategy_Builder
             }
             else if (mouseX >= XLeft && mouseX <= XRight)
             {   // Entering into the chart
-                if (isCrossShown) 
+                if (isCrossShown)
                     pnlPrice.Cursor = Cursors.Cross;
                 isMouseInPriceChart = true;
                 isDrawDinInfo = true;
@@ -2720,7 +2720,7 @@ namespace Forex_Strategy_Builder
             }
             else if (mouseX >= XLeft && mouseX <= XRight)
             {    // Entering into the chart
-                if (isCrossShown) 
+                if (isCrossShown)
                     panel.Cursor = Cursors.Cross;
                 isMouseInIndicatorChart = true;
                 isDrawDinInfo = true;

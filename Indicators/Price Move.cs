@@ -84,7 +84,7 @@ namespace Forex_Strategy_Builder
             // Calculation
             double[] adBasePr = Price(price);
             double[] adUpBand = new double[Bars];
-			double[] adDnBand = new double[Bars];
+            double[] adDnBand = new double[Bars];
 
             int iFirstBar = 1 + iPrvs;
 

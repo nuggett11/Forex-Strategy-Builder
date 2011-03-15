@@ -67,12 +67,12 @@ namespace Forex_Strategy_Builder
                 else
                     adBars[iBar] = 0;
             }
-			
-			// Check the last bar
+
+            // Check the last bar
             TimeSpan tsBarClosing = Time[Bars - 1].TimeOfDay.Add(new TimeSpan(0, (int)Period, 0));
             TimeSpan tsDayClosing = new TimeSpan(24, 0, 0);
             if (Time[Bars - 1].DayOfWeek == DayOfWeek.Friday && tsBarClosing == tsDayClosing)
-				adBars[Bars - 1] = Close[Bars - 1];
+            	adBars[Bars - 1] = Close[Bars - 1];
 
             // Saving the components
             Component = new IndicatorComp[1];
