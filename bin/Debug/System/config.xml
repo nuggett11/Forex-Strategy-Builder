@@ -8,8 +8,8 @@
   <SIGMA_MODE_MAIN_CHART>1</SIGMA_MODE_MAIN_CHART>
   <SIGMA_MODE_SEPARATED_CHART>5</SIGMA_MODE_SEPARATED_CHART>
   <installed>True</installed>
-  <showStartingTip>False</showStartingTip>
-  <currentTipNumber>0</currentTipNumber>
+  <showStartingTip>True</showStartingTip>
+  <currentTipNumber>-1</currentTipNumber>
   <language>English</language>
   <showJournal>True</showJournal>
   <gradientView>True</gradientView>
@@ -22,7 +22,8 @@
   </dataDirectory>
   <colorScheme>Light Blue</colorScheme>
   <rememberLastStrategy>True</rememberLastStrategy>
-  <lastStrategy>Demo Comparator.xml</lastStrategy>
+  <lastStrategy>
+  </lastStrategy>
   <checkForUpdates>True</checkForUpdates>
   <checkForNewBeta>True</checkForNewBeta>
   <checkData>True</checkData>
@@ -32,7 +33,8 @@
   <showCustomIndicators>False</showCustomIndicators>
   <playSounds>True</playSounds>
   <optimizerWriteReport>False</optimizerWriteReport>
-  <generatorOptions>True;False;False;True;False;2;False;1;False;30;0;False;10;False;2500;False;100;False;1000;False;30;False;25;False;20;False;20;1;False;True</generatorOptions>
+  <generatorOptions>
+  </generatorOptions>
   <optimizerOptions>
   </optimizerOptions>
   <columnSeparator>,</columnSeparator>
@@ -42,7 +44,8 @@
   </jforexDataPath>
   <marketClosingHour>21</marketClosingHour>
   <marketOpeningHour>21</marketOpeningHour>
-  <bannedIndicators>__OpenPoint__;__OpenFilters__;__ClosePoint__;__CloseFilters__;</bannedIndicators>
+  <bannedIndicators>
+  </bannedIndicators>
   <showPriceChartOnAccountChart>False</showPriceChartOnAccountChart>
   <analyzerHideFSB>True</analyzerHideFSB>
   <dataHorizon>
