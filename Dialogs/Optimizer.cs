@@ -1,5 +1,4 @@
 // Strategy Optimizer
-// Last changed on 2011-02-19
 // Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
@@ -245,7 +244,6 @@ namespace Forex_Strategy_Builder
             colorText     = LayoutColors.ColorControlText;
 
             MaximizeBox     = false;
-            MinimizeBox     = false;
             Icon            = Data.Icon;
             BackColor       = LayoutColors.ColorFormBack;
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -299,6 +297,7 @@ namespace Forex_Strategy_Builder
             // smallBalanceChart
             smallBalanceChart.Parent    = this;
             smallBalanceChart.BackColor = LayoutColors.ColorControlBack;
+            smallBalanceChart.SetChartData();
 
             // ProgressBar
             progressBar.Parent  = this;
@@ -1346,6 +1345,7 @@ namespace Forex_Strategy_Builder
         {
             Backtester.Calculate();
             Backtester.CalculateAccountStats();
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
 
@@ -1430,6 +1430,7 @@ namespace Forex_Strategy_Builder
                         bestBalance = balance;
                         aParameter[param].BestValue = value;
                         ShowParamBestValue(param);
+                        smallBalanceChart.SetChartData();
                         smallBalanceChart.InitChart();
                         smallBalanceChart.Invalidate();
                         isStartegyChanged = true;
@@ -1551,6 +1552,7 @@ namespace Forex_Strategy_Builder
                             aParameter[param2].BestValue = value2;
                             ShowParamBestValue(param1);
                             ShowParamBestValue(param2);
+                            smallBalanceChart.SetChartData();
                             smallBalanceChart.InitChart();
                             smallBalanceChart.Invalidate();
                             isStartegyChanged = true;
@@ -1870,6 +1872,7 @@ namespace Forex_Strategy_Builder
 
             if (isOOS)
             {
+                smallBalanceChart.SetChartData();
                 smallBalanceChart.InitChart();
                 smallBalanceChart.Invalidate();
             }
@@ -1886,6 +1889,7 @@ namespace Forex_Strategy_Builder
             smallBalanceChart.OOS    = isOOS;
             smallBalanceChart.OOSBar = barOOS;
 
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
         }

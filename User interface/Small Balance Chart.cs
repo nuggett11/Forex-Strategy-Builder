@@ -27,6 +27,7 @@ namespace Forex_Strategy_Builder
         float  YScale;
         float  YPriceScale;
         bool   showPriceLine;
+        bool   isNotPaint = false;
 
         int   countLabels;
         float delta;
@@ -62,9 +63,23 @@ namespace Forex_Strategy_Builder
         bool   isScanPerformed;
         string modellingQuolity;
 
+        double dataMaxPrice;
+        double dataMinPrice;
+
+        int[] backtesterBalance;
+        int[] backtesterEquity;
+        int[] backtesterLongBalance;
+        int[] backtesterShortBalance;
+        double[] backtesterMoneyBalance;
+        double[] backtesterMoneyEquity;
+        double[] backtesterLongMoneyBalance;
+        double[] backtesterShortMoneyBalance;
+        double[] dataClose;
+
         // Out of Sample
         int   barOOS = Data.Bars - 1;
         bool  isOOS  = false;
+        DateTime dataTimeBarOOS;
         float XOOSBar;
 
         /// <summary>
@@ -98,32 +113,21 @@ namespace Forex_Strategy_Builder
         public bool OOS { set { isOOS = value; } }
 
         /// <summary>
-        /// Sets the chart params
+        /// Sets chart's instrument and backtesting data.
         /// </summary>
-        public void InitChart()
+        public void SetChartData()
         {
-            // Chart Title
-            strChartTitle = Language.T("Balance / Equity Chart") + " [" + (Configs.AccountInMoney ? Configs.AccountCurrency + "]" : Language.T("pips") + "]");
-            font          = new Font(Font.FontFamily, 9);
-            captionHeight = (float)Math.Max(font.Height, 18);
-            rectfCaption  = new RectangleF(0, 0, ClientSize.Width, captionHeight);
-            stringFormatCaption               = new StringFormat();
-            stringFormatCaption.Alignment     = StringAlignment.Center;
-            stringFormatCaption.LineAlignment = StringAlignment.Center;
-            stringFormatCaption.Trimming      = StringTrimming.EllipsisCharacter;
-            stringFormatCaption.FormatFlags   = StringFormatFlags.NoWrap;
+            isNotPaint = !Data.IsData || !Data.IsResult || Data.Bars <= Data.FirstBar;
 
-            brushFore   = new SolidBrush(LayoutColors.ColorChartFore);
-            penGrid     = new Pen(LayoutColors.ColorChartGrid);
-            penGrid.DashStyle   = DashStyle.Dash;
-            penGrid.DashPattern = new float [] {4, 2};
-            penBorder = new Pen(Data.GetGradientColor(LayoutColors.ColorCaptionBack, -LayoutColors.DepthCaption), border);
+            if (isNotPaint) return;
 
-            if (!Data.IsData || !Data.IsResult || Data.Bars <= Data.FirstBar) return;
+            showPriceLine   = Configs.ShowPriceChartOnAccountChart && Backtester.ExecutedOrders > 0;
+            isScanPerformed = Backtester.IsScanPerformed;
 
             firstBar   = Data.FirstBar;
             bars       = Data.Bars;
             chartBars  = Data.Bars - firstBar;
+
             int maxBalance = Configs.AccountInMoney ? (int)Backtester.MaxMoneyBalance : Backtester.MaxBalance;
             int minBalance = Configs.AccountInMoney ? (int)Backtester.MinMoneyBalance : Backtester.MinBalance;
             int maxEquity  = Configs.AccountInMoney ? (int)Backtester.MaxMoneyEquity  : Backtester.MaxEquity;
@@ -131,8 +135,8 @@ namespace Forex_Strategy_Builder
 
             if (Configs.AdditionalStatistics)
             {
-                int maxLongBalance  = Configs.AccountInMoney ? (int)Backtester.MaxLongMoneyBalance : Backtester.MaxLongBalance;
-                int minLongBalance  = Configs.AccountInMoney ? (int)Backtester.MinLongMoneyBalance : Backtester.MinLongBalance;
+                int maxLongBalance  = Configs.AccountInMoney ? (int)Backtester.MaxLongMoneyBalance  : Backtester.MaxLongBalance;
+                int minLongBalance  = Configs.AccountInMoney ? (int)Backtester.MinLongMoneyBalance  : Backtester.MinLongBalance;
                 int maxShortBalance = Configs.AccountInMoney ? (int)Backtester.MaxShortMoneyBalance : Backtester.MaxShortBalance;
                 int minShortBalance = Configs.AccountInMoney ? (int)Backtester.MinShortMoneyBalance : Backtester.MinShortBalance;
                 int maxLSBalance = Math.Max(maxLongBalance, maxShortBalance);
@@ -149,8 +153,108 @@ namespace Forex_Strategy_Builder
 
             minimum = (int)(Math.Floor(minimum / 10f) * 10);
 
+            dataMaxPrice = Data.MaxPrice;
+            dataMinPrice = Data.MinPrice;
+
+            if (showPriceLine)
+            {
+                dataClose = new double[bars];
+                Data.Close.CopyTo(dataClose, 0);
+            }
+
+            if (Configs.AccountInMoney)
+            {
+                backtesterMoneyBalance = new double[bars];
+                backtesterMoneyEquity  = new double[bars];
+            }
+            else
+            {
+                backtesterBalance = new int[bars];
+                backtesterEquity  = new int[bars];
+            }
+
+            if (Configs.AdditionalStatistics)
+            {
+                if (Configs.AccountInMoney)
+                {
+                    backtesterLongMoneyBalance  = new double[bars];
+                    backtesterShortMoneyBalance = new double[bars];
+                }
+                else
+                {
+                    backtesterLongBalance  = new int[bars];
+                    backtesterShortBalance = new int[bars];
+                }
+            }
+
+
+            for (int bar = firstBar; bar < bars; bar++)
+            {
+                if (Configs.AccountInMoney)
+                {
+                    backtesterMoneyBalance[bar] = Backtester.MoneyBalance(bar);
+                    backtesterMoneyEquity[bar]  = Backtester.MoneyEquity(bar);
+                }
+                else
+                {
+                    backtesterBalance[bar] = Backtester.Balance(bar);
+                    backtesterEquity[bar]  = Backtester.Equity(bar);
+                }
+
+                if (Configs.AdditionalStatistics)
+                {
+                    if (Configs.AccountInMoney)
+                    {
+                        backtesterLongMoneyBalance[bar]  = Backtester.LongMoneyBalance(bar);
+                        backtesterShortMoneyBalance[bar] = Backtester.ShortMoneyBalance(bar);
+                    }
+                    else
+                    {
+                        backtesterLongBalance[bar]  = Backtester.LongBalance(bar);
+                        backtesterShortBalance[bar] = Backtester.ShortBalance(bar);
+                    }
+                }
+            }
+
+            marginCallBar = Backtester.MarginCallBar;
+
+            if (isOOS && barOOS > firstBar)
+            {
+                balance = (float)(Configs.AccountInMoney ? Backtester.MoneyBalance(barOOS) : Backtester.Balance(barOOS));
+                dataTimeBarOOS = Data.Time[barOOS];
+            }
+            else
+                balance = (float)(Configs.AccountInMoney ? Backtester.NetMoneyBalance : Backtester.NetBalance);
+
+            return;
+        }
+
+        /// <summary>
+        /// Sets the chart params
+        /// </summary>
+        public void InitChart()
+        {
+            // Chart Title
+            strChartTitle = Language.T("Balance / Equity Chart") + " [" + (Configs.AccountInMoney ? Configs.AccountCurrency + "]" : Language.T("pips") + "]");
+            font          = new Font(Font.FontFamily, 9);
+            captionHeight = (float)Math.Max(font.Height, 18);
+            rectfCaption  = new RectangleF(0, 0, ClientSize.Width, captionHeight);
+            stringFormatCaption               = new StringFormat();
+            stringFormatCaption.Alignment     = StringAlignment.Center;
+            stringFormatCaption.LineAlignment = StringAlignment.Center;
+            stringFormatCaption.Trimming      = StringTrimming.EllipsisCharacter;
+            stringFormatCaption.FormatFlags   = StringFormatFlags.NoWrap;
+
+            brushFore = new SolidBrush(LayoutColors.ColorChartFore);
+            penGrid   = new Pen(LayoutColors.ColorChartGrid);
+            penGrid.DashStyle   = DashStyle.Dash;
+            penGrid.DashPattern = new float [] {4, 2};
+            penBorder = new Pen(Data.GetGradientColor(LayoutColors.ColorCaptionBack, -LayoutColors.DepthCaption), border);
+
+            if (isNotPaint) return;
+
             YTop    = (int)captionHeight + 2 * space + 1;
-            YBottom = ClientSize.Height   - 2 * space - 1 - border;
+            YBottom = ClientSize.Height  - 2 * space - 1 - border;
 
             Graphics  g = CreateGraphics();
             labelWidth = (int)Math.Max(g.MeasureString(minimum.ToString(), Font).Width, g.MeasureString(maximum.ToString(), Font).Width);
@@ -180,24 +284,23 @@ namespace Forex_Strategy_Builder
             apntClosePrice = new PointF[chartBars];
 
             // Close Price
-            showPriceLine = Configs.ShowPriceChartOnAccountChart && Backtester.ExecutedOrders > 0;
             if (showPriceLine)
-                YPriceScale = (float)((YBottom - YTop) / (Data.MaxPrice - Data.MinPrice));
+                YPriceScale = (float)((YBottom - YTop) / (dataMaxPrice - dataMinPrice));
 
             int index = 0;
-            for (int iBar = firstBar; iBar < bars; iBar++)
+            for (int bar = firstBar; bar < bars; bar++)
             {
                 apntBalance[index].X = XLeft + index * XScale;
                 apntEquity[index].X  = XLeft + index * XScale;
                 if (Configs.AccountInMoney)
                 {
-                    apntBalance[index].Y = (float)(YBottom - (Backtester.MoneyBalance(iBar) - minimum) * YScale);
-                    apntEquity[index].Y  = (float)(YBottom - (Backtester.MoneyEquity(iBar)  - minimum) * YScale);
+                    apntBalance[index].Y = (float)(YBottom - (backtesterMoneyBalance[bar] - minimum) * YScale);
+                    apntEquity[index].Y  = (float)(YBottom - (backtesterMoneyEquity[bar]  - minimum) * YScale);
                 }
                 else
                 {
-                    apntBalance[index].Y = YBottom - (Backtester.Balance(iBar) - minimum) * YScale;
-                    apntEquity[index].Y  = YBottom - (Backtester.Equity(iBar)  - minimum) * YScale;
+                    apntBalance[index].Y = YBottom -  (backtesterBalance[bar] - minimum) * YScale;
+                    apntEquity[index].Y  = YBottom -  (backtesterEquity[bar]  - minimum) * YScale;
                 }
 
                 if (Configs.AdditionalStatistics)
@@ -206,49 +309,39 @@ namespace Forex_Strategy_Builder
                     apntShortBalance[index].X = XLeft + index * XScale;
                     if (Configs.AccountInMoney)
                     {
-                        apntLongBalance[index].Y  = (float)(YBottom - (Backtester.LongMoneyBalance(iBar)  - minimum) * YScale);
-                        apntShortBalance[index].Y = (float)(YBottom - (Backtester.ShortMoneyBalance(iBar) - minimum) * YScale);
+                        apntLongBalance[index].Y  = (float)(YBottom - (backtesterLongMoneyBalance[bar]  - minimum) * YScale);
+                        apntShortBalance[index].Y = (float)(YBottom - (backtesterShortMoneyBalance[bar] - minimum) * YScale);
                     }
                     else
                     {
-                        apntLongBalance[index].Y  = YBottom - (Backtester.LongBalance(iBar)  - minimum) * YScale;
-                        apntShortBalance[index].Y = YBottom - (Backtester.ShortBalance(iBar) - minimum) * YScale;
+                        apntLongBalance[index].Y  = YBottom - (backtesterLongBalance[bar]  - minimum) * YScale;
+                        apntShortBalance[index].Y = YBottom - (backtesterShortBalance[bar] - minimum) * YScale;
                     }
                 }
 
                 if (showPriceLine)
                 {
                     apntClosePrice[index].X = XLeft + index * XScale;
-                    apntClosePrice[index].Y = YBottom - (float)(Data.Close[iBar] - Data.MinPrice) * YPriceScale;
+                    apntClosePrice[index].Y = YBottom - (float)(dataClose[bar] - dataMinPrice) * YPriceScale;
                 }
                 index++;
             }
 
-            balance = (float)(Configs.AccountInMoney ? Backtester.NetMoneyBalance : Backtester.NetBalance);
-
             // Margin Call
-            marginCallBar = Backtester.MarginCallBar;
-            if (Backtester.MarginCallBar >= firstBar)
-                XMarginCallBar = XLeft + (Backtester.MarginCallBar - firstBar) * XScale;
+            if (marginCallBar >= firstBar)
+                XMarginCallBar = XLeft + (marginCallBar - firstBar) * XScale;
             else
                 XMarginCallBar = 0;
 
             //OOS
             if (isOOS && barOOS > firstBar)
-            {
                 XOOSBar = XLeft + (barOOS - firstBar) * XScale;
-                balance = (float)(Configs.AccountInMoney ? Backtester.MoneyBalance(barOOS) : Backtester.Balance(barOOS));
-
-            }
             else
-            {
-                balance = (float)(Configs.AccountInMoney ? Backtester.NetMoneyBalance : Backtester.NetBalance);
                 XOOSBar = 0;
-            }
-            YBalance   = YBottom - (balance - minimum) * YScale;
+
+            YBalance = YBottom - (balance - minimum) * YScale;
 
             isHideScanningLine = false;
-            isScanPerformed  = Backtester.IsScanPerformed;
             modellingQuolity = " MQ " + Data.ModellingQuality.ToString("N2") + "%";
         }
 
@@ -272,24 +365,14 @@ namespace Forex_Strategy_Builder
             RectangleF rectField = new RectangleF(border, captionHeight, ClientSize.Width - 2 * border, ClientSize.Height - captionHeight - border);
             Data.GradientPaint(g, rectField, LayoutColors.ColorChartBack, LayoutColors.DepthControl);
 
-            if (!Data.IsData || !Data.IsResult || Data.Bars <= Data.FirstBar) return;
+            if (isNotPaint) return;
 
             // Grid and Price labels
-            for (int iLabel = minimum; iLabel <= maximum; iLabel += step)
+            for (int label = minimum; label <= maximum; label += step)
             {
-                int iLabelY = (int)(YBottom - (iLabel - minimum) * YScale);
-                g.DrawString(iLabel.ToString(), Font, brushFore, XRight, iLabelY - Font.Height / 2 - 1);
-                g.DrawLine(penGrid, XLeft, iLabelY, XRight, iLabelY);
-            }
-
-            // Out of Sample
-            if (isOOS && barOOS > 0)
-            {
-                g.DrawLine(new Pen(LayoutColors.ColorChartFore), XOOSBar, YTop, XOOSBar, YBottom);
-                Brush brushOOS = new Pen(LayoutColors.ColorChartFore).Brush;
-                g.DrawString("OOS", Font, brushOOS, XOOSBar, YBottom - Font.Height);
-                float fOOSBarDateWith = g.MeasureString(Data.Time[barOOS].ToShortDateString(), Font).Width;
-                g.DrawString(Data.Time[barOOS].ToShortDateString(), Font, brushOOS, XOOSBar - fOOSBarDateWith, YBottom - Font.Height);
+                int labelY = (int)(YBottom - (label - minimum) * YScale);
+                g.DrawString(label.ToString(), Font, brushFore, XRight, labelY - Font.Height / 2 - 1);
+                g.DrawLine(penGrid, XLeft, labelY, XRight, labelY);
             }
 
             // Price close
@@ -306,6 +389,16 @@ namespace Forex_Strategy_Builder
                 g.DrawLines(new Pen(Color.Green), apntLongBalance);
             }
 
+            // Out of Sample
+            if (isOOS && barOOS > 0)
+            {
+                g.DrawLine(new Pen(LayoutColors.ColorChartFore), XOOSBar, YTop, XOOSBar, YBottom);
+                Brush brushOOS = new Pen(LayoutColors.ColorChartFore).Brush;
+                g.DrawString("OOS", Font, brushOOS, XOOSBar, YBottom - Font.Height);
+                float OOSBarDateWidth = g.MeasureString(dataTimeBarOOS.ToShortDateString(), Font).Width;
+                g.DrawString(dataTimeBarOOS.ToShortDateString(), Font, brushOOS, XOOSBar - OOSBarDateWidth, YBottom - Font.Height);
+            }
+
             // In case of Margin Call
             if (marginCallBar > 0)
             {
@@ -313,7 +406,7 @@ namespace Forex_Strategy_Builder
                 for (int i = 0; i < apntfGreenBalance.Length; i++)
                     apntfGreenBalance[i] = apntBalance[i];
 
-                PointF[] apntfRedBalance = new PointF[Data.Bars - marginCallBar];
+                PointF[] apntfRedBalance = new PointF[bars - marginCallBar];
                 for (int i = 0; i < apntfRedBalance.Length; i++)
                     apntfRedBalance[i] = apntBalance[i + marginCallBar - firstBar];
 
@@ -353,14 +446,14 @@ namespace Forex_Strategy_Builder
                  Data.Period == DataPeriods.min1 && Data.IsTickData && Configs.UseTickData))
             {
                 DataPeriods dataPeriod = Data.Period;
-                Color color = Data.PeriodColor[Data.Period];
-                int   fromBar = Data.FirstBar;
-                for (int bar = Data.FirstBar; bar < Data.Bars; bar++)
+                Color color   = Data.PeriodColor[Data.Period];
+                int   fromBar = firstBar;
+                for (int bar = firstBar; bar < bars; bar++)
                 {
-                    if (Data.IntraBarsPeriods[bar] != dataPeriod || bar == Data.Bars - 1)
+                    if (Data.IntraBarsPeriods[bar] != dataPeriod || bar == bars - 1)
                     {
-                        int xStart = (int)((fromBar - Data.FirstBar) * XScale) + XLeft;
-                        int xEnd   = (int)((bar     - Data.FirstBar) * XScale) + XLeft;
+                        int xStart = (int)((fromBar - firstBar) * XScale) + XLeft;
+                        int xEnd   = (int)((bar     - firstBar) * XScale) + XLeft;
                         fromBar = bar;
                         dataPeriod = Data.IntraBarsPeriods[bar];
                         Data.GradientPaint(g, new RectangleF(xStart, YBottom + 4, xEnd - xStart + 2, 5), color, 60);
@@ -373,15 +466,15 @@ namespace Forex_Strategy_Builder
                 {
                     int firstBarWithTicks = -1;
                     int lastBarWithTicks  = -1;
-                    for (int b = 0; b < Data.Bars; b++)
+                    for (int b = 0; b < bars; b++)
                     {
                         if (firstBarWithTicks == -1 && Data.TickData[b] != null)
                             firstBarWithTicks = b;
                         if (Data.TickData[b] != null)
                             lastBarWithTicks = b;
                     }
-                    int xStart = (int)((firstBarWithTicks - Data.FirstBar) * XScale) + XLeft;
-                    int xEnd   = (int)((lastBarWithTicks  - Data.FirstBar) * XScale) + XLeft;
+                    int xStart = (int)((firstBarWithTicks - firstBar) * XScale) + XLeft;
+                    int xEnd   = (int)((lastBarWithTicks  - firstBar) * XScale) + XLeft;
                     Data.GradientPaint(g, new RectangleF(xStart, YBottom + 4, xEnd - xStart + 2, 5), color, 60);
 
                     RectangleF rectf = new RectangleF(xStart, YBottom + 4, xEnd - xStart + 2, 5);

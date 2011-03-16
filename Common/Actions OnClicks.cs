@@ -868,6 +868,7 @@ namespace Forex_Strategy_Builder
             ToolStripMenuItem mi = (ToolStripMenuItem)sender;
             Configs.ShowPriceChartOnAccountChart = mi.Checked;
 
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
 

@@ -327,6 +327,7 @@ namespace Forex_Strategy_Builder
                 UpdateFromIndicatorParam(Data.Strategy.Slot[slot].IndParam);
                 SetLogicalGroup();
                 CalculateIndicator(false);
+                pnlSmallBalanceChart.SetChartData();
                 pnlSmallBalanceChart.InitChart();
                 pnlSmallBalanceChart.Invalidate();
             }
@@ -735,6 +736,7 @@ namespace Forex_Strategy_Builder
             UpdateFromIndicatorParam(indicator.IndParam);
             SetDefaultGroup();
             CalculateIndicator(true);
+            pnlSmallBalanceChart.SetChartData();
             pnlSmallBalanceChart.InitChart();
             pnlSmallBalanceChart.Invalidate();
 
@@ -750,6 +752,7 @@ namespace Forex_Strategy_Builder
             UpdateFromIndicatorParam(indicator.IndParam);
             SetDefaultGroup();
             CalculateIndicator(true);
+            pnlSmallBalanceChart.SetChartData();
             pnlSmallBalanceChart.InitChart();
             pnlSmallBalanceChart.Invalidate();
 
@@ -795,6 +798,7 @@ namespace Forex_Strategy_Builder
         void Param_Changed(object sender, EventArgs e)
         {
             CalculateIndicator(true);
+            pnlSmallBalanceChart.SetChartData();
             pnlSmallBalanceChart.InitChart();
             pnlSmallBalanceChart.Invalidate();
         }

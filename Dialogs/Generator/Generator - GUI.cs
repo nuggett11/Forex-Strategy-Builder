@@ -186,6 +186,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
             smallBalanceChart.Click    += new EventHandler(AccountAutput_Click);
             smallBalanceChart.DoubleClick += new EventHandler(AccountAutput_Click);
             toolTip.SetToolTip(smallBalanceChart, Language.T("Show account statistics."));
+            smallBalanceChart.SetChartData();
 
             // Info Panel Account Statistics
             infpnlAccountStatistics.Parent  = this;
@@ -1066,6 +1067,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
             }
             else
             {
+                smallBalanceChart.SetChartData();
                 smallBalanceChart.InitChart();
                 smallBalanceChart.Invalidate();
             }
@@ -1211,6 +1213,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
 
             if (isOOS)
             {
+                smallBalanceChart.SetChartData();
                 smallBalanceChart.InitChart();
                 smallBalanceChart.Invalidate();
             }
@@ -1226,6 +1229,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
             smallBalanceChart.OOS    = isOOS;
             smallBalanceChart.OOSBar = barOOS;
 
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
         }

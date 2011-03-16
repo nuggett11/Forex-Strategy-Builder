@@ -1,6 +1,4 @@
 BUGS
-- Small Balance Chart - bug when restore from minimized and startegy was changed. The problem is that InitChart() uses Data.*. InitChart() have to be separated from SetResize().
-- Generator: CheckAvailableIndicators() - max number of slots
 
 CURRENT TASK
 
@@ -11,6 +9,7 @@ Cumulative strategy report:
 
 DEBUG
 - Generator: banned indicators, linked slots, locked slots, top 10.
+- Balance chart and minimise / restore.
 
 
 TODO

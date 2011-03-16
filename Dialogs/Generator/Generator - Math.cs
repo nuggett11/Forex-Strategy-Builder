@@ -151,6 +151,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
             Backtester.Calculate();
             Backtester.CalculateAccountStats();
 
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
 

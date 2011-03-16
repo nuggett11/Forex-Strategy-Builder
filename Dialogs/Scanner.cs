@@ -79,8 +79,9 @@ namespace Forex_Strategy_Builder
             pnlInfo.BackColor = LayoutColors.ColorControlBack;
             pnlInfo.Paint    += new PaintEventHandler(PnlInfo_Paint);
 
-            // smallBalanceChart
+            // Small Balance Chart
             smallBalanceChart.Parent = this;
+            smallBalanceChart.SetChartData();
 
             // ProgressBar
             progressBar.Parent = this;
@@ -141,7 +142,7 @@ namespace Forex_Strategy_Builder
 
             if (isCompactMode)
             {
-                pnlInfo.Visible  = false;
+                pnlInfo.Visible = false;
                 smallBalanceChart.Visible = false;
                 lblProgress.Visible = true;
                 chbAutoscan.Visible = false;
@@ -309,11 +310,11 @@ namespace Forex_Strategy_Builder
             stringFormatCaption.FormatFlags   = StringFormatFlags.NoWrap;
             stringFormatCaption.Alignment     = StringAlignment.Near;
             string stringCaptionText = Language.T("Intrabar Data");
-            float  fCaptionWidth     = Math.Min(pnlInfo.ClientSize.Width, xp7 - xp0);
-            float  fCaptionTextWidth = g.MeasureString(stringCaptionText, fontInfo).Width;
-            float  fCaptionTextX     = Math.Max((fCaptionWidth - fCaptionTextWidth) / 2f, 0);
-            PointF pfCaptionText     = new PointF(fCaptionTextX, 0);
-            SizeF  sfCaptionText     = new SizeF(fCaptionWidth - fCaptionTextX, infoRowHeight);
+            float  captionWidth      = Math.Min(pnlInfo.ClientSize.Width, xp7 - xp0);
+            float  captionTextWidth  = g.MeasureString(stringCaptionText, fontInfo).Width;
+            float  captionTextX      = Math.Max((captionWidth - captionTextWidth) / 2f, 0);
+            PointF pfCaptionText     = new PointF(captionTextX, 0);
+            SizeF  sfCaptionText     = new SizeF(captionWidth - captionTextX, infoRowHeight);
             rectfCaption = new RectangleF(pfCaptionText, sfCaptionText);
 
             Brush brush = new SolidBrush(LayoutColors.ColorCaptionText);
@@ -389,25 +390,25 @@ namespace Forex_Strategy_Builder
                 int coveredBars = 0;
                 double percentage = 0;
 
-                bool bMultyAreas = false;
+                bool isMultyAreas = false;
                 if (intraBars > 0)
                 {
-                    bool bFromBarFound = false;
-                    bool bUntilBarFound = false;
+                    bool isFromBarFound = false;
+                    bool isUntilBarFound = false;
                     untilBar = Data.Bars;
                     for (int bar = 0; bar < Data.Bars; bar++)
                     {
-                        if (!bFromBarFound && Data.IntraBarsPeriods[bar] == period)
+                        if (!isFromBarFound && Data.IntraBarsPeriods[bar] == period)
                         {
                             fromBar = bar;
-                            bFromBarFound = true;
+                            isFromBarFound = true;
                         }
-                        if (bFromBarFound && !bUntilBarFound &&
+                        if (isFromBarFound && !isUntilBarFound &&
                             (Data.IntraBarsPeriods[bar] != period || bar == Data.Bars - 1))
                         {
                             if (bar < Data.Bars - 1)
                             {
-                                bUntilBarFound = true;
+                                isUntilBarFound = true;
                                 untilBar = bar;
                             }
                             else
@@ -416,13 +417,13 @@ namespace Forex_Strategy_Builder
                             }
                             coveredBars = untilBar - fromBar;
                         }
-                        if (bFromBarFound && bUntilBarFound && Data.IntraBarsPeriods[bar] == period)
+                        if (isFromBarFound && isUntilBarFound && Data.IntraBarsPeriods[bar] == period)
                         {
-                            bMultyAreas = true;
+                            isMultyAreas = true;
                             coveredBars++;
                         }
                     }
-                    if (bFromBarFound)
+                    if (isFromBarFound)
                     {
                         percentage = 100d * coveredBars / Data.Bars;
                         fromBar++;
@@ -451,7 +452,7 @@ namespace Forex_Strategy_Builder
                     g.DrawString(intraBars.ToString(), fontInfo, brush, (xp2 + xp1) / 2, y, sf);
                     g.DrawString(fromBar.ToString(),   fontInfo, brush, (xp3 + xp2) / 2, y, sf);
                     g.DrawString(untilBar.ToString(),  fontInfo, brush, (xp4 + xp3) / 2, y, sf);
-                    g.DrawString(coveredBars.ToString() + (bMultyAreas ? "*" : ""), fontInfo, brush, (xp5 + xp4) / 2, y, sf);
+                    g.DrawString(coveredBars.ToString() + (isMultyAreas ? "*" : ""), fontInfo, brush, (xp5 + xp4) / 2, y, sf);
                     g.DrawString(percentage.ToString("F2"), fontInfo, brush, (xp6 + xp5) / 2, y, sf);
 
                     RectangleF rectf = new RectangleF(xp6 + 10, y + 4, xp7 - xp6 - 20, 9);
@@ -558,6 +559,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         void ShowScanningResult()
         {
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
             pnlInfo.Invalidate();
@@ -578,44 +580,44 @@ namespace Forex_Strategy_Builder
         /// </summary>
         void LoadData(BackgroundWorker worker, DoWorkEventArgs e)
         {
-            int  iPeriodsToLoad   = 0;
-            int  iAllPeriods      = Enum.GetValues(typeof(DataPeriods)).Length;
-            Data.IntraBars        = new int[iAllPeriods];
+            int  periodsToLoad    = 0;
+            int  allPeriods       = Enum.GetValues(typeof(DataPeriods)).Length;
+            Data.IntraBars        = new int[allPeriods];
             Data.IntraBarData     = new Bar[Data.Bars][];
             Data.IntraBarBars     = new int[Data.Bars];
             Data.IntraBarsPeriods = new DataPeriods[Data.Bars];
             Data.LoadedIntraBarPeriods = 0;
 
-            for (int iBar = 0; iBar < Data.Bars; iBar++)
+            for (int bar = 0; bar < Data.Bars; bar++)
             {
-                Data.IntraBarsPeriods[iBar] = Data.Period;
-                Data.IntraBarBars[iBar] = 0;
+                Data.IntraBarsPeriods[bar] = Data.Period;
+                Data.IntraBarBars[bar] = 0;
             }
 
             // Counts how many periods to load
-            for (int iPeriod = 0; iPeriod < iAllPeriods; iPeriod++)
+            for (int prd = 0; prd < allPeriods; prd++)
             {
-                DataPeriods period = (DataPeriods)Enum.GetValues(typeof(DataPeriods)).GetValue(iPeriod);
+                DataPeriods period = (DataPeriods)Enum.GetValues(typeof(DataPeriods)).GetValue(prd);
                 if (period < Data.Period)
                 {
-                    iPeriodsToLoad++;
+                    periodsToLoad++;
                 }
             }
 
             // Load the intrabar data (Starts from 1 Min)
-            for (int iPeriod = 0; iPeriod < iAllPeriods && isLoadingNow; iPeriod++)
+            for (int prd = 0; prd < allPeriods && isLoadingNow; prd++)
             {
                 if (worker.CancellationPending) break;
 
-                int iLoadedBars = 0;
-                DataPeriods period = (DataPeriods)Enum.GetValues(typeof(DataPeriods)).GetValue(iPeriod);
+                int loadedBars = 0;
+                DataPeriods period = (DataPeriods)Enum.GetValues(typeof(DataPeriods)).GetValue(prd);
 
                 SetLabelProgressText(Language.T("Loading:") + " " + Data.DataPeriodToString(period) + "...");
 
                 if (period < Data.Period)
                 {
-                    iLoadedBars = LoadIntrabarData(period);
-                    if (iLoadedBars > 0)
+                    loadedBars = LoadIntrabarData(period);
+                    if (loadedBars > 0)
                     {
                         Data.IsIntrabarData = true;
                         Data.LoadedIntraBarPeriods++;
@@ -623,14 +625,14 @@ namespace Forex_Strategy_Builder
                 }
                 else if (period == Data.Period)
                 {
-                    iLoadedBars = Data.Bars;
+                    loadedBars = Data.Bars;
                     Data.LoadedIntraBarPeriods++;
                 }
 
-                Data.IntraBars[iPeriod] = iLoadedBars;
+                Data.IntraBars[prd] = loadedBars;
 
                 // Report progress as a percentage of the total task.
-                int percentComplete = iPeriodsToLoad > 0 ? 100 * (iPeriod + 1) / iPeriodsToLoad : 100 ;
+                int percentComplete = periodsToLoad > 0 ? 100 * (prd + 1) / periodsToLoad : 100 ;
                 percentComplete = percentComplete > 100 ? 100 : percentComplete;
                 if (percentComplete > progressPercent)
                 {

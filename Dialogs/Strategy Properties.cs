@@ -1,5 +1,4 @@
 // Strategy Properties Dialogue
-// Last changed on 2011-02-12
 // Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
@@ -94,6 +93,7 @@ namespace Forex_Strategy_Builder
             pnlAmounts.Parent    = this;
             pnlProtection.Parent = this;
             pnlSmallBalanceChart.Parent = this;
+            pnlSmallBalanceChart.SetChartData();
 
             // Label Same dir action
             lblSameDirAction.Parent    = pnlAveraging;
@@ -639,6 +639,7 @@ namespace Forex_Strategy_Builder
 
         void UpdateChart()
         {
+            pnlSmallBalanceChart.SetChartData();
             pnlSmallBalanceChart.InitChart();
             pnlSmallBalanceChart.Invalidate();
         }

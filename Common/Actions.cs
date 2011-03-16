@@ -206,6 +206,7 @@ namespace Forex_Strategy_Builder
                 this.Text = Path.GetFileNameWithoutExtension(Data.StrategyName) + "* - " + Data.ProgramName;
                 Data.IsStrategyChanged = true;
                 RebuildStrategyLayout();
+                smallBalanceChart.SetChartData();
                 smallBalanceChart.InitChart();
                 smallBalanceChart.Invalidate();
                 SetupJournal();
@@ -244,6 +245,7 @@ namespace Forex_Strategy_Builder
                 smallIndicatorChart.InitChart();
                 smallIndicatorChart.Invalidate();
                 RebuildStrategyLayout();
+                smallBalanceChart.SetChartData();
                 smallBalanceChart.InitChart();
                 smallBalanceChart.Invalidate();
                 SetupJournal();
@@ -855,6 +857,7 @@ namespace Forex_Strategy_Builder
             if (isUPBVChanged) RebuildStrategyLayout();
             smallIndicatorChart.InitChart();
             smallIndicatorChart.Invalidate();
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
             SetupJournal();
@@ -1104,6 +1107,7 @@ namespace Forex_Strategy_Builder
 
             infpnlAccountStatistics.Update(Backtester.AccountStatsParam, Backtester.AccountStatsValue,
                                            Backtester.AccountStatsFlags, Language.T("Account Statistics"));
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
             SetupJournal();
@@ -1121,6 +1125,7 @@ namespace Forex_Strategy_Builder
 
             infpnlAccountStatistics.Update(Backtester.AccountStatsParam, Backtester.AccountStatsValue,
                                            Backtester.AccountStatsFlags, Language.T("Account Statistics"));
+            smallBalanceChart.SetChartData();
             smallBalanceChart.InitChart();
             smallBalanceChart.Invalidate();
             SetupJournal();
@@ -1312,6 +1317,7 @@ namespace Forex_Strategy_Builder
                 infpnlAccountStatistics.SetColors();
                 infpnlMarketStatistics.SetColors();
                 smallIndicatorChart.InitChart();
+                smallBalanceChart.SetChartData();
                 smallBalanceChart.InitChart();
                 SetupJournal();
                 pnlWorkspace.Invalidate(true);

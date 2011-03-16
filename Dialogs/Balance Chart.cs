@@ -38,7 +38,7 @@ namespace Forex_Strategy_Builder.Dialogs
             balanceChart.MouseMove  += new MouseEventHandler(BalanceChart_MouseMove);
             balanceChart.MouseLeave += new EventHandler(BalanceChart_MouseLeave);
             balanceChart.ShowDynamicInfo = true;
-
+            balanceChart.SetChartData();
             balanceChart.InitChart();
 
             // Label Dynamic Info
