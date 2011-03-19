@@ -9,7 +9,7 @@ Cumulative strategy report:
 
 DEBUG
 - Generator: banned indicators, linked slots, locked slots, top 10.
-- Balance chart and minimise / restore.
+- Balance chart and minimize / restore.
 
 
 TODO

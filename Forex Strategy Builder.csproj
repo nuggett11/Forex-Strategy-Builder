@@ -587,4 +587,7 @@
     <None Include="app.config" />
     <None Include="Properties\app.manifest" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
 </Project>

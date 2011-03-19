@@ -4,5 +4,5 @@ Installation instructions and the user manual are at http://forexsb.com/wiki/fsb
 
 For support see http://forexsb.com/forum/
 
-Copyright © 2006-2010 Miroslav Popov
-See the License Agreement and file headers for license info.
+Copyright © 2006-2011 Miroslav Popov
+See the License Agreement for license info.

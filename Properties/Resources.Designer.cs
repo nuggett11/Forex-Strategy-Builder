@@ -957,8 +957,7 @@ namespace Forex_Strategy_Builder.Properties {
         ///    /// &lt;summary&gt;
         ///    /// Startegy to Indicator
         ///    /// &lt;/summary&gt;
-        ///    public class Strategy_To_Indicator : Indicator
-        /// [rest of string was truncated]&quot;;.
+        ///    public class Strategy_To_Indicator : Indicator        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StrategyToIndicator {
             get {

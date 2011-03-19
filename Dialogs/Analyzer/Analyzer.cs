@@ -171,7 +171,7 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
         }
 
         /// <summary>
-        /// It shows if some proces is running.
+        /// It shows if some process is running.
         /// </summary>
         /// <returns></returns>
         bool IsSomethingRunning()
