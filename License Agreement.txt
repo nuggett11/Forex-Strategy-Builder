@@ -1,23 +1,27 @@
 FSB Source Code License Agreement
 
 1. Terms
+
 In this License Agreement the following words and phrases shall, unless the context otherwise requires, have the following meanings:
-1.1. Software – Forex Strategy Builder a.k.a. FSB.
-1.2. Source Code – the source code of Forex Strategy Builder.
-1.2. Owner – Miroslav Petrov Popov, 4 Peter Raichev str., 9010 Varna, Bulgaria.
-1.3. Contact Information – Miroslav Petrov Popov, email info@forexsb.com.
-1.4. Licensee – a person or company that has been granted this License Agreement.
-1.5. Contribute – an act of changing, improving or expanding the Source Code and sending to Owner.
-1.6. Contribution – the part of code you have written and sent to the Owner.
-1.7. Contributor – a person or company who makes Contributions.
+
+1.1. Software - Forex Strategy Builder a.k.a. FSB.
+1.2. Source Code - the source code of Forex Strategy Builder.
+1.2. Owner - Miroslav Petrov Popov, 4 Peter Raichev str., 9010 Varna, Bulgaria.
+1.3. Contact Information - Miroslav Petrov Popov, email info@forexsb.com.
+1.4. Licensee - a person or company that has been granted this License Agreement.
+1.5. Contribute - an act of changing, improving or expanding the Source Code and sending to Owner.
+1.6. Contribution - the part of code you have written and sent to the Owner.
+1.7. Contributor - a person or company who makes Contributions.
 
 2. Introduction
+
 2.1. You accept this license agreement when using the Source Code.
 2.2. If you do not accept this license agreement you cannot use the Source Code.
 2.3. This License Agreement is your proof of license to exercise the rights granted herein and must be retained by you.
 2.4. The owner of the intellectual rights of the the Source Code and the Software is the Owner.
 
 3. Rights
+
 3.1. A Licensee can download the Source Code free of charge from a place specified by the Owner.
 3.2. A Licensee can use the Source Code for better understanding of how the Software works.
 3.3. A Licensee can change the Source Code in order to improve it, fix bugs or add new features.
@@ -27,6 +31,7 @@ In this License Agreement the following words and phrases shall, unless the cont
 3.7. If Contributions are accepted, the Contributor will be duly noted as a Contributor on a proper place in the website of Forex Strategy Builder and / or in the Software itself.
 
 4. Restrictions
+
 4.1. The Contributor Contributes to the Software free of charge.
 4.2. The Contributor cannot use any part of the Source Code in other applications without explicit permission from the Owner.
 4.3. By sending Contributions to the Owner a Contributor transfers all rights in the Contribution including, without limitation, all intellectual property rights in the work to the Owner. The Owner becomes the sole and absolute owner of all rights on the Contribution.
@@ -35,6 +40,7 @@ In this License Agreement the following words and phrases shall, unless the cont
 4.6. The Source Code cannot be used for making forks of the Software.
 
 5. The Contributor warrants to the Owner that
+
 5.1 The Contribution is the Contributor's original work and has not been copied in whole or in any part from any other work or material.
 5.2 The Contribution will not infringe the rights of any third party.
 5.3 No other person or entity was involved with the Contributor in the creation of the Contribution.

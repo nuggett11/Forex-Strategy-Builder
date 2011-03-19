@@ -9,17 +9,17 @@ using System.IO;
 
 namespace Forex_Strategy_Builder
 {
-	public class Instrument
-	{
+    public class Instrument
+    {
         Instrument_Properties instrProperties; // The instrument properties.
-		int      period; // Represented as a number of minutes
-		DateTime timeUpdate;  // Data update time
-		int      bars; // Count of data bars
-		Bar[]    aBar; // An array containing tha data
+        int      period; // Represented as a number of minutes
+        DateTime timeUpdate;  // Data update time
+        int      bars; // Count of data bars
+        Bar[]    aBar; // An array containing the data
 
-		// Statistical information
-		double instrMinPrice;
-		double instrMaxPrice;
+        // Statistical information
+        double instrMinPrice;
+        double instrMaxPrice;
         int averageGap;
         int maxGap;
         int averageHighLow;
@@ -39,21 +39,21 @@ namespace Forex_Strategy_Builder
         public int    AverageHighLow   { get { return averageHighLow; } }
         public int    AverageCloseOpen { get { return averageCloseOpen; } }
 
-		// Date format
-		DateFormat dfDateFormat = DateFormat.Unknown;
+        // Date format
+        DateFormat dfDateFormat = DateFormat.Unknown;
 
-		// Data directory
-		string pathDataDir = "." + Path.DirectorySeparatorChar + "Data" + Path.DirectorySeparatorChar;
+        // Data directory
+        string pathDataDir = "." + Path.DirectorySeparatorChar + "Data" + Path.DirectorySeparatorChar;
 
-        bool isCut = false; // Whether the data have ben cut
+        bool isCut = false; // Whether the data have been cut
 
         /// <summary>
-        /// Whether the data have ben cut
+        /// Whether the data have been cut
         /// </summary>
         public bool Cut { get { return isCut; } set { isCut = value; } }
 
 
-		// General instrument info
+        // General instrument info
         public string   Symbol { get { return instrProperties.Symbol; } }
         public int      Period { get { return period; } }
         public int      Bars   { get { return bars; } }
@@ -109,39 +109,39 @@ namespace Forex_Strategy_Builder
         public bool UseStartDate { get { return useStartDate; } set { useStartDate = value; } }
         // -------------------------------------------------------------
 
-		// Bar info
-		public DateTime	Time	(int bar) { return aBar[bar].Time  ; }
-		public double	Open	(int bar) { return aBar[bar].Open  ; }
-		public double	High	(int bar) { return aBar[bar].High  ; }
-		public double	Low		(int bar) { return aBar[bar].Low   ; }
-		public double	Close	(int bar) { return aBar[bar].Close ; }
-		public int		Volume	(int bar) { return aBar[bar].Volume; }
+        // Bar info
+        public DateTime Time    (int bar) { return aBar[bar].Time  ; }
+        public double   Open    (int bar) { return aBar[bar].Open  ; }
+        public double   High    (int bar) { return aBar[bar].High  ; }
+        public double   Low     (int bar) { return aBar[bar].Low   ; }
+        public double   Close   (int bar) { return aBar[bar].Close ; }
+        public int      Volume (int bar) { return aBar[bar].Volume; }
 
         public DateFormat FormatDate { get { return dfDateFormat; } set { dfDateFormat = value; } }
         public string DataDir { get { return pathDataDir; } set { pathDataDir = value; } }
 
-		/// <summary>
-		/// Default constructor
-		/// </summary>
-		Instrument()
-		{
-		}
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        Instrument()
+        {
+        }
 
-		/// <summary>
-		/// Constructor
-		/// </summary>
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public Instrument(Instrument_Properties instrProperties, int period)
-		{
+        {
             this.instrProperties = instrProperties;
-			this.period = period;
-		}
+            this.period = period;
+        }
 
-		/// <summary>
-		/// Loads the data file
-		/// </summary>
-		/// <returns>0 - success</returns>
-		public int LoadData()
-		{
+        /// <summary>
+        /// Loads the data file
+        /// </summary>
+        /// <returns>0 - success</returns>
+        public int LoadData()
+        {
             // The source data file full name
             string sourceDataFile = pathDataDir + instrProperties.BaseFileName + period.ToString() + ".csv";
 
@@ -171,12 +171,12 @@ namespace Forex_Strategy_Builder
             return respond;
         }
 
-		/// <summary>
-		/// Loads the data file
-		/// </summary>
-		/// <returns>0 - success</returns>
-		public int LoadResourceData()
-		{
+        /// <summary>
+        /// Loads the data file
+        /// </summary>
+        /// <returns>0 - success</returns>
+        public int LoadResourceData()
+        {
             Data_Parser dataParser = new Data_Parser(Properties.Resources.EURUSD1440);
             int respond = dataParser.Parse();
 
@@ -275,25 +275,25 @@ namespace Forex_Strategy_Builder
         /// </summary>
         int DataHorizon()
         {
-	        if (bars < Configs.MIN_BARS) return 0;
+            if (bars < Configs.MIN_BARS) return 0;
 
             int startBar = 0;
             int endBar   = bars - 1;
-	        DateTime startDate = new DateTime(startYear, startMonth, startDay);
+            DateTime startDate = new DateTime(startYear, startMonth, startDay);
             DateTime endDate   = new DateTime(endYear,   endMonth,   endDay);
 
-	        // Set the starting date
+            // Set the starting date
             if (useStartDate && aBar[0].Time < startDate)
-	        {
+            {
                 for (int bar = 0; bar < bars; bar++)
-		        {
+                {
                     if (aBar[bar].Time >= startDate)
-			        {
+                    {
                         startBar  = bar;
-				        break;
-			        }
-		        }
-	        }
+                        break;
+                    }
+                }
+            }
 
             // Set the end date
             if (useEndDate && aBar[bars - 1].Time > endDate)
@@ -340,14 +340,14 @@ namespace Forex_Strategy_Builder
                 isCut  = true;
             }
 
-	        return 0;
+            return 0;
         }
 
         /// <summary>
         /// Checks the loaded data
         /// </summary>
-		bool CheckMarketData()
-		{
+        bool CheckMarketData()
+        {
             for (int bar = 0; bar < Bars; bar++)
             {
                 if (High(bar) < Open(bar)  ||
@@ -360,24 +360,24 @@ namespace Forex_Strategy_Builder
                 }
             }
 
-			return true;
-		}
+            return true;
+        }
 
         /// <summary>
         /// Calculate statistics for the loaded data.
         /// </summary>
         void SetDataStats()
         {
-			instrMinPrice = double.MaxValue;
-			instrMaxPrice = double.MinValue;
-			double maxHighLowPrice   = double.MinValue;
-			double maxCloseOpenPrice = double.MinValue;
-			double sumHighLow   = 0;
-			double sumCloseOpen = 0;
-			instrDaysOff = 0;
-			double sumGap = 0;
-			double instrMaxGap = double.MinValue;
-			double gap;
+            instrMinPrice = double.MaxValue;
+            instrMaxPrice = double.MinValue;
+            double maxHighLowPrice   = double.MinValue;
+            double maxCloseOpenPrice = double.MinValue;
+            double sumHighLow   = 0;
+            double sumCloseOpen = 0;
+            instrDaysOff = 0;
+            double sumGap = 0;
+            double instrMaxGap = double.MinValue;
+            double gap;
 
             for (int bar = 1; bar < Bars; bar++)
             {
@@ -414,9 +414,9 @@ namespace Forex_Strategy_Builder
 
             return;
         }
-	}
+    }
 
-	public enum DateFormat
+    public enum DateFormat
     {
         DayMonthYear,
         MonthDayYear,
