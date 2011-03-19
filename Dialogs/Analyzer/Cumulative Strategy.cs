@@ -18,12 +18,22 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
         Button btnOpenReport;
         //string pathReportFile;
 
+        Label lblInfo;
+
         public Cumulative_Strategy(string caption) : base(caption)
         {
             btnAddStrategy  = new Button();
             btnResetReport  = new Button();
             btnOpenFolder   = new Button();
             btnOpenReport   = new Button();
+
+            // Label Info
+            lblInfo = new Label();
+            lblInfo.Parent    = this;
+            lblInfo.Text      = "Under Construction!!";
+            lblInfo.BackColor = Color.Transparent;
+            lblInfo.ForeColor = Color.Red;
+            lblInfo.Font      = new System.Drawing.Font(Font.FontFamily, 12, FontStyle.Bold);
 
             // Button Add Strategy
             btnAddStrategy.Parent = this;
@@ -76,8 +86,13 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
             btnAddStrategy.Size     = new Size(buttonWidth, buttonHeight);
             btnAddStrategy.Location = new Point(border + btnHrzSpace, 18 + btnVertSpace);
 
+            // Button Reset Report.
             btnResetReport.Size     = new Size(buttonWidth / 2, buttonHeight);
             btnResetReport.Location = new Point(border + btnHrzSpace, btnAddStrategy.Bottom + btnVertSpace);
+
+            // Label Info
+            lblInfo.Width = 250;
+            lblInfo.Location = new Point(btnAddStrategy.Right + btnHrzSpace, btnAddStrategy.Top);
 
             int btnWideWidth = (int)((this.ClientSize.Width - 2 * border - 4 * btnHrzSpace) / 3);
             btnOpenFolder.Size = new Size(btnWideWidth, buttonHeight);
