@@ -24,18 +24,18 @@ namespace Forex_Strategy_Builder
         string[]  asTitlesMoney;   // Journal title
 
         int[] aiColumnX;  // The horizontal position of the column
-        int[] aiX;        // The scalled horizontal position of the column
+        int[] aiX;        // The scaled horizontal position of the column
         int   columns;    // The number of the columns
         int   rowHeight;  // The journal row height
         int   border = 2; // The width of outside border of the panel
 
-        int rows;           // The nuber of rows can be shown (without the caption bar)
+        int rows;           // The number of rows can be shown (without the caption bar)
         int positions;      // The total number of the positions
         int firstPos;       // The number of the first shown position
         int lastPos;        // The number of the last shown position
         int shownPos;       // How many positions are shown
-        int selectedRow;    // The nuber of the selected row
-        int selectedBarOld; // The nuber of the old selected bar
+        int selectedRow;    // The number of the selected row
+        int selectedBarOld; // The number of the old selected bar
 
         public event EventHandler SelectedBarChange;
 
@@ -63,7 +63,7 @@ namespace Forex_Strategy_Builder
         public Button BtnRemoveJournal { get { return btnRemoveJournal; } }
 
         /// <summary>
-        /// Gets the Journal Toglle Button
+        /// Gets the Journal Toggle Button
         /// </summary>
         public Button BtnToggleJournal { get { return btnToggleJournal; } }
 
@@ -588,7 +588,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Selects a row on Mous Up
+        /// Selects a row on Mouse Up
         /// </summary>
         protected override void OnMouseUp(MouseEventArgs e)
         {

@@ -10,24 +10,24 @@ using System.Drawing;
 namespace Forex_Strategy_Builder
 {
     /// <summary>
-    /// Indicator's comoponent.
+    /// Indicator's component.
     /// </summary>
     public class IndicatorComp
     {
-        private string   sCompName;
+        private string   compName;
         private IndComponentType dataType;
         private IndChartType     chartType;
         private Color    chartColor;
-        private int      iFirstBar;
-        private int      iPrvs;
-        private bool     bDynInfo;
+        private int      firstBar;
+        private int      prvs;
+        private bool     isDynInfo;
         private double[] adValue;
         private PositionPriceDependence posPriceDependence;
 
         /// <summary>
         /// The component's name
         /// </summary>
-        public string CompName { get { return sCompName; } set { sCompName = value; } }
+        public string CompName { get { return compName; } set { compName = value; } }
 
         /// <summary>
         /// The component's data type
@@ -47,20 +47,20 @@ namespace Forex_Strategy_Builder
         /// <summary>
         /// The component's first bar
         /// </summary>
-        public int FirstBar { get { return iFirstBar; } set { iFirstBar = value; } }
+        public int FirstBar { get { return firstBar; } set { firstBar = value; } }
 
         /// <summary>
         /// The indicator uses the previous bar value
         /// </summary>
-        public int UsePreviousBar { get { return iPrvs; } set { iPrvs = value; } }
+        public int UsePreviousBar { get { return prvs; } set { prvs = value; } }
 
         /// <summary>
         /// Whether the component has to be shown on dynamic info or not?
         /// </summary>
-        public bool ShowInDynInfo { get { return bDynInfo; } set { bDynInfo = value; } }
+        public bool ShowInDynInfo { get { return isDynInfo; } set { isDynInfo = value; } }
 
         /// <summary>
-        /// Whether the component depences from the position entry price or not?
+        /// Whether the component depends of the position entry price.
         /// </summary>
         public PositionPriceDependence PosPriceDependence { get { return posPriceDependence; } set { posPriceDependence = value; } }
 
@@ -74,13 +74,13 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public IndicatorComp()
         {
-            sCompName  = "Not defined";
+            compName   = "Not defined";
             dataType   = IndComponentType.NotDefined;
             chartType  = IndChartType.NoChart;
             chartColor = Color.Red;
-            iFirstBar  = 0;
-            iPrvs      = 0;
-            bDynInfo   = true;
+            firstBar   = 0;
+            prvs       = 0;
+            isDynInfo  = true;
             adValue    = new double[] { };
             posPriceDependence = PositionPriceDependence.None;
         }
@@ -92,13 +92,13 @@ namespace Forex_Strategy_Builder
         {
             IndicatorComp icomp = new IndicatorComp();
 
-            icomp.sCompName  = sCompName;
+            icomp.compName   = compName;
             icomp.dataType   = dataType;
             icomp.chartType  = chartType;
             icomp.chartColor = chartColor;
-            icomp.iFirstBar  = iFirstBar;
-            icomp.iPrvs      = iPrvs;
-            icomp.bDynInfo   = bDynInfo;
+            icomp.firstBar   = firstBar;
+            icomp.prvs       = prvs;
+            icomp.isDynInfo  = isDynInfo;
             icomp.posPriceDependence = posPriceDependence;
 
             if (adValue != null)

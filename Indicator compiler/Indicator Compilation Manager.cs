@@ -40,7 +40,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Gather all assemblies referenced from currrent assembly.
+        /// Gather all assemblies referenced from current assembly.
         /// </summary>
         static public Assembly[] GetReferencedAndInitialAssembly(Assembly initialAssembly)
         {
@@ -61,7 +61,7 @@ namespace Forex_Strategy_Builder
         /// Load file, compile it and create/load the indicators into the CustomIndicatorsList.
         /// </summary>
         /// <param name="sFilePath">Path to the source file</param>
-        /// <param name="sErrorMessages">Resulting error messaes, if any.</param>
+        /// <param name="sErrorMessages">Resulting error messages, if any.</param>
         public void LoadCompileSourceFile(string filePath, out string errorMessages)
         {
             string errorLoadSourceFile;
@@ -174,7 +174,7 @@ namespace Forex_Strategy_Builder
                 {
                     ConstructorInfo[] aConstructorInfo = typeAssembly.GetConstructors();
 
-                    // Looking for an appropreate constructor
+                    // Looking for an appropriate constructor
                     foreach (ConstructorInfo constructorInfo in aConstructorInfo)
                     {
                         ParameterInfo[] parameterInfo = constructorInfo.GetParameters();

@@ -1,5 +1,5 @@
 // Forex Strategy Builder - Comparator
-// Part of Forex Strategy Builde
+// Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
 // This code or any part of it cannot be used in other applications without a permission.
@@ -541,7 +541,7 @@ namespace Forex_Strategy_Builder
             Data.GradientPaint(g, rectfCaption, LayoutColors.ColorCaptionBack, LayoutColors.DepthCaption);
             g.DrawString(str, Font, new SolidBrush(LayoutColors.ColorCaptionText), rectfCaption, stringFormatCaption);
 
-            // Paint the panel backgraund
+            // Paint the panel background
             RectangleF rectClient = new RectangleF(border, fCaptionHeight, pnl.ClientSize.Width - 2 * border, pnl.Height - fCaptionHeight - border);
             Data.GradientPaint(g, rectClient, LayoutColors.ColorControlBack, LayoutColors.DepthControl);
 
@@ -631,7 +631,7 @@ namespace Forex_Strategy_Builder
             Data.GradientPaint(g, rectfCaption, LayoutColors.ColorCaptionBack, LayoutColors.DepthCaption);
             g.DrawString(str, Font, new SolidBrush(LayoutColors.ColorCaptionText), rectfCaption, stringFormatCaption);
 
-            // Paint the panel backgraund
+            // Paint the panel background
             RectangleF rectClient = new RectangleF(border, fCaptionHeight, pnl.ClientSize.Width - 2 * border, pnl.Height - fCaptionHeight - border);
             Data.GradientPaint(g, rectClient, LayoutColors.ColorChartBack, LayoutColors.DepthControl);
 
@@ -685,7 +685,7 @@ namespace Forex_Strategy_Builder
 
             if (isRandom)
             {
-                // Drow the random area and Min Max lines
+                // Draws the random area and Min Max lines
                 PointF[] apntMinRandom = new PointF[bars];
                 PointF[] apntMaxRandom = new PointF[bars];
                 for (int iBar = 0; iBar < bars; iBar++)
@@ -706,7 +706,7 @@ namespace Forex_Strategy_Builder
                 g.DrawLines(penRandBands, apntMaxRandom);
             }
 
-            // Drow the lines
+            // Draws the lines
             for (int m = 0; m < countMethods; m++)
             {
                 if (!achboxMethods[m].Checked) continue;
@@ -742,7 +742,7 @@ namespace Forex_Strategy_Builder
                 g.DrawLines(pen, apntLines);
             }
 
-            // Drow the average balance
+            // Draws the average balance
             PointF[] apntBalance = new PointF[bars];
             for (int bar = 0; bar < bars; bar++)
             {

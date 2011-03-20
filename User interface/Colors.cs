@@ -14,7 +14,7 @@ using System.Xml;
 namespace Forex_Strategy_Builder
 {
     /// <summary>
-    /// Struct Colors
+    /// Colors
     /// </summary>
     public static class LayoutColors
     {
@@ -402,7 +402,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Sets the deafult color sceme
+        /// Sets the default color scheme
         /// </summary>
         static void SetColorsDefault()
         {
@@ -553,7 +553,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Inits the languages.
+        /// Inits the color scheme.
         /// </summary>
         public static void InitColorSchemes()
         {

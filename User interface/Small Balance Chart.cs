@@ -503,7 +503,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Generates dinamic info on the status bar
+        /// Generates dynamic info on the status bar
         /// when we are Moving the mouse over the SmallBalanceChart.
         /// </summary>
         protected override void OnMouseMove(MouseEventArgs e)

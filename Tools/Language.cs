@@ -20,7 +20,7 @@ namespace Forex_Strategy_Builder
     public static class Language
     {
         static Dictionary<String, String> languageFiles; // Language files <Language><FileName>
-        static Dictionary<String, String> dictLanguage;      // Language dictionarry
+        static Dictionary<String, String> dictLanguage;  // Language dictionary
         static string[] languageList; // List of the languages
         static string translatedBy;
         static string website;
@@ -367,7 +367,7 @@ namespace Forex_Strategy_Builder
 
             try
             {
-                // Pass the filepath and filename to the StreamWriter Constructor
+                // Pass the file path and filename to the StreamWriter Constructor
                 StreamWriter sw = new StreamWriter(sFilePath);
 
                 // Write the text
@@ -441,7 +441,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Shows the phrases in a webbrowser.
+        /// Shows the phrases in a web browser.
         /// </summary>
         /// <param name="iWhatToshow">1 - English, 2 - Alt, 3 - Both, 4 - Wiki</param>
         public static void ShowPhrases(int iWhatToShow)

@@ -1,5 +1,5 @@
 // Chart class
-// Part of Forex Strategy Builde
+// Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
 // This code or any part of it cannot be used in other applications without a permission.
@@ -54,7 +54,7 @@ namespace Forex_Strategy_Builder
         double   YScale;
         string[] asInfoTitle;
         string[] asInfoValue;
-        int[]    aiInfoType; // 0 - text; 1 - Idicator;
+        int[]    aiInfoType; // 0 - text; 1 - Indicator;
         bool[]   repeatedIndicator;
         int      mouseX;
         int      mouseY;
@@ -157,22 +157,22 @@ namespace Forex_Strategy_Builder
             set { isTrueChartsShown = value; }
         }
 
-        int  infoRows;	         // Dynamic info rows
+        int  infoRows;           // Dynamic info rows
         int  XDynInfoCol2;       // Dynamic info second column X
         int  dynInfoWidth;       // Dynamic info width
         bool isDrawDinInfo;      // Draw or not
         int  dynInfoScrollValue; // Dynamic info vertical scrolling position
 
-        int spcBottom;		// pnlPrice bottom margin
-        int spcTop;			// pnlPrice top margin
-        int spcLeft;		// pnlPrice left margin
-        int spcRight;		// pnlPrice right margin
+        int spcBottom;      // pnlPrice bottom margin
+        int spcTop;         // pnlPrice top margin
+        int spcLeft;        // pnlPrice left margin
+        int spcRight;       // pnlPrice right margin
 
-        int XLeft;			// pnlPrice left coordinate
-        int XRight;		    // pnlPrice right coordinate
-        int YTop;			// pnlPrice top coordinate
-        int YBottom;		// pnlPrice bottom coordinate
-        int YBottomText;	// pnlPrice bottom coordinate for date text
+        int XLeft;          // pnlPrice left coordinate
+        int XRight;         // pnlPrice right coordinate
+        int YTop;           // pnlPrice top coordinate
+        int YBottom;        // pnlPrice bottom coordinate
+        int YBottomText;    // pnlPrice bottom coordinate for date text
 
         int    maxVolume;  // Max Volume in the chart
         double YVolScale;  // The scale for drawing the Volume
@@ -226,7 +226,7 @@ namespace Forex_Strategy_Builder
 
 // ------------------------------------------------------------
         /// <summary>
-        /// The dafault constructor.
+        /// The default constructor.
         /// </summary>
         public Chart()
         {
@@ -591,7 +591,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Sets the chart's parametes.
+        /// Sets the chart's parameters.
         /// </summary>
         void SetPriceChartParam()
         {
@@ -659,13 +659,13 @@ namespace Forex_Strategy_Builder
         /// </summary>
         void SetAllPanelsHeight()
         {
-            int iPanelNumber = isIndicatorsShown ? indPanels : 0;
-            iPanelNumber += isFloatingPLShown ? 1 : 0;
-            iPanelNumber += isBalanceEquityShown ? 1 : 0;
+            int panelNumber = isIndicatorsShown ? indPanels : 0;
+            panelNumber += isFloatingPLShown ? 1 : 0;
+            panelNumber += isBalanceEquityShown ? 1 : 0;
 
-            int iAvailableHeight = pnlCharts.ClientSize.Height - tsChartButtons.Height - scroll.Height - iPanelNumber * 4;
+            int iAvailableHeight = pnlCharts.ClientSize.Height - tsChartButtons.Height - scroll.Height - panelNumber * 4;
 
-            int iPnlIndHeight = iAvailableHeight / (2 + iPanelNumber);
+            int iPnlIndHeight = iAvailableHeight / (2 + panelNumber);
 
             for (int i = 0; i < indPanels && isIndicatorsShown; i++)
                 pnlInd[i].Height = iPnlIndHeight;
@@ -833,7 +833,7 @@ namespace Forex_Strategy_Builder
                     //Horizontal positions
                     point = new Point(XRight, mouseY - szPrice.Height / 2);
                     rec   = new Rectangle(point, szPrice);
-                    // Horisontal line
+                    // Horizontal line
                     g.DrawLine(penCross, XLeft, mouseY, mouseX - 10, mouseY);
                     g.DrawLine(penCross, mouseX + 10, mouseY, XRight, mouseY);
                     // Price Window

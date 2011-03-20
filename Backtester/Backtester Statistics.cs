@@ -321,7 +321,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Calculates the accaunt statistics.
+        /// Calculates the account statistics.
         /// </summary>
         public static void CalculateAccountStats()
         {
@@ -881,5 +881,5 @@ namespace Forex_Strategy_Builder
         {
             return money * AccountExchangeRate(Close[bar]) / (InstrProperties.Point * InstrProperties.LotSize);
         }
-	}
+    }
 }

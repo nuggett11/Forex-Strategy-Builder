@@ -550,7 +550,7 @@ namespace Forex_Strategy_Builder
             isPaint = true;
 
             return;
-		}
+        }
 
         /// <summary>
         /// Sets the logical group of the slot.
@@ -744,10 +744,10 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Loads the defolt parameters for the selekted indicator.
+        /// Loads the default parameters for the selected indicator.
         /// </summary>
         void BtnDefault_Click(object sender, EventArgs e)
-		{
+        {
             Indicator indicator = Indicator_Store.ConstructIndicator(indicatorName, slotType);
             UpdateFromIndicatorParam(indicator.IndParam);
             SetDefaultGroup();
@@ -757,13 +757,13 @@ namespace Forex_Strategy_Builder
             pnlSmallBalanceChart.Invalidate();
 
             return;
-		}
+        }
 
         /// <summary>
         /// Shows help for the selected indicator.
         /// </summary>
         void BtnHelp_Click(object sender, EventArgs e)
-		{
+        {
             try
             {
                 System.Diagnostics.Process.Start("http://forexsb.com/wiki/indicators/start");
@@ -771,15 +771,15 @@ namespace Forex_Strategy_Builder
             catch { }
 
             return;
-		}
+        }
 
         /// <summary>
         /// Closes the dialog.
         /// </summary>
         void BtnOk_Click(object sender, EventArgs e)
-		{
+        {
             return;
-		}
+        }
 
         /// <summary>
         /// Sets the slot group.
@@ -793,11 +793,17 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Cals Preview()
+        /// Calculates strategy when a parameter was changed.
         /// </summary>
         void Param_Changed(object sender, EventArgs e)
         {
             CalculateIndicator(true);
+            UpdateBalanceChart();
+        }
+
+        // Updates the balance chart.
+        void UpdateBalanceChart()
+        {
             pnlSmallBalanceChart.SetChartData();
             pnlSmallBalanceChart.InitChart();
             pnlSmallBalanceChart.Invalidate();
@@ -988,18 +994,18 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Sets or restores the opposite signal behaviour.
+        /// Sets or restores the opposite signal behavior.
         /// </summary>
         private void SetOppositeSignalBehaviour()
         {
-            // Changes opposite signal behaviour.
+            // Changes opposite signal behavior.
             if (slotType == SlotTypes.Close && indicatorName == "Close and Reverse" && oppSignalBehaviour != OppositeDirSignalAction.Reverse)
             {   // Sets the strategy opposite signal to Reverse.
                 Data.Strategy.OppSignalAction = OppositeDirSignalAction.Reverse;
                 oppSignalSet = true;
             }
             else if (slotType == SlotTypes.Close && indicatorName != "Close and Reverse" && oppSignalSet)
-            {   // Recovers the original opp signal.
+            {   // Recovers the original opposite signal.
                 Data.Strategy.OppSignalAction = oppSignalBehaviour;
                 oppSignalSet = false;
             }
@@ -1022,7 +1028,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Chnages the background color of a label when the mause leaves.
+        /// Changes the background color of a label when the mouse leaves.
         /// </summary>
         void Label_MouseLeave(object sender, EventArgs e)
         {
@@ -1031,7 +1037,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Chnages the background color of a label when the mause enters.
+        /// Changes the background color of a label when the mouse enters.
         /// </summary>
         void Label_MouseEnter(object sender, EventArgs e)
         {

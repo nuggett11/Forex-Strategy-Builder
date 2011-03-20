@@ -22,17 +22,17 @@ namespace Forex_Strategy_Builder
         string[,] asJournalData;   // The text journal data
 
         int[] aiColumnX;  // The horizontal position of the column
-        int[] aiX;        // The scalled horizontal position of the column
+        int[] aiX;        // The scaled horizontal position of the column
         int   columns;    // The number of the columns
         int   rowHeight;  // The journal row height
         int   border = 2; // The width of outside border of the panel
 
-        int rows;           // The nuber of bars can be shown (without the caption bar)
+        int rows;           // The number of bars can be shown (without the caption bar)
         int bars;           // The total number of the bars
         int firstBar;       // The number of the first shown bar
         int lastBar;        // The number of the last shown bar
         int shownBars;      // How many bars are shown
-        int selectedRow;    // The nuber of the selected row
+        int selectedRow;    // The number of the selected row
         int selectedBarOld; // The old selected bar
 
         Font  font;
@@ -544,7 +544,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Selects a row on Mous Up
+        /// Selects a row on Mouse Up
         /// </summary>
         protected override void OnMouseUp(MouseEventArgs e)
         {

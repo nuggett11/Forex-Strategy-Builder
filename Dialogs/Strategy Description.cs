@@ -1,9 +1,8 @@
-﻿// Forex Strategy Builder
-// Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved!
-// http://forexsb.com
-// info@forexsb.com
-//
-// Last changed on: 2008-06-14
+﻿// Strategy Description
+// Part of Forex Strategy Builder
+// Website http://forexsb.com/
+// Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
+// This code or any part of it cannot be used in other applications without a permission.
 
 using System;
 using System.Drawing;
@@ -21,7 +20,7 @@ namespace Forex_Strategy_Builder
         Button  btnClose;
         Button  btnAccept;
         Button  btnClear;
-        String  sOldInfo;
+        String  oldInfo;
 
         /// <summary>
         /// Make a form
@@ -93,7 +92,7 @@ namespace Forex_Strategy_Builder
             txboxInfo.Text          = Data.Strategy.Description;
             txboxInfo.Select(0, 0);
 
-            sOldInfo = Data.Strategy.Description;
+            oldInfo = Data.Strategy.Description;
 
             // btnClose
             btnClose.Text   = Language.T("Close");
@@ -112,7 +111,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initialising
+        /// Initialization
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
@@ -186,7 +185,7 @@ namespace Forex_Strategy_Builder
         private void BtnAccept_Click(object sender, EventArgs e)
         {
             Data.Strategy.Description = txboxInfo.Text;
-            sOldInfo = txboxInfo.Text;
+            oldInfo = txboxInfo.Text;
             Close();
         }
 
@@ -211,7 +210,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         void Actions_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (sOldInfo != txboxInfo.Text)
+            if (oldInfo != txboxInfo.Text)
             {
                 DialogResult dr = MessageBox.Show(Language.T("Do you want to accept the changes?"),
                     Data.ProgramName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -223,12 +222,12 @@ namespace Forex_Strategy_Builder
                 else if (dr == DialogResult.Yes)
                 {
                     Data.Strategy.Description = txboxInfo.Text;
-                    sOldInfo = txboxInfo.Text;
+                    oldInfo = txboxInfo.Text;
                     Close();
                 }
                 else if (dr == DialogResult.No)
                 {
-                    sOldInfo = txboxInfo.Text;
+                    oldInfo = txboxInfo.Text;
                     Close();
                 }
             }

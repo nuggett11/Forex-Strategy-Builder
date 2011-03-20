@@ -338,7 +338,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Selects the vertical scrallbar
+        /// Selects the vertical scrollbar
         /// </summary>
         void Info_Panel_MouseUp(object sender, MouseEventArgs e)
         {

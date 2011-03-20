@@ -13,40 +13,40 @@ namespace Forex_Strategy_Builder
     /// </summary>
     public class CheckParam
     {
-        private string sCaption;
-        private bool   bChecked;
-        private bool   bEnabled;
-        private string sToolTip;
+        private string caption;
+        private bool   isChecked;
+        private bool   isEnabled;
+        private string toolTip;
 
         /// <summary>
         /// Gets or sets the text describing the parameter.
         /// </summary>
-        public string Caption { get { return sCaption; } set { sCaption = value; } }
+        public string Caption { get { return caption; } set { caption = value; } }
 
         /// <summary>
         /// Gets or sets the value indicating whether the control is checked.
         /// </summary>
-        public bool Checked { get { return bChecked; } set { bChecked = value; } }
+        public bool Checked { get { return isChecked; } set { isChecked = value; } }
 
         /// <summary>
         /// Gets or sets the value indicating whether the control can respond to user interaction.
         /// </summary>
-        public bool Enabled { get { return bEnabled; } set { bEnabled = value; } }
+        public bool Enabled { get { return isEnabled; } set { isEnabled = value; } }
 
         /// <summary>
-        /// Gets or sets the text of tool tip asociated with this control.
+        /// Gets or sets the text of tool tip associated with this control.
         /// </summary>
-        public string ToolTip { get { return sToolTip; } set { sToolTip = value; } }
+        public string ToolTip { get { return toolTip; } set { toolTip = value; } }
 
         /// <summary>
         /// The default constructor.
         /// </summary>
         public CheckParam()
         {
-            sCaption = String.Empty;
-            bEnabled = false;
-            bChecked = false;
-            sToolTip = String.Empty;
+            caption = String.Empty;
+            isEnabled = false;
+            isChecked = false;
+            toolTip = String.Empty;
         }
 
         /// <summary>
@@ -56,10 +56,10 @@ namespace Forex_Strategy_Builder
         {
             CheckParam cparam = new CheckParam();
 
-            cparam.sCaption = sCaption;
-            cparam.bEnabled = bEnabled;
-            cparam.bChecked = bChecked;
-            cparam.sToolTip = sToolTip;
+            cparam.caption = caption;
+            cparam.isEnabled = isEnabled;
+            cparam.isChecked = isChecked;
+            cparam.toolTip = toolTip;
 
             return cparam;
         }

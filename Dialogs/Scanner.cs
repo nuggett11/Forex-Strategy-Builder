@@ -1,5 +1,4 @@
 // Forex Strategy Builder - Scanner
-// Last changed on: 2011-01-21
 // Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.

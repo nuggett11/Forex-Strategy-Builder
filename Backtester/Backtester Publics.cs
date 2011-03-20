@@ -550,5 +550,5 @@ namespace Forex_Strategy_Builder
         {
             return session[bar].WayPoints;
         }
-	}
+    }
 }

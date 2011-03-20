@@ -1,4 +1,4 @@
-// Forex Strategy Builder - Market contrlos.
+// Forex Strategy Builder - Market controls.
 // Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.

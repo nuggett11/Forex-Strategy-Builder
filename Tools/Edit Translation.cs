@@ -164,7 +164,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initialising
+        /// Performs initialization.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
@@ -331,7 +331,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Sets the phrases in teh text boxes.
+        /// Sets the phrases in the text boxes.
         /// </summary>
         void SetTextBoxes()
         {

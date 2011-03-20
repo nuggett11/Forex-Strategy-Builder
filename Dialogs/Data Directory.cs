@@ -101,7 +101,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initializing
+        /// Performs initialization.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
@@ -179,7 +179,6 @@ namespace Forex_Strategy_Builder
         /// <summary>
         void BtnDefault_Click(object sender, EventArgs e)
         {
-            //txbDataDirectory.Text = Data.DefaultOfflineDataDir;
             txbDataDirectory.Text = "";
         }
     }

@@ -14,10 +14,10 @@ namespace Forex_Strategy_Builder
     /// </summary>
     public class IndicatorParam
     {
-        int             iSlotNumb;
+        int             slotNumb;
         SlotTypes       slotType;
-        bool            bIsDefined;
-        string          sIndicatorName;
+        bool            isDefined;
+        string          indicatorName;
         TypeOfIndicator typeOfIndicator;
         ExecutionTime   timeExecution;
         ListParam[]     aListParam;
@@ -27,7 +27,7 @@ namespace Forex_Strategy_Builder
         /// <summary>
         /// Gets or sets the number of current slot.
         /// </summary>
-        public int SlotNumber { get { return iSlotNumb; } set { iSlotNumb = value; } }
+        public int SlotNumber { get { return slotNumb; } set { slotNumb = value; } }
 
         /// <summary>
         /// Gets or sets the type of the slot.
@@ -37,12 +37,12 @@ namespace Forex_Strategy_Builder
         /// <summary>
         /// Gets or sets a value indicating whether the indicator is defined.
         /// </summary>
-        public bool IsDefined { get { return bIsDefined; } set { bIsDefined = value; } }
+        public bool IsDefined { get { return isDefined; } set { isDefined = value; } }
 
         /// <summary>
         /// Gets or sets the indicator name.
         /// </summary>
-        public string IndicatorName { get { return sIndicatorName; } set { sIndicatorName = value; } }
+        public string IndicatorName { get { return indicatorName; } set { indicatorName = value; } }
 
         /// <summary>
         /// Gets or sets the type of the indicator
@@ -70,14 +70,14 @@ namespace Forex_Strategy_Builder
         public CheckParam[] CheckParam { get { return aCheckParam; } set { aCheckParam = value; } }
 
         /// <summary>
-        /// Creats emty parameters.
+        /// Creates an empty parameter.
         /// </summary>
         public IndicatorParam()
         {
-            iSlotNumb       = 0;
-            bIsDefined      = false;
+            slotNumb        = 0;
+            isDefined       = false;
             slotType        = SlotTypes.NotDefined;
-            sIndicatorName  = String.Empty;
+            indicatorName   = String.Empty;
             typeOfIndicator = TypeOfIndicator.Indicator;
             timeExecution   = ExecutionTime.DuringTheBar;
             aListParam      = new ListParam[5];
@@ -101,10 +101,10 @@ namespace Forex_Strategy_Builder
         {
             IndicatorParam iparam = new IndicatorParam();
 
-            iparam.iSlotNumb       = iSlotNumb;
-            iparam.bIsDefined      = bIsDefined;
+            iparam.slotNumb       = slotNumb;
+            iparam.isDefined      = isDefined;
             iparam.slotType        = slotType;
-            iparam.sIndicatorName  = sIndicatorName;
+            iparam.indicatorName  = indicatorName;
             iparam.typeOfIndicator = typeOfIndicator;
             iparam.timeExecution   = timeExecution;
             iparam.aListParam      = new ListParam[5];
@@ -124,7 +124,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Represents the indicator parametres in a readable form.
+        /// Represents the indicator parameters in a readable form.
         /// </summary>
         public override string ToString()
         {

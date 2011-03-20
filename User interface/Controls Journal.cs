@@ -1,4 +1,4 @@
-// Forex Strategy Builder - Journal contrlos.
+// Forex Strategy Builder - Journal controls.
 // Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
@@ -23,7 +23,7 @@ namespace Forex_Strategy_Builder
         protected int selectedBar; // The bar number represented by the selected row
 
         /// <summary>
-        /// Initialise the controls in panel pnlJournal.
+        /// Initializes the controls in panel pnlJournal.
         /// </summary>
         void InitializeJournal()
         {
@@ -208,7 +208,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Reset the jounal leyout
+        /// Reset the journal layout
         /// </summary>
         protected void ResetJournal()
         {

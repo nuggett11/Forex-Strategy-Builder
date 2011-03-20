@@ -117,7 +117,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initialising
+        /// Performs initialization.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {

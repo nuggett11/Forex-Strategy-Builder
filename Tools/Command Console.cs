@@ -347,7 +347,7 @@ namespace Forex_Strategy_Builder
                     }
                 }
 
-                tbxOutput.Text += Environment.NewLine + "Inidicators for bar " + (bar + 1).ToString() + Environment.NewLine +
+                tbxOutput.Text += Environment.NewLine + "Indicators for bar " + (bar + 1).ToString() + Environment.NewLine +
                     "-----------------" + Environment.NewLine + sb.ToString();
             }
         }

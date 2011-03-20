@@ -14,7 +14,7 @@ namespace Forex_Strategy_Builder
     /// <summary>
     /// CSharp_Compiler manages the compilation of source code to an assembly.
     /// This class is thread safe, so multiple threads are capable
-    /// to utilize it simultaniously.
+    /// to utilize it simultaneously.
     /// </summary>
     public class CSharp_Compiler
     {
@@ -32,7 +32,7 @@ namespace Forex_Strategy_Builder
             codeProvider = new CSharpCodeProvider();
             compilationParameters = new CompilerParameters();
 
-            // Make sure we conduct all the oprations "in memory".
+            // Make sure we conduct all the operations "in memory".
             compilationParameters.GenerateInMemory = true;
 
             return;
@@ -57,7 +57,7 @@ namespace Forex_Strategy_Builder
         /// Compile a single source file to assembly.
         /// </summary>
         /// <param name="compilerErrors">Compiler errors, if any.</param>
-        /// <returns>Compiled assambly or null.</returns>
+        /// <returns>Compiled assembly or null.</returns>
         public Assembly CompileSource(string source, out Dictionary<string, int> compilerErrors)
         {
             compilerErrors = new Dictionary<string, int>();

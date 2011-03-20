@@ -227,7 +227,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initialising
+        /// Performs initialization.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
@@ -398,7 +398,7 @@ namespace Forex_Strategy_Builder
                 leverage = int.Parse(cbxLeverage.Text.Substring(2));
             }
 
-            // NumericUpDown Exhchange Rate
+            // NumericUpDown Exchange Rate
             if (name == "nudExchangeRate")
             {
                 if (cbxAccountCurrency.Text == "USD")

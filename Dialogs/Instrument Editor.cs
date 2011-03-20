@@ -21,7 +21,7 @@ namespace Forex_Strategy_Builder
         Fancy_Panel pnlProperties;
         Fancy_Panel pnlAddInstrument;
 
-        // Instruments' comntrols
+        // Instruments' controls
         ListBox lbxInstruments;
         Button  btnUp;
         Button  btnDown;
@@ -579,7 +579,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initialising
+        /// Performs initialization.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {

@@ -23,7 +23,7 @@ namespace Forex_Strategy_Builder
         protected Small_Balance_Chart smallBalanceChart;       // Small Balance Chart
 
         /// <summary>
-        /// Initialise the controls in panel pnlOverview
+        /// Initializes the controls in panel pnlOverview
         /// </summary>
         void InitializeAccount()
         {
@@ -114,7 +114,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Show the dynamic info on the statusbar
+        /// Show the dynamic info on the status bar
         /// </summary>
         void SmallBalanceChart_MouseMove(object sender, MouseEventArgs e)
         {
@@ -125,7 +125,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Deletes the dynamic info on the statusbar
+        /// Deletes the dynamic info on the status bar
         /// </summary>
         void SmallBalanceChart_MouseLeave(object sender, EventArgs e)
         {

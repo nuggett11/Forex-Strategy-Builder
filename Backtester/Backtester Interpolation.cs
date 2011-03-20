@@ -1426,7 +1426,7 @@ namespace Forex_Strategy_Builder
                 }
             }
             else if (eval == BacktestEval.Ambiguous)
-            {   // Ambiguouse - two orders or order and bar closing
+            {   // Ambiguous - two orders or order and bar closing
                 if (!isClosingAmbiguity)
                 {   // Execute one of both orders
                     bool executeUpper;

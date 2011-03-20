@@ -141,14 +141,14 @@ namespace Forex_Strategy_Builder
             };
 
             number = 0;
-            foreach (string sName in asOutputNames)
+            foreach (string name in asOutputNames)
             {
                 alblOutputNames[number] = new Label();
                 alblOutputNames[number].Parent    = pnlOutput;
                 alblOutputNames[number].ForeColor = colorText;
                 alblOutputNames[number].BackColor = Color.Transparent;
                 alblOutputNames[number].AutoSize  = true;
-                alblOutputNames[number].Text      = sName;
+                alblOutputNames[number].Text      = name;
 
                 alblOutputValues[number] = new Label();
                 alblOutputValues[number].Parent    = pnlOutput;
@@ -169,7 +169,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initialising
+        /// Performs initialization.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
@@ -202,7 +202,7 @@ namespace Forex_Strategy_Builder
             int btnHrzSpace  = (int)(Data.HorizontalDLU * 3);
             int border       = btnHrzSpace;
             int textHeight   = Font.Height;
-            int width        = 100; // Right side contrlos
+            int width        = 100; // Right side controls
 
             // pnlInput
             pnlInput.Size = new Size(ClientSize.Width - 2 * border, 190);

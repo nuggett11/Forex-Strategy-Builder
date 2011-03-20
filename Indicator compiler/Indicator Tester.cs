@@ -12,7 +12,7 @@ namespace Forex_Strategy_Builder
     public static class Indicator_Tester
     {
         /// <summary>
-        /// Tests general parametes of a custom indicator.
+        /// Tests general parameters of a custom indicator.
         /// </summary>
         /// <param name="indicator">The indicator.</param>
         /// <returns>True, if the test succeed.</returns>

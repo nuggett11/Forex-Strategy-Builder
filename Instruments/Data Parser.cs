@@ -352,7 +352,7 @@ namespace Forex_Strategy_Builder
             }
             sr.Close();
 
-            // If the date format is not recognused we try to find the number of changes
+            // If the date format is not recognized we try to find the number of changes
             if (yearPos == 0 || monthPos == 0 || dayPos == 0)
             {
                 int dateOld1 = 0;

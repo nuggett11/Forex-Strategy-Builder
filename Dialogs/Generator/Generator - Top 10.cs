@@ -66,7 +66,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         }
 
         /// <summary>
-        /// Check wether the strategy has to be added in Top10 list
+        /// Check whether the strategy has to be added in Top10 list
         /// </summary>
         public bool IsNominated(int balance)
         {
@@ -82,7 +82,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         }
 
         /// <summary>
-        /// Arrenges the controls after resizing
+        /// Arranges the controls after resizing
         /// </summary>
         protected override void OnResize(EventArgs eventargs)
         {
@@ -147,7 +147,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         }
 
         /// <summary>
-        /// Clears the selectiona attribut of the slots.
+        /// Clears the selection attribute of the slots.
         /// </summary>
         public void ClearSelectionOfSelectedSlot()
         {
@@ -287,10 +287,10 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
             if (isSelected)
                 g.DrawRectangle(penGlow, 3, 3, ClientSize.Width - 6, ClientSize.Height - 6);
 
-            // Drows the chart image
+            // Draws the chart image
             g.DrawImage(chart, new Point(border + space, border + space));
 
-            // Drows the stats
+            // Draws the stats
             int textLeft = border + space + chart.Width + space;
 
             string[] paramNames = new string[] {

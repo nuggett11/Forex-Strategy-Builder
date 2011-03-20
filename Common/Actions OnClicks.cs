@@ -55,7 +55,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Stragey panel menu items clicked
+        /// Strategy panel menu items clicked
         /// </summary>
         protected override void SlotContextMenu_Click(object sender, EventArgs e)
         {

@@ -91,7 +91,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         }
 
         /// <summary>
-        /// Removes the excesive filter.
+        /// Removes the excessive filter.
         /// </summary>
         void RemoveNeedlessFilters(BackgroundWorker worker)
         {

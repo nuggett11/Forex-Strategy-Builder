@@ -47,7 +47,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Overides the base method OnLoad.
+        /// Overrides the base method OnLoad.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {

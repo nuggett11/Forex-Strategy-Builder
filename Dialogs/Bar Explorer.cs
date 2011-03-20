@@ -456,7 +456,7 @@ namespace Forex_Strategy_Builder
 
             Panel  pnl        = (Panel)sender;
             Pen    penFore    = new Pen(LayoutColors.ColorControlText);
-            string FF         = Data.FF; // Format modifire to print the floats
+            string FF         = Data.FF; // Format modifier to print the floats
             int    width     = pnl.ClientSize.Width;
 
             Size size = new Size(width, infoRowHeight);
@@ -481,7 +481,7 @@ namespace Forex_Strategy_Builder
             rectfCaption = new RectangleF(border, 0, pnl.ClientSize.Width - 2 * border, infoRowHeight);
             g.DrawString(stringCaptionText, fontInfo, brushCaptionText, rectfCaption, stringFormatCaption);
 
-            // Paint the panel backgraund
+            // Paint the panel background
             RectangleF rectClient = new RectangleF(0, infoRowHeight, pnl.ClientSize.Width, pnl.Height - infoRowHeight);
             Data.GradientPaint(g, rectClient, LayoutColors.ColorChartBack, LayoutColors.DepthControl);
 
@@ -611,7 +611,7 @@ namespace Forex_Strategy_Builder
                 g.DrawLine(penBarBorder, x, yClose, x + barPixels - 2, yClose);
             }
 
-            // Drow cancelled orders
+            // Draw cancelled orders
             for (int orderIndex = 0; orderIndex < Backtester.Orders(bar); orderIndex++)
             {
                 int ordNumber = Backtester.OrdNumb(bar, orderIndex);
@@ -867,7 +867,7 @@ namespace Forex_Strategy_Builder
 
             Panel  pnl     = (Panel)sender;
             Brush  brush   = Brushes.White;
-            string FF      = Data.FF; // Format modifire to print the floats
+            string FF      = Data.FF; // Format modifier to print the floats
 
             Size size = new Size(aiX[columns] - aiX[0], infoRowHeight);
 

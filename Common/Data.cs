@@ -548,7 +548,7 @@ namespace Forex_Strategy_Builder
             periodColor.Add(DataPeriods.day,   Color.Red);
             periodColor.Add(DataPeriods.week,  Color.DarkViolet);
 
-            // Create a new Logfile
+            // Create a new Log file
             if (toLog == true)
                 swLogFile = new StreamWriter(logFileName, false);
         }
@@ -605,7 +605,7 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public static void CloseLogFile()
         {
-            // Closes the logfile
+            // Closes the log file
             if (toLog == true)
             {
                 swLogFile.Flush();

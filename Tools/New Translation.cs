@@ -97,7 +97,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initialising
+        /// Performs initialization.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
@@ -121,7 +121,7 @@ namespace Forex_Strategy_Builder
             int btnHrzSpace  = (int)(Data.HorizontalDLU * 3);
             int border       = btnHrzSpace;
             int textHeight   = Font.Height;
-            int width        = 195; // Right side contrlos
+            int width        = 195; // Right side controls
 
             // pnlInput
             pnlInput.Size     = new Size(ClientSize.Width - 2 * border, 170);

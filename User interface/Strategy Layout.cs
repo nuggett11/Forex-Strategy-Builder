@@ -958,7 +958,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Arrenges the controls after resizing
+        /// Arranges the controls after resizing
         /// </summary>
         protected override void OnResize(EventArgs eventargs)
         {

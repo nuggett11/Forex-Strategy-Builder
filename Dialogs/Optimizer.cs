@@ -349,7 +349,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Perform initialising
+        /// Performs initialization.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
@@ -412,7 +412,7 @@ namespace Forex_Strategy_Builder
             // No params
             lblNoParams.Location = new Point(5, 5);
 
-            ////// Panel Limitations
+            // Panel Limitations
             pnlLimitations.Size     = pnlParamsBase.Size;
             pnlLimitations.Location = pnlParamsBase.Location;
 

@@ -228,7 +228,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         }
 
         /// <summary>
-        /// Rearanges layout.
+        /// Rearranges layout.
         /// </summary>
         protected override void OnResize(EventArgs eventargs)
         {
@@ -250,7 +250,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         }
 
         /// <summary>
-        /// Change of the indicator bann state.
+        /// Change of the indicator ban state.
         /// </summary>
         void ChbxIndicator_CheckedChanged(object sender, EventArgs e)
         {
@@ -498,5 +498,4 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
             msgbox.Show();
         }
     }
-
 }

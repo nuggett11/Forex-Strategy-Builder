@@ -559,7 +559,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Sets the parameters after the horisontal scrollbar position has been changed.
+        /// Sets the parameters after the horizontal scrollbar position has been changed.
         /// </summary>
         void HscrllbInstrChart_ValueChanged(object sender, EventArgs e)
         {

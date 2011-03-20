@@ -10,7 +10,7 @@ namespace Forex_Strategy_Builder
 {
     /// <summary>
     /// The type of the indicator.
-    /// It serves for arrangment of the indicators in the
+    /// It serves for arrangement of the indicators in the
     /// indicator properties dialog window.
     /// This doesn't affect the indicator application.
     /// </summary>
@@ -30,7 +30,7 @@ namespace Forex_Strategy_Builder
     public enum ExecutionTime
     {
         DuringTheBar,   // The opening / closing price can be everywhere in the bar.
-        AtBarOpening,   // The opening / closing price is at the beginig of the bar.
+        AtBarOpening,   // The opening / closing price is at the beginning of the bar.
         AtBarClosing,   // The opening / closing price is at the end of the bar.
         CloseAndReverse // For the close and reverse logic.
     }
@@ -58,7 +58,7 @@ namespace Forex_Strategy_Builder
     }
 
     /// <summary>
-    /// The type of base prace
+    /// The type of base price
     /// </summary>
     public enum BasePrice
     {

@@ -13,8 +13,8 @@ namespace Forex_Strategy_Builder
 {
     public class Exporter
     {
-        string FF; // Format modifire to print the floats
-        string sDF; // Format modifire to print the date
+        string FF; // Format modifier to print the floats
+        string sDF; // Format modifier to print the date
         StringBuilder sb; // The data file
 
         /// <summary>
@@ -22,8 +22,8 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public Exporter()
         {
-            FF  = Data.FF; // Format modifire to print the floats
-            sDF = Data.DF; // Format modifire to print the date
+            FF  = Data.FF; // Format modifier to print the floats
+            sDF = Data.DF; // Format modifier to print the date
             sb = new StringBuilder();
        }
 

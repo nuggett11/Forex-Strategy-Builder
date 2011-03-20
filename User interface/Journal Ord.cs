@@ -24,13 +24,13 @@ namespace Forex_Strategy_Builder
         string[]  asTitlesMoney; // Journal title
 
         int[] aiColumnX;    // The horizontal position of the column
-        int[] aiX;          // The scalled horizontal position of the column
+        int[] aiX;          // The scaled horizontal position of the column
         int   columns;      // The number of the columns
         int   rowHeight;    // The journal row height
-        int   visibalWidth; // The width of the panel visibal part
+        int   visibalWidth; // The width of the panel visible part
         int   border = 2;   // The width of outside border of the panel
 
-        int rows;           // The nuber of rows can be shown (without the caption bar)
+        int rows;           // The number of rows can be shown (without the caption bar)
         int orders;         // The total number of the orders during the bar
         int firstOrd;       // The number of the first shown orders
         int lastOrd;        // The number of the last shown orders

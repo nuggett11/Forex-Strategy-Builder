@@ -111,26 +111,26 @@ namespace Forex_Strategy_Builder
         /// </summary>
         public IndicatorSlot Clone()
         {
-            IndicatorSlot islot = new IndicatorSlot();
-            islot.slotNumb         = slotNumb;
-            islot.slotType         = slotType;
-            islot.slotStatus       = slotStatus;
-            islot.group            = group;
-            islot.isDefined        = isDefined;
-            islot.indicatorName    = indicatorName;
-            islot.isSeparatedChart = isSeparatedChart;
-            islot.minValue         = minValue;
-            islot.maxValue         = maxValue;
-            islot.indicatorParam   = indicatorParam.Clone();
+            IndicatorSlot slot = new IndicatorSlot();
+            slot.slotNumb         = slotNumb;
+            slot.slotType         = slotType;
+            slot.slotStatus       = slotStatus;
+            slot.group            = group;
+            slot.isDefined        = isDefined;
+            slot.indicatorName    = indicatorName;
+            slot.isSeparatedChart = isSeparatedChart;
+            slot.minValue         = minValue;
+            slot.maxValue         = maxValue;
+            slot.indicatorParam   = indicatorParam.Clone();
 
-            islot.adSpecValue = new double[adSpecValue.Length];
-            adSpecValue.CopyTo(islot.adSpecValue, 0);
+            slot.adSpecValue = new double[adSpecValue.Length];
+            adSpecValue.CopyTo(slot.adSpecValue, 0);
 
-            islot.component = new IndicatorComp[component.Length];
+            slot.component = new IndicatorComp[component.Length];
             for (int i = 0; i < component.Length; i++)
-                islot.component[i] = component[i].Clone();
+                slot.component[i] = component[i].Clone();
 
-            return islot;
+            return slot;
         }
     }
 }

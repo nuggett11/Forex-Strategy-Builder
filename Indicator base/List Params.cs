@@ -13,17 +13,17 @@ namespace Forex_Strategy_Builder
     /// </summary>
     public class ListParam
     {
-        private string   sCaption;
+        private string   caption;
         private string[] asItemList;
-        private string   sText;
-        private int      iIndex;
-        private bool     bEnabled;
-        private string   sToolTip;
+        private string   text;
+        private int      index;
+        private bool     isEnabled;
+        private string   toolTip;
 
         /// <summary>
         /// Gets or sets the text describing the parameter.
         /// </summary>
-        public string Caption { get { return sCaption; } set { sCaption = value; } }
+        public string Caption { get { return caption; } set { caption = value; } }
 
         /// <summary>
         /// Gets or sets the list of parameter values.
@@ -33,34 +33,34 @@ namespace Forex_Strategy_Builder
         /// <summary>
         /// Gets or sets the text associated whit this parameter.
         /// </summary>
-        public string Text { get { return sText; } set { sText = value; } }
+        public string Text { get { return text; } set { text = value; } }
 
         /// <summary>
         /// Gets or sets the index specifying the currently selected item.
         /// </summary>
-        public int Index { get { return iIndex; } set { iIndex = value; } }
+        public int Index { get { return index; } set { index = value; } }
 
         /// <summary>
         /// Gets or sets the value indicating whether the control can respond to user interaction.
         /// </summary>
-        public bool Enabled { get { return bEnabled; } set { bEnabled = value; } }
+        public bool Enabled { get { return isEnabled; } set { isEnabled = value; } }
 
         /// <summary>
         /// Gets or sets the text of tool tip associated with this control.
         /// </summary>
-        public string ToolTip { get { return sToolTip; } set { sToolTip = value; } }
+        public string ToolTip { get { return toolTip; } set { toolTip = value; } }
 
         /// <summary>
         /// Zeroing the parameters.
         /// </summary>
         public ListParam()
         {
-            sCaption   = String.Empty;
+            caption    = String.Empty;
             asItemList = new string[] { "" };
-            iIndex     = 0;
-            sText      = String.Empty;
-            bEnabled   = false;
-            sToolTip   = String.Empty;
+            index      = 0;
+            text       = String.Empty;
+            isEnabled  = false;
+            toolTip    = String.Empty;
         }
 
         /// <summary>
@@ -70,13 +70,13 @@ namespace Forex_Strategy_Builder
         {
             ListParam lparam = new ListParam();
 
-            lparam.sCaption   = sCaption;
+            lparam.caption    = caption;
             lparam.asItemList = new string[asItemList.Length];
             asItemList.CopyTo(lparam.asItemList, 0);
-            lparam.iIndex     = iIndex;
-            lparam.sText      = sText;
-            lparam.bEnabled   = bEnabled;
-            lparam.sToolTip   = sToolTip;
+            lparam.index     = index;
+            lparam.text      = text;
+            lparam.isEnabled = isEnabled;
+            lparam.toolTip   = toolTip;
 
             return lparam;
         }

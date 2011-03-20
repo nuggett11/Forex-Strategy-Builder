@@ -1,4 +1,4 @@
-// Forex Strategy Builder - Strategy contrlos.
+// Forex Strategy Builder - Strategy controls.
 // Part of Forex Strategy Builder
 // Website http://forexsb.com/
 // Copyright (c) 2006 - 2011 Miroslav Popov - All rights reserved.
@@ -118,7 +118,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Arange the controls after resizing
+        /// Arranges the controls after resizing
         /// </summary>
         void PnlStrategy_Resize(object sender, EventArgs e)
         {
@@ -337,7 +337,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Vew / edit the strategy description
+        /// View / edit the strategy description
         /// </summary>
         protected virtual void BtnStrategyDescription_Click(object sender, EventArgs e)
         {

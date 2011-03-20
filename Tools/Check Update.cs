@@ -27,7 +27,7 @@ namespace Forex_Strategy_Builder
         XmlDocument xmlUpdateFile;
 
         /// <summary>
-        /// Public onstructor
+        /// Public constructor.
         /// </summary>
         public Check_Update(string pathSystem, ToolStripMenuItem miLiveContent, ToolStripMenuItem miForex)
         {
