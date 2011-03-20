@@ -37,7 +37,7 @@
     <slippage>0</slippage>
     <priceIn>USD</priceIn>
     <rateToUSD>1</rateToUSD>
-    <rateToEUR>1,42365002632141</rateToEUR>
+    <rateToEUR>1.42365002632141</rateToEUR>
     <baseFileName>GBPUSD</baseFileName>
   </instrument>
   <instrument>
@@ -57,7 +57,7 @@
     <slippage>0</slippage>
     <priceIn>CHF</priceIn>
     <rateToUSD>0</rateToUSD>
-    <rateToEUR>1,33689999580383</rateToEUR>
+    <rateToEUR>1.33689999580383</rateToEUR>
     <baseFileName>USDCHF</baseFileName>
   </instrument>
   <instrument>
@@ -93,11 +93,11 @@
     <commissionType>percents</commissionType>
     <commissionScope>deal</commissionScope>
     <commissionTime>openclose</commissionTime>
-    <commission>0,25</commission>
+    <commission>0.25</commission>
     <slippage>0</slippage>
     <priceIn>USD</priceIn>
     <rateToUSD>1</rateToUSD>
-    <rateToEUR>1,29999995231628</rateToEUR>
+    <rateToEUR>1.29999995231628</rateToEUR>
     <baseFileName>#IBM</baseFileName>
   </instrument>
   <instrument>
@@ -113,11 +113,11 @@
     <commissionType>percents</commissionType>
     <commissionScope>deal</commissionScope>
     <commissionTime>openclose</commissionTime>
-    <commission>0,25</commission>
+    <commission>0.25</commission>
     <slippage>0</slippage>
     <priceIn>USD</priceIn>
     <rateToUSD>1</rateToUSD>
-    <rateToEUR>1,29999995231628</rateToEUR>
+    <rateToEUR>1.29999995231628</rateToEUR>
     <baseFileName>$INDU</baseFileName>
   </instrument>
 </fsb>

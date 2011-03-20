@@ -749,9 +749,9 @@ namespace Forex_Strategy_Builder
         {
             int buttonWidth = (int)(Data.HorizontalDLU * 65);
             int border      = (int)(Data.HorizontalDLU * 3);
-            int iPosition    = i * border + (i - 1) * buttonWidth;
+            int position    = i * border + (i - 1) * buttonWidth;
 
-            return iPosition;
+            return position;
         }
 
         /// <summary>
@@ -761,9 +761,9 @@ namespace Forex_Strategy_Builder
         {
             int buttonHeight = (int)(Data.VerticalDLU * 15.5);
             int border       = (int)(Data.HorizontalDLU * 3);
-            int iPosition     = (int)captionHeight + i * border + (i - 1) * buttonHeight;
+            int position     = (int)captionHeight + i * border + (i - 1) * buttonHeight;
 
-            return iPosition;
+            return position;
         }
 
         /// <summary>
