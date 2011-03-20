@@ -73,6 +73,7 @@ namespace Forex_Strategy_Builder
         Button btnCancel;
         ToolTip toolTip = new ToolTip();
         bool   isPaint = false;
+        bool   isChartRecalculation = true;
         string description;
         OppositeDirSignalAction oppSignalBehaviour;
         bool   oppSignalSet = false;
@@ -333,17 +334,17 @@ namespace Forex_Strategy_Builder
             }
             else
             {
-                string sDefaultIndicator;
+                string defaultIndicator;
                 if (slotType == SlotTypes.Open)
-                    sDefaultIndicator = "Bar Opening";
+                    defaultIndicator = "Bar Opening";
                 else if (slotType == SlotTypes.OpenFilter)
-                    sDefaultIndicator = "Accelerator Oscillator";
+                    defaultIndicator = "Accelerator Oscillator";
                 else if (slotType == SlotTypes.Close)
-                    sDefaultIndicator = "Bar Closing";
+                    defaultIndicator = "Bar Closing";
                 else
-                    sDefaultIndicator = "Accelerator Oscillator";
+                    defaultIndicator = "Accelerator Oscillator";
 
-                TreeNode[] atrn = trvIndicators.Nodes.Find(sDefaultIndicator, true);
+                TreeNode[] atrn = trvIndicators.Nodes.Find(defaultIndicator, true);
                 trvIndicators.SelectedNode = atrn[0];
                 TrvIndicatorsLoadIndicator(atrn[0]);
             }
@@ -507,6 +508,7 @@ namespace Forex_Strategy_Builder
             lblIndicator.Text = indicatorName;
 
             isPaint = false;
+            isChartRecalculation = false;
 
             // List params
             for (int i = 0; i < 5; i++)
@@ -548,6 +550,7 @@ namespace Forex_Strategy_Builder
             }
 
             isPaint = true;
+            isChartRecalculation = true;
 
             return;
         }
@@ -648,30 +651,30 @@ namespace Forex_Strategy_Builder
                 trnIndicatorsMAOscillator, trnDateTime, trnCustomIndicators
             });
 
-            foreach (string sIndicatorName in Indicator_Store.GetIndicatorNames(slotType))
+            foreach (string indicatorName in Indicator_Store.GetIndicatorNames(slotType))
             {
                 TreeNode trn = new TreeNode();
                 trn.Tag  = true;
-                trn.Name = sIndicatorName;
-                trn.Text = sIndicatorName;
+                trn.Name = indicatorName;
+                trn.Text = indicatorName;
                 trnAll.Nodes.Add(trn);
 
-                Indicator indicator = Indicator_Store.ConstructIndicator(sIndicatorName, slotType);
+                Indicator indicator = Indicator_Store.ConstructIndicator(indicatorName, slotType);
                 TypeOfIndicator type = indicator.IndParam.IndicatorType;
 
                 if (indicator.CustomIndicator)
                 {
                     TreeNode trnCustom = new TreeNode();
                     trnCustom.Tag  = true;
-                    trnCustom.Name = sIndicatorName;
-                    trnCustom.Text = sIndicatorName;
+                    trnCustom.Name = indicatorName;
+                    trnCustom.Text = indicatorName;
                     trnCustomIndicators.Nodes.Add(trnCustom);
                 }
 
                 TreeNode trnGroups = new TreeNode();
                 trnGroups.Tag  = true;
-                trnGroups.Name = sIndicatorName;
-                trnGroups.Text = sIndicatorName;
+                trnGroups.Name = indicatorName;
+                trnGroups.Text = indicatorName;
 
                 if (type == TypeOfIndicator.Indicator)
                 {
@@ -736,9 +739,7 @@ namespace Forex_Strategy_Builder
             UpdateFromIndicatorParam(indicator.IndParam);
             SetDefaultGroup();
             CalculateIndicator(true);
-            pnlSmallBalanceChart.SetChartData();
-            pnlSmallBalanceChart.InitChart();
-            pnlSmallBalanceChart.Invalidate();
+            UpdateBalanceChart();
 
             return;
         }
@@ -752,9 +753,7 @@ namespace Forex_Strategy_Builder
             UpdateFromIndicatorParam(indicator.IndParam);
             SetDefaultGroup();
             CalculateIndicator(true);
-            pnlSmallBalanceChart.SetChartData();
-            pnlSmallBalanceChart.InitChart();
-            pnlSmallBalanceChart.Invalidate();
+            UpdateBalanceChart();
 
             return;
         }
@@ -804,6 +803,9 @@ namespace Forex_Strategy_Builder
         // Updates the balance chart.
         void UpdateBalanceChart()
         {
+            if (!isChartRecalculation)
+                return;
+
             pnlSmallBalanceChart.SetChartData();
             pnlSmallBalanceChart.InitChart();
             pnlSmallBalanceChart.Invalidate();
