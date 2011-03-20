@@ -33,6 +33,8 @@ namespace Forex_Strategy_Builder
             if (ForeColor != foreColor)
                 ForeColor = foreColor;
 
+            timer.Tag = Value;
+
             base.OnValueChanged(e);
         }
 
