@@ -88,17 +88,17 @@ namespace Forex_Strategy_Builder
         public bool ShowDynamicInfo {  get { return isShowDynamicInfo; } set { isShowDynamicInfo = value; } }
 
         /// <summary>
-        /// Returnt dynamic info
+        /// Returns dynamic info
         /// </summary>
         public string CurrentBarInfo { get { return strStatusBarText; } }
 
         /// <summary>
-        /// Returnt X Left
+        /// Returns X Left
         /// </summary>
         public int XLeftMargin { get { return border + space; } }
 
         /// <summary>
-        /// Returnt X Right
+        /// Returns X Right
         /// </summary>
         public int XRightMargin {  get { return XRight - space; } }
 
@@ -113,7 +113,7 @@ namespace Forex_Strategy_Builder
         public bool OOS { set { isOOS = value; } }
 
         /// <summary>
-        /// Sets chart's instrument and backtesting data.
+        /// Sets chart's instrument and back testing data.
         /// </summary>
         public void SetChartData()
         {
@@ -410,7 +410,7 @@ namespace Forex_Strategy_Builder
                 for (int i = 0; i < apntfRedBalance.Length; i++)
                     apntfRedBalance[i] = apntBalance[i + marginCallBar - firstBar];
 
-                if (apntfGreenBalance.Length > 0)
+                if (apntfGreenBalance.Length > 1)
                     g.DrawLines(new Pen(LayoutColors.ColorChartBalanceLine), apntfGreenBalance);
                 g.DrawLines(new Pen(LayoutColors.ColorSignalRed), apntfRedBalance);
 
