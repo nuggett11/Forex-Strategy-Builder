@@ -884,7 +884,7 @@ namespace Forex_Strategy_Builder
                         break;
                 }
 
-                // If entry order closes or reverses the position the exit orthers of the
+                // If entry order closes or reverses the position the exit orders of the
                 // initial position have to be cancelled
                 if (order.OrdSender == OrderSender.Open &&
                     (session[bar].Summary.Transaction == Transaction.Close ||
@@ -904,7 +904,7 @@ namespace Forex_Strategy_Builder
                         }
                     }
 
-                    // In case when the order is not found, this means that the position is transfered
+                    // In case when the order is not found, this means that the position is transferred
                     // so its exit order is not conditional
                     if (!isFound)
                     {
@@ -1084,7 +1084,7 @@ namespace Forex_Strategy_Builder
                     Strategy.Slot[Strategy.CloseSlot].Component[1].Value[bar - 1] = stop;
                 }
 
-                // Saves the Account Percen Stop price
+                // Saves the Account Percent Stop price
                 if (Strategy.Slot[Strategy.CloseSlot].IndicatorName == "Account Percent Stop" &&
                     session[bar - 1].Summary.Transaction != Transaction.Transfer)
                 {
@@ -1095,7 +1095,7 @@ namespace Forex_Strategy_Builder
                 }
             }
             else
-            {   // When there is no position transffer the old balance and equity
+            {   // When there is no position transfer the old balance and equity
                 session[bar].Summary.Balance      = session[bar - 1].Summary.Balance;
                 session[bar].Summary.Equity       = session[bar - 1].Summary.Equity;
                 session[bar].Summary.MoneyBalance = session[bar - 1].Summary.MoneyBalance;

@@ -63,12 +63,12 @@ namespace Forex_Strategy_Builder
             IndParam.NumParam[0].ToolTip = "A vertical shift above the higher and below the lower round number.";
 
             // The NumericUpDown parameters
-            IndParam.NumParam[1].Caption = "Digids";
+            IndParam.NumParam[1].Caption = "Digits";
             IndParam.NumParam[1].Value   = 2;
             IndParam.NumParam[1].Min     = 2;
             IndParam.NumParam[1].Max     = 4;
             IndParam.NumParam[1].Enabled = true;
-            IndParam.NumParam[1].ToolTip = "Number of digids to be rounded.";
+            IndParam.NumParam[1].ToolTip = "Number of digits to be rounded.";
 
             return;
         }

@@ -37,7 +37,7 @@ namespace Forex_Strategy_Builder
         protected int space = 4;
 
         /// <summary>
-        /// The dafault constructor
+        /// The default constructor
         /// Sets the base panels
         /// </summary>
         public Workspace()

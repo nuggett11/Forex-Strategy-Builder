@@ -1,4 +1,4 @@
-// Traling Stop Indicator
+// Trailing Stop Indicator
 // Last changed on 2010-09-14
 // Part of Forex Strategy Builder & Forex Strategy Trader
 // Website http://forexsb.com/
@@ -8,8 +8,8 @@
 namespace Forex_Strategy_Builder
 {
     /// <summary>
-    /// Traling Stop Indicator
-    /// The implimentation of logic is in Market.AnalyseClose(int iBar)
+    /// Trailing Stop Indicator
+    /// The implementation of logic is in Market.AnalyseClose(int iBar)
     /// </summary>
     public class Trailing_Stop : Indicator
     {

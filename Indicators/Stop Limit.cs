@@ -9,7 +9,7 @@ namespace Forex_Strategy_Builder
 {
     /// <summary>
     /// Stop Limit Indicator
-    /// The implimentation of logic is in Market.AnalyseClose(int iBar)
+    /// The implementation of logic is in Market.AnalyseClose(int iBar)
     /// </summary>
     public class Stop_Limit : Indicator
 	{

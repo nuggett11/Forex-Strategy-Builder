@@ -373,7 +373,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Performs actions when upbv has been chaged
+        /// Performs actions when UPBV has been changed
         /// </summary>
         void UsePreviousBarValue_Change()
         {
@@ -849,7 +849,7 @@ namespace Forex_Strategy_Builder
             // Logging
             Data.Log("Calculate the strategy");
 
-            // Calculates the Backtest
+            // Calculates the backtest
             Backtester.Calculate();
             Backtester.CalculateAccountStats();
 
@@ -952,7 +952,7 @@ namespace Forex_Strategy_Builder
         /// <summary>
         /// Check the needed market conditions
         /// </summary>
-        /// <param name="isMessage">To show the mesage or not</param>
+        /// <param name="isMessage">To show the message or not</param>
         void AfterStrategyOpening(bool isMessage)
         {
             if (Data.Strategy.Symbol != Data.Symbol || Data.Strategy.DataPeriod != Data.Period)

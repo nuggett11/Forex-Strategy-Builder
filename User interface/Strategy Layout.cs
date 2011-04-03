@@ -287,7 +287,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Rearange all controls in panel Strategy
+        /// Rearranges all controls in panel Strategy
         /// </summary>
         public void RearangeStrategyControls()
         {
@@ -759,7 +759,7 @@ namespace Forex_Strategy_Builder
             g.DrawLine(penBorder, pnl.Width - border + 1, captionHeight, pnl.Width - border + 1, pnl.Height);
             g.DrawLine(penBorder, 0, pnl.Height - border + 1, pnl.Width, pnl.Height - border + 1);
 
-            // Paint the panel's backgraund
+            // Paint the panel's background
             RectangleF rectfPanel = new RectangleF(border, captionHeight, pnl.Width - 2 * border, pnl.Height - captionHeight - border);
             Data.GradientPaint(g, rectfPanel, colorBackground, LayoutColors.DepthControl);
 

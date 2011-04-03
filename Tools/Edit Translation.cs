@@ -321,7 +321,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Scrall Bar value changed.
+        /// Scroll Bar value changed.
         /// </summary>
         void ScrollBar_ValueChanged(object sender, EventArgs e)
         {

@@ -1500,7 +1500,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         }
 
         /// <summary>
-        /// Vew / edit the strategy description
+        /// View and edit the strategy description
         /// </summary>
         protected virtual void BtnStrategyDescription_Click(object sender, EventArgs e)
         {

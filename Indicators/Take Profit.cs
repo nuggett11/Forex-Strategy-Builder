@@ -9,7 +9,7 @@ namespace Forex_Strategy_Builder
 {
     /// <summary>
     /// Take Profit Indicator
-    /// The implimentation of logic is in Backtester.AnalyseClose(int iBar)
+    /// The implementation of logic is in Backtester.AnalyseClose(int iBar)
     /// </summary>
     public class Take_Profit : Indicator
 	{

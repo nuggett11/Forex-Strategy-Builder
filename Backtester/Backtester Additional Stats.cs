@@ -91,7 +91,7 @@ namespace Forex_Strategy_Builder
         static double sharpeRatioShort;
 
         /// <summary>
-        /// Gets the Additional Stats Param Name.
+        /// Gets the Additional Stats Parameter Name.
         /// </summary>
         public static string[] AdditionalStatsParamName { get { return additionalStatsParamName; } }
 

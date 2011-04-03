@@ -93,8 +93,8 @@ namespace Forex_Strategy_Builder
             newElem.InnerText = strategy.MaxOpenLots.ToString();
             xmlDocStrategy.DocumentElement.AppendChild(newElem);
 
-            // Add Use Acount Percent Entry
-            newElem = xmlDocStrategy.CreateElement("useAcountPercentEntry");
+            // Add Use Account Percent Entry
+            newElem = xmlDocStrategy.CreateElement("useAccountPercentEntry");
             newElem.InnerText = strategy.UseAccountPercentEntry.ToString();
             xmlDocStrategy.DocumentElement.AppendChild(newElem);
 
@@ -279,7 +279,14 @@ namespace Forex_Strategy_Builder
             catch { }
 
             // Money Management
-            tempStrategy.UseAccountPercentEntry = bool.Parse(xmlDocStrategy.GetElementsByTagName("useAcountPercentEntry")[0].InnerText);
+            try
+            {
+                tempStrategy.UseAccountPercentEntry = bool.Parse(xmlDocStrategy.GetElementsByTagName("useAccountPercentEntry")[0].InnerText);
+            }
+            catch
+            {
+                tempStrategy.UseAccountPercentEntry = bool.Parse(xmlDocStrategy.GetElementsByTagName("useAcountPercentEntry")[0].InnerText);
+            }
             tempStrategy.MaxOpenLots  = StringToDouble(xmlDocStrategy.GetElementsByTagName("maxOpenLots")[0].InnerText);
             tempStrategy.EntryLots    = StringToDouble(xmlDocStrategy.GetElementsByTagName("entryLots")[0].InnerText);
             tempStrategy.AddingLots   = StringToDouble(xmlDocStrategy.GetElementsByTagName("addingLots")[0].InnerText);

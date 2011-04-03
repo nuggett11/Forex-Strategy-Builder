@@ -37,7 +37,7 @@
     <slippage>0</slippage>
     <priceIn>USD</priceIn>
     <rateToUSD>1</rateToUSD>
-    <rateToEUR>1.4</rateToEUR>
+    <rateToEUR>1.39999997615814</rateToEUR>
     <baseFileName>GBPUSD</baseFileName>
   </instrument>
   <instrument>
@@ -97,7 +97,7 @@
     <slippage>0</slippage>
     <priceIn>USD</priceIn>
     <rateToUSD>1</rateToUSD>
-    <rateToEUR>1.3</rateToEUR>
+    <rateToEUR>1.29999995231628</rateToEUR>
     <baseFileName>#IBM</baseFileName>
   </instrument>
   <instrument>
@@ -117,7 +117,7 @@
     <slippage>0</slippage>
     <priceIn>USD</priceIn>
     <rateToUSD>1</rateToUSD>
-    <rateToEUR>1.3</rateToEUR>
+    <rateToEUR>1.29999995231628</rateToEUR>
     <baseFileName>$INDU</baseFileName>
   </instrument>
 </fsb>

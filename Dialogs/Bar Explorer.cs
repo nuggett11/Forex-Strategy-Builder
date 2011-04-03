@@ -58,7 +58,7 @@ namespace Forex_Strategy_Builder
         string[] asTitles;  // Journal title second row
         string[] asContent; // The text journal data
         int[]    aiColumnX; // The horizontal position of the column
-        int[]    aiX;       // The scalled horizontal position of the column
+        int[]    aiX;       // The scaled horizontal position of the column
         int      columns;   // The number of the columns
         Font     fontInfo;
         string   barInfo;
@@ -190,7 +190,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Sets the journal colums with.
+        /// Sets the journal columns with.
         /// </summary>
         private void SetJournalPoints()
         {
@@ -402,7 +402,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Sets the nav buttons
+        /// Sets the navigation buttons
         /// </summary>
         void SetBtnNavigate()
         {

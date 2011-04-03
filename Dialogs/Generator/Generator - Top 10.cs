@@ -251,7 +251,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         public int  Balance { get { return balance; }}
 
         /// <summary>
-        /// Sets the chart params
+        /// Sets the chart parameters
         /// </summary>
         public void InitSlot()
         {

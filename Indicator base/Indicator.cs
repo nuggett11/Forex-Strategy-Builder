@@ -457,7 +457,7 @@ namespace Forex_Strategy_Builder
                         int  baseBar  = currBar - 1;
                         bool isHigher = adIndValue[currBar] > adIndValue[baseBar];
 
-                        if (!isDescreteValues)  // Aroon oscillator uses bIsDescreteValues = true
+                        if (!isDescreteValues)  // Aroon oscillator uses isDescreteValues = true
                         {
                             bool isNoChange = true;
                             while (Math.Abs(adIndValue[currBar] - adIndValue[baseBar]) < sigma && isNoChange && baseBar > firstBar)
@@ -479,7 +479,7 @@ namespace Forex_Strategy_Builder
                         int  baseBar  = currBar - 1;
                         bool isHigher = adIndValue[currBar] > adIndValue[baseBar];
 
-                        if (!isDescreteValues)  // Aroon oscillator uses bIsDescreteValues = true
+                        if (!isDescreteValues)  // Aroon oscillator uses isDescreteValues = true
                         {
                             bool isNoChange = true;
                             while (Math.Abs(adIndValue[currBar] - adIndValue[baseBar]) < sigma && isNoChange && baseBar > firstBar)
@@ -712,7 +712,7 @@ namespace Forex_Strategy_Builder
         /// <param name="indCompLong">Indicator component for Long position.</param>
         /// <param name="indCompShort">Indicator component for Short position.</param>
         /// <param name="indLogic">The chosen logic.</param>
-        /// <returns>True if everyting is ok.</returns>
+        /// <returns>True if everything is ok.</returns>
         protected bool BandIndicatorLogic(int firstBar, int prvs, double[] adUpperBand, double[] adLowerBand, ref IndicatorComp indCompLong, ref IndicatorComp indCompShort, BandIndLogic indLogic)
         {
             double sigma = Sigma();

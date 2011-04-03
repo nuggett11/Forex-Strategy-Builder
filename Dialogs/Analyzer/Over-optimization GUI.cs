@@ -267,7 +267,7 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
         }
 
         /// <summary>
-        /// Opens charts screan.
+        /// Opens a chart screen.
         /// </summary>
         void ViewCharts_Click(object sender, EventArgs e)
         {

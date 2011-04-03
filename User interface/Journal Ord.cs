@@ -58,7 +58,7 @@ namespace Forex_Strategy_Builder
         public Button BtnRemoveJournal { get { return btnRemoveJournal; } }
 
         /// <summary>
-        /// Gets the Button Toglle Journal
+        /// Gets the Button Toggle Journal
         /// </summary>
         public Button BtnToggleJournal { get { return btnToggleJournal; } }
 
@@ -254,7 +254,7 @@ namespace Forex_Strategy_Builder
                 WayPointType wpType = Backtester.WayPoint(selectedBar, point).WPType;
 
                 if (iOrdNumber == -1) continue; // There is no order
-                if (iOrdNumber < Backtester.OrdNumb(selectedBar, 0)) continue; // For a transfered position
+                if (iOrdNumber < Backtester.OrdNumb(selectedBar, 0)) continue; // For a transferred position
 
                 if (wpType == WayPointType.Add    || wpType == WayPointType.Cancel ||
                     wpType == WayPointType.Entry  || wpType == WayPointType.Exit   ||

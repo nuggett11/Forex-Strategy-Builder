@@ -236,7 +236,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Rearange the strategy slots without changing its kind and count
+        /// Rearranges the strategy slots without changing its kind and count
         /// </summary>
         protected void RearangeStrategyLayout()
         {

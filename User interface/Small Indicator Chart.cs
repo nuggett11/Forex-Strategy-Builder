@@ -98,7 +98,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Returnt dynamic info
+        /// Returns dynamic info
         /// </summary>
         public string CurrentBarInfo
         {
@@ -112,7 +112,7 @@ namespace Forex_Strategy_Builder
         {
             Padding = new Padding(border, 0, border, border);
 
-            // Horizontal scrol bar
+            // Horizontal scroll bar
             scrollBar = new HScrollBar();
             scrollBar.Parent        = this;
             scrollBar.Dock          = DockStyle.Bottom;
@@ -434,7 +434,7 @@ namespace Forex_Strategy_Builder
 
             if (!Data.IsData || !Data.IsResult || Data.Bars <= Data.FirstBar) return;
 
-            // Limits the drawimg into the chart area only
+            // Limits the drawing into the chart area only
             g.SetClip(new Rectangle(xLeft, yTop, xRight - xLeft, yPrcBottom - yTop));
 
             // Draws Volume, Lots and Price
@@ -532,7 +532,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Generates dinamic info on the status bar
+        /// Generates dynamic info on the status bar
         /// when we are Moving the mouse over the SmallIndicatorsChart.
         /// </summary>
         protected override void OnMouseMove(MouseEventArgs e)

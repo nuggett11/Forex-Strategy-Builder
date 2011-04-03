@@ -440,12 +440,12 @@ namespace Forex_Strategy_Builder
             aChartButtons[(int)ChartButtons.DynamicInfo].Checked = isInfoPanelShown;
             aChartButtons[(int)ChartButtons.DynamicInfo].ToolTipText = Language.T("Show / hide the info panel") + "   I";
 
-            // Move Dyn Info Up
+            // Move Dynamic Info Up
             aChartButtons[(int)ChartButtons.DInfoUp].Image = Properties.Resources.chart_dinfo_up;
             aChartButtons[(int)ChartButtons.DInfoUp].ToolTipText = Language.T("Scroll info upwards") + "   A, S";
             aChartButtons[(int)ChartButtons.DInfoUp].Visible = isInfoPanelShown;
 
-            // Move Dyn Info Down
+            // Move Dynamic Info Down
             aChartButtons[(int)ChartButtons.DInfoDwn].Image = Properties.Resources.chart_dinfo_down;
             aChartButtons[(int)ChartButtons.DInfoDwn].ToolTipText = Language.T("Scroll info downwards") + "   Z, X";
             aChartButtons[(int)ChartButtons.DInfoDwn].Visible = isInfoPanelShown;
@@ -2316,50 +2316,50 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// When the mous is near to an important value - show a tip
+        /// When the mouse is near to an important value - show a tip
         /// </summary>
         void GenerateMouseTip(int barNumb)
         {
             barNumb = Math.Max(0, barNumb);
             barNumb = Math.Min(chartBars - 1, barNumb);
 
-            int iBar;
-            iBar  = firstBar + barNumb;
-            iBar  = Math.Min(Data.Bars - 1, iBar);
+            int bar;
+            bar  = firstBar + barNumb;
+            bar  = Math.Min(Data.Bars - 1, bar);
 
-            string sTip = "";
-            string sTipBarInfo = "";
-            double dMousePrice = (YBottom - mouseY) / YScale + minPrice;
-            if (Math.Abs(dMousePrice - Data.Open[iBar]) < 5 * Data.InstrProperties.Point)
+            string tip = "";
+            string tipBarInfo = "";
+            double mousePrice = (YBottom - mouseY) / YScale + minPrice;
+            if (Math.Abs(mousePrice - Data.Open[bar]) < 5 * Data.InstrProperties.Point)
             {
-                sTipBarInfo += "    Open: " + Data.High[iBar].ToString() + Environment.NewLine;
+                tipBarInfo += "    Open: " + Data.High[bar].ToString() + Environment.NewLine;
             }
-            if (Math.Abs(dMousePrice - Data.High[iBar])  < 5 * Data.InstrProperties.Point)
+            if (Math.Abs(mousePrice - Data.High[bar])  < 5 * Data.InstrProperties.Point)
             {
-                sTipBarInfo += "    High: " + Data.High[iBar].ToString() + Environment.NewLine;
+                tipBarInfo += "    High: " + Data.High[bar].ToString() + Environment.NewLine;
             }
-            if (Math.Abs(dMousePrice - Data.Low[iBar]) < 5 * Data.InstrProperties.Point)
+            if (Math.Abs(mousePrice - Data.Low[bar]) < 5 * Data.InstrProperties.Point)
             {
-                sTipBarInfo += "    Low: " + Data.High[iBar].ToString() + Environment.NewLine;
+                tipBarInfo += "    Low: " + Data.High[bar].ToString() + Environment.NewLine;
             }
-            if (Math.Abs(dMousePrice - Data.Close[iBar])< 5 * Data.InstrProperties.Point)
+            if (Math.Abs(mousePrice - Data.Close[bar])< 5 * Data.InstrProperties.Point)
             {
-                sTipBarInfo += "    Close: " + Data.High[iBar].ToString() + Environment.NewLine;
-            }
-
-            if (sTipBarInfo != "")
-            {
-                sTipBarInfo = "Bar information" + Environment.NewLine + sTipBarInfo;
-                sTip += sTipBarInfo;
+                tipBarInfo += "    Close: " + Data.High[bar].ToString() + Environment.NewLine;
             }
 
-            for (int iSlot = 0; iSlot < Data.Strategy.Slots; iSlot++)
+            if (tipBarInfo != "")
             {
-                if (Data.Strategy.Slot[iSlot] != null)
+                tipBarInfo = "Bar information" + Environment.NewLine + tipBarInfo;
+                tip += tipBarInfo;
+            }
+
+            for (int slot = 0; slot < Data.Strategy.Slots; slot++)
+            {
+                if (Data.Strategy.Slot[slot] != null)
                 {
-                    for (int iComp = 0; iComp < Data.Strategy.Slot[iSlot].Component.Length; iComp++)
+                    for (int comp = 0; comp < Data.Strategy.Slot[slot].Component.Length; comp++)
                     {
-                        IndComponentType indDataTipe = Data.Strategy.Slot[iSlot].Component[iComp].DataType;
+                        IndComponentType indDataTipe = Data.Strategy.Slot[slot].Component[comp].DataType;
                         if (indDataTipe == IndComponentType.CloseLongPrice  ||
                             indDataTipe == IndComponentType.ClosePrice      ||
                             indDataTipe == IndComponentType.CloseShortPrice ||
@@ -2370,12 +2370,12 @@ namespace Forex_Strategy_Builder
                             indDataTipe == IndComponentType.OpenShortPrice
                            )
                         {
-                            double dValue = Data.Strategy.Slot[iSlot].Component[iComp].Value[iBar];
-                            if (Math.Abs(dMousePrice - dValue) < 5 * Data.InstrProperties.Point)
+                            double dValue = Data.Strategy.Slot[slot].Component[comp].Value[bar];
+                            if (Math.Abs(mousePrice - dValue) < 5 * Data.InstrProperties.Point)
                             {
                                 double dl  = Math.Abs(dValue);
                                 string sFR = dl < 10 ? "F4" : dl < 100 ? "F3" : dl < 1000 ? "F2" : dl < 10000 ? "F1" : "F0";
-                                sTip += Data.Strategy.Slot[iSlot].Component[iComp].CompName + ": " + dValue.ToString(sFR) + Environment.NewLine;
+                                tip += Data.Strategy.Slot[slot].Component[comp].CompName + ": " + dValue.ToString(sFR) + Environment.NewLine;
                             }
                         }
                     }
@@ -2383,18 +2383,18 @@ namespace Forex_Strategy_Builder
             }
 
             // Positions
-            int iPos;
-            for (iPos = 0; iPos < Backtester.Positions(iBar); iPos++)
+            int pos;
+            for (pos = 0; pos < Backtester.Positions(bar); pos++)
             {
-                double fOrderPrice    = Backtester.SummaryOrdPrice(iBar);
-                double fPositionPrice = Backtester.SummaryPrice(iBar);
-                if (Math.Abs(dMousePrice - fOrderPrice) < 5 * Data.InstrProperties.Point) sTip += "Order price: " + fOrderPrice.ToString() + Environment.NewLine;
-                if (Math.Abs(dMousePrice - fPositionPrice) < 5 * Data.InstrProperties.Point) sTip += "Positions price: " + fPositionPrice.ToString() + Environment.NewLine;
+                double orderPrice    = Backtester.SummaryOrdPrice(bar);
+                double fPositionPrice = Backtester.SummaryPrice(bar);
+                if (Math.Abs(mousePrice - orderPrice) < 5 * Data.InstrProperties.Point) tip += "Order price: " + orderPrice.ToString() + Environment.NewLine;
+                if (Math.Abs(mousePrice - fPositionPrice) < 5 * Data.InstrProperties.Point) tip += "Positions price: " + fPositionPrice.ToString() + Environment.NewLine;
             }
 
-            if (sTip != "")
+            if (tip != "")
             {
-                mouseTips.Show(sTip, pnlPrice, mouseX + 10, mouseY + 10, 5000);
+                mouseTips.Show(tip, pnlPrice, mouseX + 10, mouseY + 10, 5000);
             }
 
             return;
@@ -2994,7 +2994,7 @@ namespace Forex_Strategy_Builder
                 isCandleChart = !isCandleChart;
                 pnlPrice.Invalidate();
             }
-            // Dyn info scroll up
+            // Dynamic info scroll up
             else if (e.KeyCode == Keys.A)
             {
                 if (!isInfoPanelShown)
@@ -3004,7 +3004,7 @@ namespace Forex_Strategy_Builder
                 pnlInfo.Invalidate();
 
             }
-            // Dyn info scroll up fast
+            // Dynamic info scroll up fast
             else if (e.KeyCode == Keys.S)
             {
                 if (!isInfoPanelShown)
@@ -3014,7 +3014,7 @@ namespace Forex_Strategy_Builder
                 pnlInfo.Invalidate();
 
             }
-            // Dyn info scroll down
+            // Dynamic info scroll down
             else if (e.KeyCode == Keys.Z)
             {
                 if (!isInfoPanelShown)
@@ -3023,7 +3023,7 @@ namespace Forex_Strategy_Builder
                 dynInfoScrollValue = dynInfoScrollValue > infoRows - 5 ? infoRows - 5 : dynInfoScrollValue;
                 pnlInfo.Invalidate();
             }
-            // Dyn info scroll down fast
+            // Dynamic info scroll down fast
             else if (e.KeyCode == Keys.X)
             {
                 if (!isInfoPanelShown)

@@ -80,7 +80,7 @@ namespace Forex_Strategy_Builder
             if (SameSignalAction == SameDirSignalAction.Add)
                 strBBCode += "[b]A same direction signal[/b] - [i]Adds to the position[/i]" + nl;
             else if (SameSignalAction == SameDirSignalAction.Winner)
-                strBBCode += "[b]A same direction signal[/b] - [i]Adds to a winnig position[/i]" + nl;
+                strBBCode += "[b]A same direction signal[/b] - [i]Adds to a winning position[/i]" + nl;
             else if (SameSignalAction == SameDirSignalAction.Nothing)
                 strBBCode += "[b]A same direction signal[/b] - [i]Does nothing[/i]" + nl;
 

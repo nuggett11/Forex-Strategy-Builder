@@ -769,7 +769,7 @@ namespace Forex_Strategy_Builder
             aOptimizerButtons[(int)OptimizerButtons.SelectNone].Image = Properties.Resources.optimizer_select_none;
             aOptimizerButtons[(int)OptimizerButtons.SelectNone].ToolTipText = Language.T("Select none of the parameters.");
 
-            // Select Randome
+            // Select Random
             aOptimizerButtons[(int)OptimizerButtons.SelectRandom].Image = Properties.Resources.optimizer_select_random;
             aOptimizerButtons[(int)OptimizerButtons.SelectRandom].ToolTipText = Language.T("Select a random number of parameters.");
 
@@ -1072,7 +1072,7 @@ namespace Forex_Strategy_Builder
                 }
             }
 
-            int totalHeight = ArangeControls();
+            int totalHeight = ArrangeControls();
 
             if (parameters == 0)
             {
@@ -1158,9 +1158,9 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Aranges the controls
+        /// Arranges the controls
         /// </summary>
-        int ArangeControls()
+        int ArrangeControls()
         {
             int vertMargin   = 3;
             int horizMargin  = 5;
@@ -1198,7 +1198,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Shift the pnlParams vewpoint
+        /// Shift the pnlParams viewpoint
         /// <summary>
         void ScrollBar_MouseWheel(object sender, MouseEventArgs e)
         {
@@ -1463,7 +1463,7 @@ namespace Forex_Strategy_Builder
             if (checkedParams < 2)
                 return;
 
-            // Counts the neccessary round
+            // Counts the necessary round
             int rounds= 0;
             for (int i = 0; i < checkedParams - 1; i++)
             for (int j = 0; j < checkedParams    ; j++)
@@ -1646,7 +1646,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Calculates the Limitations Vriteria
+        /// Calculates the Limitations Criteria
         /// </summary>
         bool IsLimitationsFulfilled()
         {
@@ -1821,7 +1821,7 @@ namespace Forex_Strategy_Builder
 
         delegate void ShowParamBestValueCallback(int param);
         /// <summary>
-        /// Shows the best value of a param during optimization.
+        /// Shows the best value of a parameter during optimization.
         /// </summary>
         void ShowParamBestValue(int param)
         {

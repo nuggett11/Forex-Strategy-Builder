@@ -174,7 +174,7 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
 
             Indicator indicator = Indicator_Store.ConstructIndicator(ip.IndicatorName, ip.SlotType);
 
-            // List params
+            // List parameters
             for (int i = 0; i < 5; i++)
             {
                 indicator.IndParam.ListParam[i].Index   = ip.ListParam[i].Index;
@@ -182,14 +182,14 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
                 indicator.IndParam.ListParam[i].Enabled = ip.ListParam[i].Enabled;
             }
 
-            // Numeric params
+            // Numeric parameters
             for (int i = 0; i < 6; i++)
             {
                 indicator.IndParam.NumParam[i].Value   = ip.NumParam[i].Value;
                 indicator.IndParam.NumParam[i].Enabled = ip.NumParam[i].Enabled;
             }
 
-            // Check params
+            // Check parameters
             for (int i = 0; i < 2; i++)
             {
                 indicator.IndParam.CheckParam[i].Checked = ip.CheckParam[i].Checked;

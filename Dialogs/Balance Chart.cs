@@ -49,7 +49,7 @@ namespace Forex_Strategy_Builder.Dialogs
         }
 
         /// <summary>
-        /// Perform initializing
+        /// Perform initializing.
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
@@ -80,13 +80,13 @@ namespace Forex_Strategy_Builder.Dialogs
             balanceChart.Size     = new Size(ClientSize.Width - 2 * space, btnClose.Top - space - btnVertSpace);
             balanceChart.Location = new Point(space, space);
 
-            // Label dynamic info
+            // Label dynamic info.
             lblDynInfo.Width = btnClose.Left - 2 * space;
             lblDynInfo.Location = new Point(space, btnClose.Top + 6);
         }
 
         /// <summary>
-        /// Form On Paint
+        /// Form On Paint.
         /// </summary>
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -94,7 +94,7 @@ namespace Forex_Strategy_Builder.Dialogs
         }
 
         /// <summary>
-        /// Show the dynamic info on the statusbar
+        /// Show the dynamic info on the status bar.
         /// </summary>
         void BalanceChart_MouseMove(object sender, MouseEventArgs e)
         {
@@ -105,7 +105,7 @@ namespace Forex_Strategy_Builder.Dialogs
         }
 
         /// <summary>
-        /// Deletes the dynamic info on the statusbar
+        /// Deletes the dynamic info on the status bar.
         /// </summary>
         void BalanceChart_MouseLeave(object sender, EventArgs e)
         {

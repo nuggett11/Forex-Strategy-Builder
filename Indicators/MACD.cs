@@ -131,7 +131,7 @@ namespace Forex_Strategy_Builder
 
             double[] maSignalLine = MovingAverage(nSignal, 0, slMethod, adMACD);
 
-            // adHistogram reprezents the MACD oscillator
+            // adHistogram represents the MACD oscillator
             double[] adHistogram = new double[Bars];
             for (int iBar = nSlow + nSignal - 1; iBar < Bars; iBar++)
                 adHistogram[iBar] = adMACD[iBar] - maSignalLine[iBar];

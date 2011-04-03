@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <strategy>
   <programName>Forex Strategy Builder</programName>
-  <programVersion>2.57.9.0</programVersion>
+  <programVersion>2.57.22.0</programVersion>
   <strategyName>Demo MACD Reversal</strategyName>
   <instrumentSymbol>EURUSD</instrumentSymbol>
   <instrumentPeriod>day</instrumentPeriod>
@@ -11,7 +11,7 @@
   <permanentTakeProfit usePermanentTP="False" permanentTPType="Relative">1000</permanentTakeProfit>
   <breakEven useBreakEven="False">100</breakEven>
   <maxOpenLots>20</maxOpenLots>
-  <useAcountPercentEntry>False</useAcountPercentEntry>
+  <useAccountPercentEntry>False</useAccountPercentEntry>
   <entryLots>1</entryLots>
   <addingLots>1</addingLots>
   <reducingLots>1</reducingLots>

@@ -54,7 +54,7 @@ namespace Forex_Strategy_Builder.Dialogs.Analyzer
         }
 
         /// <summary>
-        /// Sets the chart params
+        /// Sets the chart parameters
         /// </summary>
         public void InitChart(Over_optimization_Data_Table table)
         {

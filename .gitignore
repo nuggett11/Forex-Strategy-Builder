@@ -1,0 +1,15 @@
+Thumbs.db
+/*.suo
+/obj
+/bin/*.exe
+/bin/Debug/*.exe
+/bin/Debug/*.config
+/bin/Debug/*.pdb
+/bin/Debug/*.manifest
+/bin/Debug/Strategies/*.csv
+/bin/Forex\ Strategy\ Builder/*.exe
+!/bin/Forex\ Strategy\ Builder/FSB\ Starter.exe
+/bin/Forex\ Strategy\ Builder/*.config
+/bin/Forex\ Strategy\ Builder/*.pdb
+/bin/Forex\ Strategy\ Builder/*.manifest
+/bin/Forex\ Strategy\ Builder/Strategies/*.csv

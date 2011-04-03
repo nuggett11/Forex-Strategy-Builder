@@ -208,7 +208,7 @@ namespace Forex_Strategy_Builder
         static bool[]   marketStatsFlag;
 
         /// <summary>
-        /// Inits the stats names
+        /// Initializes the stats names
         /// </summary>
         internal static void InitMarketStatistic()
         {
@@ -276,7 +276,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Gets the market stats params
+        /// Gets the market stats parameters
         /// </summary>
         public static string[] MarketStatsParam { get { return marketStatsParam; } }
 
@@ -507,7 +507,7 @@ namespace Forex_Strategy_Builder
             // Sets the date format.
             dateFormat = System.Globalization.DateTimeFormatInfo.CurrentInfo.ShortDatePattern;
             if (dateFormat == "dd/MM yyyy") dateFormat = "dd/MM/yyyy"; // Fixes the Uzbek (Latin) issue
-            dateFormat = dateFormat.Replace(" ",""); // Fixes the Sloven issue
+            dateFormat = dateFormat.Replace(" ",""); // Fixes the Slovenian issue
             char[]   acDS = System.Globalization.DateTimeFormatInfo.CurrentInfo.DateSeparator.ToCharArray();
             string[] asSS = dateFormat.Split(acDS, 3);
             asSS[0] = asSS[0].Substring(0, 1) + asSS[0].Substring(0, 1);

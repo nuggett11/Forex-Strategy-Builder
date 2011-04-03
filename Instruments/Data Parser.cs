@@ -134,7 +134,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Gets or sets whether a volum column present
+        /// Gets or sets whether a volume column present
         /// </summary>
         bool IsVolumeColumn
         {
@@ -143,7 +143,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Gets or sets whether the file mathches the pattern
+        /// Gets or sets whether the file matches the pattern
         /// </summary>
         bool IsFileMatchPattern
         {
@@ -152,7 +152,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Analises and parses an input string
+        /// Analyses and parses an input string
         /// </summary>
         /// <param name="sInput"></param>
         public Data_Parser(string sInput)
@@ -220,7 +220,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Analises the input file
+        /// Analyses the input file
         /// </summary>
         int AnaliseInput()
         {

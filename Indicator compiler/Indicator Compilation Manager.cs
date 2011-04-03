@@ -132,7 +132,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Reads the souce code from file contents.
+        /// Reads the source code from file contents.
         /// </summary>
         public string LoadSourceFile(string pathToIndicator, out string errorLoadSourceFile)
         {
@@ -163,7 +163,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Creates an indicator instance from the assambly given.
+        /// Creates an indicator instance from the assembly given.
         /// </summary>
         static Indicator GetIndicatorInstanceFromAssembly(Assembly assembly, string indicatorFileName, out string errorMessage)
         {

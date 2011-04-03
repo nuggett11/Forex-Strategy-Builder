@@ -188,13 +188,13 @@ namespace Forex_Strategy_Builder
 
                 if (Data.Debug && dictLanguage.ContainsValue(sAlt))
                 {
-                    string sMessage = "The string" + ": " + sAlt + Environment.NewLine + "appears more than once in the laguage file";
+                    string sMessage = "The string" + ": " + sAlt + Environment.NewLine + "appears more than once in the language file";
                     System.Windows.Forms.MessageBox.Show(sMessage, "Language Files Loading", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
                 if (dictLanguage.ContainsKey(sMain))
                 {
-                    string sMessage = "The string" + ": " + sMain + Environment.NewLine + "appears more than once in the laguage file";
+                    string sMessage = "The string" + ": " + sMain + Environment.NewLine + "appears more than once in the language file";
                     System.Windows.Forms.MessageBox.Show(sMessage, "Language Files Loading", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
@@ -404,7 +404,7 @@ namespace Forex_Strategy_Builder
 
                 if (listPhrases.Contains(sMain))
                 {
-                    string sMessage = "The string" + ": " + sMain + Environment.NewLine + "appears more than once in the base laguage file";
+                    string sMessage = "The string" + ": " + sMain + Environment.NewLine + "appears more than once in the base language file";
                     System.Windows.Forms.MessageBox.Show(sMessage, "Language Files Loading", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else

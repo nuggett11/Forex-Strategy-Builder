@@ -153,7 +153,7 @@ namespace Forex_Strategy_Builder
                     dAF    = Math.Min(dAF + dAFInc, dAFMax);
                 }
 
-                // Wheather the price reaches PSAR
+                // Whether the price reaches PSAR
                 if (Low[iBar] <= adPSAR[iBar] && adPSAR[iBar] <= High[iBar])
                 {
                     intDirNew = -aiDir[iBar];

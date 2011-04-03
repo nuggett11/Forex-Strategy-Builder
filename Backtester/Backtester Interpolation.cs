@@ -624,7 +624,7 @@ namespace Forex_Strategy_Builder
                                 break;
                             }
 
-                            // The order is reachable downlards
+                            // The order is reachable downwards
                             goUpward = false;
                             isScanningResult = true;
                         }
@@ -947,7 +947,7 @@ namespace Forex_Strategy_Builder
                 }
             }
             else if (eval == BacktestEval.Ambiguous)
-            {   // Ambiguouse - two orders or order and bar closing
+            {   // Ambiguous - two orders or order and bar closing
                 if (!isClosingAmbiguity)
                 {   // Execute the randomly chosen order
                     int upRange   = (int)Math.Round((priceHigher - current) / Data.InstrProperties.Point);
@@ -1141,7 +1141,7 @@ namespace Forex_Strategy_Builder
                 }
             }
             else if (eval == BacktestEval.Ambiguous)
-            {   // Ambiguouse - two orders or order and bar closing
+            {   // Ambiguous - two orders or order and bar closing
                 if (!isClosingAmbiguity)
                 {   // Execute the nearest order
                     double upRange   = priceHigher - current;
@@ -1270,7 +1270,7 @@ namespace Forex_Strategy_Builder
                 }
             }
             else if (eval == BacktestEval.Ambiguous)
-            {   // Ambiguouse - two orders or order and bar closing
+            {   // Ambiguous - two orders or order and bar closing
                 if (!isClosingAmbiguity)
                 {   // Execute the nearest order
                     Order  theOrder;

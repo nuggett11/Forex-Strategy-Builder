@@ -9,7 +9,7 @@ namespace Forex_Strategy_Builder
 {
     /// <summary>
     /// Trailing Stop Limit Indicator
-    /// The implimentation of logic is in Market.AnalyseClose(int iBar)
+    /// The implementation of logic is in Market.AnalyseClose(int iBar)
     /// </summary>
     public class Trailing_Stop_Limit : Indicator
     {

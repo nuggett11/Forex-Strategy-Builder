@@ -922,7 +922,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Ubdates the clock in the statusbar.
+        /// Updates the clock in the status bar.
         /// </summary>
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -984,7 +984,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Change Full Screan mode
+        /// Change Full Scream mode
         /// </summary>
         protected virtual void MenuViewFullScreen_OnClick(object sender, EventArgs e)
         {
@@ -1099,7 +1099,7 @@ namespace Forex_Strategy_Builder
         }
 
         /// <summary>
-        /// Undos the strategy
+        /// Undoes the strategy
         /// </summary>
         protected virtual void MenuStrategyUndo_OnClick(object sender, EventArgs e)
         {

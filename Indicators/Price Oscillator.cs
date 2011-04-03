@@ -310,7 +310,7 @@ namespace Forex_Strategy_Builder
                 IndParam.ListParam[1].Text         + ", " + // Smoothing method
                 IndParam.ListParam[2].Text         + ", " + // Base price
                 IndParam.NumParam[0].ValueToString + ", " + // Period
-                IndParam.NumParam[1].ValueToString + ")";   // Additional moothing
+                IndParam.NumParam[1].ValueToString + ")";   // Additional smoothing
 
             return sString;
         }

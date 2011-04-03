@@ -787,7 +787,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
             SlotTypes slotType      = Data.Strategy.GetSlotType(slot);
             Indicator indicator     = Indicator_Store.ConstructIndicator(indicatorName, slotType);
 
-            // List params
+            // List parameters
             foreach (ListParam list in indicator.IndParam.ListParam)
                 if (list.Enabled)
                 {
@@ -801,7 +801,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
             int firstBar = 0;
             do
             {
-                // Numeric params
+                // Numeric parameters
                 foreach (NumericParam num in indicator.IndParam.NumParam)
                     if (num.Enabled)
                     {

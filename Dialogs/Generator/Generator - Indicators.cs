@@ -169,7 +169,7 @@ namespace Forex_Strategy_Builder.Dialogs.Generator
         }
 
         /// <summary>
-        /// Checks if the indicator is in the bann list.
+        /// Checks if the indicator is in the ban list.
         /// </summary>
         public bool IsIndicatorBanned(SlotTypes slotType, string indicatorName)
         {

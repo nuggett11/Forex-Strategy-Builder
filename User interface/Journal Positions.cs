@@ -419,7 +419,7 @@ namespace Forex_Strategy_Builder
                 else
                     asJournalData[row, p++] = "-";
 
-                // Blance / Equity
+                // Balance / Equity
                 if (Configs.AccountInMoney)
                 {
                     asJournalData[row, p++] = position.MoneyBalance.ToString("F2");

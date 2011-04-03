@@ -264,17 +264,17 @@ namespace Forex_Strategy_Builder
         public static int TestedDays { get { return testedDays; } }
 
         /// <summary>
-        /// Gets the profit per tetsted day.
+        /// Gets the profit per tested day.
         /// </summary>
         public static int ProfitPerDay { get { return testedDays > 0 ? Backtester.Balance(Bars - 1) / testedDays : 0; } }
 
         /// <summary>
-        /// Gets the profit per tetsted day in currency.
+        /// Gets the profit per tested day in currency.
         /// </summary>
         public static double MoneyProfitPerDay { get { return testedDays > 0 ? (Backtester.MoneyBalance(Bars - 1) - Configs.InitialAccount) / testedDays : 0; } }
 
         /// <summary>
-        /// Gets the account stats params
+        /// Gets the account stats parameters
         /// </summary>
         public static string[] AccountStatsParam { get { return accountStatsParam; } }
 
@@ -644,8 +644,8 @@ namespace Forex_Strategy_Builder
                 Language.T("Minimum account"),
                 Language.T("Maximum account"),
                 Language.T("Maximum drawdown"),
-                Language.T("Max equty drawdown"),
-                Language.T("Max equty drawdown"),
+                Language.T("Max equity drawdown"),
+                Language.T("Max equity drawdown"),
                 Language.T("Gross profit"),
                 Language.T("Gross loss"),
                 Language.T("Sent orders"),

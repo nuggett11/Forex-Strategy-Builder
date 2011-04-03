@@ -212,7 +212,7 @@ namespace Forex_Strategy_Builder
                 // Label Progress
                 lblProgress.Location = new Point(space, btnClose.Top + 5);
 
-                // Autoscan checkbox
+                // Auto scan checkbox
                 chbAutoscan.Location = new Point(space, btnClose.Top + 5);
 
                 // TickScan checkbox

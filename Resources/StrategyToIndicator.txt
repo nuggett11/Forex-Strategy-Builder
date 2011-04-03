@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace Forex_Strategy_Builder
 {
     /// <summary>
-    /// Startegy to Indicator
+    /// Strategy to Indicator
     /// </summary>
     public class Strategy_To_Indicator : Indicator
     {
@@ -71,7 +71,7 @@ namespace Forex_Strategy_Builder
             IndParam.CheckParam[0].Caption = "Reversed signals";
             IndParam.CheckParam[0].Checked = false;
             IndParam.CheckParam[0].Enabled = true;
-            IndParam.CheckParam[0].ToolTip = "The indicator raises signals which are opposit to the signlas of the base startegy.";
+            IndParam.CheckParam[0].ToolTip = "The indicator raises signals, which are opposite to the signals of the base strategy.";
 
             return;
         }

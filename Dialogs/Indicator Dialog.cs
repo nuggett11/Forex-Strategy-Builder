@@ -44,7 +44,7 @@ namespace Forex_Strategy_Builder
     //    ###################################################################################
 
     /// <summary>
-    /// Form dialog contains controls for adjusting the indicator's parametres.
+    /// Form dialog contains controls for adjusting the indicator's parameters.
     /// </summary>
     public class Indicator_Dialog : Form
     {

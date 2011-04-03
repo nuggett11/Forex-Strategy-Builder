@@ -183,12 +183,12 @@ namespace Forex_Strategy_Builder
         public IndicatorSlot[] Slot { get { return indicatorSlot; } set { indicatorSlot = value; } }
 
         /// <summary>
-        /// Gets or sets a value representing how the new opposite signal reflecrs the position
+        /// Gets or sets a value representing how the new opposite signal reflects on the position
         /// </summary>
         public OppositeDirSignalAction OppSignalAction { get { return oppDirSignal; } set { oppDirSignal = value; } }
 
         /// <summary>
-        /// Gets or sets a value representing how the new same dir signal reflecrs the position
+        /// Gets or sets a value representing how the new same dir signal reflects on the position
         /// </summary>
         public SameDirSignalAction SameSignalAction { get { return sameDirSignal; } set { sameDirSignal = value; } }
 

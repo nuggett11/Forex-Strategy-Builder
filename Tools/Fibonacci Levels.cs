@@ -145,7 +145,7 @@ namespace Forex_Strategy_Builder
             int btnHrzSpace  = (int)(Data.HorizontalDLU * 3);
             int border     = btnHrzSpace;
             int textHeight = Font.Height;
-            int width      = 100; // Right side contrlos
+            int width      = 100; // Right side controls
 
             // pnlInput
             pnlInput.Size = new Size(ClientSize.Width - 2 * border, 85);

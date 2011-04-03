@@ -291,7 +291,7 @@
   <str><main>pip</main><alt>пипс</alt></str>
   <str><main>No limits</main><alt>Без ограничения</alt></str>
   
-  <!-- Additional statsitics -->
+  <!-- Additional statistics -->
   <str><main>Additional Statistics</main><alt>Допълнителна статистика</alt></str>
   <str><main>Show long/short balance lines in the chart and more statistics in the overview.</main><alt>Показване на балансните лини за къса и дълга позиция и повече статистически параметри.</alt></str>
   <str><main>Profit factor</main><alt>Фактор печалба</alt></str>

@@ -302,7 +302,7 @@ namespace Forex_Strategy_Builder
             lblCommission.Location = new Point(btnHrzSpace + border, 3 * buttonHeight + 4 * space + 8);
             lblSlippage.Location   = new Point(btnHrzSpace + border, 4 * buttonHeight + 5 * space + 8);
 
-            // NUD Params
+            // NUD Parameters
             int nudLeft = pnlBase.ClientSize.Width - nudWidth - btnHrzSpace - border;
             nudSpread.Size          = new Size(nudWidth, buttonHeight);
             nudSpread.Location      = new Point(nudLeft, 0 * buttonHeight + 1 * space + 6);

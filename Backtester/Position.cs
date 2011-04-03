@@ -60,7 +60,7 @@ namespace Forex_Strategy_Builder
         double absoluteSL;         // Absolute mode Permanent SL
         double absoluteTP;         // Absolute mode Permanent TP
         double breakEven;          // Break Even
-        double requiredMargin;     // The required marging
+        double requiredMargin;     // The required margin
         double profitLoss;         // Position Profit Loss
         double floatingPL;         // Position Floating Profit Loss
         double balance;            // Account balance at the end of the session
@@ -329,10 +329,10 @@ namespace Forex_Strategy_Builder
             pos += "Transaction        "        + transaction.ToString()       + NL;
             pos += "Direction          "        + posDirection.ToString()      + NL;
             pos += "Opening Bar        "        + (openingBar + 1).ToString()  + NL;
-            pos += "Ord Numb           "        + (ordNumb + 1).ToString()     + NL;
-            pos += "Ord Price          "        + ordPrice.ToString()          + NL;
-            pos += "Pos Lots           "        + posLots.ToString()           + NL;
-            pos += "Pos Price          "        + posPrice.ToString()          + NL;
+            pos += "Order Number       "        + (ordNumb + 1).ToString()     + NL;
+            pos += "Order Price        "        + ordPrice.ToString()          + NL;
+            pos += "Position Lots      "        + posLots.ToString()           + NL;
+            pos += "Position Price     "        + posPrice.ToString()          + NL;
             pos += "Req. Margin [" + AC + "]  " + requiredMargin.ToString()    + NL;
             pos += "---------------------------------"  + NL;
             pos += "Abs Permanent SL   "        + absoluteSL.ToString()        + NL;
