@@ -62,7 +62,7 @@ namespace Forex_Strategy_Builder
 
             IndParam.NumParam[1].Caption = "Increment";
             IndParam.NumParam[1].Value   = 0.02;
-            IndParam.NumParam[1].Min     = 0.01;
+            IndParam.NumParam[1].Min     = 0.001;
             IndParam.NumParam[1].Max     = 5.00;
             IndParam.NumParam[1].Point   = 2;
             IndParam.NumParam[1].Enabled = true;
@@ -70,7 +70,7 @@ namespace Forex_Strategy_Builder
 
             IndParam.NumParam[2].Caption = "Maximum AF";
             IndParam.NumParam[2].Value   = 2.00;
-            IndParam.NumParam[2].Min     = 0.01;
+            IndParam.NumParam[2].Min     = 0.001;
             IndParam.NumParam[2].Max     = 9.00;
             IndParam.NumParam[2].Point   = 2;
             IndParam.NumParam[2].Enabled = true;
